@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Sequences, limits and series | Mathematics for Business and Economics</title>
+  <meta name="description" content="Chapter 3 Sequences, limits and series | Mathematics for Business and Economics" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Sequences, limits and series | Mathematics for Business and Economics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Sequences, limits and series | Mathematics for Business and Economics" />
+  
+  
+  
+
+<meta name="author" content="Maria Osipenko" />
+
+
+<meta name="date" content="2024-08-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="the-basics.html"/>
+<link rel="next" href="continuity-of-functions.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Wirtschaftsmathematik</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-do-we-need-the-mathematics-for-business-and-economics"><i class="fa fa-check"></i>Why do we need the mathematics for business and economics?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#example-utility-maximization"><i class="fa fa-check"></i>Example: utility maximization</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-basics.html"><a href="the-basics.html"><i class="fa fa-check"></i><b>2</b> The basics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="the-basics.html"><a href="the-basics.html#sets-and-number-sets"><i class="fa fa-check"></i><b>2.1</b> Sets and Number Sets</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="the-basics.html"><a href="the-basics.html#operations-on-sets"><i class="fa fa-check"></i><b>2.1.1</b> Operations on Sets</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="the-basics.html"><a href="the-basics.html#number-sets"><i class="fa fa-check"></i><b>2.2</b> Number sets</a></li>
+<li class="chapter" data-level="2.3" data-path="the-basics.html"><a href="the-basics.html#point-sets-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Point sets in <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="the-basics.html"><a href="the-basics.html#intervals-as-sets-of-points-in-mathbbrn"><i class="fa fa-check"></i><b>2.3.1</b> Intervals as sets of points in <span class="math inline">\(\mathbb{R^n}\)</span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-distance"><i class="fa fa-check"></i><b>2.3.2</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: Distance</a></li>
+<li class="chapter" data-level="2.3.3" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-epsilon-neighborhood"><i class="fa fa-check"></i><b>2.3.3</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\epsilon-\)</span>neighborhood</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="the-basics.html"><a href="the-basics.html#functions"><i class="fa fa-check"></i><b>2.4</b> Functions</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="the-basics.html"><a href="the-basics.html#linear-functions"><i class="fa fa-check"></i><b>2.4.1</b> Linear Functions</a></li>
+<li class="chapter" data-level="2.4.2" data-path="the-basics.html"><a href="the-basics.html#quadratic-functions"><i class="fa fa-check"></i><b>2.4.2</b> Quadratic Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="the-basics.html"><a href="the-basics.html#power-exponential-and-logarithmic-functions"><i class="fa fa-check"></i><b>2.5</b> Power, exponential and logarithmic functions</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="the-basics.html"><a href="the-basics.html#convexity-and-concavity"><i class="fa fa-check"></i><b>2.5.1</b> Convexity and concavity</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html"><i class="fa fa-check"></i><b>3</b> Sequences, limits and series</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#sequences"><i class="fa fa-check"></i><b>3.1</b> Sequences</a></li>
+<li class="chapter" data-level="3.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergence-of-sequences"><i class="fa fa-check"></i><b>3.2</b> Convergence of sequences</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergent-sequences-and-their-limits"><i class="fa fa-check"></i><b>3.2.1</b> Convergent sequences and their limits</a></li>
+<li class="chapter" data-level="3.2.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#bounded-sequences"><i class="fa fa-check"></i><b>3.2.2</b> Bounded sequences</a></li>
+<li class="chapter" data-level="3.2.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#divergent-sequences"><i class="fa fa-check"></i><b>3.2.3</b> Divergent sequences</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#properties-of-sequences"><i class="fa fa-check"></i><b>3.3</b> Properties of sequences</a></li>
+<li class="chapter" data-level="3.4" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#series"><i class="fa fa-check"></i><b>3.4</b> Series</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#special-series"><i class="fa fa-check"></i><b>3.4.1</b> Special Series</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html"><i class="fa fa-check"></i><b>4</b> Continuity of functions</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#pointwise-continuity"><i class="fa fa-check"></i><b>4.1</b> Pointwise continuity</a></li>
+<li class="chapter" data-level="4.2" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#continuous-functions-and-their-properties"><i class="fa fa-check"></i><b>4.2</b> Continuous functions and their properties</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differential-calculus.html"><a href="differential-calculus.html"><i class="fa fa-check"></i><b>5</b> Differential calculus</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-tangent-line"><i class="fa fa-check"></i><b>5.1</b> Definition of the tangent line</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="differential-calculus.html"><a href="differential-calculus.html#secant-and-tangent-lines"><i class="fa fa-check"></i><b>5.1.1</b> Secant and tangent lines</a></li>
+<li class="chapter" data-level="5.1.2" data-path="differential-calculus.html"><a href="differential-calculus.html#from-the-secant-to-the-tangent-line"><i class="fa fa-check"></i><b>5.1.2</b> From the secant to the tangent line</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-derivative"><i class="fa fa-check"></i><b>5.2</b> Definition of the derivative</a></li>
+<li class="chapter" data-level="5.3" data-path="differential-calculus.html"><a href="differential-calculus.html#differentiability"><i class="fa fa-check"></i><b>5.3</b> Differentiability</a></li>
+<li class="chapter" data-level="5.4" data-path="differential-calculus.html"><a href="differential-calculus.html#derivation-rules"><i class="fa fa-check"></i><b>5.4</b> Derivation rules</a></li>
+<li class="chapter" data-level="5.5" data-path="differential-calculus.html"><a href="differential-calculus.html#the-rule-of-lhôpital"><i class="fa fa-check"></i><b>5.5</b> The rule of L’Hôpital</a></li>
+<li class="chapter" data-level="5.6" data-path="differential-calculus.html"><a href="differential-calculus.html#higher-order-derivatives"><i class="fa fa-check"></i><b>5.6</b> Higher order derivatives</a></li>
+<li class="chapter" data-level="5.7" data-path="differential-calculus.html"><a href="differential-calculus.html#taylors-theorem"><i class="fa fa-check"></i><b>5.7</b> Taylor’s theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="optimization.html"><a href="optimization.html"><i class="fa fa-check"></i><b>6</b> Optimization</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="optimization.html"><a href="optimization.html#necessary-conditions-for-maxima-and-minima"><i class="fa fa-check"></i><b>6.1</b> Necessary conditions for maxima and minima</a></li>
+<li class="chapter" data-level="6.2" data-path="optimization.html"><a href="optimization.html#second-order-conditions"><i class="fa fa-check"></i><b>6.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="6.3" data-path="optimization.html"><a href="optimization.html#optimization-on-an-interval"><i class="fa fa-check"></i><b>6.3</b> Optimization on an interval</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="integral-calculus.html"><a href="integral-calculus.html"><i class="fa fa-check"></i><b>7</b> Integral calculus</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="integral-calculus.html"><a href="integral-calculus.html#the-indefinite-integral"><i class="fa fa-check"></i><b>7.1</b> The indefinite integral</a></li>
+<li class="chapter" data-level="7.2" data-path="integral-calculus.html"><a href="integral-calculus.html#the-definite-integral"><i class="fa fa-check"></i><b>7.2</b> The definite integral</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="integral-calculus.html"><a href="integral-calculus.html#properties-and-elementary-calculation-rules"><i class="fa fa-check"></i><b>7.2.1</b> Properties and elementary calculation rules</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html"><i class="fa fa-check"></i><b>8</b> Systems of linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-two-linear-equations"><i class="fa fa-check"></i><b>8.1</b> Systems of two linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solution-by-substitution-and-elimination"><i class="fa fa-check"></i><b>8.1.1</b> Solution by substitution and elimination</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-equations-with-n-linear-equations"><i class="fa fa-check"></i><b>8.2</b> Systems of equations with <span class="math inline">\(n\)</span> linear equations</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solving-systems-of-equations-with-m-linear-equations"><i class="fa fa-check"></i><b>8.2.1</b> Solving systems of equations with <span class="math inline">\(m\)</span> linear equations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html"><i class="fa fa-check"></i><b>9</b> Matrices and Basic Matrix Operations</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#matrices"><i class="fa fa-check"></i><b>9.1</b> Matrices</a></li>
+<li class="chapter" data-level="9.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#basic-matrix-operations"><i class="fa fa-check"></i><b>9.2</b> Basic matrix operations</a></li>
+<li class="chapter" data-level="9.3" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#economic-applications"><i class="fa fa-check"></i><b>9.3</b> Economic Applications</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#monthly-consumer-spending"><i class="fa fa-check"></i><b>9.3.1</b> Monthly consumer spending</a></li>
+<li class="chapter" data-level="9.3.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#regional-migration"><i class="fa fa-check"></i><b>9.3.2</b> Regional migration</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#transpose-of-a-matrix"><i class="fa fa-check"></i><b>9.4</b> Transpose of a matrix</a></li>
+<li class="chapter" data-level="9.5" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#determinant-and-inverse-of-a-matrix"><i class="fa fa-check"></i><b>9.5</b> Determinant and inverse of a matrix</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#more-on-the-determinant-of-a-matrixast"><i class="fa fa-check"></i><b>9.5.1</b> More on the Determinant of a Matrix<span class="math inline">\(^\ast\)</span></a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#rank-and-determinantast"><i class="fa fa-check"></i><b>9.5.2</b> Rank and determinant<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html"><i class="fa fa-check"></i><b>10</b> Calculus with <span class="math inline">\(n\)</span> variables</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#continuity-of-a-function"><i class="fa fa-check"></i><b>10.1</b> Continuity of a function</a></li>
+<li class="chapter" data-level="10.2" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives"><i class="fa fa-check"></i><b>10.2</b> Partial derivatives</a></li>
+<li class="chapter" data-level="10.3" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives-of-higher-order"><i class="fa fa-check"></i><b>10.3</b> Partial derivatives of higher order</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#the-gradient-vector-and-the-hessian-matrix"><i class="fa fa-check"></i><b>10.3.1</b> The gradient vector and the Hessian matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#derivation-of-implicit-functionsast"><i class="fa fa-check"></i><b>10.4</b> Derivation of implicit functions<span class="math inline">\(^\ast\)</span></a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#contour-lines-indifference-curvesast"><i class="fa fa-check"></i><b>10.4.1</b> Contour lines / indifference curves<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="optimization-ii.html"><a href="optimization-ii.html"><i class="fa fa-check"></i><b>11</b> Optimization II</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="optimization-ii.html"><a href="optimization-ii.html#first-order-conditions"><i class="fa fa-check"></i><b>11.1</b> First-order conditions</a></li>
+<li class="chapter" data-level="11.2" data-path="optimization-ii.html"><a href="optimization-ii.html#second-order-conditions-1"><i class="fa fa-check"></i><b>11.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="11.3" data-path="optimization-ii.html"><a href="optimization-ii.html#optimization-under-constraints-lagrange-method"><i class="fa fa-check"></i><b>11.3</b> Optimization under constraints: Lagrange method</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathematics for Business and Economics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="sequences-limits-and-series" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Sequences, limits and series<a href="sequences-limits-and-series.html#sequences-limits-and-series" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<script>
+function checkAnswer_mmc(q) {
+      const selectedOptions = document.querySelectorAll('input[name="option'+q.id+'"]:checked');
+      if (selectedOptions.length === 2) {
+        const userAnswers = Array.from(selectedOptions).map(option => option.value);
+        const correctAnswers = q.answer;
+        const isCorrect = userAnswers.every(answer => correctAnswers.includes(answer));
+
+if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+// numeric
+function generateQuestion_num(id) {
+      // Generate two random numbers between 2 and 10
+      const num1 = Math.floor(Math.random() * 10) + 2;
+      const num2 = Math.floor(Math.random() * 10) + 2;
+      const x1 = Math.floor(Math.random() * 100) + 2;
+      const x2 = Math.floor(Math.random() * 100) + 2;
+      const x3 = Math.floor(Math.random() * 100) + 2;
+      const x4 = Math.floor(Math.random() * 100) + 2;
+      const x5 = Math.floor(Math.random() * 100) + 2;
+      const x6 = Math.floor(Math.random() * 100) + 2;
+
+       // Calculate the correct answer
+      let answer = num1*Math.sqrt(x1) + num2*Math.sqrt(x2);
+
+      // Return the question and answer as an object
+      return {
+       // question: num1 + "\\(\\sqrt{x}+\\)"+ num2 + "\\(\\sqrt{y}\\)" + " for \\(x=\\)" + x1 + " and \\(y=\\)" + x2,
+        question: [num1,num2,x1,x2,x3,x4,x5,x6],
+        answer: answer,
+        id: id
+      };
+    }
+
+function checkAnswer_num(q) {
+      const userAnswer = document.getElementById('answer'+q.id).value;
+      const isCorrect = Math.round(parseFloat(userAnswer)*100)/100 === Math.round(q.answer*100)/100;
+
+      if (isCorrect) {
+        document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+      } else {
+        document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+      }
+  }
+
+// plain multiple choice
+  function checkAnswer_match(q) {
+      const selectedOption = document.querySelector('input[name="option'+q.id+'"]:checked');
+      if (selectedOption) {
+        const userAnswer = selectedOption.value;
+        const isCorrect = userAnswer === q.answer;
+
+        if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select an option.';
+      }
+    }
+</script>
+<iframe src="https://scratch.mit.edu/projects/777492999/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen>
+</iframe>
+<div id="sequences" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Sequences<a href="sequences-limits-and-series.html#sequences" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:deffolge" class="definition"><strong>Definition 3.1  (Sequence) </strong></span>A <strong>sequence</strong> is a function <span class="math inline">\(f : \mathbb N \rightarrow \mathbb {R}\)</span>.</p>
+</div>
+<p>In other words, it is a function whose domain is the natural numbers and whose domain is the real numbers.</p>
+<ul>
+<li><p>Notation: <span class="math inline">\(f(n),n= 1,2,3,...\)</span></p></li>
+<li><p>The following notation is also often used: <span class="math inline">\(({a}_{n}) _{i \in \mathbb{N} }\)</span>, where <span class="math inline">\(a_n=f(n)\)</span></p></li>
+<li><p>The elements of the domain are called indices (singular: index).</p></li>
+</ul>
+<p>Properties of interest are:</p>
+<ol style="list-style-type: decimal">
+<li>convergence,</li>
+<li>whether a sequence is bounded or not,</li>
+<li>monotony.</li>
+</ol>
+<p>The concept of convergence is fundamental for various applications and concepts, e.g.</p>
+<ul>
+<li>in financial mathematics;</li>
+<li>in analysis (continuity, differential quotient).</li>
+</ul>
+<div class="example">
+<p><span id="exm:mitarbeiter" class="example"><strong>Example 3.1  (Number sequences in the business context) </strong></span></p>
+<ul>
+<li><p><strong>New customers</strong>
+In a company, the monthly customer additions in the first quarter of 2022 are <span class="math inline">\(a_1=120,560, \ a_2=133,847\)</span> and <span class="math inline">\(a_3=123,432\)</span>. It is a finite sequence of numbers, with real numbers assigned to the months of January (1), February (2) and March (3).</p></li>
+<li><p><strong>Employees</strong>
+The number of employees increases monthly by <span class="math inline">\(2\)</span> %. Starting from March 2022 (<span class="math inline">\(a_0=128,432\)</span>), we then have the following sequence members (unrounded):
+<span class="math inline">\(a_1=128,432.00 \cdot 1.02 =131,000.64\)</span> (April)</p></li>
+</ul>
+<p><span class="math inline">\(a_2=131,000.64 \cdot 1.02 =133,620.65\)</span> (May)</p>
+<p><span class="math inline">\(a_3=133,620.65 \cdot 1.02 =136,293.07\)</span> (June)</p>
+<p>In this example we have the special feature that you can calculate the individual members of the sequence. The functional rule for the nth element of the sequence applies:</p>
+<p><span class="math inline">\(a_n=128,432 \times 1.02^n\)</span></p>
+<p>If we put <span class="math inline">\(n=3\)</span> (for the month of June), then we have <span class="math inline">\(128,432 \cdot 1.02^3\)</span>, i.e. <span class="math inline">\(136,293.07\)</span>. Such a sequence, which satisfies a functional rule, is also called a geometric sequence (see below). Note that a functional relationship cannot be specified for every sequence.</p>
+</div>
+<p>Auch reine Zahlenfolgen werden meist mittels einer Funktionsvorschrift angegeben.</p>
+<div class="example">
+<p><span id="exm:folgen" class="example"><strong>Example 3.2  (Sequences of numbers) </strong></span><img src="images/folgen.png" /></p>
+</div>
+<p>Observations:</p>
+<ul>
+<li><p>The terms in the sequences <span class="math inline">\((1/n)_{n\in \mathbb N}\)</span> and <span class="math inline">\((-1/n)_{n\in \mathbb N}\)</span> approach zero; they have a limit.</p></li>
+<li><p>Although no element in the sequence takes on the value zero, the limit value is zero.</p></li>
+<li><p>The other two sequences do not approach any finite value.</p></li>
+</ul>
+<div class="exercise">
+<p><span id="exr:folgengl" class="exercise"><strong>Exercise 3.1  (sequence members) </strong></span>Find the first ten terms of each of the given sequences:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(f (n) = 5 + 1/n\)</span></li>
+<li><span class="math inline">\(f (n) = 5n/({2}^{n})\)</span></li>
+<li><span class="math inline">\(f (n) = ({n}^{2} + 2n)/n\)</span></li>
+<li><span class="math inline">\(f (n) = 5 − 1/n\)</span></li>
+<li><span class="math inline">\(f (n) = n/(n + 1)\)</span></li>
+<li><span class="math inline">\(f(n) = 3+(-1)^n\)</span></li>
+<li><span class="math inline">\(f (n) = 3 + [(−1)^n(1/n)]\)</span></li>
+</ol>
+<p>Hint: Insert <span class="math inline">\(n=1;2;3;4;...10\)</span> to determine the first 10 terms.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p><img src="images/folgenglieder.png" /></p>
+</details>
+</div>
+<div id="qfolgen" class="quiz">
+<script>
+
+// Generate a random question
+  const questionObj7 = {
+      question: 'Which of the above sequences do not tend towards a fixed value as \\(n\\) increases?',
+      options: ['b','c','f'],
+      answer: ['2','3','6'],
+      id: 7
+    };
+</script>
+<p class="question">
+Frage: <span id="question-text7"></span>
+</p>
+<div class="options">
+<p><label>
+<input type="checkbox" name="option7" value=1> a
+</label>
+<label>
+<input type="checkbox" name="option7" value=2> b
+</label>
+<label>
+<input type="checkbox" name="option7" value=3> c
+</label>
+<label>
+<input type="checkbox" name="option7" value=4> d
+</label>
+<label>
+<input type="checkbox" name="option7" value=5> e
+</label>
+<label>
+<input type="checkbox" name="option7" value=6> f
+</label>
+<label>
+<input type="checkbox" name="option7" value=7> g
+</label></p>
+</div>
+<button onclick="checkAnswer_mmc(questionObj7)">
+Submit
+</button>
+<p id="result7">
+</p>
+<script>
+    // Display the question
+    document.getElementById('question-text7').textContent = questionObj7.question;
+
+</script>
+</div>
+</div>
+<div id="convergence-of-sequences" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Convergence of sequences<a href="sequences-limits-and-series.html#convergence-of-sequences" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Convergence of a sequence means that the sequence terms <span class="math inline">\(a_n = f (n)\)</span> come “arbitrarily close” to a unique finite value, its limit value (also: <span class="math inline">\(\lim\)</span>), if <span class="math inline">\(n\)</span> is “large enough”.</p>
+<p>More formally: convergence means that the distance <span class="math inline">\(|a_n − a|\)</span> between the following terms <span class="math inline">\(a_n, n = 1,2, ...\)</span> and the limit <span class="math inline">\(a \in \mathbb{R}\)</span> becomes arbitrarily small with increasing <span class="math inline">\(n\)</span>, i.e.:</p>
+<p><span class="math inline">\(|a_n − a| &lt; \varepsilon\)</span>, for arbitrarily small <span class="math inline">\(\varepsilon &gt; 0\)</span>, if <span class="math inline">\(n\)</span> tends to infinity (<span class="math inline">\(n\rightarrow \infty\)</span>).</p>
+<ul>
+<li><p>A sequence with a limit <strong>converges</strong>.</p></li>
+<li><p>A sequence that does not converge <strong>diverges</strong>.</p></li>
+<li><p>Notation: If the sequence <span class="math inline">\(a_n, n = 1,2, ...\)</span> converges to the limit <span class="math inline">\(a\)</span>, then we write:</p></li>
+</ul>
+<p><span class="math inline">\(\lim \limits_{n \rightarrow \infty } a_n=a\)</span> or</p>
+<p><span class="math inline">\(a_n \rightarrow a\)</span> for <span class="math inline">\(n \rightarrow \infty\)</span>.</p>
+<div id="convergent-sequences-and-their-limits" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Convergent sequences and their limits<a href="sequences-limits-and-series.html#convergent-sequences-and-their-limits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="definition">
+<p><span id="def:defkonv" class="definition"><strong>Definition 3.2  (limit) </strong></span>The sequence <span class="math inline">\((a_n) _{n\in \mathbb N}\)</span> has the <strong>limit</strong> <span class="math inline">\(a \in \mathbb {R}\)</span>, if for each any <span class="math inline">\(\varepsilon &gt; 0\)</span> an index <span class="math inline">\(N\)</span> exists such that:</p>
+<p><span class="math inline">\(|a_n − a| &lt; \varepsilon\)</span>, for all <span class="math inline">\(n &gt; N\)</span>.</p>
+<p>A sequence with a limit is called <strong>convergent</strong>, and the limit is written as</p>
+<p><span class="math inline">\(\lim\limits_{n \rightarrow \infty } a_n=a\)</span>.</p>
+<p>or:</p>
+<p><span class="math inline">\(a_n \rightarrow a\)</span> for <span class="math inline">\(n \rightarrow \infty\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:grenzwert" class="example"><strong>Example 3.3  (Checking convergence) </strong></span>We examine the sequence <span class="math inline">\((a_n) _{n\in \mathbb N}\)</span> with <span class="math inline">\(a_n = 1/n\)</span>.</p>
+<p>First, choose <span class="math inline">\(\varepsilon = 0.01\)</span>. Then, for each <span class="math inline">\(n &gt; 100\)</span> holds <span class="math inline">\(|a_n − 0| &lt; 1/100 = 1/100 = 0.01 = \varepsilon\)</span>.</p>
+<p>So the distance of the following terms <span class="math inline">\({a}_{101}, {a}_{102}\)</span> from <span class="math inline">\(0\)</span> is smaller than <span class="math inline">\(\varepsilon = 0.01\)</span>.</p>
+<p>Further, check the above property for <span class="math inline">\(\varepsilon= 0.002\)</span> and <span class="math inline">\(n &gt; 500\)</span>.</p>
+<p>In general, for any <span class="math inline">\(\varepsilon &gt; 0\)</span>: from <span class="math inline">\(n &gt; 1/\varepsilon\)</span> follows <span class="math inline">\(|a_n − 0| = 1/n &lt; \varepsilon\)</span>.</p>
+<p>Hence <span class="math inline">\((1/n) _{n\in \mathbb N}\)</span> converges to <span class="math inline">\(0\)</span>.</p>
+<p><img src="images/konv_folge.png" /></p>
+</div>
+<div class="example">
+<p><span id="exm:konvfolgen" class="example"><strong>Example 3.4  (Some convergent sequences and their limits) </strong></span></p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(\lim \limits_{n \rightarrow \infty } \frac{1}{n} =0\)</span></p></li>
+<li><p><span class="math inline">\(\lim \limits_{n \rightarrow \infty } \frac{n}{n+1} =1\)</span></p></li>
+<li><p><span class="math inline">\(\lim\limits_{n \rightarrow \infty } c^n =0\)</span>, for <span class="math inline">\(c &lt; 1\)</span></p></li>
+<li><p><span class="math inline">\(\lim \limits_{n \rightarrow \infty } e^{-n} =0\)</span></p></li>
+<li><p><span class="math inline">\(\lim \limits_{n \rightarrow \infty } e^{-1/n} =1\)</span></p></li>
+</ol>
+</div>
+</div>
+<div id="bounded-sequences" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Bounded sequences<a href="sequences-limits-and-series.html#bounded-sequences" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="definition">
+<p><span id="def:defbeschr" class="definition"><strong>Definition 3.3  (Bounded sequence) </strong></span>A sequence is <strong>bounded</strong> if there is a number <span class="math inline">\(K &gt; 0\)</span> such that an index <span class="math inline">\(N\)</span> exists with
+<span class="math inline">\(a_n &lt; K\)</span> for all <span class="math inline">\(n &gt; N\)</span> (bounded from above) and</p>
+<p><span class="math inline">\(a_n &gt; −K\)</span> for all <span class="math inline">\(n &gt; N\)</span> (bounded from below).</p>
+<p>Otherwise the sequence is <strong>unbounded</strong>.</p>
+</div>
+<p>A sequence is bounded if and only if there is a number <span class="math inline">\(K &gt; 0\)</span> such that an index <span class="math inline">\(N\)</span> exists with</p>
+<p><span class="math inline">\(|a_n| &lt; K\)</span>, for all <span class="math inline">\(n &gt; N\)</span>.</p>
+<details>
+<summary>
+Graph
+</summary>
+<img src="images/Krahmen.png" />
+</details>
+<p>Examples:</p>
+<ul>
+<li><span class="math inline">\(a_n = 2n, \ n = 1,2,3, ...\)</span> is unbounded because it is not bounded from above;</li>
+</ul>
+<details>
+<summary>
+Graph
+</summary>
+<img src="images/unbeschoben.png" />
+</details>
+<ul>
+<li><span class="math inline">\(a_n = −n^2 , \ n = 1,2,3, ...\)</span> is unbounded because it is not bounded from below;</li>
+</ul>
+<details>
+<summary>
+Graph
+</summary>
+<img src="images/unbeschunten.png" />
+</details>
+<ul>
+<li><span class="math inline">\(a_n = (−2)^n , \ n = 1,2,3, ...\)</span> is not limited from below or above;</li>
+</ul>
+<details>
+<summary>
+Graph
+</summary>
+<img src="images/unbesch.png" />
+</details>
+<ul>
+<li><span class="math inline">\(a_n = 1/n, \ n = 1,2,3, ...\)</span> is bounded;</li>
+</ul>
+<details>
+<summary>
+Graph
+</summary>
+<img src="images/beschr1.png" />
+</details>
+<ul>
+<li><span class="math inline">\(a_n = (−1)^n , \ n = 1,2,3, ...\)</span> is bounded but does not converge.</li>
+</ul>
+<details>
+<summary>
+Graph
+</summary>
+<img src="images/beschr2.png" />
+</details>
+<p>There is the following relationship between the bounded sequence and their convergence properties.</p>
+<div class="theorem">
+<p><span id="thm:thm1" class="theorem"><strong>Theorem 3.1  (Boundedness of convergent sequences) </strong></span>Every convergent sequence is bounded.</p>
+<details>
+<summary>
+Proof
+</summary>
+<p>Consider a convergent sequence <span class="math inline">\((a_n)\)</span> with limit <span class="math inline">\(a&lt;\infty\)</span>.
+With the triangle inequality it follows that <span class="math inline">\(|a_n|=|a_n-a+a|\leq |a_n−a|+|a|\)</span></p>
+<p>Due to the convergence of <span class="math inline">\((a_n)\)</span> there is in particular a natural number <span class="math inline">\(N\)</span>,
+so that <span class="math inline">\(|a_n−a|\leq 1\)</span> for all <span class="math inline">\(n\geq N\)</span>. We thus get the estimate:</p>
+<span class="math inline">\(|a_n|\leq 1+|a|\)</span> for all <span class="math inline">\(n\geq N\)</span>.
+</details>
+</div>
+</div>
+<div id="divergent-sequences" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Divergent sequences<a href="sequences-limits-and-series.html#divergent-sequences" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="definition">
+<p><span id="def:defdiv" class="definition"><strong>Definition 3.4  (Divergent sequences) </strong></span>A sequence with no limit diverges.</p>
+</div>
+<p>A distinction is made between the following forms of divergence:</p>
+<ul>
+<li>Definite divergence:</li>
+</ul>
+<p><span class="math inline">\(\lim _{n\rightarrow \infty} a_n = \infty\)</span> or <span class="math inline">\(\lim _{n\rightarrow \infty} a_n = -\infty\)</span>.</p>
+<p>Examples: <span class="math inline">\((n) _{n\in \mathbb N}\)</span>, <span class="math inline">\((n^k) _{n\in \mathbb N}\)</span>, for <span class="math inline">\(k &gt; 0\)</span>, <span class="math inline">\(( e^n) _{n\in \mathbb N}\)</span>, <span class="math inline">\((\ln(n)) _{n\in \mathbb N}\)</span></p>
+<details>
+<summary>
+Graph
+</summary>
+<img src="images/best_div.png" />
+</details>
+<p><br></p>
+<ul>
+<li>Indefinite divergence:</li>
+</ul>
+<p>the sequence is not convergent, nor does it grow (fall) above (below) any limit.</p>
+<p>Examples: <span class="math inline">\((\sin(n)) _{n\in \mathbb N}\)</span>, <span class="math inline">\((-1^n) _{n\in \mathbb N}\)</span></p>
+<details>
+<summary>
+Graph
+</summary>
+<img src="images/unbest_div.png" />
+</details>
+<p>The sequence <span class="math inline">\((-1^n) _{n\in \mathbb N}\)</span> diverges because for <span class="math inline">\(\varepsilon &gt; 0\)</span> small enough, no candidate for a limit can be found:</p>
+<p><img src="images/unbest_div1.png" /></p>
+</div>
+</div>
+<div id="properties-of-sequences" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Properties of sequences<a href="sequences-limits-and-series.html#properties-of-sequences" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We have already seen that some sequences, like <span class="math inline">\((1/n)_{n\in \mathbb N}\)</span>, are convergent and some, like <span class="math inline">\((-1)^n_{n\in \mathbb N}\)</span>, are divergent. Now we consider more complex sequences, which are defined as the sum or product of two sequences.</p>
+<div class="theorem">
+<p><span id="thm:thmkonv" class="theorem"><strong>Theorem 3.2  (Convergence of Sequences I) </strong></span>Let <span class="math inline">\((a_n)_{n\in \mathbb N}\)</span> and <span class="math inline">\((b_n)_{n\in \mathbb N}\)</span> be two convergent sequences with limit values
+<span class="math inline">\(\lim _{n \rightarrow \infty } a_n =a\)</span> and <span class="math inline">\(\lim _{n \rightarrow \infty } b_n =b\)</span>.
+Then:</p>
+<ol style="list-style-type: lower-roman">
+<li><p>the sum <span class="math inline">\(a_n + b_n\)</span> converges, with limit <span class="math inline">\(\lim _{n \rightarrow \infty } (a_n + b_n)= a+b\)</span>;</p></li>
+<li><p>the product <span class="math inline">\(a_n \cdot b_n\)</span> converges, with limit <span class="math inline">\(\lim _{n \rightarrow \infty } (a_n \cdot b_n)= a\cdot b\)</span>;</p></li>
+<li><p>if <span class="math inline">\(b \neq 0\)</span>, then <span class="math inline">\(a_n/b_n\)</span> converges, with limit <span class="math inline">\(\lim _{n \rightarrow \infty } (a_n / b_n)= a/b\)</span>.</p></li>
+</ol>
+</div>
+<div class="theorem">
+<p><span id="thm:thmkonv2" class="theorem"><strong>Theorem 3.3  (Convergence of sequences II) </strong></span>Let <span class="math inline">\((a_n)_{n\in \mathbb N}\)</span> be a convergent sequence with limit <span class="math inline">\(\lim\limits_{n \rightarrow \infty } a_n=a\)</span> and let <span class="math inline">\((b_n)_{ n\in \mathbb N}\)</span> be a definite divergent with <span class="math inline">\(\lim\limits_{n \rightarrow \infty } b_n= + \infty\)</span>.
+Then:</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(\lim\limits_{n \rightarrow \infty } (a_n+b_n)= + \infty\)</span></p></li>
+<li><p><span class="math inline">\(\lim\limits_{n \rightarrow \infty} (a_n\cdot b_n) =\begin{pmatrix} + \infty , \ if \ a&gt;0 \\ - \infty ,\ \ if \ a&lt; 0 \\ \end{pmatrix}\)</span></p></li>
+<li><p><span class="math inline">\(\lim \limits_{n \rightarrow \infty } (a_n/b_n)= 0\)</span></p></li>
+</ol>
+</div>
+<p>Remark:</p>
+<p>If <span class="math inline">\(\lim\limits_{n \rightarrow \infty } a_n= 0\)</span> , then the limit of the product, <span class="math inline">\(\lim\limits_{n \rightarrow \infty } (a_n\cdot b_n)\)</span>, can converge or diverge</p>
+<p>A consequence of (iii) is: <span class="math inline">\(\lim\limits_{n \rightarrow \infty } 1/b_n= 0\)</span>.</p>
+<div class="theorem">
+<p><span id="thm:thmkonv3" class="theorem"><strong>Theorem 3.4  (Convergence of Sequences III) </strong></span>Let <span class="math inline">\(\displaystyle (b_{n})_{n\in \mathbb {N} }\displaystyle (c_{n})_{n\in \mathbb {N} }\)</span> be two sequences and let <span class="math inline">\({\displaystyle a\in \mathbb {R} }\)</span>.
+The sequence <span class="math inline">\({\displaystyle (a_{n})_{n\in \mathbb {N} }}\)</span> is defined by
+<span class="math display">\[{\displaystyle a_{n}={\begin{cases}b_{\frac {n+1}{2}}&amp;{\text{for }}n{\text{ odd}}\\c_{\frac {n}{2}}&amp;{\text{for }}n{\text{ even}}\end{cases}}}\]</span> converges to <span class="math inline">\({\displaystyle a}\)</span> if and only if the sequences <span class="math inline">\({\displaystyle (b_{n})_{n\in \mathbb {N} }}\)</span> and <span class="math inline">\({\displaystyle (c_{n})_{n\in \mathbb {N} }}\)</span> converge to <span class="math inline">\({\displaystyle a}\)</span>.</p>
+</div>
+<div id="qkonv" class="quiz">
+<p id="question">
+<span id="question-text8"></span>
+</p>
+<input type="number" id="answer8" placeholder="Enter your answer">
+<button onclick="checkAnswer_num(questionObj8)">Submit</button>
+<p id="result8">
+</p>
+<script>
+
+ // Generate a random question
+    const questionObj8 = generateQuestion_num(8);
+// Display the question
+    document.getElementById('question-text8').textContent = "Find the limit of the sequence: \\(a_n=\\)"+questionObj8.question[0] + "\\(+\\frac{"+questionObj8.question[1]+"n+1}{n^2}\\)";
+    questionObj8.answer = questionObj8.question[0]
+</script>
+</div>
+<p>Hints for finding limits of sequences:</p>
+<ul>
+<li><p>If there is a fraction <span class="math inline">\(\frac{a_n}{b_n}\)</span> of the form <span class="math inline">\(\frac\infty\infty\)</span> or <span class="math inline">\(\frac00\)</span>: find the highest power of <span class="math inline">\(n\)</span> in the denominator and factor them out in the numerator and denominator. Then shorten it and see where sequences with a known limit have come up.</p></li>
+<li><p>If <span class="math inline">\(a_n - b_n\)</span> is in the form <span class="math inline">\(\infty - \infty\)</span>, use the transformation <span class="math display">\[a-b=\frac{(a-b)(a+b)}{a+b} = \frac {a^2-b^2}{a+b}.\]</span> Then use the tip above.</p></li>
+<li><p>If <span class="math inline">\(a_n\)</span> contains <span class="math inline">\((-1)^n\)</span>, consider the subsequences for <span class="math inline">\(n\)</span> even and odd separately and apply the theorem <a href="sequences-limits-and-series.html#thm:thmkonv3">3.4</a>.</p></li>
+</ul>
+<!--- If \(a_n\) is in the form \(const^\infty\), bring the expression to the form \((1+\frac xn)^n\) and use \(\lim_{ n\rightarrow \infty}(1+\frac xn)^n=e^x\).-->
+<div class="example">
+<p><span id="exm:limits" class="example"><strong>Example 3.5  (Limit value determination I) </strong></span><br>Find the limit value:</p>
+<p><span class="math display">\[\lim _{n\rightarrow\infty}\frac{2n^2-4n+5}{6-5n^2+7n}.\]</span></p>
+<details>
+<summary>
+Limit value calculation
+</summary>
+<p>We start by looking at the denominator and finding the highest power of <span class="math inline">\(n\)</span> (here it is <span class="math inline">\(n^2\)</span>). Then we exclude <span class="math inline">\(n^2\)</span> from the numerator and denominator. (I.e. each summand is divided by <span class="math inline">\(n^2\)</span>):</p>
+<p><span class="math display">\[\lim _{n\rightarrow\infty}\frac{2n^2-4n+5}{6-5n^2+7n} = \lim _{n\rightarrow\infty}\frac{n^2\cdot\ left(\frac{2n^2}{n^2}-\frac{4n}{n^2}+\frac5{n^2}\right)}{n^2\cdot\left(\frac6{n ^2}-\frac{5n^2}{n^2}+\frac{7n}{n^2}\right)}.\]</span></p>
+<p>Now we reduce the individual fractions in the numerator and denominator as much as we can. <span class="math inline">\(n^2/n^2\)</span> in the large fraction can also be reduced:</p>
+<p><span class="math display">\[= \lim_{n\rightarrow\infty}\frac{n^2\cdot\left(2-\frac{4}{n}+\frac5{n^2}\right)}{n^2\ cdot\left(\frac6{n^2}-5+\frac{7}{n}\right)} = \lim_{n\rightarrow\infty}\frac{2-\frac{4}{n}+ \frac5{n^2}}{\frac6{n^2}-5+\frac{7}{n}}.\]</span></p>
+<p>In the next step, we apply <span class="math inline">\(\lim _{n\rightarrow\infty}\)</span> to each summand in the numerator and denominator individually:</p>
+<p><span class="math display">\[=\frac{\lim _{n\rightarrow\infty}\left(2-\frac{4}{n}+\frac5{n^2}\right)}{\lim _{n\rightarrow\infty} \left(\frac6{n^2}-5+\frac{7}{n}\right)} = \frac{\lim _{n\rightarrow\infty}2-\lim _{n\rightarrow\infty}\ frac{4}{n}+\lim _{n\rightarrow\infty}\frac5{n^2}}{\lim _{n\rightarrow\infty}\frac6{n^2}-\lim _{n\rightarrow\ infty}5+\lim_{n\rightarrow\infty}\frac{7}{n}}.\]</span></p>
+<p>As we have seen, all sequences where a number is divided by <span class="math inline">\(n, n^2,n^3,\ldots\)</span> converge to zero as <span class="math inline">\(n\)</span> increases. Furthermore, the limit of a number is the number itself. Therefore:</p>
+<p><span class="math display">\[\frac{\overbrace{\lim _{n\rightarrow\infty}2}^{\rightarrow 2}-\overbrace{\lim _{n\rightarrow\infty}\frac{4}{n}}^{\ rightarrow0}+\overbrace{\lim _{n\rightarrow\infty}\frac5{n^2}}^{\rightarrow 0}}{\underbrace{\lim _{n\rightarrow\infty}\frac6{n^2} }_{\rightarrow 0}-\underbrace{\lim _{n\rightarrow\infty}5}_{\rightarrow 5}+\underbrace{\lim _{n\rightarrow\infty}\frac{7}{n}} _{\rightarrow0}} = \frac{2-0+0}{0-5+0} = -\frac25.\]</span></p>
+<p>So the limit is:</p>
+<p><span class="math display">\[\lim_{n\rightarrow\infty}\frac{2n^2-4n+5}{6-5n^2+7n}=-\frac25.\]</span></p>
+</details>
+</div>
+<div class="example">
+<p><span id="exm:limits2" class="example"><strong>Example 3.6  (Limit value determination II) </strong></span><br>Find the limit value:
+<span class="math display">\[\lim _{n\rightarrow\infty}(-1)^{n}\cdot\frac{4n^3}{5n^4-n^2}.\]</span></p>
+<details>
+<summary>
+Limit value calculation
+</summary>
+<p>Since the sequence contains the term <span class="math inline">\((-1)^n\)</span>, which takes the value either <span class="math inline">\(1\)</span> or <span class="math inline">\(-1\)</span> depending on whether <span class="math inline">\(n\)</span> is even or odd, we must Here we look at two subsequences: for <span class="math inline">\(n\)</span> even and odd. If the two subsequences have the same limit, then this limit will apply to the entire sequence according to theorem <a href="sequences-limits-and-series.html#thm:thmkonv3">3.4</a>.</p>
+<ul>
+<li><p>For <span class="math inline">\(n\)</span> even <span class="math inline">\((n=2k)\)</span> the corresponding subsequence is:
+<span class="math display">\[(-1)^{2k}\cdot\frac{4n^3}{5n^4-n^2} = \frac{4n^3}{5n^4-n^2}.\]</span>
+We calculate the limit as follows:
+<span class="math display">\[\begin{align}\lim _{n\rightarrow\infty}\frac{4n^3}{5n^4-n^2} &amp;= \lim _{n\rightarrow\infty}\frac{n^4\ cdot\frac{4n^3}{n^4}}{n^4\cdot\left(\frac{5n^4}{n^4}-\frac{n^2}{n^4}\right )}\\
+&amp;=\lim_{n\rightarrow\infty}\frac{n^4\cdot\frac{4}{n}}{n^4\cdot\left(5-\frac{1}{n^2}\ right)}=\lim_{n\rightarrow\infty}\frac{\overbrace{\frac{4}{n}}^{\rightarrow0}}{\underbrace{5}_{\rightarrow 5}-\underbrace{ \frac{1}{n^2}}_{\rightarrow 0}} = \frac0{5-0} = 0.
+\end{align}\]</span></p></li>
+<li><p>For <span class="math inline">\(n\)</span> odd <span class="math inline">\((n=2k+1)\)</span> the corresponding subsequence is:
+<span class="math display">\[(-1)^{2k+1}\cdot\frac{4n^3}{5n^4-n^2} = -\frac{4n^3}{5n^4-n^2}.\ ]
+We calculate the limit as follows:
+\[\begin{align}\lim _{n\rightarrow\infty}-\frac{4n^3}{5n^4-n^2} &amp;= \lim _{n\rightarrow\infty}-\frac{n^ 4\cdot\frac{4n^3}{n^4}}{n^4\cdot\left(\frac{5n^4}{n^4}-\frac{n^2}{n^4} \right)}\\
+&amp;=\lim_{n\rightarrow\infty}-\frac{\overbrace{\frac{4}{n}}^{\rightarrow0}}{\underbrace{5}_{\rightarrow 5}-\underbrace{\ frac{1}{n^2}}_{\rightarrow 0}} = -\frac0{5-0} = 0.
+\end{align}\]</span></p></li>
+</ul>
+The two subsequences therefore have the same limit <span class="math inline">\(0\)</span>. Consequently, the entire sequence converges to <span class="math inline">\(0\)</span> if <span class="math inline">\(n\rightarrow \infty\)</span>.
+</details>
+</div>
+<div class="example">
+<p><span id="exm:limits3" class="example"><strong>Example 3.7  (Limit value determination III) </strong></span></p>
+<br>Find the limit value:
+<span class="math display">\[\lim_{n\rightarrow\infty}{\sqrt{4n^2+3n}-{2n}}.\]</span>
+<details>
+<summary>
+Limit value calculation
+</summary>
+<p>Here we use the conversion <span class="math inline">\(a-b = \frac{(a-b)(a+b)}{(a+b)}\)</span> and the binomial formula: <span class="math inline">\((a-b)(a+b)=a^2- b^2.\)</span> Here we have to multiply by <span class="math inline">\((\overbrace{\sqrt{4n^2+3n}}^{a}+\overbrace{{2n}}^{b})\)</span> so that</p>
+<p><span class="math display">\[\begin{align}(\color{red}{\sqrt{4n^2+3n}}-\color{blue}{{2n}})\cdot (\color{red}{\sqrt{4n^ 2+3n}}+\color{blue}{{2n}})&amp; = (\color{red}{\sqrt{4n^2+3n}})^2-(\color{blue}{{2n} })^2 \\
+&amp;= \color{red}{{4n^2+3n}}-\color{blue}{{4n^2}} \\
+&amp;= 3n
+\end{align}\]</span> results.</p>
+<p>We calculate:
+<span class="math display">\[\begin{align}\lim _{n\rightarrow\infty}{\sqrt{4n^2+3n}-{2n}} &amp;= \lim _{n\rightarrow\infty}\frac{\left(\sqrt {4n^2+3n}-{2n}\right)\left(\sqrt{4n^2+3n}+{2n}\right)}{\sqrt{4n^2+3n}+{2n}}\ \
+&amp;=\lim_{n\rightarrow\infty}\frac{3n}{\sqrt{4n^2+3n}+{2n}} = \lim_{n\rightarrow\infty}\frac{3n}{\sqrt{ n^2(4+\frac3n)}+{2n}} \\
+&amp;= \lim _{n\rightarrow\infty}\frac{3n}{n\cdot\sqrt{4+\frac3n}+{2n}} = \lim _{n\rightarrow\infty}\frac{3n}{n \cdot\left(\sqrt{4+\frac3n}+{2}\right)}\\
+&amp;=\lim_{n\rightarrow\infty}\frac{3}{\sqrt{4+\underbrace{\frac3n}_{\rightarrow0}}+{2}} = \frac{3}{\sqrt{4 +0}+2} = \frac 34.
+\end{align}\]</span></p>
+<p>In the second line of the equation we used: <span class="math inline">\(\sqrt{n^2(4+\frac3n)} = \sqrt{n^2}\cdot\sqrt{4+\frac3n} = n\cdot \sqrt{ 4+\frac3n}.\)</span></p>
+<p>So the limit value is:</p>
+<p><span class="math display">\[\lim_{n\rightarrow\infty}{\sqrt{4n^2+3n}-{2n}}=\frac 34.\]</span></p>
+</details>
+</div>
+<div class="exercise">
+<p><span id="exr:grenzwerte" class="exercise"><strong>Exercise 3.2  (Limits I) </strong></span>Determine the limit of:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\frac{n}{(n+1)^2}\)</span> , <span class="math inline">\(n \in \mathbb{N}\)</span>;
+<details>
+<summary>
+Answer
+</summary>
+<span class="math inline">\(\lim\limits_{n \rightarrow \infty} \frac{n}{(n+1)^2} = \lim\limits_{n \rightarrow \infty} \frac{n}{n^2+2n +1}\stackrel{:n}{=} \lim\limits_{n \rightarrow \infty} \frac{1}{n+2+\frac1n}\)</span> Since <span class="math inline">\(\lim\limits_{n \rightarrow \infty} n+2+\frac1n = \infty\)</span> according to theorem <a href="sequences-limits-and-series.html#thm:thmkonv">3.2</a> (i), because of theorem <a href="sequences-limits-and-series.html#thm:thmkonv">3.2</a> (iii): <span class="math inline">\(\lim\limits_{n \rightarrow \infty} \frac{1}{n+2+\frac1n} =0\)</span>
+</details></li>
+<li><span class="math inline">\(\frac{n}{(2n+1)}\)</span> , <span class="math inline">\(n \in \mathbb{N}\)</span>;
+<details>
+<summary>
+Answer
+</summary>
+<span class="math inline">\(\lim\limits_{n \rightarrow \infty} \frac{n}{(2n+1)} \stackrel{:n}{=} \lim\limits_{n \rightarrow \infty} \frac{1} {2+\frac1n}\)</span> Since <span class="math inline">\(\lim\limits_{n \rightarrow \infty} \frac1n =0\)</span> according to theorem <a href="sequences-limits-and-series.html#thm:thmkonv">3.2</a> (i) and (iii): <span class="math inline">\(\lim\limits_{n \rightarrow \infty} \frac{1}{2+\frac1n}=\frac 12\)</span>
+</details></li>
+<li><span class="math inline">\(({-1})^{n+1} \cdot \frac{n}{2n+1}\)</span> , <span class="math inline">\(n \in \mathbb{N}\)</span>;
+<details>
+<summary>
+Answer
+</summary>
+<span class="math inline">\(\lim\limits_{n \rightarrow \infty} ({-1})^{n+1}\cdot\frac{n}{2n+1}\stackrel{:n}{=} \lim\limits_ {n \rightarrow \infty} ({-1})^{n+1}\frac{1}{2+\frac1n}\)</span>.
+<ul>
+<li>
+For <span class="math inline">\(n\)</span> even (<span class="math inline">\(n=2k\)</span>) the corresponding subsequence <span class="math inline">\(({-1})^{2k+1}\cdot\frac{2k}{2\cdot 2k+1} = ({-1})^{2k+1} \frac{1}{2+\frac1{2k}}\)</span> becomes <span class="math inline">\(-\frac{1}{2+\frac1{2k}}\)</span> and converges to <span class="math inline">\(-\frac12\)</span> according to theorem <a href="sequences-limits-and-series.html#thm:thmkonv">3.2</a> (ii).
+</li>
+<li>
+For <span class="math inline">\(n\)</span> odd (<span class="math inline">\(n=2k+1\)</span>) the corresponding subsequence <span class="math inline">\(({-1})^{2(k+1)}\cdot\frac{2k+1}{2\cdot (2k+1)+1} = ({-1})^{2(k+1)} \frac{1}{2+\frac1{2k+1}} = \frac{1}{2+\frac1{2k+1}}\)</span> and converges due to Theorem <a href="sequences-limits-and-series.html#thm:thmkonv">3.2</a> (ii) to <span class="math inline">\(\frac12\)</span>.
+</li>
+<li>
+Therefore the sequence <span class="math inline">\(({-1})^{n+1}\cdot\frac{n}{2n+1}\)</span> does not converge.
+</li>
+</ul>
+</details></li>
+<li><span class="math inline">\(({-1})^{n+1} \cdot \frac{1}{n}\)</span> , <span class="math inline">\(n \in \mathbb{N}\)</span>;
+<details>
+<summary>
+Answer
+</summary>
+<ul>
+<li>
+For <span class="math inline">\(n\)</span> even (<span class="math inline">\(n=2k\)</span>) the corresponding subsequence <span class="math inline">\(({-1})^{2k+1}\frac{1}{2k} = -\frac{ 1}{{2k+1}}\)</span> according to theorem <a href="sequences-limits-and-series.html#thm:thmkonv">3.2</a> (ii) to <span class="math inline">\(0\)</span>.
+</li>
+<li>
+For <span class="math inline">\(n\)</span> odd (<span class="math inline">\(n=2k+1\)</span>) the corresponding subsequence <span class="math inline">\(({-1})^{2(k+1)}\frac{1}{{2k) converges +1}} = \frac{1}{{2k+1}}\)</span> according to theorem <a href="sequences-limits-and-series.html#thm:thmkonv">3.2</a> (ii) also converges to <span class="math inline">\(0\)</span>.
+</li>
+<li>
+Therefore <span class="math inline">\(\lim\limits_{n \rightarrow \infty} ({-1})^{n+1}\cdot\frac{1}{n} =0\)</span> according to theorem <a href="sequences-limits-and-series.html#thm:thmkonv3">3.4</a>.
+</li>
+</ul>
+</details></li>
+<li><span class="math inline">\(8 − 2n\)</span>, <span class="math inline">\(n \in \mathbb{N}\)</span>.
+<details>
+<summary>
+Answer
+</summary>
+<span class="math inline">\(\lim\limits_{n \rightarrow \infty} 8 − 2n =-\infty\)</span> (Theorem <a href="sequences-limits-and-series.html#thm:thmkonv2">3.3</a> (i) and (ii)).
+</details></li>
+<li><span class="math inline">\(\sqrt{n^2-2n} - n\)</span>, <span class="math inline">\(n \in \mathbb{N}\)</span>.
+<details>
+<summary>
+Answer
+</summary>
+<span class="math inline">\(\lim\limits_{n \rightarrow \infty} \sqrt{n^2-2n} - n =\lim\limits_{n \rightarrow \infty} \frac{(\sqrt{n^2-2n} - n)(\sqrt{n^2-2n} + n)}{\sqrt{n^2-2n} + n} = \lim\limits_{n \rightarrow \infty} \frac{n^2-2n- n^2}{n\left(\sqrt{1-\frac2{n}} + 1\right)}\)</span>
+<span class="math inline">\(= \lim\limits_{n \rightarrow \infty} \frac{-2n}{n\left(\sqrt{1-\frac1{n^2}} + 1\right)}=\frac{-2 }{\left(\sqrt{1-0} + 1\right)}=-1\)</span> (Theorem <a href="sequences-limits-and-series.html#thm:thmkonv">3.2</a> (iii)).
+</details></li>
+</ol>
+<!--(g) \(\frac{(3n^2+6)^n}{(3n^2)^n}\), \( n   \in \mathbb{N} \).
+<details>
+<summary>Answer</summary>
+\(\lim\limits_{n \rightarrow \infty} \frac{(3n^2+6)^n}{(3n^2)^n} =\lim\limits_{n \rightarrow \infty} \left(\frac{3n^2+6}{3n^2}\right)^n = \lim\limits_{n \rightarrow \infty} (1+\frac2n)^n =e^2\).
+</details>-->
+</div>
+<div class="exercise">
+<p><span id="exr:grenzwerte2" class="exercise"><strong>Exercise 3.3  (Limits II) </strong></span>For each assignment of <span class="math inline">\((a_n)_{n\in \mathbb N}\)</span> and <span class="math inline">\((b_n)_{n\in \mathbb N}\)</span>, where <span class="math inline">\(\lim\limits_{n \rightarrow \infty } (a_n)= 0\)</span> and <span class="math inline">\(\lim\limits_{n \rightarrow \infty } (b_n)= + \infty\)</span> holds, determine <span class="math inline">\(\lim\limits_{n \rightarrow \infty } (a_n \cdot b_n)\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(a_n = 1/n\)</span>, <span class="math inline">\(b_n = n\)</span>, <span class="math inline">\(n \in \mathbb{N}\)</span>;</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<span class="math inline">\(\lim\limits_{n \rightarrow \infty} \frac1{n}\cdot n= \lim\limits_{n \rightarrow \infty} 1 = 1\)</span>.
+</details>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><span class="math inline">\(a_n = 1/n\)</span>, <span class="math inline">\(b_n= \sqrt{n}\)</span>, <span class="math inline">\(n \in \mathbb{N}\)</span>;</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<span class="math inline">\(\lim\limits_{n \rightarrow \infty} \frac1{n}\cdot \sqrt n= \lim\limits_{n \rightarrow \infty} \frac1{\sqrt n} = 0\)</span> (Theorem <a href="sequences-limits-and-series.html#thm:thmkonv2">3.3</a> (iii)).
+</details>
+<ol start="3" style="list-style-type: lower-alpha">
+<li><span class="math inline">\(a_n = 1/ \sqrt{n}\)</span>, <span class="math inline">\(b_n = n\)</span>, <span class="math inline">\(n \in \mathbb{N}\)</span>.</li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<span class="math inline">\(\lim\limits_{n \rightarrow \infty} \frac1{\sqrt{n}}\cdot n= \lim\limits_{n \rightarrow \infty} \sqrt{n} = \infty\)</span>.
+</details>
+</div>
+<p>The following property is very useful in determining whether a sequence converges or not.</p>
+<div class="definition">
+<p><span id="def:defmonfolgen" class="definition"><strong>Definition 3.5  (Monotone sequences) </strong></span>A sequence<span class="math inline">\((a_n) _{ n \in \mathbb{N} }\)</span> is <strong>monotonically increasing</strong> if <span class="math inline">\(a_1 ≤ a_2 ≤ a_3 ≤ ...\)</span> , and it is <strong>monotonically decreasing</strong> if <span class="math inline">\(a_1 ≥ a_2 ≥ a_3 ≥ ...\)</span> .
+In case of strict inequalities (<span class="math inline">\(&lt;\)</span> or <span class="math inline">\(&gt;\)</span>), the sequence is <strong>strictly</strong> monotonically increasing or decreasing.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:monfolge" class="theorem"><strong>Theorem 3.5  (Convergence of a monotone sequence) </strong></span></p>
+A monotone sequence converges if and only if it is bounded.
+<details>
+<summary>
+proof
+</summary>
+<ul>
+<li>
+“<span class="math inline">\(\Leftarrow\)</span>” (from monotonic and bounded follows convergent)<br>
+Let <span class="math inline">\((a_n)_n\)</span> be a bounded, monotonically increasing sequence. Because of
+of boundedness there are <span class="math inline">\(N\in \mathbb N \text{ and }a\in \mathbb R\)</span> with <span class="math inline">\(a_n \leq a\)</span> for all <span class="math inline">\(n&gt;N\)</span>. We now choose <span class="math inline">\(a\)</span> minimal with
+this property. For every <span class="math inline">\(\varepsilon &gt; 0\)</span> there is an <span class="math inline">\(M\)</span> with <span class="math inline">\(a − \varepsilon &lt; a_M\)</span> (otherwise <span class="math inline">\(a\)</span> would not be
+minimal). Because the sequence <span class="math inline">\((a_n)_n\)</span> is monotonically increasing, <span class="math inline">\(a_M ≤ a_m\)</span> holds for all <span class="math inline">\(m ≥ M\)</span>. It
+is therefore for <span class="math inline">\(m &gt; M\)</span>
+<span class="math display">\[a − \varepsilon &lt; a_M ≤ a_m ≤ a &lt; a + \varepsilon,\]</span>
+if <span class="math inline">\(m\)</span> is large enough, almost all elements <span class="math inline">\(a_m\)</span> are in the interval <span class="math inline">\((a − \varepsilon, a + \varepsilon)\)</span>. Or formulated differently: <span class="math inline">\(|a_m-a|&lt;\varepsilon\)</span> for <span class="math inline">\(m&gt;M\geq N\)</span>. One argues in the same way if the sequence is monotonically decreasing.
+</li>
+<li>
+“<span class="math inline">\(\Rightarrow\)</span>” (from convergent follows restricted)<br>
+See theorem <a href="sequences-limits-and-series.html#thm:thm1">3.1</a>.
+</li>
+</ul>
+</details>
+</div>
+<div class="example">
+<p><span id="exm:konv3" class="example"><strong>Example 3.8  (Showing convergence) </strong></span></p>
+Show that <span class="math inline">\(a_n = 1/{2^n}\)</span> , <span class="math inline">\({ n \in \mathbb{N} }\)</span>, converges.
+<details>
+<summary>
+Answer
+</summary>
+The sequence <span class="math inline">\(a_n = \frac1{2^n}={\left(\frac 12\right)}^n\)</span> is bounded for <span class="math inline">\(n&gt;1\)</span> through <span class="math inline">\(\frac 12\)</span> from above and through <span class="math inline">\(0\)</span> is bounded from below (see properties of the power function). So the sequence is bounden by <span class="math inline">\(K=\frac 12\)</span> for <span class="math inline">\(n&gt;1\)</span>. In addition, <span class="math inline">\(a_{n+1}=\frac 1{2^{(n+1)}}=\frac 1{2^{n}\cdot 2} =a_n\cdot \frac 12\lt a_n\)</span> i.e. strictly monotonically decreasing. According to theorem <a href="sequences-limits-and-series.html#thm:monfolge">3.5</a> the sequence converges.
+</details>
+</div>
+<div class="exercise">
+<p><span id="exr:konv4" class="exercise"><strong>Exercise 3.4  (Show convergence) </strong></span></p>
+Show that the sequence <span class="math inline">\(a_n = 1 /{(1 + r)}^n\)</span><br>
+(i) converges if <span class="math inline">\(r ≥ 0\)</span>, and<br>
+(ii) diverges if <span class="math inline">\(−1 &lt; r &lt; 0\)</span>.
+<details>
+<summary>
+Answer
+</summary>
+<ol style="list-style-type: lower-roman">
+<li>for <span class="math inline">\(n&gt;1\)</span> the sequence is bounded by <span class="math inline">\(K=\frac 1{1+r}\)</span>. In addition, <span class="math inline">\(a_{n+1}=\frac 1{(1+r)^{(n+1)}}=\frac 1{(1+r)^{n}\cdot (1+r) } =a_n\cdot \frac 1{1+r}\lt a_n\)</span> for <span class="math inline">\(\frac 1{1+r}\lt 1\)</span> i.e. strictly decreasing. According to Theorem <a href="sequences-limits-and-series.html#thm:monfolge">3.5</a>, the sequence for <span class="math inline">\(r&gt;0\)</span> converges.</li>
+<li>The sequence has no upper limit: for arbitrarily large <span class="math inline">\(K\)</span> there is an index <span class="math inline">\(N\)</span> such that <span class="math inline">\(a_n&gt;K\)</span> for all <span class="math inline">\(n&gt;N\)</span>. Since <span class="math inline">\(−1 &lt; r &lt; 0\)</span> we have <span class="math inline">\(\frac 1{1 + r}&gt;1\)</span> and <span class="math inline">\(\frac 1{(1 + r)}^n = \left({\frac 1{ 1+r}}\right)^{n}\)</span> strictly increasing. In addition, <span class="math inline">\(\left({\frac 1{1+r}}\right)^{n}&gt;K\)</span> applies for <span class="math inline">\(n&gt;\log_{\frac1{1+r}}K = N\)</span>.</li>
+</ol>
+</details>
+</div>
+<div class="exercise">
+<p><span id="exr:konv4" class="exercise"><strong>Exercise 3.4  (show divergence) </strong></span></p>
+Show that the value of an investment of <span class="math inline">\(0.01 \ €\)</span> in year <span class="math inline">\(0\)</span> diverges over time (assuming a positive interest rate <span class="math inline">\(r\)</span>).
+<details>
+<summary>
+Answer
+</summary>
+The value of this asset is represented by the sequence: <span class="math inline">\(a_n = 0.01\cdot(1+r)^n\)</span>. The sequence has no upper limit: for <span class="math inline">\(K\)</span> of any size, there is an index <span class="math inline">\(N\)</span> such that <span class="math inline">\(a_n&gt;K\)</span> for all <span class="math inline">\(n&gt;N\)</span>. <span class="math inline">\(0.01(1+r)^{n}&gt;K\)</span> applies for <span class="math inline">\(n&gt;\log_{1+r}(100K) = N\)</span>.
+</details>
+</div>
+</div>
+<div id="series" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Series<a href="sequences-limits-and-series.html#series" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:defreihen" class="definition"><strong>Definition 3.6  (Series and their limits) </strong></span></p>
+<ul>
+<li>
+<p>Let <span class="math inline">\((a_n)_{n\in \mathbb{N} }\)</span> be a sequence. The sequence obtained by summing up the terms of the sequence
+<span class="math display">\[s_n= \sum_{t=1}^{n} {a}_{t}, {n\in \mathbb{N} }, \]</span></p>
+is called (infinite) <strong>series</strong><!-- and is also denoted by \(\sum_{t=1}^{ \infty } {a}_{t} \) at.-->
+</li>
+<li>
+The <strong>limit</strong> of a series <span class="math inline">\(\sum_{t=1}^{ \infty } {a}_{t}\)</span> is:
+<span class="math display">\[\sum _{t=1}^{ \infty } {a}_{t} = \lim _{n\rightarrow \infty }\sum _{t=1}^{ n } {a}_{t}= \lim_{n\rightarrow\infty} s_n.\]</span>
+</li>
+</ul>
+</div>
+<p>Hint: <span class="math inline">\(a_t = (a_1+a_2+...a_n)\)</span> and <span class="math inline">\(s_1=a_1, s_2=a_1+a_2\)</span> etc. (cumulative sum)</p>
+<p>Application: Series are useful, for example, for calculating the present value of certain cash flows (annuity calculation).</p>
+<div class="example">
+<p><span id="exm:sparbuch" class="example"><strong>Example 3.9  (Savings) </strong></span>If you pay <span class="math inline">\(82.19 \ Euro\)</span> into a savings account that earns <span class="math inline">\(4\%\)</span> interest, you get after 5 years:
+<span class="math display">\[82.19 \cdot (1.04)^5 = 100 \ euros.\]</span></p>
+<p>In general: if you pay the amount <span class="math inline">\(\frac{100}{(1+r)^n}\)</span> into a savings account, you will receive <span class="math inline">\(\frac{100}{( 1+r)^n} \cdot (1+r)^n=100 \ Euro\)</span>.</p>
+</div>
+<p>How much do I have to invest in the savings account today so that I can withdraw <span class="math inline">\(100 \ Euro\)</span> for the next three years at the end of each year?</p>
+<ul>
+<li>Answer: <span class="math inline">\(\frac{100}{(1+r)} + \frac{100}{(1+r)^2}+ \frac{100}{(1+r)^3} =100 \cdot \sum_{t=1}^{3} \frac{1}{(1+r)^t}\)</span> .</li>
+</ul>
+<p>How much can I withdraw (<span class="math inline">\(A \ Euro\)</span>) for the next three years at the end of each year, if I invest <span class="math inline">\(1000\)</span> at the interest <span class="math inline">\(r\)</span>?</p>
+<ul>
+<li>Answer: <span class="math inline">\(1000=\frac{A}{(1+r)} + \frac{A}{(1+r)^2}+ \frac{A}{(1+r)^3} =A \cdot \sum_{t=1}^{3} \frac{1}{(1+r)^t}\)</span> .</li>
+</ul>
+<p>How much do I have to invest in the savings account today so that I can withdraw <span class="math inline">\(100 \ Euro\)</span> every year?</p>
+<ul>
+<li><p>Partial answer: <span class="math inline">\(100 \cdot \sum_{t=1}^{\infty } \frac{1}{(1+r)^t} =\ ???\)</span>.</p></li>
+<li><p>For some sums and series there are closed formulas.</p></li>
+</ul>
+<div class="example">
+<p><span id="exm:geschlformel" class="example"><strong>Example 3.10  (convergent series) </strong></span></p>
+<br>
+The following applies: <span class="math inline">\(s_n= \sum_{t=1}^{n} \frac{1}{t^2+t}= \frac{n}{n+1}\)</span>.
+<br><br>
+<br>For the proof we use the method of complete induction:
+<br>
+(i) First show that the claim holds for <span class="math inline">\(n = 1\)</span>.
+<br>
+(ii) Assuming that the claim holds for <span class="math inline">\(n\)</span>, show that it also holds for <span class="math inline">\(n + 1\)</span> (induction step).
+<br><br>
+<details>
+<p>Regarding (i): one easily verifies that <span class="math inline">\(s_1=\frac{1}{2}\)</span> and that <span class="math inline">\(\frac{n}{n+1}= \frac{1}{2}\)</span> .
+<br>
+Regarding (ii): Assume that the assertion holds for <span class="math inline">\(n\)</span> (i.e., <span class="math inline">\(s_{\color{red}n}=\frac {\color{red}{n}}{\color{red }n+1}\)</span>); then for <span class="math inline">\(n + 1\)</span>:</p>
+<p><span class="math display">\[ {s}_{\color{red}{n+1}}=s_n+ \frac{1}{(n+1)^2+(n+1)}= \frac{n}{n+1 }+ \frac{1}{(n+1)((n+1)+1)}\]</span></p>
+<span class="math display">\[ =\frac{n(n+2)+1}{(n+1)(n+2)}= \frac{(n+1)^2}{(n+1)(n+2) }= \frac{n+1}{n+2} = \frac{\color{red}{(n+1)}}{\color{red}{(n+1)}+1}\]</span> .
+</details>
+</div>
+<p>Since series are special sequences, all statements about the convergence and divergence of sequences on series can be transferred accordingly.</p>
+<p>The following theorem is useful for determining whether a series converges or diverges.</p>
+<div class="theorem">
+<p><span id="thm:konvreihen" class="theorem"><strong>Theorem 3.6  (convergence of series) </strong></span>Let <span class="math inline">\((a_n)_{n\in \mathbb{N} }\)</span>, <span class="math inline">\({n\in \mathbb{N} }\)</span>, be a series with</p>
+<p><span class="math display">\[\lim\limits_{n \rightarrow +\infty} \ \lvert \frac{a_{n+1}} {a_n} \rvert =a. \]</span></p>
+<p>Then:
+<br>
+(i) if <span class="math inline">\(a &lt; 1\)</span>, then the series <span class="math inline">\(s_n\)</span>, <span class="math inline">\({n\in \mathbb{N} }\)</span>;
+<br>
+(ii) if <span class="math inline">\(a &gt; 1\)</span>, then the series <span class="math inline">\(s_n\)</span>, <span class="math inline">\({n\in \mathbb{N} }\)</span>;
+<br>
+(iii) if <span class="math inline">\(a = 1\)</span>, then the series <span class="math inline">\(s_n\)</span>, <span class="math inline">\({n\in \mathbb{N} }\)</span> can converge or diverge.
+<br><br></p>
+<p><span class="math inline">\(\sum_{t=1}^{ \infty } a_t\)</span> denotes not only the series, but also its limiting value.</p>
+</div>
+<div id="special-series" class="section level3 hasAnchor" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> Special Series<a href="sequences-limits-and-series.html#special-series" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="geometric-series" class="section level4 hasAnchor" number="3.4.1.1">
+<h4><span class="header-section-number">3.4.1.1</span> Geometric series<a href="sequences-limits-and-series.html#geometric-series" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="definition">
+<p><span id="def:geomreihe" class="definition"><strong>Definition 3.7  (geometric series) </strong></span>The geometric series is given by <span class="math inline">\(g_n=\sum_{t=0}^{ n } x^t\)</span> , for <span class="math inline">\(x \in \mathbb{R}\)</span>.</p>
+</div>
+<ul>
+<li><p>It is <span class="math inline">\(\lim\limits_{n \rightarrow \infty} \lvert \frac{x^{n+1}}{x^n} \rvert = \lim\limits_{x \rightarrow \infty} \lvert x \rvert = \lvert x \rvert\)</span>.</p></li>
+<li><p>Using the theorem above, one immediately determines that the series converges in the case <span class="math inline">\(|x| &lt; 1\)</span> and diverges in the case <span class="math inline">\(|x| &gt; 1\)</span>.</p></li>
+<li><p>If <span class="math inline">\(x = 1\)</span>, then the geometric series diverges, because <span class="math inline">\(\sum_{t=1}^{n} x=n\)</span>, for all <span class="math inline">\(n \in \mathbb{N}\)</span> .</p></li>
+<li><p>If <span class="math inline">\(x = −1\)</span>, then the geometric series diverges, because the values of the series alternate between <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> for <span class="math inline">\(n \in \mathbb{N}\)</span>.</p></li>
+</ul>
+<div class="theorem">
+<p><span id="thm:geomreihe" class="theorem"><strong>Theorem 3.7  (convergence of a geometric series) </strong></span></p>
+Let <span class="math inline">\(x \neq 1\)</span>. Then:
+<span class="math display">\[\sum_{t=0}^{n} x^t= \frac{1-x^{n+1}}{1-x}, n \in \mathbb{N}.\]</span>
+<details>
+<summary>
+Proof by induction
+</summary>
+<p>For <span class="math inline">\(n = 0\)</span> the following applies:</p>
+<p><span class="math display">\[\sum_{t=0}^{0} x^t= 1= \frac{1-x^{0+1}}{1-x}.\]</span></p>
+<p>Induction step <span class="math inline">\(n \rightarrow n + 1\)</span>:</p>
+<p><span class="math display">\[\sum_{t=0}^{n+1} x^t = \sum_{t=0}^{n} x^t + x^{n+1} = \frac{1-x^{ n+1}}{1-x} + x^{n+1}\]</span></p>
+<span class="math display">\[= \frac{1-x^{n+1}+x^{n+1}-x^{n+2}}{1-x} = \frac{1-x^{n+2} }{1-x}.\]</span>
+</details>
+</div>
+<div class="corollary">
+<p><span id="cor:cor1" class="corollary"><strong>Corollary 3.1  (Special geometric series) </strong></span>Let <span class="math inline">\(|x| &lt; 1\)</span>.</p>
+<p>Then: <span class="math inline">\(\sum_{t=0}^{ \infty } x^t= \frac{1}{1-x}\)</span> .</p>
+</div>
+<div class="example">
+<p><span id="exm:sparbuch2" class="example"><strong>Example 3.11  (Savings) </strong></span>(Example <a href="sequences-limits-and-series.html#exm:sparbuch">3.9</a> cont.)</p>
+<p>The above result answers the question asked at the beginning: <br></p>
+<ol style="list-style-type: decimal">
+<li>How much can I withdraw (<span class="math inline">\(A\)</span>) for the next three years if I invest <span class="math inline">\(1000\)</span> today at the interest <span class="math inline">\(r\)</span>?</li>
+</ol>
+<p><span class="math display">\[\begin{align*}1000 &amp;= A\cdot \sum_{t=1}^3\left(\frac1{1+r}\right)^t = A\cdot \left({\color{red}{\sum_{t=0}^3\left(\frac1{1+r}\right)^t}}-1\right)\\
+&amp;=A\cdot \left({\color{red}{\frac{1-\left(\frac1{1+r}\right)^4}{1-\frac 1{1+r}}}}-1\right). (Theorem ~3.7)
+\end{align*}\]</span></p>
+<p>For different interest rates <span class="math inline">\(r\)</span>, the withdraw amount is:</p>
+<p><img src="images/savings1.png" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li>How much money (<span class="math inline">\(K_0\)</span>) do I have to put in a savings account today so that I can withdraw <span class="math inline">\(100 \ Euro\)</span> every year?
+<br>
+Answer:</li>
+</ol>
+<p><span class="math display">\[\begin{align*} 100\cdot \sum_{t=1}^{ \infty } \frac{1}{(1+r)^t}&amp;=100 \cdot [ \frac{1}{1-(1/(1+ r))}- \frac{1}{(1+r)^0}] \\
+
+&amp; =100 \cdot [ \frac{1}{(1+r-1)/(1+r)}-1]=100 \cdot [ \frac{1+r}{r}-1]= \frac{100}{r}.\\
+&amp;(Corollary~3.1)\end{align*}\]</span></p>
+<p>For different interest rates <span class="math inline">\(r\)</span>, the required investment amount is:</p>
+<p><img src="images/savings2.png" /></p>
+</div>
+</div>
+<div id="harmonic-seriesast" class="section level4 hasAnchor" number="3.4.1.2">
+<h4><span class="header-section-number">3.4.1.2</span> Harmonic series<span class="math inline">\(^\ast\)</span><a href="sequences-limits-and-series.html#harmonic-seriesast" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="definition">
+<p><span id="def:harmreihe" class="definition"><strong>Definition 3.8  (Harmonic series) </strong></span>The harmonic series is given by <span class="math inline">\(h_n=\sum_{t=1}^{n} \frac{1}{t}\)</span> .</p>
+</div>
+<p>Although the underlying sequence <span class="math inline">\((1/t) \ _ {t \in \mathbb{N} }\)</span> converges, the series diverges.</p>
+<div class="example">
+<p><span id="exm:coupons" class="example"><strong>Example 3.12  (Collecting Coupons) </strong></span><br>
+Source: <a href="https://en.wikipedia.org/wiki/Coupon_collector%27s_problem" class="uri">https://en.wikipedia.org/wiki/Coupon_collector%27s_problem</a>
+<br><br>
+In probability theory, the ‘coupon collector’s problem’ describes “collect all coupons and win” contests. It asks the following question:</p>
+<p>If each box of a brand of cereals contains a coupon, and there are <span class="math inline">\(n\)</span> different types of coupons, what is the probability that more than <span class="math inline">\(t\)</span> boxes need to be bought to collect all <span class="math inline">\(n\)</span> coupons?</p>
+<p>An alternative statement is: Given <span class="math inline">\(n\)</span> coupons, how many coupons do you expect you need to draw with replacement before having drawn each coupon at least once?</p>
+<p>The mathematical analysis of the problem reveals that the expected number of trials needed grows with <span class="math inline">\(n\)</span>. For example, when <span class="math inline">\(n=50\)</span> it takes about <span class="math inline">\(225\)</span> trials.</p>
+<p>Calculation:
+<span class="math display">\[50(1 + 1/2 + 1/3 + ... + 1/50) = 224.9603\approx 225\]</span>
+is the expected number of trials to collect all <span class="math inline">\(50\)</span> coupons.</p>
+<details>
+<ul>
+<li>
+<p>Calculating the expectation
+Let time <span class="math inline">\(T\)</span> be the number of draws needed to collect all <span class="math inline">\(n\)</span> coupons, and let <span class="math inline">\(t_i\)</span> be the time to collect the <span class="math inline">\(i\)</span>-th coupon after <span class="math inline">\(i-1\)</span> coupons have been collected. Then <span class="math inline">\(T=t_1 + \cdots + t_n\)</span>. Observe that the probability of collecting a new coupon is <span class="math inline">\(p_i = \frac{n - (i - 1)}{n} = \frac{n - i + 1}{n}\)</span> Therefore, <span class="math inline">\(t_i\)</span> has geometric distribution with expectation <span class="math inline">\(\frac{1}{p_i} = \frac{n}{n - i + 1}\)</span>. By the linearity of expectations we have:</p>
+<p><span class="math display">\[\begin{align}
+\operatorname{E}(T) &amp; {}= \operatorname{E}(t_1 + t_2 + \cdots + t_n) \\
+&amp; {}= \operatorname{E}(t_1) + \operatorname{E}(t_2) + \cdots + \operatorname{E}(t_n) \\
+&amp; {}= \frac{1}{p_1} + \frac{1}{p_2} +  \cdots + \frac{1}{p_n} \\
+&amp; {}= \frac{n}{n} + \frac{n}{n-1} +  \cdots + \frac{n}{1} \\
+&amp; {}= n \cdot \left(\frac{1}{1} + \frac{1}{2} + \cdots + \frac{1}{n}\right) \\
+&amp; {}= n \cdot h_n.
+\end{align}\]</span></p>
+</li>
+<li>
+<p>The above can be modified slightly to handle the case when we’ve already collected some of the coupons. Let <span class="math inline">\(k\)</span> be the number of coupons already collected, then:</p>
+<p><span class="math display">\[\begin{align}
+\operatorname{E}(T_k) &amp; {}= \operatorname{E}(t_{k+1} + t_{k+2} + \cdots + t_n) \\
+&amp; {}= n \cdot \left(\frac{1}{1} + \frac{1}{2} + \cdots + \frac{1}{n-k}\right) \\
+&amp; {}= n \cdot h_{n-k}
+\end{align}\]</span></p>
+</li>
+</ul>
+<img src="images/coupon_collector_problem.svg" alt="By Cmglee - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=30224158" />
+By Cmglee - Own work, CC BY-SA 3.0, <a href="https://commons.wikimedia.org/w/index.php?curid=30224158" class="uri">https://commons.wikimedia.org/w/index.php?curid=30224158</a>
+</details>
+</div>
+<div class="theorem">
+<p><span id="thm:harmreihe" class="theorem"><strong>Theorem 3.8  (Divergence of Harmonic Series) </strong></span>The harmonic series, given by <span class="math inline">\(\sum_{t=1}^{n} \frac{1}{t}\)</span> , <span class="math inline">\(n \in \mathbb{N}\)</span>, diverges.
+<br><br>
+The following applies:</p>
+<p><span class="math display">\[\lim\limits_{n \rightarrow \infty } \left| \frac{1/(n+1)}{1/n} \right| = \lim\limits_{n \rightarrow \infty } \frac{n}{n+1} = 1,\]</span></p>
+<p>so that the above theorem <a href="sequences-limits-and-series.html#thm:konvreihen">3.6</a> cannot be used to determine convergence.</p>
+<details>
+<summary>
+Proof
+</summary>
+<p>Alternatively, the harmonic series can be written as <span class="math inline">\(\left(\sum_{k=1}^{2^{n}} \frac{1}{k}\right)_{n \in \mathbb{N}}\)</span> write down.</p>
+The sequence <span class="math inline">\((\frac1k)_{k\in \mathbb N}\)</span> is increasing. If <span class="math inline">\(n\geq m\)</span>, then <span class="math inline">\(\frac 1n\leq \frac 1m\)</span>. Accordingly, we can skilfully estimate the summands downwards and then summarize them:
+<span class="math display">\[\begin{aligned}
+\sum_{k=1}^{2^{n}} \frac{1}{k} &amp;=1+\color{green}{\frac{1}{2}}+\color{purple}{\left(\frac{1}{3}+\frac{1}{4}\right)}+\color{blue}{\left(\frac{1}{5}+\frac{1}{6}+\frac{1}{7}+\frac{1}{8}\right)}+\\\\
+&amp;+\ldots+\color{orange}{\left(\frac{1}{2^{n-1}+1}+\ldots+\frac{1}{2^{n}-1}+\frac{1}{2^{n}}\right)} \\\\
+&amp; \ \downarrow \text {bound the summands from above: } \color{purple}{\frac{1}{3} \geq \frac{1}{4}} \text { und } \color{blue}{\frac{1}{5} \geq \frac{1}{6} \geq \frac{1}{7} \geq \frac{1}{8}} \text { und } \ldots \\
+&amp; \geq 1+\color{green}{\frac{1}{2}}+\color{purple}{\left(\frac{1}{4}+\frac{1}{4}\right)}+\color{blue}{\left(\frac{1}{8}+\frac{1}{8}+\frac{1}{8}+\frac{1}{8}\right)}+\ldots+\color{orange}{\left(\frac{1}{2^{n}}+\ldots+\frac{1}{2^{n}}+\frac{1}{2^{n}}\right)} \\\\
+&amp; \downarrow \ \text{combine the summands} \\
+&amp;=1+\color{green}{\frac{1}{2}}+\color{purple}{2 \cdot \frac{1}{4}}+\color{blue}{4 \cdot \frac{1}{8}}+\ldots+\color{orange}{2^{n-1} \cdot \frac{1}{2^{n}}} \\\\
+&amp;=1+\underbrace{\color{green}{\frac{1}{2}}+\color{purple}{\frac{1}{2}}+\color{blue}{\frac{1}{2}}+\ldots+\color{orange}{\frac{1}{2}}}_{n \text { summands}} \\
+&amp;=1+\frac{n}{2}
+\end{aligned}\]</span>
+This means:
+<br>
+<span class="math inline">\(\quad \lim _{n \rightarrow \infty} \sum_{k=1}^{2^{n}} \frac{1}{k} \geq \lim _{n \rightarrow \infty} 1 +\frac{n}{2}=\infty\)</span>.
+This shows us that the sequence <span class="math inline">\(\left(\sum_{k=1}^{2^{n}} \frac{1}{k}\right)_{n \in \mathbb{N}}\)</span> tends towards infinity and thus diverges.
+</details>
+</div>
+<!-- Folgen weitere Aufgaben: https://www.max-academy.de/contentPool/5de2640c9cefaf0008c441e5-->
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="the-basics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="continuity-of-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-folgen.rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

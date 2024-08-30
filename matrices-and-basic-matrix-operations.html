@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 9 Matrices and Basic Matrix Operations | Mathematics for Business and Economics</title>
+  <meta name="description" content="Chapter 9 Matrices and Basic Matrix Operations | Mathematics for Business and Economics" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 9 Matrices and Basic Matrix Operations | Mathematics for Business and Economics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 9 Matrices and Basic Matrix Operations | Mathematics for Business and Economics" />
+  
+  
+  
+
+<meta name="author" content="Maria Osipenko" />
+
+
+<meta name="date" content="2024-08-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="systems-of-linear-equations.html"/>
+<link rel="next" href="calculus-with-n-variables.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Wirtschaftsmathematik</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-do-we-need-the-mathematics-for-business-and-economics"><i class="fa fa-check"></i>Why do we need the mathematics for business and economics?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#example-utility-maximization"><i class="fa fa-check"></i>Example: utility maximization</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-basics.html"><a href="the-basics.html"><i class="fa fa-check"></i><b>2</b> The basics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="the-basics.html"><a href="the-basics.html#sets-and-number-sets"><i class="fa fa-check"></i><b>2.1</b> Sets and Number Sets</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="the-basics.html"><a href="the-basics.html#operations-on-sets"><i class="fa fa-check"></i><b>2.1.1</b> Operations on Sets</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="the-basics.html"><a href="the-basics.html#number-sets"><i class="fa fa-check"></i><b>2.2</b> Number sets</a></li>
+<li class="chapter" data-level="2.3" data-path="the-basics.html"><a href="the-basics.html#point-sets-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Point sets in <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="the-basics.html"><a href="the-basics.html#intervals-as-sets-of-points-in-mathbbrn"><i class="fa fa-check"></i><b>2.3.1</b> Intervals as sets of points in <span class="math inline">\(\mathbb{R^n}\)</span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-distance"><i class="fa fa-check"></i><b>2.3.2</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: Distance</a></li>
+<li class="chapter" data-level="2.3.3" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-epsilon-neighborhood"><i class="fa fa-check"></i><b>2.3.3</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\epsilon-\)</span>neighborhood</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="the-basics.html"><a href="the-basics.html#functions"><i class="fa fa-check"></i><b>2.4</b> Functions</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="the-basics.html"><a href="the-basics.html#linear-functions"><i class="fa fa-check"></i><b>2.4.1</b> Linear Functions</a></li>
+<li class="chapter" data-level="2.4.2" data-path="the-basics.html"><a href="the-basics.html#quadratic-functions"><i class="fa fa-check"></i><b>2.4.2</b> Quadratic Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="the-basics.html"><a href="the-basics.html#power-exponential-and-logarithmic-functions"><i class="fa fa-check"></i><b>2.5</b> Power, exponential and logarithmic functions</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="the-basics.html"><a href="the-basics.html#convexity-and-concavity"><i class="fa fa-check"></i><b>2.5.1</b> Convexity and concavity</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html"><i class="fa fa-check"></i><b>3</b> Sequences, limits and series</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#sequences"><i class="fa fa-check"></i><b>3.1</b> Sequences</a></li>
+<li class="chapter" data-level="3.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergence-of-sequences"><i class="fa fa-check"></i><b>3.2</b> Convergence of sequences</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergent-sequences-and-their-limits"><i class="fa fa-check"></i><b>3.2.1</b> Convergent sequences and their limits</a></li>
+<li class="chapter" data-level="3.2.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#bounded-sequences"><i class="fa fa-check"></i><b>3.2.2</b> Bounded sequences</a></li>
+<li class="chapter" data-level="3.2.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#divergent-sequences"><i class="fa fa-check"></i><b>3.2.3</b> Divergent sequences</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#properties-of-sequences"><i class="fa fa-check"></i><b>3.3</b> Properties of sequences</a></li>
+<li class="chapter" data-level="3.4" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#series"><i class="fa fa-check"></i><b>3.4</b> Series</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#special-series"><i class="fa fa-check"></i><b>3.4.1</b> Special Series</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html"><i class="fa fa-check"></i><b>4</b> Continuity of functions</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#pointwise-continuity"><i class="fa fa-check"></i><b>4.1</b> Pointwise continuity</a></li>
+<li class="chapter" data-level="4.2" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#continuous-functions-and-their-properties"><i class="fa fa-check"></i><b>4.2</b> Continuous functions and their properties</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differential-calculus.html"><a href="differential-calculus.html"><i class="fa fa-check"></i><b>5</b> Differential calculus</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-tangent-line"><i class="fa fa-check"></i><b>5.1</b> Definition of the tangent line</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="differential-calculus.html"><a href="differential-calculus.html#secant-and-tangent-lines"><i class="fa fa-check"></i><b>5.1.1</b> Secant and tangent lines</a></li>
+<li class="chapter" data-level="5.1.2" data-path="differential-calculus.html"><a href="differential-calculus.html#from-the-secant-to-the-tangent-line"><i class="fa fa-check"></i><b>5.1.2</b> From the secant to the tangent line</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-derivative"><i class="fa fa-check"></i><b>5.2</b> Definition of the derivative</a></li>
+<li class="chapter" data-level="5.3" data-path="differential-calculus.html"><a href="differential-calculus.html#differentiability"><i class="fa fa-check"></i><b>5.3</b> Differentiability</a></li>
+<li class="chapter" data-level="5.4" data-path="differential-calculus.html"><a href="differential-calculus.html#derivation-rules"><i class="fa fa-check"></i><b>5.4</b> Derivation rules</a></li>
+<li class="chapter" data-level="5.5" data-path="differential-calculus.html"><a href="differential-calculus.html#the-rule-of-lhôpital"><i class="fa fa-check"></i><b>5.5</b> The rule of L’Hôpital</a></li>
+<li class="chapter" data-level="5.6" data-path="differential-calculus.html"><a href="differential-calculus.html#higher-order-derivatives"><i class="fa fa-check"></i><b>5.6</b> Higher order derivatives</a></li>
+<li class="chapter" data-level="5.7" data-path="differential-calculus.html"><a href="differential-calculus.html#taylors-theorem"><i class="fa fa-check"></i><b>5.7</b> Taylor’s theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="optimization.html"><a href="optimization.html"><i class="fa fa-check"></i><b>6</b> Optimization</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="optimization.html"><a href="optimization.html#necessary-conditions-for-maxima-and-minima"><i class="fa fa-check"></i><b>6.1</b> Necessary conditions for maxima and minima</a></li>
+<li class="chapter" data-level="6.2" data-path="optimization.html"><a href="optimization.html#second-order-conditions"><i class="fa fa-check"></i><b>6.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="6.3" data-path="optimization.html"><a href="optimization.html#optimization-on-an-interval"><i class="fa fa-check"></i><b>6.3</b> Optimization on an interval</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="integral-calculus.html"><a href="integral-calculus.html"><i class="fa fa-check"></i><b>7</b> Integral calculus</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="integral-calculus.html"><a href="integral-calculus.html#the-indefinite-integral"><i class="fa fa-check"></i><b>7.1</b> The indefinite integral</a></li>
+<li class="chapter" data-level="7.2" data-path="integral-calculus.html"><a href="integral-calculus.html#the-definite-integral"><i class="fa fa-check"></i><b>7.2</b> The definite integral</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="integral-calculus.html"><a href="integral-calculus.html#properties-and-elementary-calculation-rules"><i class="fa fa-check"></i><b>7.2.1</b> Properties and elementary calculation rules</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html"><i class="fa fa-check"></i><b>8</b> Systems of linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-two-linear-equations"><i class="fa fa-check"></i><b>8.1</b> Systems of two linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solution-by-substitution-and-elimination"><i class="fa fa-check"></i><b>8.1.1</b> Solution by substitution and elimination</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-equations-with-n-linear-equations"><i class="fa fa-check"></i><b>8.2</b> Systems of equations with <span class="math inline">\(n\)</span> linear equations</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solving-systems-of-equations-with-m-linear-equations"><i class="fa fa-check"></i><b>8.2.1</b> Solving systems of equations with <span class="math inline">\(m\)</span> linear equations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html"><i class="fa fa-check"></i><b>9</b> Matrices and Basic Matrix Operations</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#matrices"><i class="fa fa-check"></i><b>9.1</b> Matrices</a></li>
+<li class="chapter" data-level="9.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#basic-matrix-operations"><i class="fa fa-check"></i><b>9.2</b> Basic matrix operations</a></li>
+<li class="chapter" data-level="9.3" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#economic-applications"><i class="fa fa-check"></i><b>9.3</b> Economic Applications</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#monthly-consumer-spending"><i class="fa fa-check"></i><b>9.3.1</b> Monthly consumer spending</a></li>
+<li class="chapter" data-level="9.3.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#regional-migration"><i class="fa fa-check"></i><b>9.3.2</b> Regional migration</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#transpose-of-a-matrix"><i class="fa fa-check"></i><b>9.4</b> Transpose of a matrix</a></li>
+<li class="chapter" data-level="9.5" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#determinant-and-inverse-of-a-matrix"><i class="fa fa-check"></i><b>9.5</b> Determinant and inverse of a matrix</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#more-on-the-determinant-of-a-matrixast"><i class="fa fa-check"></i><b>9.5.1</b> More on the Determinant of a Matrix<span class="math inline">\(^\ast\)</span></a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#rank-and-determinantast"><i class="fa fa-check"></i><b>9.5.2</b> Rank and determinant<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html"><i class="fa fa-check"></i><b>10</b> Calculus with <span class="math inline">\(n\)</span> variables</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#continuity-of-a-function"><i class="fa fa-check"></i><b>10.1</b> Continuity of a function</a></li>
+<li class="chapter" data-level="10.2" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives"><i class="fa fa-check"></i><b>10.2</b> Partial derivatives</a></li>
+<li class="chapter" data-level="10.3" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives-of-higher-order"><i class="fa fa-check"></i><b>10.3</b> Partial derivatives of higher order</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#the-gradient-vector-and-the-hessian-matrix"><i class="fa fa-check"></i><b>10.3.1</b> The gradient vector and the Hessian matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#derivation-of-implicit-functionsast"><i class="fa fa-check"></i><b>10.4</b> Derivation of implicit functions<span class="math inline">\(^\ast\)</span></a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#contour-lines-indifference-curvesast"><i class="fa fa-check"></i><b>10.4.1</b> Contour lines / indifference curves<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="optimization-ii.html"><a href="optimization-ii.html"><i class="fa fa-check"></i><b>11</b> Optimization II</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="optimization-ii.html"><a href="optimization-ii.html#first-order-conditions"><i class="fa fa-check"></i><b>11.1</b> First-order conditions</a></li>
+<li class="chapter" data-level="11.2" data-path="optimization-ii.html"><a href="optimization-ii.html#second-order-conditions-1"><i class="fa fa-check"></i><b>11.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="11.3" data-path="optimization-ii.html"><a href="optimization-ii.html#optimization-under-constraints-lagrange-method"><i class="fa fa-check"></i><b>11.3</b> Optimization under constraints: Lagrange method</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathematics for Business and Economics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="matrices-and-basic-matrix-operations" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Matrices and Basic Matrix Operations<a href="matrices-and-basic-matrix-operations.html#matrices-and-basic-matrix-operations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<script>
+function checkAnswer_mmc(q) {
+      const selectedOptions = document.querySelectorAll('input[name="option'+q.id+'"]:checked');
+      if (selectedOptions.length === 2) {
+        const userAnswers = Array.from(selectedOptions).map(option => option.value);
+        const correctAnswers = q.answer;
+        const isCorrect = userAnswers.every(answer => correctAnswers.includes(answer));
+
+if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select two options.';
+      }
+    }
+// numeric
+function generateQuestion_num(id) {
+      // Generate two random numbers between 2 and 10
+      const num1 = Math.floor(Math.random() * 10) + 2;
+      const num2 = Math.floor(Math.random() * 10) + 2;
+      const x1 = Math.floor(Math.random() * 10) + 2;
+      const x2 = Math.floor(Math.random() * 10) + 2;
+      const x3 = Math.floor(Math.random() * 100) + 2;
+      const x4 = Math.floor(Math.random() * 100) + 2;
+      const x5 = Math.floor(Math.random() * 100) + 2;
+      const x6 = Math.floor(Math.random() * 100) + 2;
+
+       // Calculate the correct answer
+      let answer = num1*Math.sqrt(x1) + num2*Math.sqrt(x2);
+
+      // Return the question and answer as an object
+      return {
+       // question: num1 + "\\(\\sqrt{x}+\\)"+ num2 + "\\(\\sqrt{y}\\)" + " for \\(x=\\)" + x1 + " and \\(y=\\)" + x2,
+        question: [num1,num2,x1,x2,x3,x4,x5,x6],
+        answer: answer,
+        id: id
+      };
+    }
+
+function checkAnswer_num(q) {
+      const userAnswer = document.getElementById('answer'+q.id).value;
+      const isCorrect = Math.round(parseFloat(userAnswer)*100)/100 === Math.round(q.answer*100)/100;
+
+      if (isCorrect) {
+        document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+      } else {
+        document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+      }
+  }
+
+// plain multiple choice
+  function checkAnswer_match(q) {
+      const selectedOption = document.querySelector('input[name="option'+q.id+'"]:checked');
+      if (selectedOption) {
+        const userAnswer = selectedOption.value;
+        const isCorrect = userAnswer === q.answer;
+
+        if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select an option.';
+      }
+    }
+</script>
+<p>Matrices represent and manipulate data in a very efficient way. One important applications of matrices is solving large systems of linear equations. We summarize the <strong>coefficients</strong> <span class="math inline">\(a_{ij}\)</span> of such linear equation system in a matrix, e.g., <span class="math inline">\(A\)</span>, write the <strong>unknowns</strong> as a vector <span class="math inline">\(\bf x\)</span>, and collect the constants on the right hand sides of the equations in a vector <span class="math inline">\(\bf b.\)</span></p>
+<p>A matrix can be thought of as a table, with the added benefit of being able to do matrices. For example, matrices can be used to solve systems of linear equations.</p>
+<div id="matrices" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> Matrices<a href="matrices-and-basic-matrix-operations.html#matrices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:defmatrix" class="definition"><strong>Definition 9.1  (Matrix) </strong></span>A <strong><span class="math inline">\((m\times n)\)</span> matrix</strong> <span class="math inline">\(A\)</span> is a rectangular number scheme with <span class="math inline">\(m\)</span> rows and <span class="math inline">\(n\)</span> columns:
+<span class="math display">\[\begin{equation*}
+      A=\begin{pmatrix}
+        a_{11} &amp; a_{12} &amp; a_{13} &amp; \ldots &amp; a_{1n} \\
+        a_{21} &amp; a_{22} &amp; a_{23} &amp; \ldots&amp; a_{2n} \\
+        \vdots &amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+          a_{m1} &amp; a_{m2} &amp; a_{m3} &amp; \ldots&amp; a_{mn}
+      \end{pmatrix}
+    \end{equation*}\]</span>
+The <strong>element</strong> <span class="math inline">\(a_{ij}\in \mathbb R\)</span> designates the entry of <span class="math inline">\(A\)</span>, which is in the <span class="math inline">\(i\)</span>-th row and the <span class="math inline">\(j\)</span>-th column.</p>
+</div>
+<ul>
+<li>Matrices are often denoted by capital letters of the alphabet.</li>
+<li>The <strong>dimensions</strong> of a matrix (important for matrix operations!) are specified in the following form <span class="math inline">\((m\times n) = (\text{number of rows}\times\text{number of columns})\)</span>.</li>
+</ul>
+<div class="definition">
+<p><span id="def:defverktor" class="definition"><strong>Definition 9.2  (Vectors) </strong></span></p>
+<ul>
+<li><p>A <strong>column vector</strong> is a matrix of dimension <span class="math inline">\(m\times 1\)</span>, i.e. a matrix consisting of a column with <span class="math inline">\(m\)</span> entries.
+For example:
+<span class="math display">\[\mathbf b = \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix}.\]</span></p></li>
+<li><p>Similarly, a <strong>row vector</strong> is a <span class="math inline">\(1\times n\)</span> matrix. For example:
+<span class="math display">\[\mathbf c = ( c_1 \ c_2 \ ... \ c_n).\]</span></p></li>
+</ul>
+</div>
+<ul>
+<li>Vectors are usually denoted by lowercase bold letters of the Roman alphabet.</li>
+<li>All operations for matrices automatically apply to vectors, since these only represent special matrices.</li>
+<li>Column and row vectors can be converted into one another by <strong>transposing</strong> them, i.e. swapping the dimensions. Write <span class="math inline">\(x^\top\)</span> to get a transposed version of <span class="math inline">\(x\)</span>.</li>
+</ul>
+<div class="example">
+<p><span id="exm:maschinenlaufzeit" class="example"><strong>Example 9.1  (machine runtime) </strong></span>In the exercise <a href="systems-of-linear-equations.html#exr:maschinen">8.1</a>, we solved the following system of three equations:</p>
+<p><span class="math display">\[\begin{align*}
+2x_1 + 2x_2 +2x_3 &amp;= 8,\\
+3x_1 + 4x_2 +x_3 &amp;=8,\\
+6x_1 + \frac{10}3 x_2 + \frac 23x_3 &amp;=8.
+\end{align*}\]</span></p>
+<ul>
+<li>The coefficients (production hours) of the three linear equations are collected in coefficient matrix <span class="math inline">\(A\)</span>:</li>
+</ul>
+<p><span class="math display">\[A=\begin{pmatrix}
+        a_{\color{red}11} &amp; a_{\color{red}12} &amp; a_{\color{red}13} &amp; \ldots &amp; a_{\color{red}1n} \\
+        a_{\color{blue}21} &amp; a_{\color{blue}22} &amp; a_{\color{blue}23} &amp; \ldots&amp; a_{\color{blue}2n} \\
+        \vdots &amp;\vdots&amp;\vdots&amp;\vdots&amp;\vdots\\
+          a_{\color{green}m1} &amp; a_{\color{green}m2} &amp; a_{\color{green}m3} &amp; \ldots&amp; a_{\color{green}mn}
+      \end{pmatrix} =
+      \begin{pmatrix}
+        \color{red}{2} &amp; \color{red}{2} &amp; \color{red}{2} \\
+        \color{blue}{3} &amp; \color{blue}4 &amp; \color{blue}1 \\
+        \color{green}{6} &amp; \color{green}{\frac{10}3} &amp; \color{green}{\frac 23}
+        \end{pmatrix}
+\]</span></p>
+<ul>
+<li>the hours required for the production on the second machine can be represented as an <span class="math inline">\(n\)</span>-dimensional row vector:</li>
+</ul>
+<p><span class="math display">\[\mathbf a_2 = (a_{21} ~ a_{22} ~\ldots ~ a_{2n}) = (\color{blue}3~~ \color{blue}4 ~~\color{blue}1)\]</span></p>
+<ul>
+<li>The available daily running times of each machine represent an <span class="math inline">\(m\)</span>-dimensional column vector:</li>
+</ul>
+<p><span class="math display">\[\mathbf b = \begin{pmatrix} b_1 \\ b_2 \\b_3 \end{pmatrix}= \begin{pmatrix} \color{red}8 \\ \color{blue}{8} \\ \color{green}8 \end{pmatrix}.\]</span></p>
+<p>In the example above, we have three unknowns (production quantities), which we summarize in the column vector:
+<span class="math display">\[\mathbf x = \begin{pmatrix} x_1 \\ x_2 \\ x_3 \end{pmatrix}.\]</span></p>
+</div>
+<p>Apart from summarizing linear equation systems, matrices are useful for other complex data representation as the following example shows.</p>
+<div class="example">
+<p><span id="exm:regmigration" class="example"><strong>Example 9.2  (Transition matrices) </strong></span></p>
+<ul>
+<li><p>A transition matrix represents the transition from one state to another. Examples of “states”: belonging to a social class, income group, geographical location.</p></li>
+<li><p>Regional migration: In a country with three regions <span class="math inline">\(1\)</span>, <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span>, the proportion of the population that stays in one region or moves to another region is described by the following transition matrix:
+<span class="math display">\[P = \begin{pmatrix} p_{11} \ p_{12} \ p_{13} \\ p_{21} \ p_{22} \ p_{23} \\ p_{31} \ p_{32} \ p_{33} \end{pmatrix},\]</span> where the element <span class="math inline">\(p_{ij}\)</span> denotes the proportion of the population that moves from region <span class="math inline">\(j\)</span> to region <span class="math inline">\(i\)</span>.</p>
+<ul>
+<li>The elements on the diagonal, <span class="math inline">\(p_{ii}\)</span>, <span class="math inline">\(i = 1,2,3\)</span>, denote the proportion of people who stay in their region.</li>
+<li>Let’s assume the transition matrix has the following entries:</li>
+</ul></li>
+</ul>
+<p><span class="math display">\[P = \begin{pmatrix} \color{red}{p_{11}} &amp;  \color{orange}{p_{12}} &amp; p_{13}  \\ \color{blue}{p_{21}} &amp; p_{22} &amp; p_{23} \\ \color{green}{p_{31}} &amp; p_{32} &amp; p_{33}  \end{pmatrix}=\begin{pmatrix} \color{red}{0.80} \ \   \color{orange}{0.15} \ \  0.05  \\ \color{blue}{0.10} \ \ 0.70 \ \ 0.05 \\ \color{green}{0.10} \ \ 0.15 \ \ 0.90  \end{pmatrix}\]</span>
+- This expresses that <span class="math inline">\(\color{red}{80 \%}\)</span> of the population from region <span class="math inline">\(1\)</span> stay in region <span class="math inline">\(1\)</span>, <span class="math inline">\(\color{blue}{10 \%}\)</span> move from region <span class="math inline">\(1\)</span> to region <span class="math inline">\(2\)</span> and more <span class="math inline">\(\color{green}{10 \% }\)</span> move from region <span class="math inline">\(1\)</span> to region <span class="math inline">\(3\)</span>.
+- Similarly, the entry <span class="math inline">\(p_{12} = 0.15\)</span> means that <span class="math inline">\(\color{orange}{15 \%}\)</span> of the population is moving from region <span class="math inline">\(2\)</span>= to region <span class="math inline">\(1\)</span>.</p>
+<p>Advantage among others: The matrix notation allows a short and clear representation of these relationships.
+[We’ll come back to this example later…]</p>
+</div>
+<p>There are some special types of matrices, which are summarized in the following definition.</p>
+<div class="definition">
+<p><span id="def:defspezmatrizen" class="definition"><strong>Definition 9.3  (special matrices) </strong></span></p>
+<ul>
+<li><p>The <strong>zero matrix</strong> is a matrix whose entries are all zero (<span class="math inline">\(a_{ij} = 0\)</span> for <span class="math inline">\(i = 1,...m\)</span> and <span class="math inline">\(j = 1,... n\)</span>).</p></li>
+<li><p>A <strong>square matrix</strong> is a matrix with the same number of rows and columns (<span class="math inline">\(m = n\)</span>).</p></li>
+<li><p>A <strong>diagonal matrix</strong> is a square matrix that has zeros everywhere except on the main diagonal.</p></li>
+<li><p>An upper (lower) <strong>triangular matrix</strong> is a matrix that has non-zero entries only above (below) the diagonal.</p></li>
+<li><p>A <strong>identity matrix</strong> is a diagonal matrix whose diagonal elements are all one. The identity matrix with dimension <span class="math inline">\(n × n\)</span> is denoted by <span class="math inline">\(I_n\)</span>. Example for <span class="math inline">\(n = 4\)</span>:
+<span class="math display">\[I_4 = \begin{pmatrix} 1 \ \   0 \ \  0 \ \ 0 \\ 0 \ \ 1 \ \ 0 \ \ 0 \\ 0 \ \ 0 \ \ 1 \ \ 0 \\ 0 \ \ 0 \ \ 0 \ \ 1  \end{pmatrix}\]</span></p></li>
+</ul>
+</div>
+</div>
+<div id="basic-matrix-operations" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Basic matrix operations<a href="matrices-and-basic-matrix-operations.html#basic-matrix-operations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It is often necessary to compare, add and multiply two matrices, or even form the “reciprocal” of a matrix.</p>
+<div class="definition">
+<p><span id="def:defgleichmatrizen" class="definition"><strong>Definition 9.4  (Equality of two matrices) </strong></span>Two matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are equal if they have the same dimension and all elements are identical, i.e. if <span class="math inline">\(a_{ij} = b_{ij}\)</span>, for all <span class="math inline">\(i = 1, ... , m\)</span> and <span class="math inline">\(j = 1, ... , n\)</span>.</p>
+<p>For example, the two <span class="math inline">\(2 × 2\)</span> are matrices
+<span class="math inline">\(\begin{pmatrix}2 &amp; 2x \\ 3 &amp; 1\end{pmatrix}\)</span> and <span class="math inline">\(\begin{pmatrix} 2 &amp;4 \\ x+y &amp; 1 \end{pmatrix}\)</span></p>
+<p>equal if and only if <span class="math inline">\(x = 2\)</span> and <span class="math inline">\(y = 1\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:defaddsubmatrizen" class="definition"><strong>Definition 9.5  (Addition and subtraction of matrices) </strong></span>The sum of two matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> exists if the matrices have the same dimension; in this case the sum is defined elementwise:
+<span class="math display">\[\begin{align*}
+      A+B&amp;=
+           \begin{pmatrix}
+             a_{11} &amp; a_{12} &amp; a_{13} &amp; \ldots &amp; a_{1n} \\
+             a_{21} &amp; a_{22} &amp; a_{23} &amp; \ldots &amp; a_{2n} \\
+             \vdots &amp; \vdots&amp; \vdots &amp; &amp; \vdots\\
+             a_{m1} &amp; a_{m2} &amp; a_{m3} &amp; \ldots &amp; a_{mn}
+           \end{pmatrix}+
+                                                 \begin{pmatrix}
+                                                   b_{11} &amp; b_{12} &amp; b_{13} &amp; \ldots &amp; b_{1n} \\
+                                                   b_{21} &amp; b_{22} &amp; b_{23} &amp; \ldots &amp; b_{2n} \\
+                                                   \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots\\
+                                                   b_{m1} &amp; b_{m2} &amp;
+                                                   b_{m3} &amp; \ldots &amp;
+                                                   b_{mn}
+                                                 \end{pmatrix}\\[10pt]
+         &amp;=
+           \begin{pmatrix}
+             a_{11}+b_{11} &amp; a_{12}+b_{12} &amp; a_{13}+b_{13} &amp; \ldots &amp; a_{1n}+b_{1n} \\
+             a_{21}+b_{21} &amp; a_{22}+b_{22} &amp; a_{23}+b_{23} &amp; \ldots &amp; a_{2n}+b_{2n} \\
+             \vdots &amp; \vdots &amp; \vdots &amp; &amp; \vdots\\
+             a_{m1}+b_{m1} &amp; a_{m2}+b_{m2} &amp; a_{m3}+b_{m3} &amp; \ldots &amp;
+             a_{mn}+b_{mn}
+           \end{pmatrix}
+\end{align*}\]</span>
+The difference <span class="math inline">\(A − B\)</span> is defined analogously.</p>
+</div>
+<div class="example">
+<p><span id="exm:exaddsubmatrizen" class="example"><strong>Example 9.3  (Addition and subtraction of matrices) </strong></span>Consider the situation, where production process in Example <a href="matrices-and-basic-matrix-operations.html#exm:maschinenlaufzeit">9.1</a> is changed in following way:</p>
+<ul>
+<li><p>production hours on machine 1 are increased by one hour for each of the three products.</p></li>
+<li><p>production hours on machine 2 remain unchanged.</p></li>
+<li><p>production hours on machine 3 decrease by <span class="math inline">\(\frac 13\)</span> for product 2 and increase by <span class="math inline">\(\frac 13\)</span> for product 3.</p></li>
+</ul>
+<p>Then, the new production process can be described by the sum of matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, where:</p>
+<p><span class="math inline">\(A = \begin{pmatrix}  2 &amp; 2 &amp; 2 \\  3 &amp; 4 &amp; 1 \\  6 &amp; \frac{10}3 &amp; \frac 23  \end{pmatrix}\)</span> and <span class="math inline">\(B = \begin{pmatrix}  1 &amp; 1 &amp; 1 \\  0 &amp; 0 &amp; 0 \\  0 &amp; -\frac 13 &amp; \frac 13  \end{pmatrix}\)</span></p>
+<p>Their sum is defined element wise:
+<span class="math display">\[\begin{align*}
+      A+B&amp;=
+           \begin{pmatrix}
+        2 &amp; 2 &amp; 2 \\
+        3 &amp; 4 &amp; 1 \\
+        6 &amp; \frac{10}3 &amp; \frac 23
+        \end{pmatrix}+
+                                                 \begin{pmatrix}
+        1 &amp; 1 &amp; 1 \\
+        0 &amp; 0 &amp; 0 \\
+        0 &amp; -\frac 13 &amp; \frac 13
+        \end{pmatrix}\\
+         &amp;=
+            \begin{pmatrix}
+        2+1 &amp; 2+1 &amp; 2+1 \\
+        3+0 &amp; 4+0 &amp; 1+0 \\
+        6+0 &amp; \frac{10}3 - \frac 13 &amp; \frac 23+\frac 13
+        \end{pmatrix}\\
+        &amp;=
+            \begin{pmatrix}
+        3 &amp; 3 &amp; 3 \\
+        3 &amp; 4 &amp; 1 \\
+        6 &amp; 3 &amp; 1
+        \end{pmatrix}
+\end{align*}\]</span></p>
+</div>
+<p><strong>Multiplication</strong> of a matrix by a scalar refers to <strong>scaling</strong>; each element of the matrix is multiplied by a <strong>scalar</strong> (= a real number).</p>
+<div class="definition">
+<p><span id="def:defskprodmatrizen" class="definition"><strong>Definition 9.6  (Multiplication by a scalar) </strong></span>The product of a real number <span class="math inline">\(\lambda\)</span> with a matrix <span class="math inline">\(A\)</span> is defined as:
+<span class="math display">\[\begin{equation*}
+      \lambda\cdot A=\lambda\cdot
+      \begin{pmatrix}
+        a_{11} &amp; a_{12} &amp; a_{13} &amp; \ldots &amp; a_{1n} \\
+        a_{21} &amp; a_{22} &amp; a_{23} &amp; \ldots &amp; a_{2n} \\
+        \vdots &amp; \vdots&amp; \vdots &amp; &amp; \vdots\\
+        a_{m1} &amp; a_{m2} &amp; a_{m3} &amp; \ldots &amp; a_{mn}%
+      \end{pmatrix}
+      = \begin{pmatrix}
+        \lambda\,a_{11} &amp; \lambda\, a_{12} &amp; \lambda\, a_{13} &amp; \ldots &amp; \lambda\, a_{1n} \\
+        \lambda\, a_{21} &amp; \lambda\, a_{22} &amp; \lambda\, a_{23} &amp; \ldots &amp; \lambda\, a_{2n} \\
+        \vdots &amp; \vdots&amp; \vdots &amp; &amp; \vdots\\
+        \lambda\, a_{m1} &amp; \lambda\, a_{m2} &amp; \lambda\, a_{m3} &amp; \ldots &amp; \lambda\, a_{mn}%
+      \end{pmatrix}
+    \end{equation*}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:exmultsksubmatrizen" class="example"><strong>Example 9.4  (Multiplication of matrices with a number) </strong></span>Consider the situation, where production process in Example <a href="matrices-and-basic-matrix-operations.html#exm:maschinenlaufzeit">9.1</a> becomes more efficient, and the production hours reduce by 50%. This corresponds to multiplication of <span class="math inline">\(A\)</span> with <span class="math inline">\(0.5\)</span>:</p>
+<p><span class="math display">\[\begin{align*}
+      0.5\cdot A&amp;=
+           0.5\cdot \begin{pmatrix}
+        2 &amp; 2 &amp; 2 \\
+        3 &amp; 4 &amp; 1 \\
+        6 &amp; \frac{10}3 &amp; \frac 23
+        \end{pmatrix}\\
+         &amp;=
+            \begin{pmatrix}
+        0.5\cdot 2 &amp; 0.5\cdot 2 &amp; 0.5\cdot 2 \\
+        0.5\cdot 3 &amp; 0.5\cdot 4 &amp; 0.5\cdot 1 \\
+        0.5\cdot 6 &amp; 0.5\cdot \frac{10}3 &amp; 0.5\cdot\frac 23
+        \end{pmatrix}\\
+        &amp;=
+            \begin{pmatrix}
+        1&amp; 1 &amp; 1 \\
+        1.5 &amp; 2 &amp; 0.5 \\
+        3 &amp; \frac 53 &amp; \frac 13
+        \end{pmatrix}
+\end{align*}\]</span></p>
+</div>
+<p>Before we define the multiplication of matrices with matrices, we consider the product of two vectors (the dot product or scalar product) as a special case.</p>
+<div class="definition">
+<p><span id="def:defskalarprodukt" class="definition"><strong>Definition 9.7  (dot product) </strong></span>Let <span class="math inline">\(\bf x^\top\)</span> be an <span class="math inline">\(n\)</span>-dimensional row vector (<span class="math inline">\(1 \times n\)</span>) and <span class="math inline">\(\bf y\)</span> be an <span class="math inline">\(n\)</span>-dimensional column vector (<span class="math inline">\(n \times 1\)</span>). Then the <strong>dot product</strong> or the <strong>scalar product</strong> <span class="math inline">\(\bf x^\top y\)</span> is defined as the sum of the products of the elements of <span class="math inline">\(\bf x\)</span> and <span class="math inline">\(\bf y\)</span>:</p>
+<p><span class="math display">\[\begin{equation*}
+      \begin{pmatrix}
+        x_{1} &amp; x_{2} &amp; \ldots &amp; x_{n}
+      \end{pmatrix}
+      \,
+      \begin{pmatrix}
+        y_{1}\\
+        y_{2}\\
+        \vdots\\
+        y_{n}
+      \end{pmatrix}
+      = x_{1} y_{1} + x_{2} y_{2} + \cdots + x_{n} y_{n} =\sum _{i=1}^n x_{i} y_{i}.
+    \end{equation*}\]</span></p>
+</div>
+<p>The dot product is thus an operation that returns a <strong>number</strong> from two <strong>vectors</strong>. This number can be interpreted geometrically. It tells you to what extent the vectors, which are represented as arrows from the coordinate origin to the point with vector elements as coordinates, point in the same direction (see the figure below).</p>
+<p>If the dot product is <span class="math inline">\(\color{green}{positive}\)</span>, the angle between the arrows is <span class="math inline">\(\color{green}{\alpha&lt;90°}\)</span>. For a <span class="math inline">\(\color{red}{negative}\)</span> dot product, the angle becomes <span class="math inline">\(\color{red}{\beta&gt;90°}\)</span>. If the dot product is zero, the arrows are perpendicular to each other (at a 90° angle).</p>
+<p>The <strong>angle</strong> between the vectors as arrows can also be used as a <strong>similarity measure</strong>: the smaller the angle, the more similar the data is, represented as points in <span class="math inline">\(\mathbb R^n\)</span>.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-51"></span>
+<img src="_main_files/figure-html/unnamed-chunk-51-1.png" alt="Illustation of the dot product" width="672" />
+<p class="caption">
+Figure 9.1: Illustation of the dot product
+</p>
+</div>
+<div class="example">
+<p><span id="exm:exkalarprodukt" class="example"><strong>Example 9.5  (dot product) </strong></span></p>
+<ul>
+<li><p>The <strong>dot product</strong> <span class="math inline">\(\bf x^\top y\)</span> of <span class="math inline">\(\bf x = \begin{pmatrix}  3 &amp; 3  \end{pmatrix}\)</span> and <span class="math inline">\(\bf y = \begin{pmatrix}  1\\  5  \end{pmatrix}\)</span> is:</p>
+<p><span class="math display">\[\begin{equation*}
+   \begin{pmatrix}
+      3 &amp; 3
+    \end{pmatrix}
+    \,
+  \begin{pmatrix}
+      1\\
+   5
+    \end{pmatrix}
+    = 3\cdot 1 + 3 \cdot 5= 18.
+  \end{equation*}\]</span></p></li>
+</ul>
+<p><img src="_main_files/figure-html/unnamed-chunk-52-1.png" width="672" /></p>
+<ul>
+<li><p>The <strong>dot product</strong> <span class="math inline">\(\bf x^\top y\)</span> of <span class="math inline">\(\bf x = \begin{pmatrix}  3 &amp; -3  \end{pmatrix}\)</span> and <span class="math inline">\(\bf y = \begin{pmatrix}  -1\\  5  \end{pmatrix}\)</span> is:</p>
+<p><span class="math display">\[\begin{equation*}
+   \begin{pmatrix}
+      3 &amp; -3
+    \end{pmatrix}
+    \,
+  \begin{pmatrix}
+      -1\\
+   5
+    \end{pmatrix}
+    = 3\cdot (-1) + (-3) \cdot 5= -18.
+  \end{equation*}\]</span></p></li>
+</ul>
+<p><img src="_main_files/figure-html/unnamed-chunk-53-1.png" width="672" /></p>
+</div>
+<p>To be able to interpret the dot product in the sense of cosine of the corresponding angle, we have to normalize it, i.e. take the lengths of the vectors into account. To do this, we define the Euclidean norm of a vector.</p>
+<div class="definition">
+<p><span id="def:defnorm" class="definition"><strong>Definition 9.8  (Euclidean norm of a vector) </strong></span>The Euclidean norm (length) of a column vector <span class="math inline">\(\bf x\)</span> is denoted by <span class="math inline">\(\lvert \lvert \bf x \rvert \lvert\)</span> and is defined as:
+<span class="math display">\[\lvert \lvert {\mathbf {x}} \rvert \lvert = \sqrt{\mathbf {x^\top x}} = \sqrt{ \sum_{i=1}^{n} x_i^2 }\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:exnorm" class="example"><strong>Example 9.6  (Euclidean norm) </strong></span>The Euclidean norm of <span class="math inline">\(\bf z = \begin{pmatrix}  0\\  4\\  -3  \end{pmatrix}\)</span> is:</p>
+<p><span class="math display">\[\begin{align*}
+||{\bf{z}}||&amp;={\bf{z}}^\top {\bf{z}}\\
+     &amp;=\sqrt{\begin{pmatrix}
+        0 &amp; 4 &amp; -3
+      \end{pmatrix}
+      \cdot
+    \begin{pmatrix}
+        0\\
+        4\\
+       -3
+      \end{pmatrix}}\\
+      &amp;= \sqrt{(0)^2 + (4)^2 + (-3)^2} =\sqrt{25} = 5.
+    \end{align*}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:exkalarprodukt1" class="example"><strong>Example 9.7  (scalar product) </strong></span><br>
+Continuation of <a href="matrices-and-basic-matrix-operations.html#exm:exkalarprodukt">9.5</a>.</p>
+<ul>
+<li><p>The <strong>scalar product</strong> <span class="math inline">\(\bf x^\top y\)</span> of <span class="math inline">\(\bf x = \begin{pmatrix}  3 &amp; 3  \end{pmatrix}\)</span> and <span class="math inline">\(\bf y = \begin{pmatrix}  1\\  5  \end{pmatrix}\)</span> is <span class="math inline">\(18.\)</span></p></li>
+<li><p>The Euclidean norm of <span class="math inline">\(x\)</span>:
+<span class="math display">\[||x|| = \sqrt{x^\top x} = \sqrt{3^2+3^2}=\sqrt{18}.\]</span></p></li>
+<li><p>The Euclidean norm of <span class="math inline">\(y\)</span>:
+<span class="math display">\[||y|| = \sqrt{y^\top y} = \sqrt{1^2+5^2}=\sqrt{26}.\]</span></p></li>
+<li><p>The angle between the vectors:</p></li>
+</ul>
+<p><span class="math display">\[\begin{align}\alpha &amp;= \arccos\left(\frac{x^\top y}{||x||\cdot||y||}\right) \\
+&amp;= \arccos\left(\frac{18}{\sqrt{18}\sqrt{26}}\right)= \arccos(0.8321) = 0.588rad\\
+&amp;\approx33.7°
+\end{align}\]</span></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-54-1.png" width="672" /></p>
+</div>
+<p>The remaining case is when the dot product is zero. In this case the vectors are perpendicular to each other. Such vectors form, for example, useful coordinate systems. It also makes sense if the vectors that form the basis of such coordinate systems have the length <span class="math inline">\(1\)</span> (intuitively: one step in each direction). When you bring the length of vectors to <span class="math inline">\(1\)</span>, you term it <strong>normalize</strong>. The following definition makes the terms more precise.</p>
+<div class="definition">
+<p><span id="def:defortho" class="definition"><strong>Definition 9.9  (Orthogonal and orthonormal vectors) </strong></span>Two vectors are <strong>orthogonal</strong> if their dot product is zero. This means that the two vectors are perpendicular to each other.
+Vectors that are pairwise orthogonal and all have length one are said to be <strong>orthonormal</strong>.</p>
+</div>
+<div class="exercise">
+<p><span id="exr:ortho" class="exercise"><strong>Exercise 9.1  (find an orthogonal vector) </strong></span>Consider <span class="math inline">\(\mathbf x = \begin{pmatrix}  3 &amp; -3 &amp; a  \end{pmatrix}\)</span> and <span class="math inline">\(\bf y = \begin{pmatrix}  1\\  1\\  -5  \end{pmatrix}.\)</span></p>
+<p>Find <span class="math inline">\(a\)</span> such that the vectors are orthogonal.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>The dot product is:</p>
+<p><span class="math display">\[3\cdot 1 + (-3) \cdot 1 + a\cdot (-5) =3 -3 -5a = -5a.\]</span></p>
+<p>Since the dot product of orthogonal vectors is zero, we have:</p>
+<p><span class="math display">\[-5a=0\rightarrow a=0.\]</span></p>
+<p>We obtain, <span class="math inline">\(\mathbf x = \begin{pmatrix}  3 &amp; -3 &amp; 0  \end{pmatrix}.\)</span></p>
+</details>
+</div>
+<div class="exercise">
+<p><span id="exr:ortho2" class="exercise"><strong>Exercise 9.2  (find orthonormal vectors) </strong></span>Consider <span class="math inline">\(\mathbf x = \begin{pmatrix}  a &amp; b &amp; a  \end{pmatrix}\)</span> and <span class="math inline">\(\bf y = \begin{pmatrix}  0\\  0.6\\  -0.8  \end{pmatrix}.\)</span></p>
+<p>Find <span class="math inline">\(a,b&gt;0\)</span> such that the vectors are orthonormal.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>The dot product is:</p>
+<p><span class="math display">\[a\cdot 0+ b \cdot 0.6 + a\cdot (-0.8) =0.6 b -0.8a \stackrel{!}{=} 0.\]</span></p>
+<p>So, <span class="math inline">\(a=3/4\cdot b.\)</span></p>
+<p>On the other hand, the norm of <span class="math inline">\(\bf x\)</span> is:</p>
+<p><span class="math display">\[\sqrt{a^2+b^2+a^2} \stackrel{!}{=} 1\rightarrow 2a^2 + b^2 = 1. \]</span></p>
+<p>Plugging in the above <span class="math inline">\(a=3/4\cdot b,\)</span> we have:</p>
+<p><span class="math display">\[2\cdot 9/16b^2 + b^2 = 1\rightarrow 17/8b^2 =1\rightarrow b = \sqrt{8/17} = 2\sqrt{2/17}.\]</span></p>
+<p>Hence, <span class="math inline">\(a=3/4\cdot 2\sqrt{2/17} = 1.5 \cdot \sqrt{2/17}.\)</span></p>
+<p>Therefore:</p>
+<p><span class="math inline">\(\mathbf x = \begin{pmatrix}  1.5 \cdot \sqrt{2/17} &amp; \sqrt{8/17} &amp; 1.5 \cdot \sqrt{2/17}  \end{pmatrix}\)</span></p>
+</details>
+</div>
+<p>The <strong>product of two matrices</strong> is defined in such a way that some properties of multiplication of real numbers are preserved.</p>
+<div class="definition">
+<p><span id="def:defmatprod" class="definition"><strong>Definition 9.10  (product of two matrices) </strong></span>Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(m × n\)</span> matrix and <span class="math inline">\(B\)</span> an <span class="math inline">\(n × q\)</span> matrix (i.e. the number of columns in <span class="math inline">\(A\)</span> corresponds to the number of rows in <span class="math inline">\(B\)</span> – important!).
+Then the product <span class="math inline">\(C = A · B\)</span> is defined as the <span class="math inline">\(m × q\)</span> matrix with the elements:
+<span class="math inline">\(c_{ij}= \sum_{k=1}^{n} a_{ik} \ b_{kj}\)</span>,</p>
+<p><span class="math inline">\(i = 1, ... , m\)</span>, <span class="math inline">\(\ j = 1, ... , q\)</span>.</p>
+<p>In other words: The entry <span class="math inline">\(c_{ij}\)</span> is the scalar product of the <span class="math inline">\(i\)</span>th row vector and the <span class="math inline">\(j\)</span>th column vector:</p>
+<p><span class="math display">\[\begin{equation*}
+    \begin{pmatrix}
+        a_{i1} &amp; a_{i2} &amp; \ldots &amp; a_{in}
+      \end{pmatrix}
+      \,
+      \begin{pmatrix}
+        b_{1j}\\
+        b_{2j}\\
+        \vdots\\
+        b_{nj}
+      \end{pmatrix}
+      = a_{i1} b_{1j} + a_{i2} b_{j2} + \cdots + a_{in} b_{nj} =c_{ij}.
+\end{equation*}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:mmult" class="example"><strong>Example 9.8  (matrix multiplication) </strong></span>Let <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> be given as:
+<span class="math display">\[\begin{equation*}
+  A=\begin{pmatrix}
+  3 &amp; \phantom{-}1 \\
+  2 &amp; -2\\
+  0 &amp; \phantom{-}2%
+  \end{pmatrix}
+  ,\quad\quad B=\begin{pmatrix}
+  1 &amp; 0 &amp; -1\\
+  2 &amp; 3 &amp; \phantom{-}0%
+  \end{pmatrix}
+  \end{equation*}\]</span></p>
+<p>Then the product of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is <span class="math inline">\(3\times 3\)</span>
+Matrix:
+<span class="math display">\[\begin{align*}
+        AB &amp;= \begin{pmatrix}
+          3\cdot 1+1\cdot2=5 &amp; 3\cdot 0+1\cdot 3=3 &amp; 3\cdot (-1)+1\cdot 0=-3\\
+          2\cdot1-2\cdot2=-2 &amp; 2\cdot 0-2\cdot 3=-6 &amp; 2\cdot (-1)-2\cdot 0=-2\\
+          0\cdot 1+2\cdot 2=4 &amp; 0\cdot 0+2\cdot 3=6 &amp; 0\cdot (-1)+2\cdot
+          0=0%
+        \end{pmatrix}\\
+           &amp;=\begin{pmatrix}
+             \phantom{-}5 &amp; \phantom{-}3 &amp; -3 \\
+             -2 &amp; -6 &amp; -2 \\
+             \phantom{-}4 &amp; \phantom{-}6 &amp; \phantom{-}0%
+           \end{pmatrix}
+      \end{align*}\]</span></p>
+<p>In Excel, the product of two matrices is calculated as follows:</p>
+<ul>
+<li>Input of matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> in Excel;</li>
+<li>Selecting the cells that will contain the product <span class="math inline">\(A\, B\)</span>
+to be entered in;</li>
+<li>Enter the formula {=MMULT(“range of <span class="math inline">\(A\)</span>”,“range
+from <span class="math inline">\(B\)</span>”)}</li>
+<li>With the confirmation { CTRL + SHIFT + ENTER} result will be calculated.</li>
+</ul>
+<p><img src="images/mmult.png" /></p>
+</div>
+<div id="qmmul" class="quiz">
+<p>The following matrices are given:</p>
+<p><span class="math inline">\(A = \begin{pmatrix} 3 \ \ -5 \ \ \  \ \ \ 4 \\ 2 \ \ \  -2 \ \ -2 \end{pmatrix}\)</span></p>
+<p><span class="math inline">\(B = \begin{pmatrix} -2 \ \ -3 \\ 5 \ \  \  -2 \\ 4 \ \ \ \ 4 \  \end{pmatrix}\)</span>.</p>
+<p>Compute their product!</p>
+<script>
+  // Generate a random question
+    const questionObj17 = {
+      question: 'What is the product \\(A \\cdot B\\)?',
+      options: [\\(\\begin{pmatrix} -15 \\ \\ -15  \\\\ 2 \\ \\ \\ \\ \\ \\ 2  \\end{pmatrix}\\),\\(\\begin{pmatrix} -10 \\ \\ -10  \\\\ 3 \\ \\ \\ \\ \\ \\ 3  \\end{pmatrix}\\)],
+      answer: '1',
+      id: 17
+    };
+</script>
+<p class="question">
+<span id="question-text17"></span>
+</p>
+<div class="options">
+<label>
+<input type="radio" name="option17" value=1> ‘\(\begin{pmatrix} -15 \ \ -15 \\ 2 \ \ \ \ \ \ 2 \end{pmatrix}\)’
+</label>
+<label>
+<input type="radio" name="option17" value=2> ‘\(\begin{pmatrix} -10 \ \ -10 \\ 3 \ \ \ \ \ \ 3 \end{pmatrix}\)’
+</label>
+</div>
+<button onclick="checkAnswer_match(questionObj17)">Submit</button>
+<p id="result17">
+</p>
+</div>
+<p>Matrices are often used to solve (large) linear systems of equations.</p>
+<div class="example">
+<p><span id="exm:mmultlgs" class="example"><strong>Example 9.9  (Systems of linear equations) </strong></span></p>
+<ul>
+<li>We consider an LGS consisting of <span class="math inline">\(m\)</span> linear ones
+Equations and <span class="math inline">\(n\)</span> variables:
+<span class="math display">\[\begin{equation*}
+    \begin{array}{ccccccccc}
+      a_{11} x_1 &amp;+&amp; a_{12} x_2 &amp;+&amp; \cdots &amp;+&amp; a_{1n} x_n &amp;=&amp; b_1\\
+      a_{21} x_1 &amp;+&amp; a_{22} x_2 &amp;+&amp; \cdots &amp;+&amp; a_{2n} x_n &amp;=&amp; b_2\\
+      \vdots &amp; &amp; \vdots &amp; &amp; \ddots &amp; &amp; \vdots &amp; &amp; \vdots\\
+      a_{m1} x_1 &amp;+&amp; a_{m2} x_2 &amp;+&amp; \cdots &amp;+&amp; a_{mn} x_n &amp;=&amp; b_m
+    \end{array}
+  \end{equation*}\]</span></li>
+<li>The LGS can be written as a matrix product:
+<span class="math display">\[\begin{equation*}
+    Ax=b
+  \end{equation*}\]</span>
+where <span class="math inline">\(A=\begin{pmatrix}  a_{11} &amp; a_{12} &amp; \ldots &amp; a_{1n}\\  a_{21} &amp; a_{22} &amp; \ldots &amp; a_{2n}\\  \vdots &amp; \vdots &amp; &amp; \vdots\\  a_{m1} &amp; a_{m2} &amp; \ldots &amp; a_{mn}  \end{pmatrix}\)</span>,
+<span class="math inline">\(x=\begin{pmatrix}  x_{1} \\  x_{2}\\  \vdots\\  x_n  \end{pmatrix}\)</span>,
+<span class="math inline">\(b=\begin{pmatrix}  b_{1} \\  b_{2}\\  \vdots\\  b_m  \end{pmatrix}\)</span>.</li>
+</ul>
+</div>
+<p>The following theorem contains some properties of matrix multiplication.</p>
+<div class="theorem">
+<p><span id="thm:thmmmult" class="theorem"><strong>Theorem 9.1  (Properties of matrix multiplication) </strong></span>Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(m \times n\)</span> matrix and let <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> be matrices such that the following operations are well defined:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Multiplication by the identity matrix:
+<span class="math inline">\(A I_n = A\)</span> and <span class="math inline">\(I_m A = A\)</span>.</p></li>
+<li><p>associative law:</p></li>
+</ol>
+<p><span class="math inline">\((A + B) + C = A + (B + C)\)</span>
+<span class="math inline">\((AB)C = A(BC)\)</span></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li>Commutative Law of Addition:</li>
+</ol>
+<p><span class="math inline">\(A + B = B + A\)</span></p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>distributive law:</li>
+</ol>
+<p><span class="math inline">\(A(B + C) = AB + AC\)</span>
+<span class="math inline">\((A + B)C = AC + BC\)</span></p>
+<p><strong>Important</strong>: There is no commutative law for multiplication! As a rule <span class="math inline">\(AB \neq BA\)</span> holds, even if both products are well defined.</p>
+</div>
+<div class="exercise">
+<p><span id="exr:exrmmult" class="exercise"><strong>Exercise 9.3  (Matrix multiplication I) </strong></span>Check that <span class="math inline">\(AB\not= BA\)</span> for the matrices
+<span class="math inline">\(\displaystyle A=  \begin{pmatrix}  2 &amp; 1 \\  1 &amp; 1  \end{pmatrix}\)</span> and <span class="math inline">\(\displaystyle B=  \begin{pmatrix}  1 &amp; -1 \\  0 &amp;\phantom{-}2  \end{pmatrix}\)</span>.</p>
+</div>
+<p>Matrices that have the property <span class="math inline">\(AB= BA\)</span> are called <strong>idempotent</strong> matrices.</p>
+<div class="definition">
+<p><span id="def:defidempotenz" class="definition"><strong>Definition 9.11  (idempotence) </strong></span>A square matrix <span class="math inline">\(A\)</span> is called <strong>idempotent</strong> if:
+<span class="math inline">\(A\, A=A\)</span>.</p>
+</div>
+<div class="exercise">
+<p><span id="exr:idempo" class="exercise"><strong>Exercise 9.4  (Idempotent Matrices) </strong></span>Show that the following matrices are idempotent:
+<span class="math display">\[\begin{pmatrix}
+        -1 &amp; 2\\
+        -1 &amp; 2
+      \end{pmatrix}\]</span>
+and
+<span class="math display">\[\displaystyle
+      \begin{pmatrix}
+        \phantom{-}3 &amp; \phantom{-}6\\
+        -1 &amp; -2
+\end{pmatrix}\]</span></p>
+</div>
+<div class="exercise">
+<p><span id="exr:exrmmult2" class="exercise"><strong>Exercise 9.5  (Matrix multiplication II) </strong></span>be</p>
+<p><span class="math inline">\(A = \begin{pmatrix} 2 \ 1 \\ 1\ 1 \\ 1 \ 1 \end{pmatrix}\)</span> and</p>
+<p><span class="math inline">\(B = \begin{pmatrix} 1 \ -1 \ \ 1 \\ 0 \ \ \ \ \ 2 \ \ \ 1\end{pmatrix}\)</span></p>
+Both products are well defined, but it is easy to see that <span class="math inline">\(AB \neq BA\)</span>.
+<details>
+<summary>
+Answer
+</summary>
+<img src="images/aufgmmult.png" />
+</details>
+</div>
+</div>
+<div id="economic-applications" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Economic Applications<a href="matrices-and-basic-matrix-operations.html#economic-applications" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="monthly-consumer-spending" class="section level3 hasAnchor" number="9.3.1">
+<h3><span class="header-section-number">9.3.1</span> Monthly consumer spending<a href="matrices-and-basic-matrix-operations.html#monthly-consumer-spending" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The column vector <span class="math inline">\(x\)</span> represents the quantities of <span class="math inline">\(n\)</span> goods that a consumer buys monthly:</p>
+<p><span class="math inline">\(x = \begin{pmatrix} x_1 \\ x_2 \\ ... \\ x_n \end{pmatrix}\)</span></p>
+<p>The associated prices (in Euro) per unit of each consumer good are entered in the row vector <span class="math inline">\(p^\top\)</span>:</p>
+<p><span class="math inline">\(p^\top=(p_1 \ \ p_2 \ \ ... \ \ p_n)\)</span></p>
+<p>The monthly consumer spending corresponds to the scalar product <span class="math inline">\(E = p^\top x\)</span>:</p>
+<p><span class="math inline">\(E= p^\top x= (p_{1} \ \ p_{2} \ \ ... \ p_{n}) \begin{pmatrix} x_{1} \\ x_{2} \\ . \\ . \\ x_{n} \end{pmatrix} = \sum_{i=1}^{n} p_ix_i\)</span></p>
+</div>
+<div id="regional-migration" class="section level3 hasAnchor" number="9.3.2">
+<h3><span class="header-section-number">9.3.2</span> Regional migration<a href="matrices-and-basic-matrix-operations.html#regional-migration" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The transition matrix from section 1 above describes the migratory behavior of the population in three regions.</p>
+<p>Currently, i.e. at the time <span class="math inline">\(t = 0\)</span>, the population is distributed over the three regions as follows (numbers in million),</p>
+<p><span class="math inline">\({\bf x_0} = \begin{pmatrix} 5 \\ 10 \\ 6 \end{pmatrix}\)</span></p>
+<p>With the transition matrix <span class="math inline">\(P\)</span></p>
+<p><span class="math inline">\(P = \begin{pmatrix} 0.80 \ \ 0.15 \ \ 0.05 \\ 0.10 \ \ 0.70 \ \ 0.05\\ 0.10 \ \ 0.15 \ \ 0 ,90 \\ \end{pmatrix}\)</span></p>
+<p>we can find the population distribution at the beginning of the next period (<span class="math inline">\(t = 1\)</span>): <span class="math inline">\({\bf x_1} = P{\bf x_0}\)</span>.</p>
+<p>The solution <span class="math inline">\({\bf x_1} = P {\bf x_0}\)</span> with the concrete numbers is</p>
+<p><span class="math display">\[\begin{align*} P{\bf x_0}  &amp;= \begin{pmatrix} 0.80 \ \ 0.15 \ \ 0.05 \\ 0.10 \ \ 0.70 \ \ 0.05\\ 0.10 \ \ 0.15 \ \ 0 ,90 \\ \end{pmatrix} \begin{pmatrix} 5 \\ 10 \\ 6 \end{pmatrix} \\
+&amp; = \begin{pmatrix} 0.80 \cdot 5\ + \ 0.15 \cdot 10 \ + \ 0.05 \cdot 6\\ 0.10 \cdot 5 \ + \ 0.70 \cdot 10 \ + \ 0.05 \cdot 6\\ 0.10 \cdot 5\ + \ 0.15 \cdot 10 \ + \ 0.90 \cdot 6 \\ \end{pmatrix} =\begin{pmatrix} 5.8 \\7.8\\ 7.4\end{pmatrix}
+\end{align*}\]</span></p>
+<p>According to this, after a period more people live in regions 1 and 3, whereas the population in region 2 has shrunk.</p>
+<p>Similarly, it can be calculated how the population is distributed over the three regions after two periods:
+<span class="math display">\[{\bf x_2}  = P{\bf x_1}  = P(P{\bf x_0} ) = P^ 2 {\bf x_0}. \]</span></p>
+<p>In general, after <span class="math inline">\(n\)</span> periods</p>
+<p><span class="math display">\[{\bf x_n}  = P{\bf x_{n-1}}  = P^ n {\bf x_0}. \]</span></p>
+<div class="exercise">
+<p><span id="exr:regwand" class="exercise"><strong>Exercise 9.6  (Regional migration) </strong></span>Determine <span class="math inline">\(\bf x_2\)</span>, the population in the three regions at the end of the second period.</p>
+<details>
+<summary>
+Answer
+</summary>
+<img src="images/regwand.png" />
+</details>
+</div>
+<div class="exercise">
+<p><span id="exr:kundebest" class="exercise"><strong>Exercise 9.7  (customer order) </strong></span>The customer orders of a manufacturer are:</p>
+<p>– Customer 1 orders 3 units of product 1,</p>
+<p>– Customer 2 orders 2 units of product 1,</p>
+<p>– Customer 3 orders 0 units of product 1,</p>
+<p>– Customer 4 orders 7 units of product 1,</p>
+<p>– Customer 1 orders 9 units of product 2,</p>
+<p>– Customer 2 orders 1 units of product 2,</p>
+<p>– Customer 3 orders 2 units of product 2,</p>
+<p>– Customer 4 orders 3 units of product 2,</p>
+<p>– Customer 1 orders 5 units of product 3,</p>
+<p>– Customer 2 orders 3 units of product 3,</p>
+<p>– Customer 3 orders 6 units of product 3,</p>
+<p>– Customer 4 orders 4 units of product 3.</p>
+<p>Write the orders in matrix notation and determine the revenue per customer for the following prices:</p>
+<p>– a unit of product 1 costs p1 = 2 euros,</p>
+<p>– a unit of product 2 costs p2 = 4 euros,</p>
+<p>– a unit of product 3 costs p3 = 10 euros</p>
+<details>
+<summary>
+Answer
+</summary>
+<img src="images/kundenbest.png" />
+</details>
+</div>
+</div>
+</div>
+<div id="transpose-of-a-matrix" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Transpose of a matrix<a href="matrices-and-basic-matrix-operations.html#transpose-of-a-matrix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We have already seen that you can use transposition to turn a column vector into a row vector and vice versa. You can also transpose matrices and thus swap their dimensions.</p>
+<div class="definition">
+<p><span id="def:deftransponierte" class="definition"><strong>Definition 9.12  (transpose of a matrix) </strong></span>Let <span class="math inline">\(A\)</span> be a <span class="math inline">\(m\times n\)</span> matrix. The <strong>Transpose</strong> of a matrix
+<span class="math inline">\(A^\top\)</span>, also written as <span class="math inline">\(A^\prime\)</span>, is a <span class="math inline">\(n\times m\)</span> matrix,
+which is created by adding the rows (columns) from <span class="math inline">\(A\)</span> to the
+Columns (rows) of <span class="math inline">\(A^\top\)</span> makes:
+<span class="math display">\[\begin{equation*}
+      A^\top = \begin{pmatrix}
+        a_{11} &amp; a_{12} &amp; \ldots &amp; a_{1n}\\
+        a_{21} &amp; a_{22} &amp; \ldots &amp; a_{2n}\\
+        \vdots &amp; \vdots &amp;&amp; \vdots\\
+        a_{m1} &amp; a_{m2} &amp; \ldots &amp; a_{mn}
+      \end{pmatrix}^\top =
+      \begin{pmatrix}
+        a_{11} &amp; a_{21} &amp; \ldots &amp; a_{m1}\\
+        a_{12} &amp; a_{22} &amp; \ldots &amp; a_{m2}\\
+        \vdots &amp; \vdots &amp; \ldots &amp; \vdots\\
+        a_{1n} &amp; a_{2n} &amp; \ldots &amp; a_{mn}
+      \end{pmatrix}
+    \end{equation*}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:transponieren" class="example"><strong>Example 9.10  (Transposing a matrix) </strong></span><span class="math display">\[\begin{equation*}
+      \begin{pmatrix}
+        3 &amp; 1 \\
+        2 &amp; -2 \\
+        0 &amp; 2%
+      \end{pmatrix}^\top =
+      \begin{pmatrix}
+        3 &amp; 2 &amp; 0 \\
+        1 &amp; -2 &amp; 2%
+      \end{pmatrix}
+    \end{equation*}\]</span></p>
+</div>
+<ul>
+<li>Are a square matrix and its transposed matrix
+identical, i.e. if <span class="math inline">\(A^\top=A\)</span> then it is called <strong>symmetric</strong>
+Matrix.</li>
+<li>Transposing a vector results in out of a
+row vector becomes a column vector and vice versa.</li>
+</ul>
+<div class="theorem">
+<p><span id="thm:thmtransponieren" class="theorem"><strong>Theorem 9.2  (Properties of the transpose) </strong></span></p>
+<ul>
+<li><p>Transposing a transposed matrix produces the
+original matrix: <span class="math inline">\((A^{\top})^{\top}=A\)</span>.</p></li>
+<li><p>The transpose of a sum of matrices is equal to
+Sum of the transposed matrices:
+<span class="math display">\[\begin{equation*}
+      (A+B+C)^{\top}=A^{\top}+B^{\top}+C^{\top}.
+    \end{equation*}\]</span></p></li>
+<li><p>The transpose of a well-defined matrix product
+<span class="math inline">\(AB\)</span> is the dimension <span class="math inline">\(m\times m\)</span>, where <span class="math inline">\(A\)</span> is the dimension
+<span class="math inline">\(m\times n\)</span> and <span class="math inline">\(B\)</span> has the dimension <span class="math inline">\(n\times m\)</span> is given
+through:
+<span class="math display">\[\begin{equation*}
+      (AB)^{\top}=B^{\top}A^{\top}.
+    \end{equation*}\]</span></p></li>
+<li><p>For three matrices with corresponding dimensions <span class="math inline">\(A, B\)</span> and
+<span class="math inline">\(C\)</span> is: <span class="math inline">\((ABC)^{\top}=C^{\top}B^{\top}A^{\top}\)</span>.</p></li>
+</ul>
+</div>
+</div>
+<div id="determinant-and-inverse-of-a-matrix" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Determinant and inverse of a matrix<a href="matrices-and-basic-matrix-operations.html#determinant-and-inverse-of-a-matrix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We define the inverse of a square matrix.</p>
+<div class="definition">
+<p><span id="def:definverse" class="definition"><strong>Definition 9.13  (Inverse of a square matrix) </strong></span></p>
+<ul>
+<li><p>Let <span class="math inline">\(A\)</span> be a square <span class="math inline">\(n\times n\)</span> matrix. The <span class="math inline">\(n\times n\)</span> matrix
+<span class="math inline">\(B\)</span> is the <strong>inverse matrix</strong> of <span class="math inline">\(A\)</span> if:
+<span class="math display">\[\begin{equation*}
+  AB=BA=I_n.
+\end{equation*}\]</span></p></li>
+<li><p>If such a matrix <span class="math inline">\(B\)</span> exists, then <span class="math inline">\(A\)</span> is said to be <strong>invertible</strong> or
+<strong>non-singular</strong> and one writes <span class="math inline">\(A^{-1}\)</span> for the inverse matrix.</p></li>
+<li><p>If a matrix <span class="math inline">\(A\)</span> is not invertible, then it is said to be <strong>singular</strong>.</p></li>
+</ul>
+</div>
+<p>If we can find the inverse of the matrix describing a linear system of equations (LSE), it will help us it.</p>
+<div class="example">
+<p><span id="exm:matlgs" class="example"><strong>Example 9.11  (Inverse of a matrix in LSE) </strong></span>We consider an LSE in matrix form:
+<span class="math display">\[\begin{equation*}
+A{\bf x}={\bf b},
+\end{equation*}\]</span>
+whereby</p>
+<ul>
+<li><p><span class="math inline">\(A\)</span> is a <span class="math inline">\(n\times n\)</span> square coefficient matrix,</p></li>
+<li><p><span class="math inline">\(\bf x\)</span> a <span class="math inline">\(n\times 1\)</span> vector with unknowns and</p></li>
+<li><p><span class="math inline">\(\bf b\)</span> a <span class="math inline">\(n\times 1\)</span> vector consisting of constants.</p></li>
+<li><p>This system can be solved for <span class="math inline">\(\bf x\)</span> if the matrix <span class="math inline">\(A\)</span>
+is invertible.</p></li>
+<li><p>In this case both sides of the equation are filled with <span class="math inline">\(A^{-1}\)</span>
+multiplied:
+<span class="math display">\[\begin{equation*}
+A^{-1}A{\bf x}=A^{-1}{\bf b},
+\end{equation*}\]</span></p></li>
+</ul>
+<p>from what
+<span class="math display">\[\begin{equation*}
+{\bf x}=A^{-1}{\bf b}
+\end{equation*}\]</span>
+follows as the solution of the system.</p>
+</div>
+<p>We derive the inverse of a <span class="math inline">\(2\times 2\)</span> matrix. We consider an invertible <span class="math inline">\(2\times 2\)</span> matrix <br />
+<span class="math display">\[\begin{equation*}
+  \displaystyle A=
+      \begin{pmatrix}
+        a_{11} &amp; a_{12} \\
+        a_{21} &amp; a_{22}%
+      \end{pmatrix}
+\end{equation*}\]</span></p>
+<p>with the associated inverse matrix:
+<span class="math display">\[\begin{equation*}
+A^{-1}=
+\begin{pmatrix}
+\alpha _{11} &amp; \alpha _{12} \\
+\alpha _{21} &amp; \alpha _{22}%
+\end{pmatrix}.
+\end{equation*}\]</span>
+</p>
+<p>We shall now derive the relationship between the elements of <span class="math inline">\(A\)</span> and the elements of <span class="math inline">\(A^{-1}\)</span>.</p>
+<ul>
+<li><p>By definition, <span class="math inline">\(AA^{-1}=I_{2}\)</span>, i.e.
+<span class="math display">\[\begin{equation*}
+\begin{pmatrix}
+a_{11} &amp; a_{12} \\
+a_{21} &amp; a_{22}%
+\end{pmatrix}
+\begin{pmatrix}
+\alpha _{11} &amp; \alpha _{12} \\
+\alpha _{21} &amp; \alpha _{22}
+\end{pmatrix}
+=\begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{pmatrix}.
+\end{equation*}\]</span></p></li>
+<li><p>This gives a system with four equations and four unknowns: <span class="math inline">\(\alpha _{11}\)</span>, <span class="math inline">\(\alpha _{12}\)</span>, <span class="math inline">\(\alpha _{21}\)</span> and <span class="math inline">\(\alpha _{22}\)</span>.</p></li>
+<li><p>Solving the system of equations gives:
+<span class="math display">\[\begin{align*}
+\alpha _{11} &amp;=\frac{a_{22}}{a_{22}a_{11}-a_{21}a_{12}} \\
+\alpha _{21} &amp;=\frac{-a_{21}}{a_{22}a_{11}-a_{21}a_{12}} \\
+\alpha _{12} &amp;=\frac{-a_{12}}{a_{22}a_{11}-a_{21}a_{12}} \\
+\alpha _{22} &amp;=\frac{a_{11}}{a_{22}a_{11}-a_{21}a_{12}}
+\end{align*}\]</span></p></li>
+<li><p>Accordingly, the inverse of <span class="math inline">\(A\)</span> is given
+through
+<span class="math display">\[\begin{equation*}
+A^{-1}=\frac{1}{a_{22}a_{11}-a_{21}a_{12}}
+\begin{pmatrix}
+a_{22} &amp; -a_{12} \\
+-a_{21} &amp; a_{11}
+\end{pmatrix}.
+\end{equation*}\]</span></p></li>
+<li><p>The denominator of the prefactor,
+<span class="math inline">\(a_{22}a_{11}-a_{21}a_{12}\)</span>, is called the <strong>determinant</strong>. The
+Inverse exists if and only if the determinant is different from zero.</p></li>
+</ul>
+<div class="theorem">
+<p><span id="thm:thminverse" class="theorem"><strong>Theorem 9.3  (Calculation rules for the inverse) </strong></span>Let <span class="math inline">\(A\)</span> be a square matrix. Then:</p>
+<ul>
+<li><span class="math inline">\((A^{-1})^{-1}=A\)</span>,</li>
+<li><span class="math inline">\((A^\top)^{-1}=(A^{-1})^\top\)</span>,</li>
+<li><span class="math inline">\((AB)^{-1}=B^{-1}A^{-1}\)</span></li>
+<li><span class="math inline">\((\lambda \cdot A)^{-1}=\frac{1}{\lambda}\cdot A^{-1}\)</span> for all <span class="math inline">\(\lambda&gt;0\)</span>.</li>
+</ul>
+</div>
+<p>One can perform matrix inversion in Excel. Namely, the inverse of a matrix can be found in Excel as follows:</p>
+<ul>
+<li>Entering the matrix <span class="math inline">\(A\)</span> in Excel;</li>
+<li>Selection of the cells in which the result <span class="math inline">\(A^{-1}\)</span> is entered
+shall be;</li>
+<li>Enter the command =MINVERSE(“range of <span class="math inline">\(A\)</span>”)</li>
+<li>With a German-language Excel, the command is MINV.</li>
+<li>Confirm with CTRL + SHIFT + ENTER to get the result
+calculate.</li>
+</ul>
+<div class="example">
+<p><span id="exm:minverse" class="example"><strong>Example 9.12  (Matrix inverse in Excel) </strong></span><img src="images/minverse.png" /></p>
+</div>
+<div id="qinverse" class="quiz">
+<p>Given:</p>
+<p><span class="math inline">\(A = \begin{pmatrix} -3 \ \ \ \  \ 4 \\ 4 \ \ \  -3 \end{pmatrix}\)</span></p>
+<script>
+  // Generate a random question
+    const questionObj18 = {
+      question: 'Which of the following matrices is the inverse matrix of \\(A\\)?',
+      options: ['\\(\\begin{pmatrix} 0.281 \\ \\ \\ \\ \\ 0.349 \\\\ 0.349 \\ \\ \\ 0.281 \\end{pmatrix} \\)' , '\\( \\begin{pmatrix} 0.364 \\ \\ \\ \\ \\ 0.418 \\\\ 0.418 \\ \\ \\ 0.364 \\end{pmatrix}\\)', '\\(\\begin{pmatrix } 0.429 \\ \\ \\ \\ \\ 0.571 \\\\ 0.571 \\ \\ \\ 0.429 \\end{pmatrix}\\)'],
+      answer: '3',
+      id: 18
+    };
+</script>
+<p class="question">
+<span id="question-text18"></span>
+</p>
+<div class="options">
+<label>
+<input type="radio" name="option18" value=1> \(\begin{pmatrix} 0.281 \ \ \ \ \ 0.349 \\ 0.349 \ \ \ 0.281  \end{pmatrix} \)
+</label>
+<label>
+<input type="radio" name="option18" value=2> \(\begin{pmatrix} 0.364 \ \ \ \ \ 0.418 \\ 0.418 \ \ \ 0.364  \end{pmatrix}\)
+</label>
+<label>
+<input type="radio" name="option18" value=3> \(\begin{pmatrix} 0.429 \ \ \ \ \ 0.571 \\ 0.571 \ \ \ 0.429  \end{pmatrix}\)
+</label>
+</div>
+<button onclick="checkAnswer_match(questionObj18)">Submit</button>
+<p id="result18">
+</p>
+<script>
+  // Display the question
+    document.getElementById('question-text18').textContent = questionObj18.question;
+</script>
+</div>
+<div class="example">
+<p><span id="exm:kafeetee" class="example"><strong>Example 9.13  (Coffee and tea market) </strong></span></p>
+<ul>
+<li><p>Consider the market for tea with <strong>supply</strong> <span class="math inline">\(S_t\)</span> and
+<strong>demand</strong> <span class="math inline">\(D_t\)</span> given as follows:
+<span class="math display">\[\begin{align*}
+D_{t} &amp;=100-5p_{t}+3p_{k}, \\
+S_{t} &amp;=-10+2p_{t},
+\end{align*}\]</span>
+where <span class="math inline">\(p_t\)</span> is the price of tea and <span class="math inline">\(p_k\)</span> is the price of coffee
+designated.</p></li>
+<li><p>Analogously, the market for coffee can be described as follows:
+<span class="math display">\[\begin{align*}
+D_{k} &amp;=120-8p_k + 2p_t,\\
+S_{k} &amp;=-20+5p_{k}.
+\end{align*}\]</span></p></li>
+<li><p>The equilibrium prices
+for tea and coffee, <span class="math inline">\(p_{t}\)</span>
+and <span class="math inline">\(p_{k}\)</span> arise precisely where supply and demand
+to match.</p></li>
+<li><p>Using the matrix notation, the equilibrium can be
+write as:
+<span class="math display">\[\begin{equation*}
+  A\, {\bf p} = {\bf b},
+\end{equation*}\]</span>
+with
+<span class="math display">\[\begin{equation*}
+A=\begin{pmatrix}
+7 &amp; -3 \\
+-2 &amp; 13%
+\end{pmatrix}
+,\quad
+{\bf p}=
+\begin{pmatrix}
+p_{t} \\
+p_{k}%
+\end{pmatrix}
+, \quad
+{\bf b}=
+\begin{pmatrix}
+110 \\
+140%
+\end{pmatrix}.
+\end{equation*}\]</span></p></li>
+<li><p>So the solution is:
+<span class="math display">\[\begin{equation*}
+{\bf p}=A^{-1}{\bf b}.
+\end{equation*}\]</span>
+</p></li>
+<li><p>With
+<span class="math display">\[\begin{equation*}
+A^{-1}=
+\begin{pmatrix}
+13/85 &amp; 3/85 \\
+2/85 &amp; 7/85%
+\end{pmatrix}
+\end{equation*}\]</span>
+therefore applies:
+<span class="math display">\[\begin{equation*}
+{\bf p}=\begin{pmatrix}
+p_{t} \\
+p_{k}%
+\end{pmatrix}
+=\begin{pmatrix}
+13/85 &amp; 3/85 \\
+2/85 &amp; 7/85%
+\end{pmatrix}
+\, \begin{pmatrix}
+110 \\
+140%
+\end{pmatrix}
+=\begin{pmatrix}
+21.76 \\
+14.12%
+\end{pmatrix}.
+\end{equation*}\]</span></p></li>
+</ul>
+</div>
+<div class="example">
+<p><span id="exm:inputoutput" class="example"><strong>Example 9.14  (Input-Output Matrix) </strong></span></p>
+<ul>
+<li>A firm produces two outputs, <span class="math inline">\(y_{1}\)</span> and <span class="math inline">\(y_{2}\)</span>, with two
+inputs, <span class="math inline">\(z_{1}\)</span> and <span class="math inline">\(z_{2}\)</span>.</li>
+<li>Let <span class="math inline">\(a_{ij}\)</span> denote the amount of <span class="math inline">\(z_i\)</span> required to
+produce one unit of output <span class="math inline">\(y_j\)</span>.</li>
+<li>The coefficients <span class="math inline">\(a_{ij}\)</span>, <span class="math inline">\(i,j=1,2\)</span>, define the
+<strong>input-requirement matrix</strong>
+<span class="math display">\[\begin{equation*}
+A=\begin{pmatrix}
+2 &amp; 1 \\
+3 &amp; 2%
+\end{pmatrix}.
+\end{equation*}\]</span></li>
+<li>Given the input levels <span class="math inline">\(z_{1}=50\)</span> and <span class="math inline">\(z_{2}=80\)</span>, what
+outputs <span class="math inline">\(y_{1}\)</span> and <span class="math inline">\(y_{2}\)</span> are produced?</li>
+<li>We have <span class="math inline">\(z=Ay\)</span> <span class="math inline">\(\Longrightarrow y=A^{-1}z\)</span>, and therefore
+<span class="math inline">\(\displaystyle\begin{pmatrix}  y_{1} \\  y_{2}  \end{pmatrix}  =\begin{pmatrix}  2 &amp; 1 \\  3 &amp; 2  \end{pmatrix}^{-1}\,  \begin{pmatrix}  50 \\  80  \end{pmatrix}\)</span>.</li>
+<li>The inverse is determined as
+<span class="math display">\[\begin{equation*}
+\begin{pmatrix}
+2 &amp; 1 \\
+3 &amp; 2
+\end{pmatrix}^{-1}=
+\frac{1}{4-3}
+\begin{pmatrix}
+2 &amp; -1 \\
+-3 &amp; 2
+\end{pmatrix}
+=\begin{pmatrix}
+2 &amp; -1 \\
+-3 &amp; 2
+\end{pmatrix}.
+\end{equation*}\]</span></li>
+<li>Finally, we obtain
+<span class="math inline">\(\displaystyle\begin{pmatrix} y_{1} \\ y_{2} \end{pmatrix} = \begin{pmatrix} 2 &amp; -1 \\ -3 &amp; 2 \end{pmatrix}\, \begin{pmatrix} 50 \\ 80 \end{pmatrix} =\begin{pmatrix} 20 \\ 10 \end{pmatrix}\)</span>.</li>
+</ul>
+</div>
+<div id="more-on-the-determinant-of-a-matrixast" class="section level3 hasAnchor" number="9.5.1">
+<h3><span class="header-section-number">9.5.1</span> More on the Determinant of a Matrix<span class="math inline">\(^\ast\)</span><a href="matrices-and-basic-matrix-operations.html#more-on-the-determinant-of-a-matrixast" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When determining the inverse <span class="math inline">\(A^{-1}\)</span>, the special number - the <strong>determinant</strong> of the original matrix <span class="math inline">\(A\)</span> - plays an important role. In the following chapters, this number is used, for example, to check for maxima and minima of multivariate functions. Below we define the determinant explicitly.</p>
+<div class="definition">
+<p><span id="def:defdeterminante" class="definition"><strong>Definition 9.14  (determinant) </strong></span>Let <span class="math inline">\(A\)</span> be a <span class="math inline">\(2\times 2\)</span> matrix. the term
+<span class="math inline">\(a_{22}a_{11}-a_{21}a_{12}\)</span> is the <strong>determinant</strong> of <span class="math inline">\(A\)</span>
+and is denoted by <span class="math inline">\(|A|\)</span> or <span class="math inline">\(\det(A)\)</span>.</p>
+</div>
+<p>Similarly, the <strong>determinant</strong> of an arbitrarily
+define a dimensional, square matrix. However, the calculation of the determinant
+slightly more complicated for <span class="math inline">\(n&gt;2\)</span>. We therefore restrict ourselves to <span class="math inline">\(3×3\)</span> matrices for illustration.</p>
+<div class="theorem">
+<p><span id="thm:thmdet0" class="theorem"><strong>Theorem 9.4  (invertibility) </strong></span>A square matrix is non-singular (i.e. invertible)
+if and only if (iff) its determinant is non-zero.</p>
+</div>
+<div class="example">
+<p><span id="exm:nutzenmax" class="example"><strong>Example 1.1  (Determinant of a $3\times 3$ matrix) </strong></span>The following matrix is given
+<span class="math display">\[\begin{equation*}
+      A=
+      \begin{bmatrix}
+        a_{11} &amp; a_{12} &amp; a_{13}\\
+        a_{21} &amp; a_{22} &amp; a_{23}\\
+        a_{31} &amp; a_{32} &amp; a_{33}
+      \end{bmatrix}.
+    \end{equation*}\]</span></p>
+<p>The calculation of the determinant can be done using the catchy <strong>Rule of Sarrus</strong> (also called <strong>Hunter Fence Rule</strong>):</p>
+<p><img src="images/mdet.png" /></p>
+<p>The determinant of the <span class="math inline">\(3\times 3\)</span> matrix <span class="math inline">\(A\)</span> is:
+<span class="math display">\[\begin{align*}
+      \det(A) &amp;= a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{31}a_{22}a_{13}-a_{32}a_{23}a_{11}-a_{33}a_{21}a_{12}\\
+      &amp;= a_{11} (a_{22} a_{33} - a_{23} a_{32}) - a_{12} (a_{21} a_{33} -
+    a_{23} a_{31}) + a_{13} (a_{21} a_{32} - a_{22} a_{31})
+    \end{align*}\]</span></p>
+</div>
+<p>Sarrus’ rule is restricted to <span class="math inline">\(3×3\)</span> matrices. More generally, the calculation is done using subdeterminants.</p>
+<ul>
+<li><p>Consider the <span class="math inline">\(2\times 2\)</span> submatrices
+<span class="math display">\[\begin{equation*}
+    A_{11}=
+    \begin{bmatrix}
+      a_{22} &amp; a_{23}\\
+      a_{32} &amp; a_{33}
+    \end{bmatrix},
+    A_{12}=\begin{bmatrix}
+      a_{21} &amp; a_{23}\\
+      a_{31} &amp; a_{33}
+    \end{bmatrix},
+     A_{13}=\begin{bmatrix}
+    a_{21} &amp; a_{22}\\
+      a_{31} &amp; a_{32}
+    \end{bmatrix}.
+\end{equation*}\]</span></p></li>
+<li><p>The determinant of the <span class="math inline">\(3\times 3\)</span> matrix <span class="math inline">\(A\)</span> is:
+<span class="math display">\[\begin{align*}
+    \det(A) &amp;= a_{11}|A_{11}|-a_{12}|A_{12}|+a_{13}|A_{13}|\\
+    &amp;= a_{11} (a_{22} a_{33} - a_{23} a_{32}) - a_{12} (a_{21} a_{33} -
+  a_{23} a_{31}) + a_{13} (a_{21} a_{32} - a_{22} a_{31})
+  \end{align*}\]</span></p></li>
+<li><p>Note that the signs are alternating.</p></li>
+</ul>
+<div class="theorem">
+<p><span id="thm:thmdeter" class="theorem"><strong>Theorem 9.5  (Properties of the determinants) </strong></span>Let <span class="math inline">\(A\)</span> be a square matrix. Then:</p>
+<ul>
+<li><span class="math inline">\(\det(A^\top)=\det(A)\)</span>,</li>
+<li><span class="math inline">\(\det(A\, B) = \det(A) \, \det(B)\)</span>,</li>
+<li><span class="math inline">\(\det(A+B)\not= \det(A) + \det(B)\)</span>, im
+general. (“in general” should be understood as follows: It
+there may be instances where equality holds; equality is
+but not given in all cases.)</li>
+</ul>
+</div>
+<div class="example">
+<p><span id="exm:determinante" class="example"><strong>Example 9.15  (determinant) </strong></span>Note that
+<span class="math display">\[\begin{equation*}
+     det\begin{pmatrix}
+       3 &amp; 2 \\
+       1 &amp; 4
+     \end{pmatrix}
+     =10
+\end{equation*}\]</span>
+as well as
+<span class="math display">\[\begin{equation*}
+det\begin{pmatrix}
+       3 &amp; 1 \\
+       2 &amp; 4%
+     \end{pmatrix}
+     =10.
+\end{equation*}\]</span></p>
+</div>
+<div class="exercise">
+<p><span id="exr:aufdeter" class="exercise"><strong>Exercise 9.8  (determinant) </strong></span>Show that: <span class="math inline">\(\det(A^{-1})=1/\det(A)\)</span>.</p>
+<details>
+<summary>
+Solution
+</summary>
+<p>By the definition of the inverse matrix:
+<span class="math display">\[AA^{-1}=I_n,\]</span></p>
+where <span class="math inline">\(I_n\)</span> is the identity matrix.
+It holds:
+<span class="math display">\[\det(I_n) = 1,\]</span>
+so <span class="math display">\[\det(AA^{-1} = \det(A) \det(A^{-1}) = 1 \Rightarrow \det(A^{-1})=\frac 1{\det(A)}.\]</span>
+</details>
+</div>
+</div>
+<div id="rank-and-determinantast" class="section level3 hasAnchor" number="9.5.2">
+<h3><span class="header-section-number">9.5.2</span> Rank and determinant<span class="math inline">\(^\ast\)</span><a href="matrices-and-basic-matrix-operations.html#rank-and-determinantast" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="definition">
+<p><span id="def:defrang" class="definition"><strong>Definition 9.15  (rank of a matrix) </strong></span>The <strong>row rank (column rank)</strong> of a matrix <span class="math inline">\(A\)</span> (<span class="math inline">\(rg(A)\)</span>)
+corresponds to the number of linearly independent rows (columns). It
+the following applies: row rank = column rank.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:thmsingular" class="theorem"><strong>Theorem 9.6  (Determinants of singular matrices) </strong></span>A matrix whose row (column) is a multiple of another
+row (column) is called <strong>singular</strong>. In this case are
+the rows (columns) are not linearly independent, the matrix has
+therefore not full row rank (column rank).</p>
+</div>
+<div class="example">
+<p><span id="exm:singularmat" class="example"><strong>Example 9.16  (Determinants of singular matrices) </strong></span>One can see that
+<span class="math display">\[\begin{equation*}
+det\begin{pmatrix}
+         3 &amp; 2 \\
+         9 &amp; 6%
+       \end{pmatrix}
+       =0,
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+det\begin{pmatrix}
+         3 &amp; 6 \\
+         6 &amp; 12%
+       \end{pmatrix}
+       =0
+\end{equation*}\]</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:thmeigdet1" class="theorem"><strong>Theorem 9.7  (Determinant when adding the multiple of a column/row) </strong></span>If the matrix <span class="math inline">\(B\)</span> from another matrix <span class="math inline">\(A\)</span> through
+Addition of the multiple of a row (column) to another row
+(column) is generated, then the value of the determinant remains
+unchanged, i.e. are the determinants of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>
+identical.</p>
+</div>
+<div class="example">
+<p><span id="exm:eigdet2" class="example"><strong>Example 9.17  (Determinant when adding the multiple of a column/row) </strong></span><span class="math display">\[\begin{equation*}
+det(A)=det\left(
+       \begin{array}{cc}
+         3 &amp; 2 \\
+         1 &amp; 4
+       \end{array}
+     \right) =10,
+     
+\end{equation*}\]</span>
+<span class="math display">\[\begin{equation*}
+det(B)=det\left(
+       \begin{array}{cc}
+         3 &amp; 2 \\
+         7 &amp; 8
+       \end{array}
+     \right) =10
+\end{equation*}\]</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:thmdeter2" class="theorem"><strong>Theorem 9.8  (determinant of a triangular matrix) </strong></span>The determinant of an upper (lower) <strong>triangular matrix</strong>
+corresponds to the product of the diagonal elements.</p>
+</div>
+<div class="example">
+<p><span id="exm:deter3" class="example"><strong>Example 9.18  (determinant of a triangular matrix) </strong></span><span class="math display">\[\begin{equation*}
+det(A)=det\left(
+        \begin{array}{cc}
+          3 &amp; 2 \\
+          0 &amp; 4
+        \end{array}
+      \right) =12,
+\end{equation*}\]</span>
+<span class="math display">\[\begin{equation*}
+det(B)=det\left(
+        \begin{array}{cc}
+          3 &amp; 0 \\
+          3 &amp; 4
+        \end{array}
+      \right) =12.
+\end{equation*}\]</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:thmdeter3" class="theorem"><strong>Theorem 9.9  (Determinants when multiplying by a scalar) </strong></span></p>
+<ul>
+<li>Can be a matrix <span class="math inline">\(B\)</span> from another <span class="math inline">\(n\times n\)</span> matrix
+<span class="math inline">\(A\)</span> by multiplying a row (column) by a scalar
+generate <span class="math inline">\(\lambda\)</span> then the determinant of <span class="math inline">\(B\)</span> is just that
+<span class="math inline">\(\lambda\)</span> times the determinant of <span class="math inline">\(A\)</span>.</li>
+<li>becomes <span class="math inline">\(B\)</span> by multiplying all elements of <span class="math inline">\(A\)</span> by
+<span class="math inline">\(\lambda\)</span> is generated, then the determinant of <span class="math inline">\(B\)</span> is the
+Determinant of <span class="math inline">\(A\)</span> multiplied by <span class="math inline">\(\lambda ^{n}\)</span>.</li>
+</ul>
+</div>
+<div class="example">
+<p><span id="exm:deter4" class="example"><strong>Example 9.19  (Determinants when multiplying by a scalar) </strong></span><span class="math display">\[\begin{equation*}
+      \det(A)=\det\left(
+        \begin{array}{cc}
+          3 &amp; 2 \\
+          1 &amp; 4
+        \end{array}
+\right) =10
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+\det(B)=\det\left(
+       \begin{array}{cc}
+         3 &amp; 2 \\
+         3 &amp; 12%
+        \end{array}
+\right) =30
+\end{equation*}\]</span>
+<!--\begin{equation*}
+\quad|C|=\left\vert 
+        \begin{array}{cc}
+          6 & 4 \\ 
+          2 & 8
+        \end{array}
+      \right\vert =40.
+\end{equation*}--></p>
+</div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="systems-of-linear-equations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="calculus-with-n-variables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/09-matrizen.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

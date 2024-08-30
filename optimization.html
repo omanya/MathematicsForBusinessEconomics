@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 6 Optimization | Mathematics for Business and Economics</title>
+  <meta name="description" content="Chapter 6 Optimization | Mathematics for Business and Economics" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 6 Optimization | Mathematics for Business and Economics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 6 Optimization | Mathematics for Business and Economics" />
+  
+  
+  
+
+<meta name="author" content="Maria Osipenko" />
+
+
+<meta name="date" content="2024-08-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="differential-calculus.html"/>
+<link rel="next" href="integral-calculus.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Wirtschaftsmathematik</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-do-we-need-the-mathematics-for-business-and-economics"><i class="fa fa-check"></i>Why do we need the mathematics for business and economics?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#example-utility-maximization"><i class="fa fa-check"></i>Example: utility maximization</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-basics.html"><a href="the-basics.html"><i class="fa fa-check"></i><b>2</b> The basics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="the-basics.html"><a href="the-basics.html#sets-and-number-sets"><i class="fa fa-check"></i><b>2.1</b> Sets and Number Sets</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="the-basics.html"><a href="the-basics.html#operations-on-sets"><i class="fa fa-check"></i><b>2.1.1</b> Operations on Sets</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="the-basics.html"><a href="the-basics.html#number-sets"><i class="fa fa-check"></i><b>2.2</b> Number sets</a></li>
+<li class="chapter" data-level="2.3" data-path="the-basics.html"><a href="the-basics.html#point-sets-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Point sets in <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="the-basics.html"><a href="the-basics.html#intervals-as-sets-of-points-in-mathbbrn"><i class="fa fa-check"></i><b>2.3.1</b> Intervals as sets of points in <span class="math inline">\(\mathbb{R^n}\)</span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-distance"><i class="fa fa-check"></i><b>2.3.2</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: Distance</a></li>
+<li class="chapter" data-level="2.3.3" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-epsilon-neighborhood"><i class="fa fa-check"></i><b>2.3.3</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\epsilon-\)</span>neighborhood</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="the-basics.html"><a href="the-basics.html#functions"><i class="fa fa-check"></i><b>2.4</b> Functions</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="the-basics.html"><a href="the-basics.html#linear-functions"><i class="fa fa-check"></i><b>2.4.1</b> Linear Functions</a></li>
+<li class="chapter" data-level="2.4.2" data-path="the-basics.html"><a href="the-basics.html#quadratic-functions"><i class="fa fa-check"></i><b>2.4.2</b> Quadratic Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="the-basics.html"><a href="the-basics.html#power-exponential-and-logarithmic-functions"><i class="fa fa-check"></i><b>2.5</b> Power, exponential and logarithmic functions</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="the-basics.html"><a href="the-basics.html#convexity-and-concavity"><i class="fa fa-check"></i><b>2.5.1</b> Convexity and concavity</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html"><i class="fa fa-check"></i><b>3</b> Sequences, limits and series</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#sequences"><i class="fa fa-check"></i><b>3.1</b> Sequences</a></li>
+<li class="chapter" data-level="3.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergence-of-sequences"><i class="fa fa-check"></i><b>3.2</b> Convergence of sequences</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergent-sequences-and-their-limits"><i class="fa fa-check"></i><b>3.2.1</b> Convergent sequences and their limits</a></li>
+<li class="chapter" data-level="3.2.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#bounded-sequences"><i class="fa fa-check"></i><b>3.2.2</b> Bounded sequences</a></li>
+<li class="chapter" data-level="3.2.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#divergent-sequences"><i class="fa fa-check"></i><b>3.2.3</b> Divergent sequences</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#properties-of-sequences"><i class="fa fa-check"></i><b>3.3</b> Properties of sequences</a></li>
+<li class="chapter" data-level="3.4" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#series"><i class="fa fa-check"></i><b>3.4</b> Series</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#special-series"><i class="fa fa-check"></i><b>3.4.1</b> Special Series</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html"><i class="fa fa-check"></i><b>4</b> Continuity of functions</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#pointwise-continuity"><i class="fa fa-check"></i><b>4.1</b> Pointwise continuity</a></li>
+<li class="chapter" data-level="4.2" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#continuous-functions-and-their-properties"><i class="fa fa-check"></i><b>4.2</b> Continuous functions and their properties</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differential-calculus.html"><a href="differential-calculus.html"><i class="fa fa-check"></i><b>5</b> Differential calculus</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-tangent-line"><i class="fa fa-check"></i><b>5.1</b> Definition of the tangent line</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="differential-calculus.html"><a href="differential-calculus.html#secant-and-tangent-lines"><i class="fa fa-check"></i><b>5.1.1</b> Secant and tangent lines</a></li>
+<li class="chapter" data-level="5.1.2" data-path="differential-calculus.html"><a href="differential-calculus.html#from-the-secant-to-the-tangent-line"><i class="fa fa-check"></i><b>5.1.2</b> From the secant to the tangent line</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-derivative"><i class="fa fa-check"></i><b>5.2</b> Definition of the derivative</a></li>
+<li class="chapter" data-level="5.3" data-path="differential-calculus.html"><a href="differential-calculus.html#differentiability"><i class="fa fa-check"></i><b>5.3</b> Differentiability</a></li>
+<li class="chapter" data-level="5.4" data-path="differential-calculus.html"><a href="differential-calculus.html#derivation-rules"><i class="fa fa-check"></i><b>5.4</b> Derivation rules</a></li>
+<li class="chapter" data-level="5.5" data-path="differential-calculus.html"><a href="differential-calculus.html#the-rule-of-lhôpital"><i class="fa fa-check"></i><b>5.5</b> The rule of L’Hôpital</a></li>
+<li class="chapter" data-level="5.6" data-path="differential-calculus.html"><a href="differential-calculus.html#higher-order-derivatives"><i class="fa fa-check"></i><b>5.6</b> Higher order derivatives</a></li>
+<li class="chapter" data-level="5.7" data-path="differential-calculus.html"><a href="differential-calculus.html#taylors-theorem"><i class="fa fa-check"></i><b>5.7</b> Taylor’s theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="optimization.html"><a href="optimization.html"><i class="fa fa-check"></i><b>6</b> Optimization</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="optimization.html"><a href="optimization.html#necessary-conditions-for-maxima-and-minima"><i class="fa fa-check"></i><b>6.1</b> Necessary conditions for maxima and minima</a></li>
+<li class="chapter" data-level="6.2" data-path="optimization.html"><a href="optimization.html#second-order-conditions"><i class="fa fa-check"></i><b>6.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="6.3" data-path="optimization.html"><a href="optimization.html#optimization-on-an-interval"><i class="fa fa-check"></i><b>6.3</b> Optimization on an interval</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="integral-calculus.html"><a href="integral-calculus.html"><i class="fa fa-check"></i><b>7</b> Integral calculus</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="integral-calculus.html"><a href="integral-calculus.html#the-indefinite-integral"><i class="fa fa-check"></i><b>7.1</b> The indefinite integral</a></li>
+<li class="chapter" data-level="7.2" data-path="integral-calculus.html"><a href="integral-calculus.html#the-definite-integral"><i class="fa fa-check"></i><b>7.2</b> The definite integral</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="integral-calculus.html"><a href="integral-calculus.html#properties-and-elementary-calculation-rules"><i class="fa fa-check"></i><b>7.2.1</b> Properties and elementary calculation rules</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html"><i class="fa fa-check"></i><b>8</b> Systems of linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-two-linear-equations"><i class="fa fa-check"></i><b>8.1</b> Systems of two linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solution-by-substitution-and-elimination"><i class="fa fa-check"></i><b>8.1.1</b> Solution by substitution and elimination</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-equations-with-n-linear-equations"><i class="fa fa-check"></i><b>8.2</b> Systems of equations with <span class="math inline">\(n\)</span> linear equations</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solving-systems-of-equations-with-m-linear-equations"><i class="fa fa-check"></i><b>8.2.1</b> Solving systems of equations with <span class="math inline">\(m\)</span> linear equations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html"><i class="fa fa-check"></i><b>9</b> Matrices and Basic Matrix Operations</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#matrices"><i class="fa fa-check"></i><b>9.1</b> Matrices</a></li>
+<li class="chapter" data-level="9.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#basic-matrix-operations"><i class="fa fa-check"></i><b>9.2</b> Basic matrix operations</a></li>
+<li class="chapter" data-level="9.3" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#economic-applications"><i class="fa fa-check"></i><b>9.3</b> Economic Applications</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#monthly-consumer-spending"><i class="fa fa-check"></i><b>9.3.1</b> Monthly consumer spending</a></li>
+<li class="chapter" data-level="9.3.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#regional-migration"><i class="fa fa-check"></i><b>9.3.2</b> Regional migration</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#transpose-of-a-matrix"><i class="fa fa-check"></i><b>9.4</b> Transpose of a matrix</a></li>
+<li class="chapter" data-level="9.5" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#determinant-and-inverse-of-a-matrix"><i class="fa fa-check"></i><b>9.5</b> Determinant and inverse of a matrix</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#more-on-the-determinant-of-a-matrixast"><i class="fa fa-check"></i><b>9.5.1</b> More on the Determinant of a Matrix<span class="math inline">\(^\ast\)</span></a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#rank-and-determinantast"><i class="fa fa-check"></i><b>9.5.2</b> Rank and determinant<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html"><i class="fa fa-check"></i><b>10</b> Calculus with <span class="math inline">\(n\)</span> variables</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#continuity-of-a-function"><i class="fa fa-check"></i><b>10.1</b> Continuity of a function</a></li>
+<li class="chapter" data-level="10.2" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives"><i class="fa fa-check"></i><b>10.2</b> Partial derivatives</a></li>
+<li class="chapter" data-level="10.3" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives-of-higher-order"><i class="fa fa-check"></i><b>10.3</b> Partial derivatives of higher order</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#the-gradient-vector-and-the-hessian-matrix"><i class="fa fa-check"></i><b>10.3.1</b> The gradient vector and the Hessian matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#derivation-of-implicit-functionsast"><i class="fa fa-check"></i><b>10.4</b> Derivation of implicit functions<span class="math inline">\(^\ast\)</span></a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#contour-lines-indifference-curvesast"><i class="fa fa-check"></i><b>10.4.1</b> Contour lines / indifference curves<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="optimization-ii.html"><a href="optimization-ii.html"><i class="fa fa-check"></i><b>11</b> Optimization II</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="optimization-ii.html"><a href="optimization-ii.html#first-order-conditions"><i class="fa fa-check"></i><b>11.1</b> First-order conditions</a></li>
+<li class="chapter" data-level="11.2" data-path="optimization-ii.html"><a href="optimization-ii.html#second-order-conditions-1"><i class="fa fa-check"></i><b>11.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="11.3" data-path="optimization-ii.html"><a href="optimization-ii.html#optimization-under-constraints-lagrange-method"><i class="fa fa-check"></i><b>11.3</b> Optimization under constraints: Lagrange method</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathematics for Business and Economics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="optimization" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Optimization<a href="optimization.html#optimization" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Economic models are often based on the idea that a decision-maker makes an optimal decision based on possible alternatives.</p>
+<p>We formalize optimal decisions as maximizing or minimizing a function.</p>
+<p>For example:</p>
+<ul>
+<li><p>A company wants to minimize production costs or maximize profit;</p></li>
+<li><p>A consumer wants to maximize his utility;</p></li>
+<li><p>A (political) decision-maker wants to maximize social welfare.</p></li>
+</ul>
+<p>Optimization is central to economics, business administration, management, strategy, …</p>
+<p>In this chapter we cover the optimization of functions of one variable; Functions of several variables follow later.</p>
+<script>
+function checkAnswer_mmc(q) {
+      const selectedOptions = document.querySelectorAll('input[name="option'+q.id+'"]:checked');
+      if (selectedOptions.length === 2) {
+        const userAnswers = Array.from(selectedOptions).map(option => option.value);
+        const correctAnswers = q.answer;
+        const isCorrect = userAnswers.every(answer => correctAnswers.includes(answer));
+
+if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select two options.';
+      }
+    }
+// numeric
+function generateQuestion_num(id) {
+      // Generate two random numbers between 2 and 10
+      const num1 = Math.floor(Math.random() * 10) + 2;
+      const num2 = Math.floor(Math.random() * 10) + 2;
+      const x1 = Math.floor(Math.random() * 100) + 2;
+      const x2 = Math.floor(Math.random() * 100) + 2;
+      const x3 = Math.floor(Math.random() * 100) + 2;
+      const x4 = Math.floor(Math.random() * 100) + 2;
+      const x5 = Math.floor(Math.random() * 100) + 2;
+      const x6 = Math.floor(Math.random() * 100) + 2;
+
+       // Calculate the correct answer
+      let answer = num1*Math.sqrt(x1) + num2*Math.sqrt(x2);
+
+      // Return the question and answer as an object
+      return {
+       // question: num1 + "\\(\\sqrt{x}+\\)"+ num2 + "\\(\\sqrt{y}\\)" + " for \\(x=\\)" + x1 + " and \\(y=\\)" + x2,
+        question: [num1,num2,x1,x2,x3,x4,x5,x6],
+        answer: answer,
+        id: id
+      };
+    }
+
+function checkAnswer_num(q) {
+      const userAnswer = document.getElementById('answer'+q.id).value;
+      const isCorrect = Math.round(parseFloat(userAnswer)*100)/100 === Math.round(q.answer*100)/100;
+
+      if (isCorrect) {
+        document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+      } else {
+        document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+      }
+  }
+
+// plain multiple choice
+  function checkAnswer_match(q) {
+      const selectedOption = document.querySelector('input[name="option'+q.id+'"]:checked');
+      if (selectedOption) {
+        const userAnswer = selectedOption.value;
+        const isCorrect = userAnswer === q.answer;
+
+        if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select an option.';
+      }
+    }
+</script>
+<div id="necessary-conditions-for-maxima-and-minima" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Necessary conditions for maxima and minima<a href="optimization.html#necessary-conditions-for-maxima-and-minima" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Optimizing a function <span class="math inline">\(f (x), x \in D\)</span>, means finding the value <span class="math inline">\(x\)</span> at which an <strong>extreme value</strong> (also extremum) occurs; this can be a <strong>maximum</strong> or a <strong>minimum</strong>.</p>
+<p>In the case <span class="math inline">\(D=\mathbb{R}\)</span> there is an optimization problem without constraints.</p>
+<div class="definition">
+<p><span id="def:defmaxmin" class="definition"><strong>Definition 6.1  (Maximum, Minimum) </strong></span></p>
+<ul>
+<li>The function <span class="math inline">\(f\)</span> has a <strong>global maximum</strong> at the position <span class="math inline">\(x ^∗\)</span> if:</li>
+</ul>
+<p><span class="math inline">\(f (x^∗ ) \geq f (x)\)</span> for all <span class="math inline">\(x\)</span>.</p>
+<details>
+<summary>
+Illustration
+</summary>
+<img src="images/gmax.png" />
+</details>
+<ul>
+<li>A <strong>local maximum </strong>is at the position <span class="math inline">\(\hat{x}\)</span> if there is a <span class="math inline">\(\epsilon &gt;0\)</span> with</li>
+</ul>
+<p><span class="math inline">\(f ( \hat {x}) \geq f (x)\)</span> for <span class="math inline">\(\hat {x} − \epsilon \leq x \leq \hat {x} + \epsilon\)</span>.</p>
+<details>
+<summary>
+Illustration
+</summary>
+<img src="images/lmax.png" />
+</details>
+<ul>
+<li>Similarly, <span class="math inline">\(f\)</span> has a <strong>global minimum</strong> at <span class="math inline">\(x^ ∗\)</span> if:</li>
+</ul>
+<p><span class="math inline">\(f (x^ ∗ ) \leq f (x)\)</span> for all <span class="math inline">\(x\)</span>.</p>
+<details>
+<summary>
+Illustration
+</summary>
+<img src="images/gmin.png" />
+</details>
+<ul>
+<li>A <strong>local minimum</strong> is at <span class="math inline">\(\hat {x}\)</span> if there is a <span class="math inline">\(\epsilon &gt;0\)</span> with</li>
+</ul>
+<p><span class="math inline">\(f ( \hat {x}) \leq f (x)\)</span> for <span class="math inline">\(\hat {x} − \epsilon \leq x \leq \hat {x} + \epsilon\)</span>.</p>
+<details>
+<summary>
+Illustration
+</summary>
+<img src="images/lmin.png" />
+</details>
+</div>
+<p>The following theorem gives us the necessary condition for a local maximum and a local minimum.</p>
+<div class="theorem">
+<p><span id="thm:thmnbmaxmin" class="theorem"><strong>Theorem 6.1  (first-order condition) </strong></span>If the differentiable function <span class="math inline">\(f\)</span> has an extreme value at <span class="math inline">\(x^*\)</span>, then: <span class="math inline">\(f^\prime (x^ ∗ ) = 0\)</span>.</p>
+</div>
+<ul>
+<li><p>This equation is also called <strong>first-order condition</strong> (FOC).</p></li>
+<li><p>It is a <strong>necessary condition</strong>.</p></li>
+<li><p>In other words: If <span class="math inline">\(f&#39; (x) \neq 0\)</span>, then <span class="math inline">\(f\)</span> has no extremum in <span class="math inline">\(x\)</span>.</p></li>
+<li><p>The first-order condition is <strong>not a sufficient condition</strong>, i.e. the converse does not hold!</p></li>
+<li><p>In other words: The statement “If <span class="math inline">\(f&#39; (x^∗ ) = 0\)</span>, then <span class="math inline">\(f\)</span> has an extremum at <span class="math inline">\(x^ ∗\)</span>” is <strong>wrong</strong>.</p></li>
+</ul>
+<div class="example">
+<p><span id="exm:beo" class="example"><strong>Example 6.1  (FOC is not a sufficient condition) </strong></span>Consider the function
+<span class="math display">\[f (x) = 16x − 4x^ 3 + x^ 4.\]</span></p>
+<p>The derivative is:</p>
+<p><span class="math display">\[f&#39; (x) = 16 − 12x^ 2 + 4x^ 3\]</span></p>
+<p>and one easily checks that <span class="math inline">\(f&#39; (2) = 0\)</span>.</p>
+<p>The graph shows that <span class="math inline">\(f\)</span> has no extremum at <span class="math inline">\(x = 2\)</span>.</p>
+<p>A point with <span class="math inline">\(f&#39; (x) = 0\)</span>, at which there is no extremum, is called an inflection point.
+<img src="images/exbeo.png" /></p>
+</div>
+<p>In order to give a label to all points where <span class="math inline">\(f&#39;(x)=0\)</span>, we introduce the definition of <strong>stationary or critical</strong> points.</p>
+<div class="definition">
+<p><span id="def:defstpunkt" class="definition"><strong>Definition 6.2  (stationary point) </strong></span>Let <span class="math inline">\(f\)</span> be a differentiable function. Every point <span class="math inline">\(x\)</span> with <span class="math inline">\(f&#39; (x) = 0\)</span> is a <strong>stationary point/ critical point</strong>.
+A stationary point is either an extremum or an inflection point.</p>
+</div>
+<p>An example application concerns profit maximization for a monopolist such as the guitar manufacturer.</p>
+<iframe src="https://scratch.mit.edu/projects/779600446/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen>
+</iframe>
+<div class="example">
+<p><span id="exm:monopol" class="example"><strong>Example 6.2  (Monopoly with linear demand and linear costs) </strong></span>A monopolist is in the following situation:</p>
+<ul>
+<li><p>linear demand <span class="math inline">\(x = 100 − p\)</span> (<span class="math inline">\(x\)</span> is demand, <span class="math inline">\(p\)</span> is price);</p></li>
+<li><p>linear cost function <span class="math inline">\(C(x) = 25x\)</span>.</p></li>
+</ul>
+<p>Transforming the demand function into <span class="math inline">\(p = 100 − x\)</span> gives the following <strong>profit function</strong>:</p>
+<p><span class="math inline">\(\pi(x) = px − C = 100x − x^2 − 25x\)</span>.</p>
+<p>The profit is maximum at the point <span class="math inline">\(x^ ∗\)</span> with</p>
+<p><span class="math inline">\(\pi&#39; (x^ ∗ ) = 100 − 2x^∗ − 25 = 0\)</span>,</p>
+<p>so</p>
+<p><span class="math inline">\(x^∗ = (100 − 25)/ 2 = 37.5\)</span>.</p>
+<p>The <strong>profit-maximizing price</strong> and the corresponding profit are</p>
+<p><span class="math inline">\(p^∗ = 100 − x^∗ = 62.50\)</span>,</p>
+<p><span class="math inline">\(\pi^∗ = (62.50 − 25) 37.5 = 1,406.25\)</span>.
+<img src="images/monopol.png" /></p>
+<p>The graph on the left shows:</p>
+<ul>
+<li>the total revenue <span class="math inline">\(R(x) = px = 100x − x^2\)</span></li>
+<li>the total cost <span class="math inline">\(C(x) = 25x\)</span></li>
+<li>the profit <span class="math inline">\(π(x) = (100 − 25)x − x^2 = 75x − x^ 2\)</span></li>
+</ul>
+<p>The right graph shows:</p>
+<ul>
+<li>the demand <span class="math inline">\(p = 100 − x\)</span></li>
+<li>the marginal revenue <span class="math inline">\(R&#39; (x) = 100 − 2x\)</span></li>
+<li>the marginal cost <span class="math inline">\(C&#39; (x) = 25\)</span></li>
+</ul>
+</div>
+<div class="exercise">
+<p><span id="exr:stpunkte" class="exercise"><strong>Exercise 6.1  (extreme values) </strong></span>Find the extreme values of</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(f (x) = 2x^ 3 − 0.5x^ 2 + 2\)</span></p></li>
+<li><p><span class="math inline">\(f (x) = 4x^ 2 − 5x + 10\)</span></p></li>
+<li><p><span class="math inline">\(f(x) = 6x/(x^4 + 2)\)</span></p></li>
+<li><p><span class="math inline">\(f (x) = 0.5x^ 4 − 5x^ 3 + 2x^ 2\)</span></p></li>
+</ol>
+In each case, determine (e.g. graphically: <a href="https://www.desmos.com/calculator?lang=en" class="uri">https://www.desmos.com/calculator?lang=en</a>) whether it is a maximum or a minimum.
+<details>
+<summary>
+Answer
+</summary>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(f (x) = 2x^ 3 − 0,5x^ 2 + 2\)</span></li>
+</ol>
+<p><span class="math inline">\(f&#39;(x)=6x^2-x=0\)</span> (FOC)</p>
+<p><span class="math inline">\(x(6x-1)=0\)</span> <span class="math inline">\(\Leftrightarrow\)</span> <span class="math inline">\({x}_{1}^* =0\)</span>;</p>
+<p><span class="math inline">\(6x-1=0 \Rightarrow {x}_{2}^{*}= \frac{1}{6}\)</span></p>
+<p><img src="images/aufextr1.png" /></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><span class="math inline">\(f (x) = 4x^ 2 − 5x + 10\)</span></li>
+</ol>
+<p><span class="math inline">\(f&#39;(x)=8x-5=0\)</span> (FOC) <span class="math inline">\(\Leftrightarrow x^*= \frac{5}{8}\)</span></p>
+<p><img src="images/aufextr2.png" /></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li><span class="math inline">\(f (x) = 6x/(x^ 4 + 2)\)</span></li>
+</ol>
+<p><span class="math inline">\(f&#39;(x)= \frac{6(x^4+2)-6x(4x^3)}{(x^4+2)^2} =0\)</span></p>
+<p><span class="math inline">\(x^4=12/18=2/3\)</span></p>
+<p><span class="math inline">\(x^*_{1,2}= \pm \sqrt[4]{ \frac{2}{3} }\)</span> <span class="math inline">\(= \pm 0.9036\)</span></p>
+<p><img src="images/aufextr3.png" /></p>
+<ol start="4" style="list-style-type: lower-alpha">
+<li><span class="math inline">\(f (x) = 0,5x^ 4 − 5x^ 3 + 2x^ 2\)</span></li>
+</ol>
+<p><span class="math inline">\(f&#39;(x)=0,5 \cdot 4x^3-5 \cdot 3x^2+ 2 \cdot 2x=0\)</span></p>
+<p><span class="math inline">\(\Leftrightarrow x(x^2-15x+4)=0\)</span></p>
+<p><span class="math inline">\(x_1^*=0\)</span></p>
+<p><span class="math inline">\(x_{2}^*= \frac{15- \sqrt{193} }{4} = 0.2769\)</span></p>
+<p><span class="math inline">\(x_{3}^*= \frac{15+ \sqrt{193} }{4} = 7.2231\)</span></p>
+<p><img src="images/aufextr4.png" /></p>
+</details>
+</div>
+<div id="qmonopol" class="quiz">
+<p>A firm is the sole producer of a product with a cost function:</p>
+<p><span class="math display">\[\displaystyle f(x)=100+20x+2x^2\]</span>.</p>
+If the company increases the price, fewer units will be sold; the price <span class="math inline">\(p(x)\)</span> expressed as a function of the number of units <span class="math inline">\(x\)</span> is:
+<p id="question">
+<span id="question-text11"></span>
+</p>
+<input type="number" id="answer11" placeholder="Enter your answer">
+<button onclick="checkAnswer_num(questionObj11)">Submit</button>
+<p id="result11">
+</p>
+</div>
+<script>
+
+ // Generate a random question
+    const questionObj11 = generateQuestion_num(11);
+// Display the question
+    document.getElementById('question-text11').textContent = "\\[p(x)=" + questionObj11.question[2] + "-" + questionObj11.question[0] + "x\\]" + "How many units should be produced to maximize the profit?"
+    questionObj11.answer = (questionObj11.question[2]-20)/(questionObj11.question[0]*2 + 2*2)
+</script>
+</div>
+<div id="second-order-conditions" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Second-order conditions<a href="optimization.html#second-order-conditions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Second order derivatives can determine whether a stationary point is a maximum or a minimum.</p>
+<p>The three possible cases for stationary points are shown on the graphs below.</p>
+<p>Graph (a) shows that in the case of a maximum, the slope of the function is positive to the left of the maximum (i.e. for <span class="math inline">\(x &lt; x^ ∗\)</span> ) and that it is negative to the right of the maximum (<span class="math inline">\(x &gt; x^ ∗\)</span> ).</p>
+<p>This is captured by the negative slope of <span class="math inline">\(f&#39;\)</span> at <span class="math inline">\(x^ ∗\)</span> (Graph (d)).</p>
+<p>For a minimum the behavior is just the opposite (graphs (b) and (e)).</p>
+<p>In the case of an inflection point (graphs (c) and (f)) this behavior cannot occur.</p>
+<p>Hence <span class="math inline">\(f&#39;&#39;(x^∗ ) = 0\)</span>. The function changes from concave to convex (or vice versa).</p>
+<p><img src="images/bzo.png" /></p>
+<div class="theorem">
+<p><span id="thm:thmbzo" class="theorem"><strong>Theorem 6.2  (Sufficient condition for maximum (minimum)) </strong></span>Let <span class="math inline">\(f\)</span> be twice differentiable.</p>
+<ul>
+<li><p>If <span class="math inline">\(f&#39; (x^ ∗ ) = 0\)</span> and <span class="math inline">\(f&#39;&#39;(x ∗ ) &lt; 0\)</span>, then <span class="math inline">\(f\)</span> has a local maximum at <span class="math inline">\(x^ ∗\)</span> .</p></li>
+<li><p>If <span class="math inline">\(f&#39; (x^ ∗ ) = 0\)</span> and <span class="math inline">\(&#39;&#39;f(x^ ∗ ) &gt; 0\)</span>, then <span class="math inline">\(f\)</span> has a local minimum at <span class="math inline">\(x^ ∗\)</span> .</p></li>
+</ul>
+</div>
+<p>The theorem gives <strong>sufficient conditions</strong> for determining whether a stationary point is a minimum or a maximum.</p>
+<div class="exercise">
+<p><span id="exr:bzo" class="exercise"><strong>Exercise 6.2  (maximum or minimum) </strong></span>For the following function, use the second-order conditions to determine whether an extremum is a local maximum or a local minimum.</p>
+<span class="math inline">\(f (x) = 2x^ 3 − 0.5x^ 2 + 2\)</span>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(f&#39;(x)=6x^2-x=0\)</span></p>
+<p><span class="math inline">\(x(6x-1)=0 \rightarrow x_1^*=0 \text{ und }x_2^*=1/6\)</span></p>
+<p><span class="math inline">\(f&#39;&#39;(x)=(6x^2)&#39;=12x-1\)</span></p>
+<p><span class="math inline">\(x_1^*=0 : f&#39;&#39;(x_1^*)=12 \cdot 0-1=-1&lt;0\rightarrow\)</span> lokales Maximum</p>
+<p><span class="math inline">\(x_2^*=1/6:f&#39;&#39;(x_2^*)=12 \cdot(1/6)-1=1&gt;0\rightarrow\)</span> lokales Minimum</p>
+<img src="images/aufbzo.png" />
+</details>
+</div>
+<div class="example">
+<p><span id="exm:monopol2" class="example"><strong>Example 6.3  (Monopoly with linear demand and linear costs) </strong></span>In Example <a href="optimization.html#exm:monopol">6.2</a>, we obtained:</p>
+<p><span class="math inline">\(\pi&#39; (x^ ∗ ) = 100 − 2x^∗ − 25 = 0\)</span>,</p>
+<p>and</p>
+<p><span class="math inline">\(x^∗ = (100 − 25)/ 2 = 37.5\)</span>.</p>
+<p>Now, we verify, that the profit has its maximum at <span class="math inline">\(x^∗\)</span> using the second derivative:</p>
+<p><span class="math display">\[\pi&#39;&#39; (x^ ∗ ) = − 2 &lt;0,\]</span></p>
+<p>It means, that at <span class="math inline">\(x^∗=37.5\)</span> the profit function reaches its maximum.</p>
+</div>
+<div class="example">
+<p><span id="exm:profit3" class="example"><strong>Example 6.4  (Approximate maximization of profit functions with Taylor Approximation) </strong></span>In Example <a href="differential-calculus.html#exm:taylorprofit">5.8</a> we considered a monopolist with the following profit function:</p>
+<p><span class="math display">\[\pi(q) = 100\cdot \exp(-0.01 q) \cdot q - 1000 - q.\]</span></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<p>The derivative of this profit function is:</p>
+<p><span class="math display">\[\pi^\prime(q) = (-1)\cdot\exp(-0.01q)\cdot q + 100\cdot\exp(-0.01q) - 1.\]</span></p>
+<p>Note: we can not solve for <span class="math inline">\(q\)</span> if we set the derivative to zero! (Try that :))</p>
+<p>The question is: How can we find the optimal production <span class="math inline">\(q^*\)</span>? <span class="math inline">\(\leadsto\)</span> visually: the maximum has to be around <span class="math inline">\(q=100\)</span>. But can we get a better approximation?</p>
+<p>We approximate the derivative <span class="math inline">\(\pi^\prime(q)\)</span> using its first-order Taylor expansion around <span class="math inline">\(q_0=100\)</span>.</p>
+<ul>
+<li>The function value at <span class="math inline">\(q_0=100\)</span> is:</li>
+</ul>
+<p><span class="math display">\[\pi^\prime(100) = (-1)\cdot \exp(-0.01\cdot 100)\cdot 100 + 100\cdot\exp(-0.01\cdot 100) - 1 = -1,\]</span></p>
+<ul>
+<li>The derivative of the function (here <span class="math inline">\(\pi^{\prime\prime}(q)\)</span>) is:</li>
+</ul>
+<p><span class="math display">\[\begin{align*}\pi^{\prime\prime}(q) &amp;= 0.01\exp(-0.01q)\cdot q - \exp(-0.01q)+ 100(-0.01)\exp(-0.01q) \\
+&amp;= 0.01\exp(-0.01q)\cdot q - 2\exp(-0.01q).\end{align*}\]</span></p>
+<p>So <span class="math display">\[\begin{align*}\pi^{\prime\prime}(q_0=100)&amp;=0.01\exp(-0.01\cdot 100)\cdot 100 -2\exp(-0.01\cdot 100) \\
+&amp;= -\exp(-1)=-\frac1e.\end{align*}\]</span></p>
+<p>The first order Taylor approximation for the derivative of the profit function:</p>
+<p><span class="math display">\[\begin{align*}\pi^\prime(q) &amp;\approx \pi^\prime(q_0) +  \pi^{\prime\prime}(q_0)(q-q_0) \\
+&amp;=-1 - \frac 1e\cdot(q-100)
+\end{align*}\]</span></p>
+<p>Setting the expression above to zero, we get:</p>
+<p><span class="math display">\[-1 - \frac 1e\cdot(q-100)=0\rightarrow q^*_{approx}=-e+100=97.2817.\]</span></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<p>That is, the profit is approximately in its maximum for <span class="math inline">\(q^*_{approx}=97.2817.\)</span></p>
+<p>Now, we can also verify whether the second derivative is smaller than zero (sufficient condition for the maximum):</p>
+<p><span class="math display">\[\begin{align*}\pi^{\prime\prime}(q^*_{approx})&amp;=0.01\exp(-0.01\cdot 97.2817)\cdot 97.2817 -2\exp(-0.01\cdot 97.2817) \\
+&amp;=-0.3883&lt;0.\end{align*}\]</span></p>
+</div>
+</div>
+<div id="optimization-on-an-interval" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> Optimization on an interval<a href="optimization.html#optimization-on-an-interval" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In practice, most optimization problems have to be solved under constraints, for example:</p>
+<ul>
+<li><p>a firm can only produce non-negative quantities of goods;</p></li>
+<li><p>a company has production capacity limitations;</p></li>
+<li><p>a consumer has a limited budget.</p></li>
+</ul>
+<div class="example">
+<p><span id="exm:optint" class="example"><strong>Example 6.5  (Optimization on an interval) </strong></span>We decide
+<span class="math display">\[\begin{equation*}
+          \max_x f(x)=3-2x\quad\text{ under the condition } 0\leq x\leq 1.
+\end{equation*}\]</span></p>
+<p>The case without constraint has no extremes
+(<span class="math inline">\(f^\prime(x)=-2\)</span>, for all <span class="math inline">\(x\)</span>), so the maximum must be on one of the
+interval corners.</p>
+<p>Since the derivative is negative, i.e. the function is decreasing,
+the solution is the left boundary <span class="math inline">\(x^\ast=0\)</span>.</p>
+<p><img src="images/optneb.png" /></p>
+</div>
+<p>The general formulation of an optimization problem under
+Constraints (given as an interval) is as follows:
+<span class="math display" id="eq:2">\[\begin{equation}
+          \max_x f(x)\quad\text{ under the condition }\quad a\leq x\leq b.\tag{6.1}
+\end{equation}\]</span></p>
+<p>Alternatively, this can be expressed as
+<span class="math display">\[\begin{equation*}
+      \max_{x\in [a,b]} f(x).
+    \end{equation*}\]</span></p>
+<p>Three cases can be identified as possible solutions to the
+maximization problem occur:</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(x^\ast=a\)</span>: In this case,
+<span class="math inline">\(f^\prime(x^\ast)\leq 0\)</span> (left graph)</p></li>
+<li><p><span class="math inline">\(a&lt;x^\ast&lt;b\)</span>: In this case <span class="math inline">\(f^\prime(x)=0\)</span>
+(middle graph)</p></li>
+<li><p><span class="math inline">\(x^\ast=b\)</span>: In this case
+<span class="math inline">\(f^\prime(x^\ast)\geq 0\)</span> (right graph)
+<img src="images/neb2.png" /></p></li>
+</ol>
+<ul>
+<li><p>In cases (i) and (iii), the constraint is <strong>mandatory</strong>; in (ii) the constraint is <strong>non-mandatory</strong>.</p></li>
+<li><p>The solution in (ii) is called <strong>internal solution</strong>.</p></li>
+<li><p>The following sentence summarizes the three situations.</p></li>
+</ul>
+<div class="theorem">
+<p><span id="thm:thmmaxneb" class="theorem"><strong>Theorem 6.3  (Maximization under constraints) </strong></span>A solution <span class="math inline">\(x^\ast\)</span> to the problem
+<span class="math display">\[\begin{equation*}
+      \max_x f(x)\quad\text{ under the condition } a\leq x\leq b
+    \end{equation*}\]</span>
+meets one or both of the following conditions:
+<span class="math display">\[\begin{align*}
+      \phantom{test test} %
+      f^\prime(x^\ast)\leq 0&amp;\quad\text{ and }\quad (x^\ast-a)
+                                             f^\prime(x^\ast)=0\\
+      f^\prime(x^\ast)\geq 0&amp;\quad\text{ and }\quad (b-x^\ast)
+                                             f^\prime(x^\ast)=0.
+    \end{align*}\]</span>
+If <strong>both</strong> conditions are met and additionally
+<span class="math inline">\(f^\prime(a)\not=0\)</span>, <span class="math inline">\(f^\prime(b)\not=0\)</span>, then <span class="math inline">\(x^\ast\)</span> is
+an inner solution, i.e. <span class="math inline">\(a&lt;x^\ast&lt;b\)</span>.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:thmminneb" class="theorem"><strong>Theorem 6.4  (Minimization under constraints) </strong></span>A solution <span class="math inline">\(x^\ast\)</span> to the problem
+<span class="math display">\[\begin{equation*}
+      \min_x f(x)\quad\text{ under the condition } a\leq x\leq b,
+    \end{equation*}\]</span>
+meets one or both of the following conditions:
+<span class="math display">\[\begin{align*}
+      \phantom{test test} %
+      f^\prime(x^\ast)\geq 0&amp;\quad\text{ and }\quad (x^\ast-a)
+                                             f^\prime(x^\ast)=0\\
+      f^\prime(x^\ast)\leq 0&amp;\quad\text{ and }\quad (b-x^\ast)
+                                             f^\prime(x^\ast)=0.
+    \end{align*}\]</span>
+If <strong>both</strong> conditions are met and
+additionally
+<span class="math inline">\(f^\prime(a)\not=0\)</span>, <span class="math inline">\(f^\prime(b)\not=0\)</span>, then <span class="math inline">\(x^\ast\)</span> is
+an inner solution, i.e. <span class="math inline">\(a&lt;x^\ast&lt;b\)</span>.</p>
+</div>
+<p>To practically determine the maximum/minimum, carry out the following steps:</p>
+<ul>
+<li>find the derivative of <span class="math inline">\(f(x)\)</span>;</li>
+<li>see which of the two conditions from the theorems @ref(thm: thmmaxneb) and <a href="optimization.html#thm:thmminneb">6.4</a> (depending on whether you should maximize or minimize) apply and</li>
+<li>solve for <span class="math inline">\(x\)</span>.</li>
+<li>Finally, check whether the resulting values for <span class="math inline">\(x\)</span> are from the target interval and</li>
+<li>compare the function values if you received several <span class="math inline">\(x\)</span> values. The smallest (largest) function value then determines the minimum (maximum).</li>
+</ul>
+<p>Alternatively, you can</p>
+<ul>
+<li>determine all local maxima and minima for the objective function;</li>
+<li>The associated <span class="math inline">\(x\)</span> values, which are also on the target interval, are considered candidates for Min (Max)
+considered.</li>
+<li>Then compare the function values that represent local min (max) with the boundary values <span class="math inline">\(f(a),f(b)\)</span>. The smallest (largest) function value then determines the minimum (maximum).</li>
+</ul>
+<div class="exercise">
+<p><span id="exr:maxminneb" class="exercise"><strong>Exercise 6.3  (Minimum and maximum under constraints) </strong></span>Solve the following problems:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(\max_x 3 + 2x\)</span> under the condition <span class="math inline">\(0 ≤ x ≤ 10\)</span></p></li>
+<li><p><span class="math inline">\(\max_x 1 + 10x^ 2\)</span> under the condition <span class="math inline">\(5 ≤ x ≤ 20\)</span></p></li>
+<li><p><span class="math inline">\(\min_x 5 − x^ 2\)</span> under the condition <span class="math inline">\(0 ≤ x ≤ 10\)</span></p></li>
+</ol>
+Draw the solutions graphically. How do the solutions differ from the respective case without constraints?
+<details>
+<summary>
+Answer
+</summary>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\max_{0 \leq x \leq 10 }3+2x\)</span></li>
+</ol>
+<p><span class="math inline">\(f&#39; (x^ ∗ ) ≤ 0\)</span> and <span class="math inline">\((x^ ∗ − a)f&#39; (x^ ∗ ) = 0\)</span> does not hold</p>
+<p><span class="math inline">\(f&#39; (x^ ∗ ) ≥ 0\)</span> and <span class="math inline">\((b − x^ ∗ )f&#39; (x^ ∗ ) = 0\)</span> holds, therefore</p>
+<p><span class="math inline">\(f&#39;(x)=(3+2x)&#39;=2&gt;0\)</span> always applies</p>
+<p><span class="math inline">\((10-x) \cdot 2=0 \Leftrightarrow 20-2x=0 \Rightarrow x^*=10\)</span></p>
+<p><img src="images/aufneb2.png" /></p>
+<ol start="2" style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\max_{5 \leq x \leq 20 }1+10x^2\)</span></li>
+</ol>
+<p><span class="math inline">\(f&#39; (x^ ∗ ) ≤ 0\)</span> and <span class="math inline">\((x^ ∗ − a)f&#39; (x^ ∗ ) = 0\)</span> does not hold</p>
+<p><span class="math inline">\(f&#39; (x^ ∗ ) ≥ 0\)</span> and <span class="math inline">\((b − x^ ∗ )f&#39; (x^ ∗ ) = 0\)</span> holds, therefore</p>
+<p><span class="math inline">\(f&#39;(x)=(1+10x^2)&#39;=20x&gt;0 \ for \ 5 \leq x \leq 20\)</span></p>
+<p><span class="math inline">\((20-x) \cdot 20x=0 \Rightarrow 20-x=0 \Rightarrow x_1^*=20\)</span></p>
+<p><span class="math inline">\(20x=0 \Rightarrow x_2^* =0 \neq for \ 5 \leq x \leq 20\)</span>!</p>
+<p><img src="images/aufneb3.png" /></p>
+<ol start="3" style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\min_{0 \leq x \leq 10 }5-x^2\)</span></li>
+</ol>
+<p><span class="math inline">\(f&#39; (x^ ∗ ) ≥ 0\)</span> and <span class="math inline">\((x^ ∗ − a)f&#39; (x^ ∗ ) = 0\)</span> does not hold</p>
+<p><span class="math inline">\(f&#39; (x^ ∗ ) ≤ 0\)</span> and <span class="math inline">\((b − x^ ∗ )f&#39; (x^ ∗ ) = 0\)</span> holds, therefore</p>
+<p><span class="math inline">\(f&#39;(x)=(5-x^2)&#39;= -2x&lt;0\)</span> for <span class="math inline">\(0 ≤ x ≤ 10\)</span></p>
+<p><span class="math inline">\((10-x)(-2x)=0 \rightarrow x_1^*=0 \Rightarrow f(0)=5-0^2=5\)</span></p>
+<p><span class="math inline">\(x_2^*=10 \Rightarrow f(10)=5-10^2=-95\)</span></p>
+<p><img src="images/aufneb4.png" /></p>
+</details>
+</div>
+<div id="qoptneb" class="quiz">
+<script>
+
+
+// Generate a random question
+  const questionObj12 = {
+      question: 'Find the solution(s) of the following optimization problem: \\[\\max f (x) = 6x^2 \\text{ under the condition } −1\\leq x \\leq 1\\]',
+      options: ['\\(x=0\\)', '\\(x=-1\\)', ' \\(x=1\\)'],
+      answer: ['2','3'],
+      id: 12
+    };
+</script>
+<p class="question">
+<span id="question-text12"></span>
+</p>
+<div class="options">
+<p><label>
+<input type="checkbox" name="option12" value=1> <span class="math inline">\(x=0\)</span>
+</label>
+<label>
+<input type="checkbox" name="option12" value=2> <span class="math inline">\(x=-1\)</span>
+</label>
+<label>
+<input type="checkbox" name="option12" value=3> <span class="math inline">\(x=1\)</span>
+</label></p>
+</div>
+<button onclick="checkAnswer_mmc(questionObj12)">
+Submit
+</button>
+<p id="result12">
+</p>
+<script>
+    // Display the question
+    document.getElementById('question-text12').textContent = questionObj12.question;
+
+</script>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="differential-calculus.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="integral-calculus.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/06-optimierung.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

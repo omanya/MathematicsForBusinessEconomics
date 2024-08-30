@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 The basics | Mathematics for Business and Economics</title>
+  <meta name="description" content="Chapter 2 The basics | Mathematics for Business and Economics" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 The basics | Mathematics for Business and Economics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 The basics | Mathematics for Business and Economics" />
+  
+  
+  
+
+<meta name="author" content="Maria Osipenko" />
+
+
+<meta name="date" content="2024-08-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="sequences-limits-and-series.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Wirtschaftsmathematik</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-do-we-need-the-mathematics-for-business-and-economics"><i class="fa fa-check"></i>Why do we need the mathematics for business and economics?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#example-utility-maximization"><i class="fa fa-check"></i>Example: utility maximization</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-basics.html"><a href="the-basics.html"><i class="fa fa-check"></i><b>2</b> The basics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="the-basics.html"><a href="the-basics.html#sets-and-number-sets"><i class="fa fa-check"></i><b>2.1</b> Sets and Number Sets</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="the-basics.html"><a href="the-basics.html#operations-on-sets"><i class="fa fa-check"></i><b>2.1.1</b> Operations on Sets</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="the-basics.html"><a href="the-basics.html#number-sets"><i class="fa fa-check"></i><b>2.2</b> Number sets</a></li>
+<li class="chapter" data-level="2.3" data-path="the-basics.html"><a href="the-basics.html#point-sets-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Point sets in <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="the-basics.html"><a href="the-basics.html#intervals-as-sets-of-points-in-mathbbrn"><i class="fa fa-check"></i><b>2.3.1</b> Intervals as sets of points in <span class="math inline">\(\mathbb{R^n}\)</span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-distance"><i class="fa fa-check"></i><b>2.3.2</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: Distance</a></li>
+<li class="chapter" data-level="2.3.3" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-epsilon-neighborhood"><i class="fa fa-check"></i><b>2.3.3</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\epsilon-\)</span>neighborhood</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="the-basics.html"><a href="the-basics.html#functions"><i class="fa fa-check"></i><b>2.4</b> Functions</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="the-basics.html"><a href="the-basics.html#linear-functions"><i class="fa fa-check"></i><b>2.4.1</b> Linear Functions</a></li>
+<li class="chapter" data-level="2.4.2" data-path="the-basics.html"><a href="the-basics.html#quadratic-functions"><i class="fa fa-check"></i><b>2.4.2</b> Quadratic Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="the-basics.html"><a href="the-basics.html#power-exponential-and-logarithmic-functions"><i class="fa fa-check"></i><b>2.5</b> Power, exponential and logarithmic functions</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="the-basics.html"><a href="the-basics.html#convexity-and-concavity"><i class="fa fa-check"></i><b>2.5.1</b> Convexity and concavity</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html"><i class="fa fa-check"></i><b>3</b> Sequences, limits and series</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#sequences"><i class="fa fa-check"></i><b>3.1</b> Sequences</a></li>
+<li class="chapter" data-level="3.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergence-of-sequences"><i class="fa fa-check"></i><b>3.2</b> Convergence of sequences</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergent-sequences-and-their-limits"><i class="fa fa-check"></i><b>3.2.1</b> Convergent sequences and their limits</a></li>
+<li class="chapter" data-level="3.2.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#bounded-sequences"><i class="fa fa-check"></i><b>3.2.2</b> Bounded sequences</a></li>
+<li class="chapter" data-level="3.2.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#divergent-sequences"><i class="fa fa-check"></i><b>3.2.3</b> Divergent sequences</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#properties-of-sequences"><i class="fa fa-check"></i><b>3.3</b> Properties of sequences</a></li>
+<li class="chapter" data-level="3.4" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#series"><i class="fa fa-check"></i><b>3.4</b> Series</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#special-series"><i class="fa fa-check"></i><b>3.4.1</b> Special Series</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html"><i class="fa fa-check"></i><b>4</b> Continuity of functions</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#pointwise-continuity"><i class="fa fa-check"></i><b>4.1</b> Pointwise continuity</a></li>
+<li class="chapter" data-level="4.2" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#continuous-functions-and-their-properties"><i class="fa fa-check"></i><b>4.2</b> Continuous functions and their properties</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differential-calculus.html"><a href="differential-calculus.html"><i class="fa fa-check"></i><b>5</b> Differential calculus</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-tangent-line"><i class="fa fa-check"></i><b>5.1</b> Definition of the tangent line</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="differential-calculus.html"><a href="differential-calculus.html#secant-and-tangent-lines"><i class="fa fa-check"></i><b>5.1.1</b> Secant and tangent lines</a></li>
+<li class="chapter" data-level="5.1.2" data-path="differential-calculus.html"><a href="differential-calculus.html#from-the-secant-to-the-tangent-line"><i class="fa fa-check"></i><b>5.1.2</b> From the secant to the tangent line</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-derivative"><i class="fa fa-check"></i><b>5.2</b> Definition of the derivative</a></li>
+<li class="chapter" data-level="5.3" data-path="differential-calculus.html"><a href="differential-calculus.html#differentiability"><i class="fa fa-check"></i><b>5.3</b> Differentiability</a></li>
+<li class="chapter" data-level="5.4" data-path="differential-calculus.html"><a href="differential-calculus.html#derivation-rules"><i class="fa fa-check"></i><b>5.4</b> Derivation rules</a></li>
+<li class="chapter" data-level="5.5" data-path="differential-calculus.html"><a href="differential-calculus.html#the-rule-of-lhôpital"><i class="fa fa-check"></i><b>5.5</b> The rule of L’Hôpital</a></li>
+<li class="chapter" data-level="5.6" data-path="differential-calculus.html"><a href="differential-calculus.html#higher-order-derivatives"><i class="fa fa-check"></i><b>5.6</b> Higher order derivatives</a></li>
+<li class="chapter" data-level="5.7" data-path="differential-calculus.html"><a href="differential-calculus.html#taylors-theorem"><i class="fa fa-check"></i><b>5.7</b> Taylor’s theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="optimization.html"><a href="optimization.html"><i class="fa fa-check"></i><b>6</b> Optimization</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="optimization.html"><a href="optimization.html#necessary-conditions-for-maxima-and-minima"><i class="fa fa-check"></i><b>6.1</b> Necessary conditions for maxima and minima</a></li>
+<li class="chapter" data-level="6.2" data-path="optimization.html"><a href="optimization.html#second-order-conditions"><i class="fa fa-check"></i><b>6.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="6.3" data-path="optimization.html"><a href="optimization.html#optimization-on-an-interval"><i class="fa fa-check"></i><b>6.3</b> Optimization on an interval</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="integral-calculus.html"><a href="integral-calculus.html"><i class="fa fa-check"></i><b>7</b> Integral calculus</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="integral-calculus.html"><a href="integral-calculus.html#the-indefinite-integral"><i class="fa fa-check"></i><b>7.1</b> The indefinite integral</a></li>
+<li class="chapter" data-level="7.2" data-path="integral-calculus.html"><a href="integral-calculus.html#the-definite-integral"><i class="fa fa-check"></i><b>7.2</b> The definite integral</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="integral-calculus.html"><a href="integral-calculus.html#properties-and-elementary-calculation-rules"><i class="fa fa-check"></i><b>7.2.1</b> Properties and elementary calculation rules</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html"><i class="fa fa-check"></i><b>8</b> Systems of linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-two-linear-equations"><i class="fa fa-check"></i><b>8.1</b> Systems of two linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solution-by-substitution-and-elimination"><i class="fa fa-check"></i><b>8.1.1</b> Solution by substitution and elimination</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-equations-with-n-linear-equations"><i class="fa fa-check"></i><b>8.2</b> Systems of equations with <span class="math inline">\(n\)</span> linear equations</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solving-systems-of-equations-with-m-linear-equations"><i class="fa fa-check"></i><b>8.2.1</b> Solving systems of equations with <span class="math inline">\(m\)</span> linear equations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html"><i class="fa fa-check"></i><b>9</b> Matrices and Basic Matrix Operations</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#matrices"><i class="fa fa-check"></i><b>9.1</b> Matrices</a></li>
+<li class="chapter" data-level="9.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#basic-matrix-operations"><i class="fa fa-check"></i><b>9.2</b> Basic matrix operations</a></li>
+<li class="chapter" data-level="9.3" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#economic-applications"><i class="fa fa-check"></i><b>9.3</b> Economic Applications</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#monthly-consumer-spending"><i class="fa fa-check"></i><b>9.3.1</b> Monthly consumer spending</a></li>
+<li class="chapter" data-level="9.3.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#regional-migration"><i class="fa fa-check"></i><b>9.3.2</b> Regional migration</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#transpose-of-a-matrix"><i class="fa fa-check"></i><b>9.4</b> Transpose of a matrix</a></li>
+<li class="chapter" data-level="9.5" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#determinant-and-inverse-of-a-matrix"><i class="fa fa-check"></i><b>9.5</b> Determinant and inverse of a matrix</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#more-on-the-determinant-of-a-matrixast"><i class="fa fa-check"></i><b>9.5.1</b> More on the Determinant of a Matrix<span class="math inline">\(^\ast\)</span></a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#rank-and-determinantast"><i class="fa fa-check"></i><b>9.5.2</b> Rank and determinant<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html"><i class="fa fa-check"></i><b>10</b> Calculus with <span class="math inline">\(n\)</span> variables</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#continuity-of-a-function"><i class="fa fa-check"></i><b>10.1</b> Continuity of a function</a></li>
+<li class="chapter" data-level="10.2" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives"><i class="fa fa-check"></i><b>10.2</b> Partial derivatives</a></li>
+<li class="chapter" data-level="10.3" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives-of-higher-order"><i class="fa fa-check"></i><b>10.3</b> Partial derivatives of higher order</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#the-gradient-vector-and-the-hessian-matrix"><i class="fa fa-check"></i><b>10.3.1</b> The gradient vector and the Hessian matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#derivation-of-implicit-functionsast"><i class="fa fa-check"></i><b>10.4</b> Derivation of implicit functions<span class="math inline">\(^\ast\)</span></a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#contour-lines-indifference-curvesast"><i class="fa fa-check"></i><b>10.4.1</b> Contour lines / indifference curves<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="optimization-ii.html"><a href="optimization-ii.html"><i class="fa fa-check"></i><b>11</b> Optimization II</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="optimization-ii.html"><a href="optimization-ii.html#first-order-conditions"><i class="fa fa-check"></i><b>11.1</b> First-order conditions</a></li>
+<li class="chapter" data-level="11.2" data-path="optimization-ii.html"><a href="optimization-ii.html#second-order-conditions-1"><i class="fa fa-check"></i><b>11.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="11.3" data-path="optimization-ii.html"><a href="optimization-ii.html#optimization-under-constraints-lagrange-method"><i class="fa fa-check"></i><b>11.3</b> Optimization under constraints: Lagrange method</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathematics for Business and Economics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="the-basics" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> The basics<a href="the-basics.html#the-basics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<script>
+function checkAnswer_mmc(q) {
+      const selectedOptions = document.querySelectorAll('input[name="option'+q.id+'"]:checked');
+      if (selectedOptions.length === 2) {
+        const userAnswers = Array.from(selectedOptions).map(option => option.value);
+        const correctAnswers = q.answer;
+        const isCorrect = userAnswers.every(answer => correctAnswers.includes(answer));
+
+if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select two options.';
+      }
+    }
+// numeric
+function generateQuestion_num(id) {
+      // Generate two random numbers between 2 and 10
+      const num1 = Math.floor(Math.random() * 10) + 2;
+      const num2 = Math.floor(Math.random() * 10) + 2;
+      const x1 = Math.floor(Math.random() * 100) + 2;
+      const x2 = Math.floor(Math.random() * 100) + 2;
+      const x3 = Math.floor(Math.random() * 100) + 2;
+      const x4 = Math.floor(Math.random() * 100) + 2;
+      const x5 = Math.floor(Math.random() * 100) + 2;
+      const x6 = Math.floor(Math.random() * 100) + 2;
+
+       // Calculate the correct answer
+      let answer = num1*Math.sqrt(x1) + num2*Math.sqrt(x2);
+
+      // Return the question and answer as an object
+      return {
+       // question: num1 + "\\(\\sqrt{x}+\\)"+ num2 + "\\(\\sqrt{y}\\)" + " for \\(x=\\)" + x1 + " and \\(y=\\)" + x2,
+        question: [num1,num2,x1,x2,x3,x4,x5,x6],
+        answer: answer,
+        id: id
+      };
+    }
+
+function checkAnswer_num(q) {
+      const userAnswer = document.getElementById('answer'+q.id).value;
+      const isCorrect = Math.round(parseFloat(userAnswer)*100)/100 === Math.round(q.answer*100)/100;
+
+      if (isCorrect) {
+        document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+      } else {
+        document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+      }
+  }
+
+// plain multiple choice
+  function checkAnswer_match(q) {
+      const selectedOption = document.querySelector('input[name="option'+q.id+'"]:checked');
+      if (selectedOption) {
+        const userAnswer = selectedOption.value;
+        const isCorrect = userAnswer === q.answer;
+
+        if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select an option.';
+      }
+    }
+</script>
+<div id="sets-and-number-sets" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Sets and Number Sets<a href="the-basics.html#sets-and-number-sets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In our utility maximization example, we considered which consumption options (<span class="math inline">\(x=\# donuts\)</span> and <span class="math inline">\(y= \# coffee\)</span>) that the student Alex can afford. As we have seen, there are several financeable consumption combinations <span class="math inline">\((x,y)\)</span>
+for Alex to choose from. It makes sense to consider those consumption options that meet certain criteria as a set. Alex will maximize his utility by selecting the consumption combination that brings him the maximum utility from this set of consumption bundles available to him.
+Doch was ist eine Menge und wie kann man sie definieren?</p>
+<div class="definition">
+<p><span id="def:def1" class="definition"><strong>Definition 2.1  (Sets) </strong></span>A set is a collection of objects, called elements. The set can be either a finite collection or an infinite collection of objects.</p>
+<p>The set can be specified through:</p>
+<ul>
+<li>listing its elements using ” {” and ” }“, with the elements separated by commas (explicit representation):</li>
+</ul>
+<p><span class="math display">\[M=\{x_1,x_2,\ldots\},\]</span></p>
+<ul>
+<li>giving a property that characterizes the elements (implicit representation):</li>
+</ul>
+<p><span class="math display">\[M=\{x:P(x)\}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:menge1" class="example"><strong>Example 2.1  (The set of even numbers between 1 and 11) </strong></span>The set of even numbers between 1 and 11 can be specified</p>
+<ul>
+<li>via an explicit representation:
+<span class="math display">\[M=\{2,4,6,8,10\}\]</span></li>
+</ul>
+<p>or</p>
+<ul>
+<li>via an implicit representation:
+<span class="math display">\[M=\{x:x \text{ is an even number between 1 and 11}\}\]</span></li>
+</ul>
+</div>
+<p>If the object <span class="math inline">\(x\)</span> is an element of the set <span class="math inline">\(M\)</span>, we write <span class="math inline">\(x\in M\)</span>, otherwise <span class="math inline">\(x\not\in M\)</span>.</p>
+<p>In the case of Alex’s budget set, the implicit representation is used because writing down all the possible combinations would take too long.</p>
+<div class="example">
+<p><span id="exm:menge2" class="example"><strong>Example 2.2  (Alex' consumption set) </strong></span>Given enough time, Alex can consume any amount (positive or zero) of coffee and donuts. Its consumption amount can then be written as follows:</p>
+<p><span class="math inline">\(C=\{(x,y):x\geq 0,y\geq 0\}\)</span></p>
+<p>The set of consumption bundles with coffee and donuts that Alex can reach is defined as:</p>
+<p><span class="math inline">\(B=\{(x,y):xP_X+yP_Y\leq Budget\}\)</span></p>
+<p>Then for <span class="math inline">\(Budget=200\)</span>, <span class="math inline">\(P_X=2\)</span> and <span class="math inline">\(P_Y=4\)</span> holds:
+<span class="math display">\[(30;10)\in B\]</span>
+<span class="math display">\[(99;1)\not \in B \]</span></p>
+</div>
+<p>Now let’s say Alex wants to limit his consumption of sweet and not-so-healthy donuts. He doesn’t want to consume more than 30 donuts per month. Does this restriction change his consumption set? The set relations help us to find the answer.</p>
+<div class="definition">
+<p><span id="def:def2" class="definition"><strong>Definition 2.2  (Subsets and equal sets) </strong></span></p>
+<ul>
+<li><p>If all elements of a set <span class="math inline">\(X\)</span> are also elements of a set <span class="math inline">\(Y\)</span>, then <span class="math inline">\(X\)</span> is a <strong>subset</strong> of <span class="math inline">\(Y\)</span>,
+formally:
+<span class="math display">\[X\subseteq Y\]</span></p></li>
+<li><p>Furthermore, if <strong>not all</strong> elements of <span class="math inline">\(Y\)</span> are in <span class="math inline">\(X\)</span>, then <span class="math inline">\(X\)</span> is a <strong>proper subset</strong> of <span class="math inline">\(Y\)</span>,
+formally:</p></li>
+</ul>
+<p><span class="math display">\[X\subset Y\]</span></p>
+<ul>
+<li>Two sets <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are equal if they contain the same elements,
+formally:
+<span class="math display">\[X=Y\]</span></li>
+</ul>
+<p>That is: <span class="math inline">\(X=Y\Leftrightarrow X\subseteq Y\text{ und } Y\subseteq X\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:menge3" class="example"><strong>Example 2.3  (Sets and their subsets) </strong></span>Let
+<span class="math display">\[\mathbb Z_+ = \{x:x \text{ ist eine positive ganze Zahl},\]</span>
+<span class="math display">\[A=\{x\in \mathbb Z_+:x\leq 11\}=\{1,2,3,4,5,6,7,8,9,10,11\}\]</span></p>
+<p>Then, it holds: <span class="math inline">\(A\subseteq \mathbb Z_+\)</span> and <span class="math inline">\(A\subset \mathbb Z_+\)</span>.</p>
+</div>
+<p>Now back to Alex and his self-imposed condition of no more than <span class="math inline">\(30\)</span>
+eat donuts a month.</p>
+<div class="example">
+<p><span id="exm:menge3" class="example"><strong>Example 2.3  (Alex's consumption set under the condition) </strong></span>His new consumption set is:
+<span class="math display">\[C_{new} =  \{(x;y):0\leq x\leq 30,y\geq 0\}\]</span>
+It holds: <span class="math inline">\(C_{new}\subset C\)</span>.</p>
+</div>
+<div id="operations-on-sets" class="section level3 hasAnchor" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> Operations on Sets<a href="the-basics.html#operations-on-sets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Alex has another problem: his favorite donuts have become more expensive and cost now <span class="math inline">\(5\)</span> euros. Nevertheless, there is good news also - a cup of coffee in the canteen costs only <span class="math inline">\(1\)</span> euro. This changes Alex’s budget constraint. How can one compare the new situation with the situation before? This is where the set operations help us.</p>
+<p>We define the <strong>universal set</strong>, here expressed with <span class="math inline">\(U\)</span>. This is the largest set we work with in any given context. The empty set or null set contains no elements, this is noted as <span class="math inline">\(\emptyset\)</span>.</p>
+<p>For example, it makes sense for Alex’s decision to set the hypothetical consumption quantity <span class="math inline">\(C=\{(x,y):x\geq 0,y\geq 0\}\)</span> to be the universal quantity. If Alex’s budget is <span class="math inline">\(0\)</span> Euro, then his budget set is an empty set.</p>
+<div class="definition">
+<p><span id="def:def3" class="definition"><strong>Definition 2.3  (Intersections and unions of sets) </strong></span><br>The <strong>intersection</strong> of two sets <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is the set whose elements are in both <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>; formally:</p>
+<p><span class="math inline">\(X\cap Y=\{x:x\in X \text{ and } x\in Y\}\)</span> <img src="images/schnitt.png" /></p>
+<p>If <span class="math inline">\(X\cap Y=\emptyset\)</span>, then <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> are <strong>disjoint</strong>.</p>
+<p>The <strong>union</strong> of two sets <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> is the set whose elements are contained in at least one of the sets <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>; formally:</p>
+<p><span class="math inline">\(X\cup Y=\{x:x\in X \text{ oder } x\in Y\}\)</span> <img src="images/vereinigung.png" /></p>
+</div>
+<div class="exercise">
+<p><span id="exr:mengenop" class="exercise"><strong>Exercise 2.1  (Set operations 1) </strong></span>Let <span class="math inline">\(\mathbb Z_+\)</span> be the universal set, furthermore</p>
+<p><span class="math inline">\(X=\{x\in \mathbb Z_+:x\leq 20 \text{ and } x/2\in \mathbb Z_+\}\)</span>, as well as</p>
+<p><span class="math inline">\(Y=\{x\in \mathbb Z_+:10\leq x\leq 24 \text{ and } x/2\in \mathbb Z_+\}\)</span></p>
+<p>What are <span class="math inline">\(X\cap Y\)</span> and <span class="math inline">\(X\cup Y\)</span>?
+What are <span class="math inline">\(X\cap \mathbb Z_+, X\cup \mathbb Z_+, Y\cap \mathbb Z_+\text{ and } Y\cup\mathbb Z_+\)</span>?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>
+<span class="math inline">\(X\cap Y = \{x\in Z_+: 10\leq x\leq 20\text{ and } x/2\in Z_+\}\)</span>, <span class="math inline">\(X\cup Y = \{x\in Z_+: x\leq 24\text{ and } x/2\in Z_+\}\)</span>, <span class="math inline">\(X \cap Z_+=X\)</span>,<span class="math inline">\(X \cup Z_+=Z_+\)</span>, <span class="math inline">\(Y \cap Z_+=Y\)</span>and <span class="math inline">\(Y \cup Z_+=Z_+\)</span>
+</p>
+</details>
+</div>
+<p>In addition to the intersection and union of two sets, complement formation and set difference are often required.</p>
+<div class="definition">
+<p><span id="def:def4" class="definition"><strong>Definition 2.4  (Complement and difference) </strong></span>The <strong>complement</strong> of a set <span class="math inline">\(X\)</span> is the set of all elements contained in <span class="math inline">\(U\)</span> but not in <span class="math inline">\(X\)</span>;
+Notation: <span class="math inline">\(\overline X\)</span> or <span class="math inline">\(X^c\)</span>.</p>
+<p><span class="math inline">\(\overline X=\{x\in U:x\not \in X\}\)</span> <img src="images/komplement.png" /></p>
+<p>The <strong>difference</strong> <span class="math inline">\(X\setminus Y\)</span>, sometimes also <span class="math inline">\(X−Y\)</span>, is the set of all elements in <span class="math inline">\(X\)</span> that are not contained in <span class="math inline">\(Y\)</span>:</p>
+<p><span class="math inline">\(X\setminus Y=\{x\in U:x\in X \text{ und } x\not\in Y\}\)</span> <img src="images/differenz.png" /></p>
+</div>
+<div class="exercise">
+<p><span id="exr:mengenop2" class="exercise"><strong>Exercise 2.2  (Set operations 2) </strong></span></p>
+<ul>
+<li>Show via Venn diagram that <span class="math inline">\(X\setminus Y=X\cap\overline Y\)</span></li>
+</ul>
+<details>
+<summary>
+Answer
+</summary>
+<p>
+<img src="images/Mdifferenz.png" alt="" width="300" height="142" role="presentation" class="img-responsive atto_image_button_text-bottom"><br>
+</p>
+<p>
+See also<a href="https://www.geogebra.org/classic/nbwt4ega" target="_blank">Visualizing sets with Geogebra</a>
+</p>
+</details>
+<p>Let <span class="math inline">\(\mathbb Z_+, X, Y\)</span> be as in the previous exercise.</p>
+<ul>
+<li>What are the complements of <span class="math inline">\(\mathbb Z_+, X, Y\)</span></li>
+<li>What is <span class="math inline">\(\overline{X\cap Y}\)</span>?</li>
+<li>What is <span class="math inline">\(\overline{X\cup Y}\)</span>?</li>
+</ul>
+<details>
+<summary>
+Answer
+</summary>
+<p>
+<span class="math inline">\(\overline{Z_+}=\emptyset\)</span>, <span class="math inline">\(\overline{X}=\{x\in Z_+: x\geq 21 \text{ oder } x \text{ odd }\}\)</span>, <span class="math inline">\(\overline{Y}=\{x\in Z_+: x\leq 9 \text{ oder }x\geq 25 \text{ or } x \text{ odd }\}\)</span>
+</p>
+<p>
+<span class="math inline">\(\overline{X\cap Y} = \{x\in Z_+: x\leq 9 \text{ or }x\geq 20 \text{ or } x \text{ odd }\}\)</span>, <span class="math inline">\(\overline{X\cup Y}=\{x\in Z_+: x\geq 25 \text{ or } x \text{ odd }\}\)</span>
+</p>
+</details>
+<p>Let <span class="math inline">\(\mathbb Z_+, X, Y\)</span> be as in the previous exercise.</p>
+<ul>
+<li>What is the difference <span class="math inline">\(X\setminus Y\)</span>?</li>
+<li>What is <span class="math inline">\(Y\setminus X\)</span>?</li>
+</ul>
+<details>
+<summary>
+Answer
+</summary>
+<p>
+<span class="math inline">\(X\setminus Y =\{x\in \mathbb Z_+, x &lt; 10 \text{ und } x/2\in\mathbb Z_+\}\)</span>
+</p>
+<p>
+<span class="math inline">\(Y\setminus X = \{x\in \mathbb Z_+: 20&lt;x\leq 24 \text{ und } x/2\in \mathbb Z_+\}\)</span>
+</p>
+</details>
+</div>
+<div class="exercise">
+<p><span id="exr:mengenop3" class="exercise"><strong>Exercise 2.3  (Alex's consumption set and budget) </strong></span><br>
+<img src="images/Alex.png" />
+<br>Alex’s consumption set is given as <span class="math inline">\(C=\{(x_1,x_2):x_1\geq 0,x_2\geq 0\}\)</span>.</p>
+<p>The corresponding budget constraint set for Alex is <span class="math inline">\(B=\{(x_1,x_2):p_1x_1+p_2x_2\leq M\}\)</span>,</p>
+<p>where <span class="math inline">\(x_1,x_2\)</span> denotes the quantities of goods, <span class="math inline">\(p_1,p_2\)</span> the prices and <span class="math inline">\(M\)</span> the income.</p>
+<p>Illustrate the following quantities in a diagram:</p>
+<ul>
+<li><span class="math inline">\(B,C\)</span></li>
+<li><span class="math inline">\(B\cap C\)</span></li>
+</ul>
+<p>Interpret each of the sets.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>
+<img src="images/KonsumBudget.PNG" alt="" width="500" height="270" role="presentation" class="img-responsive atto_image_button_text-bottom">
+</p>
+</details>
+</div>
+</div>
+</div>
+<div id="number-sets" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Number sets<a href="the-basics.html#number-sets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:def4" class="definition"><strong>Definition 2.4  (Some number sets) </strong></span>The set of <strong>natural numbers</strong> is <span class="math inline">\(\mathbb N= \mathbb Z_+ = \{1,2,3,...\}\)</span></p>
+<p>The set of <strong>integers</strong> is <span class="math inline">\(\mathbb Z = \{...,−3,−2,−1,0,1,2,3,...\}\)</span></p>
+<p>The set of <strong>rational numbers</strong> is <span class="math inline">\(\mathbb Q=\{a,b:a\in \mathbb Z, b\in \mathbb Z\setminus\{0\}\}\)</span></p>
+</div>
+<p>Properties:</p>
+<ul>
+<li>
+The following applies: <span class="math inline">\(\mathbb{N}\subset \mathbb{Z}\subset \mathbb{Q}\)</span>.
+</li>
+<li>
+The set <span class="math inline">\(\mathbb {N}\)</span> is closed under addition and multiplication, i.e. for all <span class="math inline">\(a, b \in \mathbb {N}\)</span> the following applies: <span class="math inline">\(a + b \in \mathbb { N}\)</span>, <span class="math inline">\(a\in {N}\)</span>.
+</li>
+<li>
+The set <span class="math inline">\(\mathbb {Z}\)</span> is closed uncdot b addition, subtraction and multiplication, i.e. for all <span class="math inline">\(a, b \in \mathbb {Z}\)</span> the following applies: <span class="math inline">\(a + b \in \mathbb{Z}\)</span>, <span class="math inline">\(a - b \in \mathbb{Z}\)</span>,
+<span class="math inline">\(a \cdot b \in\)</span> <span class="math inline">\(\mathbb {Z}\)</span>.
+</li>
+<li>
+The set <span class="math inline">\(\mathbb{Q}\)</span> is closed under addition, subtraction, multiplication and division (with the exception of division by 0), i.e. for all <span class="math inline">\(a, b \in \mathbb{Q}\)</span> , c <span class="math inline">\(\neq 0\)</span> holds: <br><span class="math inline">\(a + b \in \mathbb{Q}\)</span>, <span class="math inline">\(a - b \in \mathbb{Q}\)</span>, <span class="math inline">\(a \cdot b \in \mathbb {Q}\)</span>, <span class="math inline">\(a/c \in \mathbb {Q}\)</span>.
+</li>
+</ul>
+<p>examples</p>
+<ul>
+<li>The set <span class="math inline">\(\mathbb N\)</span>: number of employees in a company, number of customers in a company</li>
+<li>The quantity <span class="math inline">\(\mathbb Z\)</span>: Growth of customers or employees numbers (absolute)</li>
+<li>The quantity <span class="math inline">\(\mathbb Q\)</span>: Percentage of existing customers/employees working full-time</li>
+</ul>
+<div class="exercise">
+<p><span id="exr:zahlen" class="exercise"><strong>Exercise 2.4  (Number sets) </strong></span>Show by counterexample that <span class="math inline">\(\mathbb N\)</span> is not closed under subtraction and division.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>
+take <span class="math inline">\(4; 5\in\mathbb{N}\)</span><br>
+</p>
+<p>
+<span class="math inline">\(4-5=-1 \notin\mathbb{N}\rightarrow\mathbb{N}\)</span> is not closed under subtraction<br>
+</p>
+<p>
+<span class="math inline">\(4 / 5\notin\mathbb{N}\rightarrow\mathbb{N}\)</span> is not closed under subtraction division<br>
+</p>
+</details>
+</div>
+<div class="definition">
+<p><span id="def:def5" class="definition"><strong>Definition 2.5  (Irrational numbers) </strong></span>There are numbers outside of <span class="math inline">\(\mathbb Q\)</span>, the so-called irrational numbers.
+Example: <span class="math inline">\(\sqrt2\)</span> is irrational.</p>
+</div>
+<p>The union of the rational and irrational numbers gives the <strong>set of real numbers</strong> <span class="math inline">\(\mathbb R\)</span>.</p>
+<p>The following properties are assumed as axioms:</p>
+<ol style="list-style-type: decimal">
+<li><p>Completeness: for all <span class="math inline">\(a,b\in \mathbb R\)</span> applies <span class="math inline">\(a+b\in \mathbb R\)</span> and <span class="math inline">\(a\cdot b\in \mathbb R\)</span></p></li>
+<li><p>Commutative laws: for all <span class="math inline">\(a,b\in \mathbb R\)</span> applies <span class="math inline">\(a+b=b+a\)</span>, <span class="math inline">\(a\cdot b=b\cdot a\)</span></p></li>
+<li><p>Associative laws: for all <span class="math inline">\(a,b,c\in \mathbb R\)</span> applies <span class="math inline">\(a+(b+c)=(a+b)+c\)</span> and <span class="math inline">\(a\cdot (b\cdot c )=(a\cdot b)\cdot c\)</span></p></li>
+<li><p>Distributive law: for all <span class="math inline">\(a,b,c\in \mathbb R\)</span> applies <span class="math inline">\(a\cdot (b+c)=a\cdot b+a\cdot c\)</span></p></li>
+<li><p>Null element: the element <span class="math inline">\(0\in\mathbb R\)</span> has the property <span class="math inline">\(a\in\mathbb R\)</span> then <span class="math inline">\(a+0=a\)</span> and (a=0 )</p></li>
+<li><p>One element: the element <span class="math inline">\(1\in\mathbb R\)</span> has the property <span class="math inline">\(1\cdot a=a\)</span></p></li>
+<li><p>Inverse additive element: for each <span class="math inline">\(a\in \mathbb R\)</span> <span class="math inline">\(−a\in \mathbb R\)</span> has the property <span class="math inline">\(a+(−a)=0\)</span></p></li>
+<li><p>Inverse multiplicative element: for <span class="math inline">\(a\in \mathbb R \setminus\{0\}\)</span>, <span class="math inline">\(\frac 1a \in \mathbb R\)</span> has the property <span class="math inline">\(a\cdot\frac 1a=1\)</span>.</p></li>
+</ol>
+<div class="definition">
+<p><span id="def:def5" class="definition"><strong>Definition 2.5  (Subsets on real numbers) </strong></span><br>The set <span class="math inline">\(\mathbb R_{++}\subset \mathbb R\)</span>
+contains the <strong>(strictly) positive numbers</strong>. The following applies:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\mathbb R++\)</span> is closed under addition and multiplication.</li>
+<li>Exactly one of the following properties applies to each <span class="math inline">\(a\in\mathbb R\)</span>:
+<span class="math inline">\(a\in \mathbb R_{++}\)</span> or <span class="math inline">\(a=0\)</span> or <span class="math inline">\(−a\in \mathbb R_{++}\)</span>.</li>
+</ol>
+<p>The set <span class="math inline">\(\mathbb R_+ = \mathbb R_{++}\cup \{0\}\)</span> is the set of <strong>non-negative numbers</strong>.</p>
+</div>
+<p>Sometimes you need to compare the numbers or specify a property that is related to a number. In this case, inequalities are useful.</p>
+<div class="definition">
+<p><span id="def:def6" class="definition"><strong>Definition 2.6  (Inequalities) </strong></span><br>
+The strict inequality <span class="math inline">\(&gt;\)</span> and the weak inequality <span class="math inline">\(\geq\)</span> are defined as follows:</p>
+<ol style="list-style-type: decimal">
+<li><p>If <span class="math inline">\(a+b\in \mathbb R_{++}\)</span>, then <span class="math inline">\(a&gt;b\)</span></p></li>
+<li><p>If <span class="math inline">\(−(a−b)\in \mathbb R_{++}\)</span>, then <span class="math inline">\(b&gt;a\)</span></p></li>
+<li><p>If <span class="math inline">\(a − b\in \mathbb R_+\)</span>, then <span class="math inline">\(a\geq b\)</span></p></li>
+<li><p>If <span class="math inline">\(−(a−b)\in \mathbb R_+\)</span>, then <span class="math inline">\(b\geq a\)</span>.</p></li>
+</ol>
+</div>
+<p>As an example, if you plan to interview the employees with the properties</p>
+<ul>
+<li>at least 5 years of service (<span class="math inline">\(X\)</span>),</li>
+<li>more than 1000 euros monthly earnings (<span class="math inline">\(Y\)</span>),</li>
+<li>less than 10 sick days in the last year (<span class="math inline">\(K\)</span>),</li>
+<li>the highest are 45 years old (<span class="math inline">\(Z\)</span>)</li>
+</ul>
+<p>you can use inequalities to specify your target group as follows: <span class="math inline">\(X\geq 5,Y&gt;1,K&lt;10 \text{ and } Z\leq 45\)</span>.</p>
+<p>Often one does not want to look at mere numbers, but rather at the <strong>deviations</strong> from a target value without considerring the direction of the deviation. In this case you need the amounts of these deviations.</p>
+<div class="definition">
+<p><span id="def:def7" class="definition"><strong>Definition 2.7  (Absolute value) </strong></span>The absolute value (also absolute value, “sign killer”) of <span class="math inline">\(x\in\mathbb R\)</span> is defined as</p>
+<p><span class="math inline">\(v=\begin{cases}x, &amp;\text{ if } x\geq 0,\\ -x, &amp;\text{ if } x&lt;0\end{cases}\)</span></p>
+</div>
+<p>As an example, consider the deviations of monthly sales from the annual average:</p>
+<ul>
+<li>Month 1: <span class="math inline">\(−1250.2\)</span> euros</li>
+<li>Month 2: <span class="math inline">\(−135.5\)</span> euros</li>
+<li>Month 3: <span class="math inline">\(680\)</span> euros</li>
+<li>Month 4: <span class="math inline">\(55\)</span> euros</li>
+</ul>
+<p>What is the mean deviation?</p>
+<p>The amounts of the sales variances are: <span class="math inline">\(1250.2;135.5;680;55\)</span> euros. The mean deviation is therefore: <span class="math inline">\(530.175\)</span> euros. If you had determined the mean deviation without first taking the amount, positive and negative deviations would cancel each other out, so that the result could not be regarded as the mean deviation.</p>
+<p>This is illustrated by the following <strong>triangle inequality</strong>.</p>
+<div class="theorem">
+<p><span id="thm:th1" class="theorem"><strong>Theorem 2.1  (Triangle inequality) </strong></span>For all <span class="math inline">\(x,y\in \mathbb R\)</span> the following applies: <span class="math display">\[|x+y|\leq|x|+|y|\]</span>
+Proof:
+<br><span class="math inline">\(x\leq|x|\)</span> and <span class="math inline">\(y\leq|y|\)</span> apply, from which it follows:
+<span class="math inline">\(x+y\leq |x|+|y|\)</span>.</p>
+<p>Similarly: <span class="math inline">\(−x\leq|x|\)</span> and <span class="math inline">\(−y\leq |y|\)</span>, so that <span class="math inline">\(−(x+y)\leq |x|+|y|\)</span>.</p>
+</div>
+<p>The absolute values of the sum of the deviations from month 2 and month 3 is <span class="math inline">\(544.5=|−135.5+680|\)</span>, which is smaller than the sum of the individual absolute values <span class="math inline">\(815.5=|−135.5| +|680|\)</span>.</p>
+<script>
+ 
+   // Generate a random question
+    const questionObj3 = {
+      question: 'Which set of numbers best describes the number of employees?',
+      options: ['\\(\\mathbb N\\)','\\(\\mathbb Z\\)' ,'\\(\\mathbb Q\\)', '\\(\\mathbb R\\)', '\\(\\mathbb R_{++}\\)'],
+      answer: '1',
+      id: 3,
+      where: 'result3'
+    };
+     const questionObj31 = {
+      question: 'Which set of figures best describes the proportion of employees on parental leave?',
+      options: ['\\(\\mathbb N\\)','\\(\\mathbb Z\\)' ,'\\(\\mathbb Q\\)', '\\(\\mathbb R\\)', '\\(\\mathbb R_{++}\\)'],
+      answer: '3',
+      id: 31,
+      where: 'result31'
+    };
+     const questionObj32 = {
+      question: "Which set of numbers best describes a company's leverage ratio?",
+      options: ['\\(\\mathbb N\\)','\\(\\mathbb Z\\)' ,'\\(\\mathbb Q\\)', '\\(\\mathbb R\\)', '\\(\\mathbb R_{++}\\)'],
+      answer: '4',
+      id: 32,
+      where: 'result32'
+    };
+     const questionObj33 = {
+      question: 'Which set of numbers best describes the duration of business relationships with an existing customer?',
+      options: ['\\(\\mathbb N\\)','\\(\\mathbb Z\\)' ,'\\(\\mathbb Q\\)', '\\(\\mathbb R\\)', '\\(\\mathbb R_{++}\\)'],
+      answer: '5',
+      id: 33,
+      where: 'result33'
+    };
+    const questionObj34 = {
+      question: 'Which set of numbers best describes the hourly balance (measured in whole hours) of an employee hourly account?',
+      options: ['\\(\\mathbb N\\)','\\(\\mathbb Z\\)' ,'\\(\\mathbb Q\\)', '\\(\\mathbb R\\)', '\\(\\mathbb R_{++}\\)'],
+      answer: '2',
+      id: 34,
+      where: 'result34'
+    };
+    
+    
+</script>
+<div id="q1" class="quiz">
+<p class="question">
+<span id="question-text3"></span>
+</p>
+<div class="options">
+<label>
+<input type="radio" name="option3" value=1> ‘\(\mathbb N\)’
+</label>
+<label>
+<input type="radio" name="option3" value=2> ‘\(\mathbb Z\)’
+</label>
+<label>
+<input type="radio" name="option3" value=3> ‘\(\mathbb Q\)’
+</label>
+<label>
+<input type="radio" name="option3" value=4> ‘\(\mathbb R\)’
+</label>
+<label>
+<input type="radio" name="option3" value=5> ‘\(\mathbb R_{++}\)’
+</label>
+</div>
+<button onclick="checkAnswer_match(questionObj3)">Submit</button>
+<p id="result3">
+</p>
+<p class="question">
+<span id="question-text31"></span>
+</p>
+<div class="options">
+<label>
+<input type="radio" name="option31" value=1> ‘\(\mathbb N\)’
+</label>
+<label>
+<input type="radio" name="option31" value=2> ‘\(\mathbb Z\)’
+</label>
+<label>
+<input type="radio" name="option31" value=3> ‘\(\mathbb Q\)’
+</label>
+<label>
+<input type="radio" name="option" value=4> ‘\(\mathbb R\)’
+</label>
+<label>
+<input type="radio" name="option31" value=5> ‘\(\mathbb R_{++}\)’
+</label>
+</div>
+<button onclick="checkAnswer_match(questionObj31)">Submit</button>
+<p id="result31">
+</p>
+<p class="question">
+<span id="question-text32"></span>
+</p>
+<div class="options">
+<label>
+<input type="radio" name="option32" value=1> ‘\(\mathbb N\)’
+</label>
+<label>
+<input type="radio" name="option32" value=2> ‘\(\mathbb Z\)’
+</label>
+<label>
+<input type="radio" name="option32" value=3> ‘\(\mathbb Q\)’
+</label>
+<label>
+<input type="radio" name="option32" value=4> ‘\(\mathbb R\)’
+</label>
+<label>
+<input type="radio" name="option32" value=5> ‘\(\mathbb R_{++}\)’
+</label>
+</div>
+<button onclick="checkAnswer_match(questionObj32)">Submit</button>
+<p id="result32">
+</p>
+<p class="question">
+<span id="question-text33"></span>
+</p>
+<div class="options">
+<label>
+<input type="radio" name="option33" value=1> ‘\(\mathbb N\)’
+</label>
+<label>
+<input type="radio" name="option33" value=2> ‘\(\mathbb Z\)’
+</label>
+<label>
+<input type="radio" name="option" value=3> ‘\(\mathbb Q\)’
+</label>
+<label>
+<input type="radio" name="option33" value=4> ‘\(\mathbb R\)’
+</label>
+<label>
+<input type="radio" name="option33" value=5> ‘\(\mathbb R_{++}\)’
+</label>
+</div>
+<button onclick="checkAnswer_match(questionObj33)">Submit</button>
+<p id="result33">
+</p>
+<p class="question">
+<span id="question-text34"></span>
+</p>
+<div class="options">
+<label>
+<input type="radio" name="option34" value=1> ‘\(\mathbb N\)’
+</label>
+<label>
+<input type="radio" name="option34" value=2> ‘\(\mathbb Z\)’
+</label>
+<label>
+<input type="radio" name="option34" value=3> ‘\(\mathbb Q\)’
+</label>
+<label>
+<input type="radio" name="option34" value=4> ‘\(\mathbb R\)’
+</label>
+<label>
+<input type="radio" name="option34" value=5> ‘\(\mathbb R_{++}\)’
+</label>
+</div>
+<button onclick="checkAnswer_match(questionObj34)">Submit</button>
+<p id="result34">
+</p>
+<script>
+  // Display the question
+    document.getElementById('question-text3').textContent = questionObj3.question;
+    document.getElementById('question-text31').textContent = questionObj31.question;
+    document.getElementById('question-text32').textContent = questionObj32.question;
+    document.getElementById('question-text33').textContent = questionObj33.question;
+    document.getElementById('question-text34').textContent = questionObj34.question;
+</script>
+</div>
+</div>
+<div id="point-sets-in-mathbb-rn" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Point sets in <span class="math inline">\(\mathbb R^n\)</span><a href="the-basics.html#point-sets-in-mathbb-rn" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Often one has the situation in which several objects or persons or their behavior have to be compared. The latter are represented by one or more values. We can always represent these individual values ​​from <span class="math inline">\(\mathbb R\)</span> or tuples of several values ​​from <span class="math inline">\(\mathbb R ^ 2, \mathbb R^3,\ldots\)</span> as points in the appropriate coordinate system. This makes it possible to determine the similarity of objects or people by measuring the distance between points.</p>
+<ul>
+<li>The real line <span class="math inline">\(\mathbb {R}\)</span> is suitable if each object is described by only one number. This then marks a point on the number line:
+<br><img src="images/R1.png" /></li>
+</ul>
+<div class="example">
+<p><span id="exm:realline" class="example"><strong>Example 2.4  (Real line) </strong></span>The consumers Alex, Tina and Amy are compared with regard to their account balance (<span class="math inline">\(x\)</span>). Alex has <span class="math inline">\(500\)</span> euros, Tina has <span class="math inline">\(250\)</span> euros and Amy has <span class="math inline">\(-600\)</span> euros in the account. What do these account balances look like as points on the real line?</p>
+</div>
+<ul>
+<li>The space <span class="math inline">\(\mathbb {R^2}\)</span>, defines the two-dimensional view via the <strong>Cartesian product</strong>:
+<span class="math inline">\(\mathbb R ⊗ \mathbb R = \left\{ {(x,y) : x \in \mathbb R, y \in \mathbb R} \right\} =\mathbb R^2\)</span>
+<br><img src="images/R2.png" /></li>
+</ul>
+<div class="example">
+<p><span id="exm:r2" class="example"><strong>Example 2.5  (Two dimensional real space) </strong></span>The consumers Alex, Tina and Amy are compared with regard to their account balance (<span class="math inline">\(x\)</span>) and the change in their consumer spending (<span class="math inline">\(y\)</span>) over the last month. Alex’s behavior is represented by the tuple (balance; change in consumer spending <span class="math inline">\(=(x;y)\)</span>) <span class="math inline">\((500; 300)\)</span>, Tinas by <span class="math inline">\((250; -200)\)</span> and Amy’s by <span class="math inline">\((-600; 200)\)</span> described.
+What do the different consumer behaviors of these consumers look like as points in the coordinate system?</p>
+</div>
+<ul>
+<li>The space <span class="math inline">\(\mathbb{R^3} \left\{ {(x, y, z) : x \in \mathbb R, y \in \mathbb R, z \in \mathbb R}\right\}\)</span> enables the analysis of three-dimensional points.
+<br><img src="images/R3.png" /></li>
+</ul>
+<div class="example">
+<p><span id="exm:r3" class="example"><strong>Example 2.6  (Three dimensional real space) </strong></span>Alex, Tina and Amy as employees are shown in terms of their salary <span class="math inline">\(x\)</span>, change in productivity <span class="math inline">\(y\)</span> and target achievement score <span class="math inline">\(z\)</span>. Their behavior is represented by the tuple (salary; productivity; goal achievement) <span class="math inline">\(=(x;y;z)\)</span>. Tina’s description is <span class="math inline">\((3; 2.5; 2)\)</span>, Alex <span class="math inline">\((-2; -5; -2.5)\)</span> and Amy’s <span class="math inline">\((-3; 1.2; 1.5)\)</span>. What do the various characteristics of the employees look like as points in the coordinate system?</p>
+</div>
+<ul>
+<li>The space <span class="math inline">\(\mathbb {R^n}\)</span>: allows the mapping of multidimensional points. For example, if you include other characteristics of employees. The visualization is difficult at this point, but the multivariate analysis of these points and the calculation of distance can be performed without any problems.
+<span class="math display">\[ R^n = \left\{ {(x_1,x_2, ... , x_n) : x_i \in \mathbb R, 1 \leq i \leq n}\right\} \]</span>
+Subsets of <span class="math inline">\(\mathbb{R^n}\)</span>: sets of points.</li>
+</ul>
+<div id="intervals-as-sets-of-points-in-mathbbrn" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Intervals as sets of points in <span class="math inline">\(\mathbb{R^n}\)</span><a href="the-basics.html#intervals-as-sets-of-points-in-mathbbrn" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Important sets of points in <span class="math inline">\(\mathbb {R}\)</span> are intervals.</p>
+<div class="example">
+<p><span id="exm:int" class="example"><strong>Example 2.7  (Intervals as point sets) </strong></span>For example, the HR manager of Alex, Tina and Amy could only consider employees with a negative salary score in the interval <span class="math inline">\(-5\)</span> to <span class="math inline">\(-1\)</span> in an evaluation. She would have a number of options to choose from. Should the employees with the score <span class="math inline">\(0\)</span> be taken into account or are they still left out? So far there have been no salary scores beyond <span class="math inline">\(-5\)</span>. But should people with a lower score than <span class="math inline">\(-5\)</span> also be included in the evaluation in the future?
+In the first case we would write the corresponding interval as <span class="math inline">\([-5;0]\)</span>, in the second - as <span class="math inline">\([-5;0)\)</span> and in the third case (if yes) - <span class="math inline">\((-\infty ; 0)\)</span> write down.</p>
+</div>
+<p>Accordingly, for <span class="math inline">\(a, b \in R, \ a &lt; b\)</span> one distinguishes:</p>
+<ul>
+<li><p>limited quantities:</p>
+<ul>
+<li><p>Closed interval: <span class="math inline">\(\left[ a, b \right] = \left\{ {x ∈ \mathbb{R} : a \leq x \leq b} \right\}\)</span></p></li>
+<li><p>Half-open interval:
+<span class="math inline">\([a, b) = \left\{ {x ∈ \mathbb{R} : a \leq x &lt; b}\right\}\)</span>
+<span class="math inline">\((a, \infty) = \left\{ {x \in \mathbb{R} : a &lt; x}\right\}\)</span></p></li>
+<li><p>Open interval: <span class="math inline">\((a, b) = \left\{ {x \in R : a &lt; x &lt; b}\right\}\)</span></p></li>
+</ul></li>
+<li><p>Unlimited quantities:</p>
+<ul>
+<li>Unlimited interval
+<span class="math inline">\([a, ∞) = \left\{ {x \in \mathbb R : a \leq x}\right\}\)</span>
+<span class="math inline">\((a, \infty) = \left\{ {x \in \mathbb R : a &lt; x}\right\}\)</span></li>
+<li>Down unlimited interval:
+<span class="math inline">\((−\infty, b] = \left\{ {x \in \mathbb R : x \leq b}\right\}\)</span>
+<span class="math inline">\((−\infty, b) = \left\{ {x \in \mathbb R : x &lt; b} \right\}\)</span></li>
+</ul></li>
+</ul>
+<div id="q1" class="quiz">
+<script>
+   const questionObj36 = {
+      question: 'In a survey, you want to interview all employees who have been employed in a company for more than 3 years but no more than 5 years. Which length of service is relevant in this case?',
+      options: ['\\((3;5)\\)','\\([3;5)\\)' ,'\\((3;5]\\)', '\\([3;5)\\)'],
+      answer: '3',
+      id: 36,
+      where: 'result36'
+    };
+    
+   const questionObj37 = {
+      question: 'In another survey, one would like to ask all employees whose length of service is in the interval \\([2;~~ 3.5)\\) years. Employees with which seniority can take part in the survey?',
+      options: ['1.5 years','2 years','2.5 years', '3.5 years'],
+      answer: ['2','3'],
+      id: 37,
+      where: 'result37'
+    };
+
+</script>
+<p class="question">
+<span id="question-text36"></span>
+</p>
+<div class="options">
+<label>
+<input type="radio" name="option36" value=1> \((3;5)\)
+</label>
+<label>
+<input type="radio" name="option36" value=2> \([3;5)\)
+</label>
+<label>
+<input type="radio" name="option36" value=3> \((3;5]\)
+</label>
+<label>
+<input type="radio" name="option36" value=4> \([3;5]\)
+</label>
+</div>
+<button onclick="checkAnswer_match(questionObj36)">Submit</button>
+<p id="result36">
+</p>
+<br><br />
+
+<p class="question">
+<span id="question-text37"></span>
+</p>
+<div class="options">
+<label>
+<input type="checkbox" name="option37" value=1> 1.5 years
+</label>
+<label>
+<input type="checkbox" name="option37" value=2> 2 years
+</label>
+<label>
+<input type="checkbox" name="option37" value=3> 2.5 years
+</label>
+<label>
+<input type="checkbox" name="option37" value=4> 3.5 years
+</label>
+</div>
+<button onclick="checkAnswer_mmc(questionObj37)">Submit</button>
+<p id="result37">
+</p>
+<script>
+    document.getElementById('question-text36').textContent = questionObj36.question;
+     document.getElementById('question-text37').textContent = questionObj37.question;
+</script>
+</div>
+</div>
+<div id="properties-of-mathbb-rn-distance" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Properties of <span class="math inline">\(\mathbb R^n\)</span>: Distance<a href="the-basics.html#properties-of-mathbb-rn-distance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>How could the HR manager now compare the employees Alex, Tina and Amy in terms of their salary <span class="math inline">\(x\)</span>, productivity change <span class="math inline">\(y\)</span> and target achievement score <span class="math inline">\(z\)</span>?. Their behavior has so far been represented by the tuple (salary; productivity; goal achievement) <span class="math inline">\(=(x;y;z)\)</span>. Tina’s description is <span class="math inline">\((3; 2.5; 2)\)</span>, Alex <span class="math inline">\((-2; -5; -2.5)\)</span> and Amy’s <span class="math inline">\((-3; 1.2; 1.5)\)</span>. Which employees are most similar? It is useful here to find the Euclidean distance between the points representing Alex, Tina, and Emy.</p>
+<div class="definition">
+<p><span id="def:def1abstand" class="definition"><strong>Definition 2.8  (Euclidean distance) </strong></span>The <strong>Euclidean distance</strong> between two points <span class="math inline">\(a = (a_1, ... , a_n)\)</span> and <span class="math inline">\(b = (b_1, ... , b_n)\)</span> in <span class="math inline">\(\mathbb {R}^ n\)</span>, <span class="math inline">\(n \geq 1\)</span>, is defined as</p>
+<p><span class="math inline">\(d(a, b) =\)</span> <span class="math inline">\(\sqrt{ \  \sum_{i=1}^{n} (a _{i} -b_{i}) ^{2} }\)</span></p>
+</div>
+<div class="example">
+<p><span id="exm:pathagoras" class="example"><strong>Example 2.8  (Pythagor) </strong></span>According to the Pythagorean theorem, the length of the straight line connecting <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is
+<span class="math inline">\(d(a, b) =\)</span> <span class="math inline">\(\sqrt{(a_{1}-b_{1})^{2} + (a_{2}-b_{2})^{2}}\)</span>
+<img src="images/abstand.png" /></p>
+</div>
+<p>The personnel manager calculates:</p>
+<div class="example">
+<p><span id="exm:personal" class="example"><strong>Example 2.9  (employee comparison) </strong></span><span class="math display">\[\begin{align*}d(Tina, Alex) &amp;= \sqrt{(3-(-2))^2 + (2.5-(-5))^2 + (2-(-2.5))^2}\\
+&amp;= 10.074\end{align*}\]</span>
+<span class="math display">\[\begin{align*}d(Tina, Amy) &amp;= \sqrt{(3-(-3))^2 + (2.5-1.2)^2 + (2-1.5))^2}\\
+&amp;= 6.1595\end{align*}\]</span>
+<span class="math display">\[\begin{align*}d(Alex, Amy) &amp;= \sqrt{(-2-(-3))^2 + (-5-1.2)^2 + (-2.5-1.5))^2} \\
+&amp;= 7.446\end{align*}\]</span></p>
+</div>
+<p>So Tina and Amy are the most similar of the three employees in terms of the description of changes in salary, productivity and goal achievement, since the Euclidean distance between their characteristics is the smallest.</p>
+<div class="exercise">
+<p><span id="exr:euklabstand" class="exercise"><strong>Exercise 2.5  (The Euclidean distance) </strong></span>Find the Euclidean distance between the following points:</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span> in <span class="math inline">\(\mathbb {R}\)</span></p></li>
+<li><p><span class="math inline">\((2; 3)\)</span> and <span class="math inline">\((4; 1)\)</span> in <span class="math inline">\(\mathbb {R^2}\)</span></p></li>
+<li><p><span class="math inline">\((2; 3; 4)\)</span> and <span class="math inline">\((4; 1; −5)\)</span> in <span class="math inline">\(\mathbb{R^3}\)</span></p></li>
+<li><p><span class="math inline">\((2; 3; 4; 5)\)</span> and <span class="math inline">\((−2; 4; 1; −5)\)</span> in <span class="math inline">\(\mathbb{R^4}\)</span></p></li>
+</ol>
+<details>
+<summary>
+Antwort
+</summary>
+<p>
+1.<span class="math inline">\(\sqrt{(2-3)^2} = 1\)</span>
+</p>
+<p>
+2.<span class="math inline">\(\sqrt{(2-4)^2 +(3-1)^2 } =\sqrt{4+4} =\sqrt{8}\)</span>
+</p>
+<p>
+3.<span class="math inline">\(\sqrt{(2-4)^2 +(3-1)^2 + (4-(-5))^2} =\sqrt{4+4+81} =\sqrt{89}\)</span>
+</p>
+<p>
+4.<span class="math inline">\(\sqrt{(2-(-2))^2 +(3-4)^2 + (4-1)^2 + (5-(-5))^2}\)</span>
+<br><span class="math inline">\(=\sqrt{16+1+9+100} =\sqrt{126}\)</span><br>
+</p>
+</details>
+</div>
+<script>
+
+ // Generate a random question
+    const questionObj4 = generateQuestion_num(4);
+    
+    questionObj4.answer = Math.sqrt(Math.pow(questionObj4.question[2]/10-questionObj4.question[5]/10,2) + Math.pow(questionObj4.question[3]/10 - questionObj4.question[6]/10,2) + Math.pow(questionObj4.question[4]/10-questionObj4.question[7]/10,2));
+    
+</script>
+<div id="q2" class="quiz">
+<p id="question">
+<span id="question-text4"></span>
+</p>
+<input type="number" id="answer4" placeholder="Enter your answer">
+<button onclick="checkAnswer_num(questionObj4)">Submit</button>
+<p id="result4">
+</p>
+</div>
+<script>
+// Display the question
+    document.getElementById('question-text4').textContent = "Compute the euclidean distance between two points in \\(\\mathbb R^3\\): ("+ questionObj4.question[2]/10+ ";" +  questionObj4.question[3]/10 + ";" + questionObj4.question[4]/10 + ") and (" + questionObj4.question[5]/10 + ";" + questionObj4.question[6]/10 + ";"+ questionObj4.question[7]/10 + ")";
+</script>
+</div>
+<div id="properties-of-mathbb-rn-epsilon-neighborhood" class="section level3 hasAnchor" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> Properties of <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\epsilon-\)</span>neighborhood<a href="the-basics.html#properties-of-mathbb-rn-epsilon-neighborhood" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We need one more concept to determine if given points are “close enough” to each other. Later in the course we want to see if a sequence tends towards a certain point, or comes arbitrarily close to it. This “arbitrarily close” is also formalized with the help of the <span class="math inline">\(\epsilon-\)</span>neighborhood.</p>
+<div class="definition">
+<p><span id="def:defumgebung" class="definition"><strong>Definition 2.9  (ϵ-neighborhood) </strong></span>Let <span class="math inline">\(\epsilon\)</span> be a positive real number. The <span class="math inline">\(\epsilon\)</span> neighborhood of a point <span class="math inline">\(x_0 ∈ R^n\)</span> is defined as the set
+<span class="math inline">\(N_ \epsilon (x_0) = {x \in R^n : d(x_0, x) &lt; \epsilon }\)</span>.</p>
+<p>In other words, <span class="math inline">\(N_ \epsilon \left( x_0 \right)\)</span> is the set of points whose distance to <span class="math inline">\(x_0\)</span> is less than <span class="math inline">\(\epsilon\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:umgebung" class="example"><strong>Example 2.10  (ϵ-neighborhood) </strong></span></p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(N _\epsilon (2) = \left\{ x \in \mathbb{R : } \sqrt{(x-2)^2} &lt; \epsilon \right\} = \left\{ x \in \mathbb{R} : \lvert x-2\rvert &lt; \epsilon \right\} = (2- \epsilon ; 2+ \epsilon )\)</span>
+<br>
+<img src="images/N1.png" />
+<br>
+If <span class="math inline">\(\epsilon = 0.1\)</span> is set, then it is all points in the interval <span class="math inline">\((1.9; 2.1)\)</span>.
+<br></li>
+<li><span class="math inline">\(N _\epsilon (2,3) = \left\{ ( x, y) \in \mathbb{R^2 : } \sqrt{(x-2)^2 + (y-3)^ 2} &lt; \epsilon \right\}\)</span></li>
+</ol>
+<p>This is the set of points in <span class="math inline">\(\mathbb{R^2}\)</span> that lie within a circle of radius <span class="math inline">\(\epsilon\)</span> around the point <span class="math inline">\((2; 3)\)</span>.
+<br>
+<img src="images/N2.png" />
+<br>
+3. <span class="math inline">\(N _\epsilon (2,3,1) = \left\{ ( x, y, z) \in \mathbb{R^3 : } \sqrt{(x-2)^2 + (y -3)^2+(z-1)^2} &lt; \epsilon \right\}\)</span></p>
+<p>This is the set of points in <span class="math inline">\(\mathbb{R^3}\)</span> that lie within a sphere of radius <span class="math inline">\(\epsilon\)</span> around the point <span class="math inline">\((2, 3, 1)\)</span>.
+<br>
+<img src="images/N3.png" /></p>
+</div>
+<p>The HR manager has determined that a productivity deviation of <span class="math inline">\(\epsilon = 0.5\)</span> is an unusual development and can indicate that the employees concerned are overworked.</p>
+<div class="example">
+<p><span id="exm:umgebung" class="example"><strong>Example 2.10  (ϵ-neighbourhood in HR) </strong></span>If the average productivity score is <span class="math inline">\(1.5\)</span> and <span class="math inline">\(\epsilon=0.5\)</span> is specified, Amy’s score is still in the <span class="math inline">\(\epsilon\)</span> environment of the average score and Tina’s scores and Alex - not. This can be seen by writing down the <span class="math inline">\(\epsilon\)</span> neighborhood for the one-dimensional case: <span class="math display">\[ N _{\epsilon=0.5} (1.5) = \left\{ x \in \mathbb{R : } \sqrt{(x-1.5)^2} &lt; 0.5 \right\} = \left\{ x \in \mathbb{R} : \lvert x-1.5\rvert &lt; 0.5 \right\} \]</span><span class="math display">\[= (1.5- 0.5 ; 1.5+ 0.5 ) \]</span> Since this interval is an open interval, Tina’s score of <span class="math inline">\(2\)</span> is no longer part of it. The personnel manager will therefore have discussions with Alex and Tina about their professional stress.</p>
+</div>
+</div>
+</div>
+<div id="functions" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Functions<a href="the-basics.html#functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We have already seen with Alex’s utility-budget representation how helpful it can be to express the problem using suitable functions. A functional form can also be very helpful in other contexts such as production and production costs to make optimal production decisions.</p>
+<iframe src="https://scratch.mit.edu/projects/766839776/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen>
+</iframe>
+<p>Now let’s take a closer look at how functions are defined and what types of functions are commonly used in a business or economic context.</p>
+<div class="definition">
+<p><span id="def:deffunction" class="definition"><strong>Definition 2.10  (Function) </strong></span>Let <span class="math inline">\(X, Y \subset\mathbb R\)</span>. A <strong>function</strong> (also <strong>mapping</strong>) from <span class="math inline">\(X\)</span> to <span class="math inline">\(Y\)</span> is a rule that assigns exactly one element of <span class="math inline">\(Y\)</span> to each element in <span class="math inline">\(X\)</span>.</p>
+</div>
+<ul>
+<li><p>The set <span class="math inline">\(X\)</span> is called the <strong>domain</strong> of the function.</p></li>
+<li><p>The set <span class="math inline">\(Y\)</span> is called the <strong>codomain</strong> of the function.</p></li>
+<li><p>Notation: If <span class="math inline">\(f\)</span> is a function, then we write</p>
+<p><span class="math inline">\(f : X \rightarrow Y\)</span> and
+<span class="math inline">\(y = f (x)\)</span>, <span class="math inline">\(x \in X\)</span>,</p></li>
+</ul>
+<p>where <span class="math inline">\(y\)</span> is called the image or the function value of <span class="math inline">\(f\)</span> at the position <span class="math inline">\(x\)</span>.</p>
+<div class="definition">
+<p><span id="def:definvfunction" class="definition"><strong>Definition 2.11  (Inverse function) </strong></span>Let <span class="math inline">\(f : X \rightarrow Y\)</span> with <span class="math inline">\(y = f (x)\)</span>.</p>
+<p>If each element <span class="math inline">\(y \in Y\)</span> is the image of exactly one point <span class="math inline">\(x \in X\)</span>, then the inverse function exists, written as <span class="math inline">\(f^{(−1)}\)</span>, and it satisfies the following equation : <span class="math display">\[ {f}^{-1} \ ( y )= x.\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:fun1" class="example"><strong>Example 2.11  (Function and its inverse) </strong></span>Let <span class="math inline">\(y = f (x) = {x}^{2}\)</span> with <span class="math inline">\(X = \mathbb{R^+}\)</span>. Then,
+<span class="math display">\[{f}^{-1} ( y ) = \sqrt{ y}, \]</span> because <span class="math inline">\(\sqrt{y} = \sqrt{x^2} = x\)</span>.</p>
+</div>
+<p>Let <span class="math inline">\(g : Y \rightarrow Z\)</span> be another function with <span class="math inline">\(z = g( y )\)</span>.</p>
+<div class="definition">
+<p><span id="def:defcomposition" class="definition"><strong>Definition 2.12  (Composition) </strong></span>The <strong>composition</strong> of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> is given by
+<span class="math display">\[g \circ f : X \rightarrow Z \text{ with } z = g(f (x)) \]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:fun2" class="example"><strong>Example 2.12  (Composition) </strong></span><span class="math inline">\(f (x) = x + 2, \ g( y ) = {y}^{2}\)</span> and <span class="math inline">\(g(f (x)) = {(x+2)}^{2}\)</span>.</p>
+</div>
+<div id="linear-functions" class="section level3 hasAnchor" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Linear Functions<a href="the-basics.html#linear-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In the utility maximization example, Alex had the budget constraint <span class="math inline">\(x \cdot P_X + y \cdot P_Y = 100.\)</span>, which was expressed as a linear function <span class="math inline">\(y(x)=\frac{100}{P_Y}-\frac {P_X} {P_Y} x\)</span> could be represented.</p>
+<p>In addition, many cost functions can be modeled as linear functions of the quantities produced. In this case, the costs consist of a fixed amount <span class="math inline">\(b\)</span> and grow proportionally to the produced quantity <span class="math inline">\(x\)</span> with the factor <span class="math inline">\(b\)</span>, so that <span class="math inline">\(K(x) = ax+b\)</span> .</p>
+<div class="definition">
+<p><span id="def:deflin" class="definition"><strong>Definition 2.13  (Linear function) </strong></span>Let <span class="math inline">\(a, b\)</span> be real numbers. The function <span class="math inline">\(f : \mathbb{R} → \mathbb{R}\)</span> with</p>
+<p><span class="math inline">\(f (x) = a \cdot x + b\)</span>, <span class="math inline">\(x ∈ \mathbb{R}\)</span>,</p>
+<p>is a <strong>linear function</strong>.</p>
+</div>
+<div class="example">
+<p><span id="exm:linfun" class="example"><strong>Example 2.13  (Linear Functions) </strong></span>Linear functions: positive <span class="math inline">\(a\)</span> in <span class="math inline">\((a)\)</span> and <span class="math inline">\((c)\)</span>; negative <span class="math inline">\(a\)</span> in <span class="math inline">\((b)\)</span>; <span class="math inline">\(b = 0\)</span> in <span class="math inline">\((a)\)</span> and <span class="math inline">\((b)\)</span>, positive <span class="math inline">\(b\)</span> in <span class="math inline">\((c)\)</span>:
+<br>
+<img src="images/linfun.png" /></p>
+</div>
+<ul>
+<li><p>The parameter <span class="math inline">\(a\)</span> determines the gradient of the linear function.</p></li>
+<li><p>Let <span class="math inline">\(y_1 = a \cdot x_1 + b\)</span>, <span class="math inline">\(y_2 = a \cdot x_2 + b\)</span>,
+it follows <span class="math inline">\(y_2 − y_1 = a\ (x_2 − x_1)\)</span>, so that <span class="math inline">\(a = \frac{y_2-y_1}{x_2-x_1} = \frac{\Delta y}{\Delta x} .\)</span> <span class="math inline">\(\Delta y\)</span> denotes the “change in <span class="math inline">\(y\)</span>”, <span class="math inline">\(\Delta x\)</span> denotes the “change in <span class="math inline">\(x\)</span>”.</p></li>
+<li><p>The ratio <span class="math inline">\(\Delta y/\Delta x\)</span> is the slope, <span class="math inline">\(a\)</span> is the slope coefficient.</p></li>
+<li><p>The parameter <span class="math inline">\(b\)</span> is the <span class="math inline">\(y\)</span>-intercept / ordinate-intercept / intercept.</p></li>
+</ul>
+<p><br>
+<img src="images/linfunpar.png" /></p>
+<div class="example">
+<p><span id="exm:kostenf" class="example"><strong>Example 2.14  (Cost function and marginal cost function) </strong></span>The cost of a bicycle manufactory is €50,000 per month and €25 per bicycle.
+The cost function (in EUR) is <span class="math display">\[ C(q) = 50,000 + 25q \]</span></p>
+<p>The marginal cost, i.e. the cost of producing an additional bike, is <span class="math display">\[C^\prime (q) = 25\]</span>
+Because of the linearity, the marginal cost is €25 independent of the production level/amount <span class="math inline">\(q\)</span> produced.</p>
+</div>
+</div>
+<div id="quadratic-functions" class="section level3 hasAnchor" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> Quadratic Functions<a href="the-basics.html#quadratic-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Some cost functions cannot be represented by a linear function. Then the costs grow disproportionately to the quantity. To describe such costs one then uses quadratic terms in the quantity produced.</p>
+<div class="definition">
+<p><span id="def:defquadf" class="definition"><strong>Definition 2.14  (Quadatic function) </strong></span>Let <span class="math inline">\(a, b, c\)</span> be constant real numbers. A quadratic function has the form
+<span class="math display">\[ y = a \cdot x^2 + b \cdot x + c, ~~x \in \mathbb {R}, a \neq 0 \]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:quadfun" class="example"><strong>Example 2.15  (Quadatic Functions) </strong></span>Quadratic functions: positive <span class="math inline">\(a\)</span> in <span class="math inline">\((a)\)</span>; negative <span class="math inline">\(a\)</span> in }((b)}):
+<img src="images/quadfun.png" /></p>
+</div>
+<p>The graph of a quadratic function is a <strong>parabola</strong>.</p>
+<div class="example">
+<p><span id="exm:qkosten" class="example"><strong>Example 2.16  (Squared cost function) </strong></span>We consider again the bicycle factory from the previous example.
+It is more realistic to assume that greater output comes with additional costs. For example, increased demand can increase the price of commodities.
+This is captured by an additional term, e.g. <span class="math inline">\(0.001 q^2\)</span>. This term is very small for small <span class="math inline">\(q\)</span>, but grows strongly with increasing production level <span class="math inline">\(q\)</span>.
+Now the cost function is</p>
+<p><span class="math inline">\(C(q) = 50,000 + 25q + 0.001q^2\)</span>,</p>
+<p>with marginal costs</p>
+<p><span class="math inline">\(C^\prime (q) = 25 + 0.002q\)</span>.
+The marginal cost is €25.20 for a production of 100 bikes per week, rising to €45 for an increase in production to 10,000 bikes per week.</p>
+</div>
+</div>
+</div>
+<div id="power-exponential-and-logarithmic-functions" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Power, exponential and logarithmic functions<a href="the-basics.html#power-exponential-and-logarithmic-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Growth processes are usually neither linear nor quadratic in the variable time. Rapid growth well described using exponential and power functions.</p>
+<p>During the corona pandemic, the number of infections was monitored very closely. Suppose every infected person infects two more people per week. Then the growth looks like this:
+<img src="images/corona.gif" />
+At this point we need the definition and calculation rules for the exponents that can describe such a growth.</p>
+<p>We write <span class="math inline">\({a}^{n}\)</span> for the <span class="math inline">\(n-fold\)</span> product of a number <span class="math inline">\(a\)</span> with itself (<span class="math inline">\(n \in \mathbb{N}\)</span>). The number <span class="math inline">\(n\)</span> is called an exponent.</p>
+<p>This can be extended to <span class="math inline">\(n \in \mathbb{R}\)</span>.</p>
+<div class="theorem" names="rules for exponents">
+<p><span id="thm:th2" class="theorem"><strong>Theorem 2.2  </strong></span><br/>
+<span class="math inline">\(a^n \cdot a^m = {a}^{n+m}\)</span></p>
+<p><span class="math inline">\(({a}^{n} ) ^m = {a}^{n \cdot m}\)</span></p>
+<p><span class="math inline">\(\frac{a^n}{a^m} = {a}^{n-m}\)</span></p>
+<p><span class="math inline">\(\frac{a^n}{a^n} = {a}^{0} = 1\)</span></p>
+<p>Furthermore: <span class="math inline">\(a^n \cdot b^n = (a \cdot b)^n; a^n/b^n = (a/b)^n \ and \ {a}^{-n} = 1/a^n\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:defpotfun" class="definition"><strong>Definition 2.15  (Power function) </strong></span>A power function has the form
+<span class="math inline">\(y = ax^b\)</span>, <span class="math inline">\(x \in \mathbb{R}\)</span>, <span class="math inline">\(a &gt; 0\)</span>.</p>
+<p>The parameter <span class="math inline">\(b\)</span> is called exponent.
+<br>
+<img src="images/potfun.png" /></p>
+</div>
+<p>Note that the variable <span class="math inline">\(x\)</span> acts as the base of the power function here.</p>
+<div class="definition">
+<p><span id="def:defexpfun" class="definition"><strong>Definition 2.16  (Exponential function) </strong></span>An exponential function has the form</p>
+<p><span class="math inline">\(y = ab^x\)</span> , <span class="math inline">\(x \in \mathbb {R}\)</span>.</p>
+<p><br>
+<img src="images/expfun.png" /></p>
+<p>The parameter <span class="math inline">\(b\)</span> is called the basis of the function.</p>
+</div>
+<ul>
+<li><p>Exponential functions capture growth effects (e.g. populations, money).</p></li>
+<li><p>The Euler constant <span class="math inline">\(e = 2.718...\)</span> is often used as the basis. (more later)</p></li>
+<li><p>Note: The exponent is now the function variable.</p></li>
+</ul>
+<p>Now if we want to invert an exponential function, e.g. to find out how many weeks it takes to reach a certain number of infected people, we use the <strong>logarithm function</strong>.</p>
+<div class="definition">
+<p><span id="def:deflogfun" class="definition"><strong>Definition 2.17  (logarithm function) </strong></span>If <span class="math inline">\(x = b^y\)</span> , with <span class="math inline">\(b &gt; 0\)</span> and <span class="math inline">\(b \neq 1\)</span>, then <span class="math inline">\(y\)</span> is the logarithm of <span class="math inline">\(x\)</span> to the base <span class="math inline">\(b\)</span>, written as
+<span class="math inline">\(y = \log_b x\)</span>, <span class="math inline">\(x \in \mathbb{R}_+\)</span></p>
+<p><br>
+<img src="images/logfun.png" /></p>
+</div>
+<p>The logarithm to the base <span class="math inline">\(e (10)\)</span> is called the <strong>natural logarithm</strong> (<strong>decade logarithm</strong>), written as
+<span class="math inline">\(y = \ln \ x\)</span> <span class="math inline">\((y = \log \ x)\)</span>.</p>
+<p>The logarithm of <span class="math inline">\(x\)</span> to the base <span class="math inline">\(b\)</span> answers the question:
+“How many times do you multiply <span class="math inline">\(b\)</span> by itself to get <span class="math inline">\(x\)</span>?”</p>
+<div class="theorem">
+<p><span id="thm:th2" class="theorem"><strong>Theorem 2.2  (rules for logarithms) </strong></span><span class="math inline">\(\log_b(xz) = \log_b\  x + \log_b\  z\)</span></p>
+<p><span class="math inline">\(\log_b(x/z) = \log_b \ x − \log_b \ z\)</span></p>
+<p><span class="math inline">\(\log_b(x ^a) = a \ \log_b \ x\)</span></p>
+</div>
+<ul>
+<li><p>Remark: From the last property it follows that <span class="math inline">\(\log_b \ x = \ln \ x / \ln\ b\)</span> .
+Because: If you set <span class="math inline">\(y = \frac{\ln\ x}{\ln\ b}\)</span> , then: <span class="math inline">\(\ln \ x = y \ \ln\ b = \ln(b^y )\)</span>.
+So <span class="math inline">\(b^y = x\)</span> and therefore <span class="math inline">\(y = \log_b x\)</span>.</p></li>
+<li><p>On the pocket calculator you can determine any logarithm using the natural logarithm.</p></li>
+</ul>
+<div id="q3" class="quiz">
+<p>The world population is growing. This process can be modeled with the help of an exponential function (albeit very simplified).</p>
+<p>The following formula helps to connect the future population <span class="math inline">\(P(t)\)</span> after <span class="math inline">\(t\)</span> periods with the initial inventory <span class="math inline">\(P(0)\)</span> and growth rate <span class="math inline">\(r\)</span> per period:</p>
+<p><span class="math inline">\(P(t)=P(0)(1+r)^t\)</span></p>
+<p>where <span class="math inline">\(r\)</span> can be positive or negative. A negative <span class="math inline">\(r\)</span> would mean that the population is shrinking. In the year <span class="math inline">\(2000\)</span>, the world population was about <span class="math inline">\(5.2 \ billion\)</span> with <span class="math inline">\(r&gt;0\)</span>, so it shows positive growth. Depending on which estimate is used, <span class="math inline">\(r \approx 1.5\)</span> percent per year applies.</p>
+<p>Suppose the population is growing exponentially and the growth rate is <span class="math inline">\(r \approx 1.5\)</span> percent per year. How high should the population be in the year <span class="math inline">\(2025\)</span> assuming <span class="math inline">\(5.2 \ billion\)</span> in the year <span class="math inline">\(2000\)</span>?</p>
+<script>
+questionObj5 = {
+        question: [],
+        answer: 5.2*Math.pow(1.015,25),
+        id: 5
+      };
+
+</script>
+<p id="question">
+<span id="question-text5"></span>
+</p>
+<input type="number" id="answer5" placeholder="Enter your answer">
+<button onclick="checkAnswer_num(questionObj5)">Submit</button>
+<p id="result5">
+</p>
+<p>How long will it take for the world population to reach <span class="math inline">\(8\)</span> billion?</p>
+<script>
+questionObj6 = {
+        question: [],
+        answer: Math.log(8/5.2)/Math.log(1.015),
+        id: 6
+      };
+
+</script>
+<p id="question">
+<span id="question-text6"></span>
+</p>
+<input type="number" id="answer6" placeholder="Enter your answer">
+<button onclick="checkAnswer_num(questionObj6)">Submit</button>
+<p id="result6">
+</p>
+</div>
+<div id="convexity-and-concavity" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Convexity and concavity<a href="the-basics.html#convexity-and-concavity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>When we examined Alex’s utility function, we found that utility increases as consumption levels increase, but the slope decreases as consumption increases. It is assumed that all consumers exhibit such behavior and it is said that the typical utility function is concave.</p>
+<div class="definition">
+<p><span id="def:defkonkav" class="definition"><strong>Definition 2.18  (Concave function) </strong></span>The function <span class="math inline">\(f : D \rightarrow \mathbb{R}\)</span> is <strong>concave</strong> if for all <span class="math inline">\(x_1,x_2 \in D\)</span> and <span class="math inline">\(\lambda \in (0,1)\)</span> is applicable:
+<span class="math inline">\(f (\lambda x_1 + (1 − \lambda )x_2) \geq \lambda f (x_1) + (1 − \lambda)f (x_2)\)</span>.</p>
+<p>The function is <strong>strictly concave</strong> if the inequality is strict.</p>
+<p><img src="images/konkavf.png" /></p>
+</div>
+<p>Notation:</p>
+<p><span class="math inline">\(\bar{x} = \lambda x_1 + (1 − \lambda)x_2\)</span>,</p>
+<p><span class="math inline">\(\bar{f} = \lambda f(x_1) + (1 − \lambda)f(x_2)\)</span>.</p>
+<p>Geometrically, (strict) concavity means that the function value of each point <span class="math inline">\(\bar{x} \in \left[ x_1, x_2 \right]\)</span> lies (strictly) above the line connecting <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> connects.</p>
+<p>Examples of concave functions:</p>
+<ul>
+<li><p>Linear functions <span class="math inline">\(ax + b\)</span>, for <span class="math inline">\(a,b \in \mathbb{R}\)</span></p></li>
+<li><p>Power functions <span class="math inline">\(x ^a\)</span> on <span class="math inline">\(\mathbb{R}_{++}\)</span>, with <span class="math inline">\(a \in [0,1]\)</span></p></li>
+<li><p>Logarithm function <span class="math inline">\(\log(x)\)</span> on <span class="math inline">\(\mathbb {R}_{++}\)</span></p></li>
+</ul>
+<div class="example">
+<p><span id="exm:nutzenf" class="example"><strong>Example 1.3  (Utility function) </strong></span>If Alex consumes a fixed amount of donuts (e.g. <span class="math inline">\(30\)</span>), his utility function only depends on the amount of coffee and is: <span class="math inline">\(U(y )=\sqrt{30} + \sqrt{y}\)</span>
+Take <span class="math inline">\(y_1=2\)</span>, <span class="math inline">\(y_2=4\)</span> and <span class="math inline">\(\lambda=0.5\)</span>, for example. Then <span class="math inline">\(\bar y=3\)</span>.
+<span class="math inline">\(U(y_1=2) = \sqrt{30} + \sqrt{2}=6.891439\)</span>, <span class="math inline">\(U(y_2=4) = \sqrt{30} + \sqrt{4}=7, 477226\)</span> and <span class="math inline">\(U(\bar y) = \sqrt{30} + \sqrt{3}=7.209276\)</span>. Since a utility function is always concave, the following applies: <span class="math inline">\(U(\bar y)=7.209276\geq 0.5\cdot U(y_1=2) + 0.5\cdot U(y_2=4) = 7.184332\)</span>.</p>
+</div>
+<div class="definition">
+<p><span id="def:defkonvex" class="definition"><strong>Definition 2.19  (Convex Function) </strong></span>The function <span class="math inline">\(f : D → \mathbb{R}\)</span> is <strong>convex</strong> if for all <span class="math inline">\(x_1,x_2 \in D\)</span> and <span class="math inline">\(\lambda \in (0,1)\)</span> holds :
+<span class="math inline">\(f (\lambda x_1 + (1 − \lambda)x_2) ≤ \lambda f (x_1) + (1 − \lambda)f (x_2)\)</span>.
+<img src="images/kovexf.png" />
+The function is <strong>strictly (strictly) convex</strong> if the inequality is strict.</p>
+</div>
+<p>Notation:</p>
+<p><span class="math inline">\(x = \lambda x_1 + (1 − \lambda)x_2, f = \lambda f (x_1) + (1 − \lambda)f (x_2)\)</span>.</p>
+<p>Geometrically, (strict) convexity means that the functional value of each point <span class="math inline">\(\bar{x} \in [x_1,x_2]\)</span> lies (strictly) below the line connecting <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span>.</p>
+<p>Examples of convex functions:</p>
+<ul>
+<li><p>Linear functions <span class="math inline">\(ax + b\)</span>, <span class="math inline">\(a,b \in \mathbb{R}\)</span></p></li>
+<li><p>Exponential functions <span class="math inline">\({e}^{ax}\)</span> or <span class="math inline">\(ab^{x}\)</span> with <span class="math inline">\(a \in \mathbb{R}\)</span> and <span class="math inline">\(b&gt;1\)</span></p></li>
+<li><p>Power functions <span class="math inline">\({x}^{a} \ on \ \mathbb{R}_{++}\)</span> with <span class="math inline">\(a &lt; 0\)</span> and <span class="math inline">\(a \geq 1\)</span></p></li>
+<li><p>Powers of the absolute value <span class="math inline">\(\lvert x \rvert ^{a}\)</span> on <span class="math inline">\(\mathbb {R}\)</span> for <span class="math inline">\(a \geq 1\)</span></p></li>
+</ul>
+<div class="example">
+<p><span id="exm:konvexf" class="example"><strong>Example 2.17  (Corona infections) </strong></span>Infection numbers in the example with the corona pandemic, where each infected person infects two more people per week and there are initially around <span class="math inline">\(1000\)</span> infected people, can be modeled using the function <span class="math inline">\(f(x) = 1000\cdot 2^x\)</span>. This is a convex function because it is an exponential function of the form <span class="math inline">\(ab^{x}\)</span> with <span class="math inline">\(2=b&gt;1\)</span> and <span class="math inline">\(a=1000\)</span>.</p>
+</div>
+<!--
+TODO:
+
+scratch mit Kostenfunktion anpassen-->
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sequences-limits-and-series.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-grundlagen.rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

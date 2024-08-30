@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Differential calculus | Mathematics for Business and Economics</title>
+  <meta name="description" content="Chapter 5 Differential calculus | Mathematics for Business and Economics" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Differential calculus | Mathematics for Business and Economics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Differential calculus | Mathematics for Business and Economics" />
+  
+  
+  
+
+<meta name="author" content="Maria Osipenko" />
+
+
+<meta name="date" content="2024-08-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="continuity-of-functions.html"/>
+<link rel="next" href="optimization.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Wirtschaftsmathematik</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-do-we-need-the-mathematics-for-business-and-economics"><i class="fa fa-check"></i>Why do we need the mathematics for business and economics?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#example-utility-maximization"><i class="fa fa-check"></i>Example: utility maximization</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-basics.html"><a href="the-basics.html"><i class="fa fa-check"></i><b>2</b> The basics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="the-basics.html"><a href="the-basics.html#sets-and-number-sets"><i class="fa fa-check"></i><b>2.1</b> Sets and Number Sets</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="the-basics.html"><a href="the-basics.html#operations-on-sets"><i class="fa fa-check"></i><b>2.1.1</b> Operations on Sets</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="the-basics.html"><a href="the-basics.html#number-sets"><i class="fa fa-check"></i><b>2.2</b> Number sets</a></li>
+<li class="chapter" data-level="2.3" data-path="the-basics.html"><a href="the-basics.html#point-sets-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Point sets in <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="the-basics.html"><a href="the-basics.html#intervals-as-sets-of-points-in-mathbbrn"><i class="fa fa-check"></i><b>2.3.1</b> Intervals as sets of points in <span class="math inline">\(\mathbb{R^n}\)</span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-distance"><i class="fa fa-check"></i><b>2.3.2</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: Distance</a></li>
+<li class="chapter" data-level="2.3.3" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-epsilon-neighborhood"><i class="fa fa-check"></i><b>2.3.3</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\epsilon-\)</span>neighborhood</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="the-basics.html"><a href="the-basics.html#functions"><i class="fa fa-check"></i><b>2.4</b> Functions</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="the-basics.html"><a href="the-basics.html#linear-functions"><i class="fa fa-check"></i><b>2.4.1</b> Linear Functions</a></li>
+<li class="chapter" data-level="2.4.2" data-path="the-basics.html"><a href="the-basics.html#quadratic-functions"><i class="fa fa-check"></i><b>2.4.2</b> Quadratic Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="the-basics.html"><a href="the-basics.html#power-exponential-and-logarithmic-functions"><i class="fa fa-check"></i><b>2.5</b> Power, exponential and logarithmic functions</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="the-basics.html"><a href="the-basics.html#convexity-and-concavity"><i class="fa fa-check"></i><b>2.5.1</b> Convexity and concavity</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html"><i class="fa fa-check"></i><b>3</b> Sequences, limits and series</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#sequences"><i class="fa fa-check"></i><b>3.1</b> Sequences</a></li>
+<li class="chapter" data-level="3.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergence-of-sequences"><i class="fa fa-check"></i><b>3.2</b> Convergence of sequences</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergent-sequences-and-their-limits"><i class="fa fa-check"></i><b>3.2.1</b> Convergent sequences and their limits</a></li>
+<li class="chapter" data-level="3.2.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#bounded-sequences"><i class="fa fa-check"></i><b>3.2.2</b> Bounded sequences</a></li>
+<li class="chapter" data-level="3.2.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#divergent-sequences"><i class="fa fa-check"></i><b>3.2.3</b> Divergent sequences</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#properties-of-sequences"><i class="fa fa-check"></i><b>3.3</b> Properties of sequences</a></li>
+<li class="chapter" data-level="3.4" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#series"><i class="fa fa-check"></i><b>3.4</b> Series</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#special-series"><i class="fa fa-check"></i><b>3.4.1</b> Special Series</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html"><i class="fa fa-check"></i><b>4</b> Continuity of functions</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#pointwise-continuity"><i class="fa fa-check"></i><b>4.1</b> Pointwise continuity</a></li>
+<li class="chapter" data-level="4.2" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#continuous-functions-and-their-properties"><i class="fa fa-check"></i><b>4.2</b> Continuous functions and their properties</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differential-calculus.html"><a href="differential-calculus.html"><i class="fa fa-check"></i><b>5</b> Differential calculus</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-tangent-line"><i class="fa fa-check"></i><b>5.1</b> Definition of the tangent line</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="differential-calculus.html"><a href="differential-calculus.html#secant-and-tangent-lines"><i class="fa fa-check"></i><b>5.1.1</b> Secant and tangent lines</a></li>
+<li class="chapter" data-level="5.1.2" data-path="differential-calculus.html"><a href="differential-calculus.html#from-the-secant-to-the-tangent-line"><i class="fa fa-check"></i><b>5.1.2</b> From the secant to the tangent line</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-derivative"><i class="fa fa-check"></i><b>5.2</b> Definition of the derivative</a></li>
+<li class="chapter" data-level="5.3" data-path="differential-calculus.html"><a href="differential-calculus.html#differentiability"><i class="fa fa-check"></i><b>5.3</b> Differentiability</a></li>
+<li class="chapter" data-level="5.4" data-path="differential-calculus.html"><a href="differential-calculus.html#derivation-rules"><i class="fa fa-check"></i><b>5.4</b> Derivation rules</a></li>
+<li class="chapter" data-level="5.5" data-path="differential-calculus.html"><a href="differential-calculus.html#the-rule-of-lhôpital"><i class="fa fa-check"></i><b>5.5</b> The rule of L’Hôpital</a></li>
+<li class="chapter" data-level="5.6" data-path="differential-calculus.html"><a href="differential-calculus.html#higher-order-derivatives"><i class="fa fa-check"></i><b>5.6</b> Higher order derivatives</a></li>
+<li class="chapter" data-level="5.7" data-path="differential-calculus.html"><a href="differential-calculus.html#taylors-theorem"><i class="fa fa-check"></i><b>5.7</b> Taylor’s theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="optimization.html"><a href="optimization.html"><i class="fa fa-check"></i><b>6</b> Optimization</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="optimization.html"><a href="optimization.html#necessary-conditions-for-maxima-and-minima"><i class="fa fa-check"></i><b>6.1</b> Necessary conditions for maxima and minima</a></li>
+<li class="chapter" data-level="6.2" data-path="optimization.html"><a href="optimization.html#second-order-conditions"><i class="fa fa-check"></i><b>6.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="6.3" data-path="optimization.html"><a href="optimization.html#optimization-on-an-interval"><i class="fa fa-check"></i><b>6.3</b> Optimization on an interval</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="integral-calculus.html"><a href="integral-calculus.html"><i class="fa fa-check"></i><b>7</b> Integral calculus</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="integral-calculus.html"><a href="integral-calculus.html#the-indefinite-integral"><i class="fa fa-check"></i><b>7.1</b> The indefinite integral</a></li>
+<li class="chapter" data-level="7.2" data-path="integral-calculus.html"><a href="integral-calculus.html#the-definite-integral"><i class="fa fa-check"></i><b>7.2</b> The definite integral</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="integral-calculus.html"><a href="integral-calculus.html#properties-and-elementary-calculation-rules"><i class="fa fa-check"></i><b>7.2.1</b> Properties and elementary calculation rules</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html"><i class="fa fa-check"></i><b>8</b> Systems of linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-two-linear-equations"><i class="fa fa-check"></i><b>8.1</b> Systems of two linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solution-by-substitution-and-elimination"><i class="fa fa-check"></i><b>8.1.1</b> Solution by substitution and elimination</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-equations-with-n-linear-equations"><i class="fa fa-check"></i><b>8.2</b> Systems of equations with <span class="math inline">\(n\)</span> linear equations</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solving-systems-of-equations-with-m-linear-equations"><i class="fa fa-check"></i><b>8.2.1</b> Solving systems of equations with <span class="math inline">\(m\)</span> linear equations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html"><i class="fa fa-check"></i><b>9</b> Matrices and Basic Matrix Operations</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#matrices"><i class="fa fa-check"></i><b>9.1</b> Matrices</a></li>
+<li class="chapter" data-level="9.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#basic-matrix-operations"><i class="fa fa-check"></i><b>9.2</b> Basic matrix operations</a></li>
+<li class="chapter" data-level="9.3" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#economic-applications"><i class="fa fa-check"></i><b>9.3</b> Economic Applications</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#monthly-consumer-spending"><i class="fa fa-check"></i><b>9.3.1</b> Monthly consumer spending</a></li>
+<li class="chapter" data-level="9.3.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#regional-migration"><i class="fa fa-check"></i><b>9.3.2</b> Regional migration</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#transpose-of-a-matrix"><i class="fa fa-check"></i><b>9.4</b> Transpose of a matrix</a></li>
+<li class="chapter" data-level="9.5" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#determinant-and-inverse-of-a-matrix"><i class="fa fa-check"></i><b>9.5</b> Determinant and inverse of a matrix</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#more-on-the-determinant-of-a-matrixast"><i class="fa fa-check"></i><b>9.5.1</b> More on the Determinant of a Matrix<span class="math inline">\(^\ast\)</span></a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#rank-and-determinantast"><i class="fa fa-check"></i><b>9.5.2</b> Rank and determinant<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html"><i class="fa fa-check"></i><b>10</b> Calculus with <span class="math inline">\(n\)</span> variables</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#continuity-of-a-function"><i class="fa fa-check"></i><b>10.1</b> Continuity of a function</a></li>
+<li class="chapter" data-level="10.2" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives"><i class="fa fa-check"></i><b>10.2</b> Partial derivatives</a></li>
+<li class="chapter" data-level="10.3" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives-of-higher-order"><i class="fa fa-check"></i><b>10.3</b> Partial derivatives of higher order</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#the-gradient-vector-and-the-hessian-matrix"><i class="fa fa-check"></i><b>10.3.1</b> The gradient vector and the Hessian matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#derivation-of-implicit-functionsast"><i class="fa fa-check"></i><b>10.4</b> Derivation of implicit functions<span class="math inline">\(^\ast\)</span></a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#contour-lines-indifference-curvesast"><i class="fa fa-check"></i><b>10.4.1</b> Contour lines / indifference curves<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="optimization-ii.html"><a href="optimization-ii.html"><i class="fa fa-check"></i><b>11</b> Optimization II</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="optimization-ii.html"><a href="optimization-ii.html#first-order-conditions"><i class="fa fa-check"></i><b>11.1</b> First-order conditions</a></li>
+<li class="chapter" data-level="11.2" data-path="optimization-ii.html"><a href="optimization-ii.html#second-order-conditions-1"><i class="fa fa-check"></i><b>11.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="11.3" data-path="optimization-ii.html"><a href="optimization-ii.html#optimization-under-constraints-lagrange-method"><i class="fa fa-check"></i><b>11.3</b> Optimization under constraints: Lagrange method</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathematics for Business and Economics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="differential-calculus" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Differential calculus<a href="differential-calculus.html#differential-calculus" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<script>
+function checkAnswer_mmc(q) {
+      const selectedOptions = document.querySelectorAll('input[name="option'+q.id+'"]:checked');
+      if (selectedOptions.length === 2) {
+        const userAnswers = Array.from(selectedOptions).map(option => option.value);
+        const correctAnswers = q.answer;
+        const isCorrect = userAnswers.every(answer => correctAnswers.includes(answer));
+
+if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select two options.';
+      }
+    }
+// numeric
+function generateQuestion_num(id) {
+      // Generate two random numbers between 2 and 10
+      const num1 = Math.floor(Math.random() * 10) + 2;
+      const num2 = Math.floor(Math.random() * 10) + 2;
+      const x1 = Math.floor(Math.random() * 100) + 2;
+      const x2 = Math.floor(Math.random() * 100) + 2;
+      const x3 = Math.floor(Math.random() * 100) + 2;
+      const x4 = Math.floor(Math.random() * 100) + 2;
+      const x5 = Math.floor(Math.random() * 100) + 2;
+      const x6 = Math.floor(Math.random() * 100) + 2;
+
+       // Calculate the correct answer
+      let answer = num1*Math.sqrt(x1) + num2*Math.sqrt(x2);
+
+      // Return the question and answer as an object
+      return {
+       // question: num1 + "\\(\\sqrt{x}+\\)"+ num2 + "\\(\\sqrt{y}\\)" + " for \\(x=\\)" + x1 + " and \\(y=\\)" + x2,
+        question: [num1,num2,x1,x2,x3,x4,x5,x6],
+        answer: answer,
+        id: id
+      };
+    }
+
+function checkAnswer_num(q) {
+      const userAnswer = document.getElementById('answer'+q.id).value;
+      const isCorrect = Math.round(parseFloat(userAnswer)*100)/100 === Math.round(q.answer*100)/100;
+
+      if (isCorrect) {
+        document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+      } else {
+        document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+      }
+  }
+
+// plain multiple choice
+  function checkAnswer_match(q) {
+      const selectedOption = document.querySelector('input[name="option'+q.id+'"]:checked');
+      if (selectedOption) {
+        const userAnswer = selectedOption.value;
+        const isCorrect = userAnswer === q.answer;
+
+        if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select an option.';
+      }
+    }
+</script>
+<p>The derivation of a function describes the change in one variable in response to the change in another variable.</p>
+<p>Examples in economics:</p>
+<ul>
+<li><p>How does a company change its production level as a result of increased costs?</p></li>
+<li><p>How does a change in the money supply affect inflation?</p></li>
+<li><p>How can I structure my consumption in such a way that my utility is at its maximum?</p></li>
+</ul>
+<p><strong>Implicitly</strong> this question is covered by the functional link <span class="math inline">\(y = f (x)\)</span>. <strong>Explicitly</strong> this is expressed as the influence of a change in <span class="math inline">\(x\)</span>, written as <span class="math inline">\(\Delta x\)</span>, on the change in <span class="math inline">\(y\)</span>, written as <span class="math inline">\(\Delta y\)</span>.</p>
+<p>In economics, this type of analysis is also called limit analysis.
+For example, profit maximization: “A profit-maximizing firm increases its output until marginal revenue (<span class="math inline">\(\Delta R\)</span>) equals or exceeds marginal cost (<span class="math inline">\(\Delta C\)</span>).”</p>
+<p><img src="images/grenzerl.png" /></p>
+<div id="definition-of-the-tangent-line" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Definition of the tangent line<a href="differential-calculus.html#definition-of-the-tangent-line" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A colloquial description of the tangent line is as follows:</p>
+<p>“A tangent line is a straight line that touches a function at only one point.”</p>
+<p>In the graph, the line <span class="math inline">\(l_P\)</span> only touches the function at the point <span class="math inline">\(P\)</span> without intersecting the function at any other point.</p>
+<p><img src="images/tang.png" /></p>
+<p>For a smooth function the slope of the tangent is identical to the slope of the function at the point of contact.</p>
+<p>The gradient of the tangent in <span class="math inline">\(P\)</span> corresponds to the derivative of <span class="math inline">\(y = f (x)\)</span> at the point <span class="math inline">\(P\)</span>.</p>
+<details>
+<summary>
+</summary>
+<img src="images/tang_besch.png" />
+</details>
+<p>The above statement covers well our general understanding of the tangent, but does not serve as a definition.</p>
+<p>The tangent may intersect the function at a point farther away; therefore we have to restrict ourselves to suitable neighborhoods of the point <span class="math inline">\(P\)</span>.</p>
+<p><img src="images/tang2.png" /></p>
+<p>In some cases, the tangent can even intersect the function, as here in the example <span class="math inline">\(y = x^3\)</span> at <span class="math inline">\(x = 0\)</span>.</p>
+<p><img src="images/tang3.png" /></p>
+<div id="secant-and-tangent-lines" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Secant and tangent lines<a href="differential-calculus.html#secant-and-tangent-lines" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>We therefore turn to a formal derivation of the derivative concept. First, we define other concepts that play a role in defining a tangent.</p>
+<div id="defsekante.definition" name="Secant">
+<p>Let <span class="math inline">\(P = (x_1, f (x_1))\)</span> and <span class="math inline">\(Q = (x_2, f (x_2))\)</span> be two points in the graph of the function <span class="math inline">\(f\)</span> . The secant of <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> is the straight line connecting <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span>.</p>
+</div>
+<ul>
+<li>The slope of the secants, called the difference quotient, is</li>
+</ul>
+<p><span class="math inline">\({m}_{PQ}= \frac{f(x_2)-f(x_1)}{x_2-x_1}=: \frac{\triangle y}{ \triangle x}\)</span> ,</p>
+<p>where <span class="math inline">\(\Delta y = f (x_2) − f (x_1)\)</span> and <span class="math inline">\(\Delta x = x_2 − x_1\)</span>.</p>
+<p><img src="images/sekante.png" /></p>
+</div>
+<div id="from-the-secant-to-the-tangent-line" class="section level3 hasAnchor" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> From the secant to the tangent line<a href="differential-calculus.html#from-the-secant-to-the-tangent-line" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><p>Now fix <span class="math inline">\(P = (x_0,f (x_0))\)</span> and consider a sequence of values <span class="math inline">\(({x_n})_{n \in \mathbb{N}}\)</span>, which against <span class="math inline">\(x_0\)</span> converges.</p></li>
+<li><p>This is equivalent to the formulation that <span class="math inline">\(\Delta x_n = x_n − x_0\)</span> converges to <span class="math inline">\(0\)</span>.</p></li>
+<li><p>If the slopes of the secants exist for every possible such sequence and these slopes converge to a limit <span class="math inline">\(m^*\)</span>, then the tangent is the straight line with slope <span class="math inline">\(m^*\)</span> that touches <span class="math inline">\(P\)</span>.
+<img src="images/tangente.png" /></p></li>
+</ul>
+<div class="definition">
+<p><span id="def:deftangente" class="definition"><strong>Definition 5.1  (Tangent line) </strong></span>Let <span class="math inline">\(f\)</span> be defined on an open interval around <span class="math inline">\(x_0\)</span>.</p>
+<p>If</p>
+<p><span class="math inline">\(m^* = \lim _{ \triangle x \rightarrow 0} \frac{f(x_0+ \triangle x) -f(x_0) }{ \triangle x}\)</span></p>
+<p>exists, then the straight line through <span class="math inline">\((x_0,f (x_0))\)</span> with slope <span class="math inline">\(m^*\)</span> is the <strong>tangent</strong> of <span class="math inline">\(f\)</span> at the point <span class="math inline">\(x_0.\)</span></p>
+</div>
+<div class="example">
+<p><span id="exm:tangente" class="example"><strong>Example 5.1  (secant and tangent) </strong></span>Let <span class="math inline">\(f (x) = x^2\)</span> , <span class="math inline">\(P = (2, 4)\)</span> and <span class="math inline">\(Q=(4, 16)\)</span>.</p>
+<ul>
+<li><p>One easily checks that <span class="math inline">\(\Delta x = 2\)</span> and <span class="math inline">\(\Delta y = 12\)</span>, so that the slope of the secants is <span class="math inline">\(\Delta y/\Delta x = 12/2 = 6\)</span>.</p></li>
+<li><p>If one chooses <span class="math inline">\(Q&#39; = (5,25)\)</span>, the secant slope is <span class="math inline">\(\Delta y/\Delta x = 21/3 = 7\)</span>.</p></li>
+<li><p>Now choose the sequence <span class="math inline">\(\Delta x_n = 1/n\)</span>, <span class="math inline">\(n \geq 1\)</span>.</p></li>
+<li><p>Then: <span class="math inline">\(\Delta x_n \rightarrow 0\)</span>, if <span class="math inline">\(n \rightarrow \infty\)</span>.</p></li>
+</ul>
+<p>For any point <span class="math inline">\(x\)</span> we determine the slope of the tangent:</p>
+<p><span class="math display">\[\begin{align*}\frac{f(x+ \triangle x_n)-f(x)}{ \triangle x_n}  &amp;= \frac{(x+1/n)^2-x^2}{1/n} \\
+
+&amp; = \frac{x^2+2x/n+1/n^2-x^2}{1/n}\\
+&amp;= 2x + \frac{1}{n},
+\end{align*}\]</span></p>
+<p>and</p>
+<p><span class="math inline">\(\lim_{ \triangle x \rightarrow 0} \frac{f(x+ \triangle x_n)-f(x)}{ \triangle x_n} = \lim_{n\rightarrow\infty}(2x+1/n) = 2x\)</span> (= the derivative of <span class="math inline">\(f(x)=x^2\)</span> ).</p>
+<p><img src="images/extangente.png" /></p>
+</div>
+</div>
+</div>
+<div id="definition-of-the-derivative" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Definition of the derivative<a href="differential-calculus.html#definition-of-the-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:ableitung" class="definition"><strong>Definition 5.2  (Derivative) </strong></span>The <strong>derivative</strong> (the <strong>differential quotient</strong>) of a function <span class="math inline">\(f\)</span> at the point <span class="math inline">\(x\)</span>, written as <span class="math inline">\(f&#39; (x)\)</span>, is the slope of the tangent at that point:</p>
+<p><span class="math inline">\(f&#39;(x)= \lim_{ \triangle x \rightarrow 0 } \frac{f(x+ \triangle x) - f(x)}{ \triangle x}\)</span> .</p>
+</div>
+<p>The so-called Leibniz notation of the derivative is <span class="math inline">\(f&#39;(x)= \frac{df(x)}{dx}\)</span>,</p>
+<p>where the differential operator <span class="math inline">\(d\)</span> expresses an infinitesimally small change.</p>
+<div class="definition">
+<p><span id="def:differential" class="definition"><strong>Definition 5.3  (Differential) </strong></span>Let <span class="math inline">\(f\)</span> be a function with derivative <span class="math inline">\(f&#39;\)</span>. The <strong>differential</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(x\)</span> is
+<span class="math inline">\(df (x) = f &#39; (x) dx\)</span>.</p>
+</div>
+<p>The differential expresses that <span class="math inline">\(f\)</span> changes at the point <span class="math inline">\(x\)</span> approximately by <span class="math inline">\(f&#39; (x) dx\)</span>, where - to put it bluntly - <span class="math inline">\(dx\)</span> is an infinitesimal change of <span class="math inline">\(x\)</span> denotes and <span class="math inline">\(f&#39;\)</span> specifies the direction of change of <span class="math inline">\(f\)</span>.</p>
+<div class="example">
+<p><span id="exm:kosten" class="example"><strong>Example 5.2  (Total cost and marginal cost) </strong></span>A firm’s total cost function <span class="math inline">\(y \mapsto C( y )\)</span> expresses costs as a function of the number <span class="math inline">\(y\)</span> units produced.</p>
+<ul>
+<li><p>The ratio <span class="math inline">\(\frac{ \triangle C}{ \triangle y} = \frac{C(y+ \triangle y) - C( y )}{ \triangle y}\)</span> reflects the average additional cost per unit if additional <span class="math inline">\(\Delta y\)</span> units are produced.</p></li>
+<li><p>The limit of this ratio when <span class="math inline">\(\Delta y \rightarrow 0\)</span>, is the instantaneous rate of change; in economics, this rate represents the marginal cost (or marginal cost):
+<span class="math inline">\(\lim_{ \triangle y \rightarrow 0 \ } \frac{ \triangle C}{ \triangle y} = \lim_{ \triangle y \rightarrow 0 \ } \frac{C(y+ \triangle y) - C( y ) }{ \triangle y} = C&#39;( y )\)</span></p></li>
+<li><p>Example of a linear cost function:</p></li>
+</ul>
+<p><img src="images/kosten1.png" /></p>
+<ul>
+<li><p>In practice, the assumption of a linear cost function, i.e. constant marginal costs, is often unrealistic (see earlier example of cost functions). Instead, higher production often leads to higher marginal costs (at least in the short run).</p></li>
+<li><p>This is expressed by a quadratic cost function, for example:</p></li>
+</ul>
+<p><img src="images/kosten2.png" /></p>
+</div>
+</div>
+<div id="differentiability" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Differentiability<a href="differential-calculus.html#differentiability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="definition">
+<p><span id="def:defdifferenz" class="definition"><strong>Definition 5.4  (Differentiability) </strong></span>The function <span class="math inline">\(f\)</span> is <strong>differentiable at the point</strong> <span class="math inline">\(x\)</span> if it is defined in an open neighborhood of <span class="math inline">\(x\)</span> and if</p>
+<p><span class="math display">\[ \lim_{ \triangle x \rightarrow 0 \ } \frac{ f(x+ \triangle x)-f(x)}{ \triangle x } \]</span></p>
+<p>exists and is finite.</p>
+<p>A function is said to be <strong>differentiable</strong> if it is differentiable anywhere in its domain.</p>
+</div>
+<p>If <span class="math inline">\(f\)</span> is differentiable in <span class="math inline">\(x\)</span>, then the <strong>left derivative</strong> and the <strong>right derivative</strong> exist and take the same value:</p>
+<p><span class="math inline">\(\lim_{ \triangle x \uparrow 0 \ } \frac{ f(x+ \triangle x)-f(x)}{ \triangle x } = \lim_{ \triangle x \downarrow 0 \ } \frac{ f(x+ \triangle x)-f(x)}{ \triangle x }\)</span>.</p>
+<div class="example">
+<p><span id="exm:differenzierbarkeit" class="example"><strong>Example 5.3  (Differentiability) </strong></span>We consider the function <span class="math inline">\(f(x)=\begin{cases} x, &amp;if~ x&lt;1 \\ 2-x, &amp;if \ x \geq 1 \end{cases}\)</span>.</p>
+<p>Although the function is continuous at the point <span class="math inline">\(x = 1\)</span>, it is not differentiable at this point.</p>
+<p>Because: At the point <span class="math inline">\(x = 1\)</span> applies
+<span class="math inline">\(\lim_{ \triangle x \uparrow 0 } \frac{ f(1+ \triangle x)-f(1)}{ \triangle x } = \lim_{ \triangle x \uparrow 0 } \frac{ 1+ \triangle x-1 }{ \triangle x } =1\)</span></p>
+<p>and</p>
+<p><span class="math inline">\(\lim_{ \triangle x \downarrow 0 } \frac{ f(1+ \triangle x)-f(1)}{ \triangle x } = \lim_{ \triangle x \downarrow 0 } \frac{ (2 -(1+ \triangle x))-(2-1) }{ \triangle x } = -1\)</span>.
+<img src="images/differenz1.png" /></p>
+<details>
+<summary>
+Details
+</summary>
+<img src="images/differenz2.png" />
+</details>
+</div>
+<p>We consider the connection between differentiability and continuity.</p>
+<div class="theorem">
+<p><span id="thm:thm1deffirenz" class="theorem"><strong>Theorem 5.1  (Differentiability and Continuity) </strong></span>If a function <span class="math inline">\(f\)</span> is differentiable at <span class="math inline">\(x\)</span>, then it is also continuous at <span class="math inline">\(x\)</span>.</p>
+</div>
+<ul>
+<li><p>The converse statement is generally not true, as the previous example shows.</p></li>
+<li><p>One can equivalently say: Continuity is a necessary but not a sufficient condition for differentiability.</p></li>
+</ul>
+<p>We extend the notion of differentiability to closed intervals.</p>
+<div class="definition">
+<p><span id="def:defdiffint" class="definition"><strong>Definition 5.5  (Differentiability on an interval) </strong></span>A function <span class="math inline">\(f\)</span> , defined on the interval <span class="math inline">\([a,b]\)</span>, is differentiable on <span class="math inline">\([a,b]\)</span> if:</p>
+<ol style="list-style-type: lower-roman">
+<li><p>the right derivative for <span class="math inline">\(f (a)\)</span> exists;</p></li>
+<li><p>the left derivative for <span class="math inline">\(f (b)\)</span> exists;</p></li>
+<li><p><span class="math inline">\(f\)</span> is differentiable on the open interval <span class="math inline">\((a,b)\)</span>.</p></li>
+</ol>
+</div>
+</div>
+<div id="derivation-rules" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Derivation rules<a href="differential-calculus.html#derivation-rules" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>With the help of the following rules we can determine derivations concretely (always assuming differentiability).</p>
+<div class="theorem">
+<p><span id="thm:thmregeln" class="theorem"><strong>Theorem 5.2  (derivation rules) </strong></span>In the following, let <span class="math inline">\(c\)</span>, <span class="math inline">\(m\)</span>, <span class="math inline">\(n\)</span> and <span class="math inline">\(b\)</span> be constants.</p>
+<p><span class="math display">\[\begin{equation*}
+      \begin{array}[t]{lll}
+        \hline
+        \text{(function) type} &amp; \text{function} &amp; \text{derivation}\\\hline
+        \text{constant function} &amp; f(x)=c &amp; f^\prime(x)=0\\
+        \text{linear function} &amp; f(x)=mx + b &amp; f^\prime(x)=m\\
+        \text{power function} &amp; f(x)=x^n &amp; f^\prime(x)=n\, x^{n-1}\\
+        \text{scaling} &amp; g(x)=c\, f(x) &amp; g^\prime(x)=c\,
+                                                   f^\prime(x)\\
+        \text{summation rule} &amp; f(x)=g_1(x) + g_2(x) &amp; f^\prime(x) =
+                                             g_1^\prime(x) + g_2^\prime(x)\\
+                             &amp; f(x)=\sum_{i=1}^n g_i(x) &amp; f^\prime(x) =
+                                                          \sum_{i=1}^n g_i^\prime(x)\\
+        \text{product rule} &amp; f(x)=g(x)\, h(x) &amp; f^\prime(x) = g^\prime(x)
+                                            h(x) + g(x) h^\prime(x)\\
+        \text{chain rule} &amp; f(x)=g(h(x))&amp; f^\prime(x)=g^\prime(h(x))\,
+                                          h^\prime(x)\\ \hline
+      \end{array}
+    \end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+      \begin{array}[t]{lll}
+        \hline
+        \text{(function) type}\!\!\!&amp; \text{function} &amp; \text{derivation}\\\hline
+        \text{ratio rule} &amp; \displaystyle f(x)=\frac{g(x)}{h(x)}, h(x)\not=0 &amp;
+                                                                          \displaystyle f^\prime(x) = \frac{g^\prime(x) h(x) - g(x) h^\prime(x)}
+                                                                          {(h(x))^2}\\
+        \text{inverse} &amp; y=f(x)\text{, where }&amp;
+                                                      \displaystyle (f^{(-1)})^\prime(y)
+                                                      =
+                                                      \frac{1}{f^\prime(x)}
+        = \frac{1}{f^\prime(f^{(-1)}(y))}\\
+                             &amp; f^{(-1)}(y)=x
+                               \text{ exists } &amp; \\
+                             &amp;\text{and }
+                               f^\prime(x)\not=0 &amp;
+        \\
+        \text{logarithm} &amp; \ln (x) &amp; \displaystyle\ln^\prime(x)=\frac{1}{x}\\
+        &amp; \log_a (x) &amp; \displaystyle\log_a^\prime(x)=\frac{1}{x\cdot \ln (a)}\\
+        \text{sine function} &amp; \sin(x) &amp; \sin^\prime(x)=\cos(x)\\
+         \text{cosine function} &amp; \cos(x) &amp; \cos^\prime(x)=-\sin(x)\\
+           \text{exponential function} &amp; e^{x} &amp; (e^{x})^\prime=e^{x}\\
+           &amp; a^{x} &amp; (a^{x})^\prime=a^{x}\ln (a)\\\hline
+      \end{array}
+    \end{equation*}\]</span></p>
+<details>
+<summary>
+Proof
+</summary>
+In general, derivations can be made via the definition of the differential quotient (definition <a href="differential-calculus.html#def:ableitung">5.2</a>) and
+already proven rules are determined.
+<ul>
+<li>
+Constant function <span class="math inline">\(f(x)=c\)</span>: The derivative is determined
+through
+<span class="math display">\[\begin{equation*}
+        f^\prime(x) = \lim_{\Delta x\rightarrow 0} \frac{f(x+\Delta
+          x)-f(x)}{\Delta x} = \lim_{\Delta x\rightarrow 0}
+        \frac{c-c}{\Delta x}=0.
+      \end{equation*}\]</span>
+</li>
+<li>
+For power functions <span class="math inline">\(f(x)=x^n\)</span> we use the <strong>binomial formula</strong>
+<span class="math display">\[\begin{equation*}
+        (x+y)^n = \sum_{k=0}^n \binom{n}{k} x^{n-k} y^k
+      \end{equation*}\]</span>
+and received
+<span class="math display">\[\begin{align*}
+        \frac{(x+\Delta x)^n - x^n}{\Delta x} %
+        &amp;= \frac{\sum _{k=1}^n \binom{n}{k} x^{n-k} (\Delta x)^k}
+          {\Delta x} %
+          = \sum_{k=1}^n \binom{n}{k} x^{n-k} (\Delta x)^{k-1} \\%
+        &amp;= \binom{n}{1} x^{n-1} + %
+          \underbrace{\sum_{k=2}^n \binom{n}{k} x^{n-k} (\Delta
+          x)^{k-1}}_{\rightarrow 0 \text{ for } \Delta x\rightarrow0}= n\, x^{n-1}
+      \end{align*}\]</span>
+</li>
+<li>
+Product rule: For the product <span class="math inline">\(f(x)=g(x) h(x)\)</span> we get
+where we used that:
+<span class="math display">\[\begin{align*}
+        \lim_{\Delta x\rightarrow 0} \frac{(g(x+\Delta x) - g(x))
+          h(x+\Delta x)} {\Delta x}&amp;%
+        = \lim_{\Delta x\rightarrow 0} \frac{(g(x+\Delta x) - g(x))}
+        {\Delta x} \, \lim_{\Delta x\rightarrow 0} h(x+\Delta x)
+      \end{align*}\]</span>
+</li>
+<li>
+Chain rule (<span class="math inline">\(f(x)=g(h(x))\)</span>): Write first
+<span class="math display">\[\begin{equation*}
+        \frac{g(h(x+\Delta x)) - g(h(x))} {\Delta x} %
+        = \frac{g(h(x+\Delta x)) - g(h(x))} {h(x+\Delta x)-h(x)} %
+        \cdot \frac{h(x+\Delta x)-h(x)} {\Delta x} %
+      \end{equation*}\]</span>
+For the first term applies
+<span class="math inline">\(\lim_{\Delta x\rightarrow 0} h(x+\Delta x)-h(x)=0\)</span>, so that
+<span class="math display">\[\begin{equation*}
+        \displaystyle \frac{g(h(x+\Delta
+          x))-g(h(x))} {h(x+\Delta x)-h(x)} \rightarrow
+        g^\prime(h(x)).
+      \end{equation*}\]</span>
+The second term converges to <span class="math inline">\(h^\prime(x)\)</span>.
+</li>
+<li>
+Quotient rule (<span class="math inline">\(\displaystyle f(x)=\frac{g(x)}{h(x)}\)</span>):
+<span class="math display">\[\begin{align*}
+        \left(\frac{g(x)}{h(x)}\right)^\prime &amp;= \left(g(x))
+                                                \frac{1}{h(x)}\right)^\prime \stackrel{\text{product rule}}=
+                                                g^\prime(x) \frac{1}{h(x)} + g(x)
+                                                \left(\frac{1}{h(x)}\right)^\prime \\%
+                                              &amp;= \frac{g^\prime(x) h(x)}{h(x)^2} + g(x)
+                                              % \underbrace{
+                                                \left(h^{-1}(x)\right)^\prime.% }
+                                                % _{\stackrel{\text{chain
+                                                % rule, power
+                                                %function}}=-1\cdot
+                                                % h^{-2}(x) \cdot
+                                                %h^\prime(x)},
+      \end{align*}\]</span>
+For <span class="math inline">\(\left(h^{-1}(x)\right)^\prime\)</span> we get with the
+Chain rule and the power rule:
+<span class="math display">\[\begin{equation*}
+        \left(h^{-1}(x)\right)^\prime = -1\cdot h^{-2}(x)\cdot h^\prime(x)
+        = -\frac{h^\prime(x)}{h(x)^2}.
+      \end{equation*}\]</span>
+</li>
+<li>
+For the inverse we use <span class="math inline">\(y=f(x)\)</span> and get with
+<span class="math inline">\(\Delta y=f(x+\Delta x)-f(x)\)</span>:
+<span class="math display">\[\begin{align*}
+        &amp;\frac{f^{(-1)}(y+\Delta y) - f^{(-1)}(y)} {\Delta y}
+          = \frac{f^{(-1)}(f(x)+f(x+\Delta x)-f(x)) - f^{(-1)}(f(x))}
+          {f(x+\Delta x) - f(x)}\\
+          &amp;= \frac{f^{(-1)}(f(x+\Delta x)) - f^{(-1)}(f(x))}
+          {f(x+\Delta
+            x)-f(x)} = \frac{\Delta x}{f(x+\Delta x)-f(x)} \rightarrow
+          \frac{1}{f^\prime(x)}
+      \end{align*}\]</span>
+</li>
+<li>
+For the derivative of the logarithm, first note that
+that
+<span class="math inline">\(\ln (a^x)=x\cdot \ln(a)\)</span>, <span class="math inline">\(\ln(a/b)=\ln (a)-\ln (b)\)</span> and that
+<span class="math inline">\(\displaystyle \lim_{n\rightarrow \infty}  \left(1+\frac{x}{n}\right)^n=\text{e}^x\)</span>. Then:
+<span class="math display">\[\begin{equation*}
+        \ln^\prime(x)%
+        = \frac{\ln(x+\Delta x)-\ln (x)} {\Delta x} %
+        = \frac{1}{\Delta x} \ln \left(\frac{x+\Delta x}{x}\right)%
+        = \ln\left(\left(\frac{x+\Delta x}{x}\right)^{1/\Delta
+            x}\right).
+      \end{equation*}\]</span>
+Set <span class="math inline">\(\displaystyle n=\frac{x}{\Delta x}\)</span> and note that
+<span class="math inline">\(n\rightarrow\infty\)</span> if <span class="math inline">\(\Delta x\rightarrow 0\)</span>. With <span class="math inline">\(n\rightarrow\infty\)</span>:
+<span class="math display">\[\begin{equation*}
+        \ln\left(1+\frac{1}{n}\right)^{n/x}%
+        = \frac{1}{x} \ln \left(1+\frac{1}{n}\right)^n %
+        \rightarrow \frac{1}{x} \ln(\text{e}) = \frac{1}{x},
+      \end{equation*}\]</span>
+</li>
+<li>
+Finally, for the exponential function we use,
+that
+<span class="math display">\[\begin{equation*}
+        \left(\ln(\text{e}^x)\right)^\prime = x^\prime=1,
+      \end{equation*}\]</span>
+and therefore, by applying the chain rule:
+<span class="math inline">\(\left(\ln\text{e}^x\right)^\prime=\frac{1}{\text{e}^x} (\text{e}^x)^\prime  =1,\)</span>
+from which <span class="math inline">\(\left(\text{e}^x\right)^\prime=\text{e}^x\)</span> follows.
+</li>
+</ul>
+</details>
+</div>
+<div class="example">
+<p><span id="exm:prodfun" class="example"><strong>Example 4.1  (Production function and marginal productivity) </strong></span>Consider the production function <span class="math inline">\(TP(L) = L^a\)</span> , <span class="math inline">\(a &gt; 0\)</span>, which maps the input <span class="math inline">\(L\)</span> (work) to the output <span class="math inline">\(TP (L)\)</span>.
+The marginal productivity is</p>
+<p><span class="math inline">\(MP (L) = dTP (L)/ \ dL = aL^{a−1}\)</span> ; if</p>
+<p><span class="math inline">\(a &gt; 1\)</span>, then <span class="math inline">\(MP (L)\)</span> is increasing in <span class="math inline">\(L\)</span>,</p>
+<p><span class="math inline">\(a = 1\)</span>, then <span class="math inline">\(TP (L) = L\)</span> and <span class="math inline">\(MP (L) = 1\)</span>,</p>
+<p><span class="math inline">\(a &lt; 1\)</span>, then <span class="math inline">\(MP (L)\)</span> falls in <span class="math inline">\(L\)</span>.</p>
+<p><img src="images/prodfun3.png" /></p>
+</div>
+<div class="example">
+<p><span id="exm:grenzerl" class="example"><strong>Example 5.4  (Marginal revenue with the product rule) </strong></span>The revenue (sales) is determined from the price of a good multiplied by the quantity sold, i.e. <span class="math inline">\(TR(q) = pq\)</span>.</p>
+<ul>
+<li><p>A competing firm will assume the price to be constant (market price): <span class="math inline">\(\bar{p}\)</span>; the marginal revenue is therefore <span class="math inline">\(MR(q) = dTR(q)/dq = \bar{p}\)</span>.</p></li>
+<li><p>From the point of view of a monopolist, quantity and price are determined by the demand function <span class="math inline">\(q = D(p)\)</span> or by its inverse <span class="math inline">\(p = D ^{(−1)}(q) =: p(q)\)</span>.</p></li>
+<li><p>The total revenue of the monopolist is</p></li>
+</ul>
+<p><span class="math inline">\(TR(q) = p(q) q\)</span></p>
+<p>and the marginal revenue is</p>
+<p><span class="math inline">\(MR(q)=TR&#39;(q)= \frac{dTR(q)}{dq} = \frac{dp}{dq}q + p(q) \frac{dq}{dq} = p&#39; (q)q+p(q)\)</span></p>
+<ul>
+<li>Typically, <span class="math inline">\(p&#39; (q) &lt; 0\)</span>.</li>
+</ul>
+</div>
+<div class="example">
+<p><span id="exm:durchkosten" class="example"><strong>Example 5.5  (Average and marginal cost with quotient rule) </strong></span>The average function of a function <span class="math inline">\(f (x)\)</span>, <span class="math inline">\(x ≥ 0\)</span>, is given by</p>
+<p><span class="math inline">\(A(x)= \frac{f(x)}{x}\)</span> .</p>
+<p>The quotient rule gives</p>
+<p><span class="math inline">\(A&#39;(x)= \frac{f&#39;(x)x-1f(x)}{x^2} = \frac{1}{x} \left[ f&#39;(x)-A(x) \right]\)</span> .</p>
+<p>with <span class="math inline">\(f&#39;\)</span> being the marginal cost.</p>
+<p>Therefore:</p>
+<ol style="list-style-type: lower-roman">
+<li><p>If <span class="math inline">\(f&#39; (x) &lt; A(x)\)</span>, then <span class="math inline">\(A&#39;(x) &lt; 0\)</span>;</p></li>
+<li><p>if <span class="math inline">\(f&#39; (x) = A(x)\)</span>, then <span class="math inline">\(A&#39; (x) = 0\)</span> (Minimum);</p></li>
+<li><p>if <span class="math inline">\(f&#39; (x) &gt; A(x)\)</span>, then <span class="math inline">\(A&#39; (x) &gt; 0\)</span>.</p></li>
+</ol>
+<p><img src="images/durchkosten.png" /></p>
+</div>
+<!--App Ableitung üben.-->
+</div>
+<div id="the-rule-of-lhôpital" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> The rule of L’Hôpital<a href="differential-calculus.html#the-rule-of-lhôpital" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If <span class="math inline">\(f (x) → 0\)</span> and <span class="math inline">\(g(x) → 0\)</span> for <span class="math inline">\(x → a\)</span>, then existence and determination of the limit <span class="math inline">\(\lim _{x \rightarrow a} \frac{f(x)}{g(x)}\)</span> not obvious at first.</p>
+<p>Examples:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(\lim _{x \rightarrow 1} \frac{x^2-1}{x-1} = 2\)</span>,</p></li>
+<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ \sin x}{x} = 1\)</span>,</p></li>
+<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ 1 - \cos x}{x} = 0\)</span></p></li>
+</ol>
+<p>The first limit is easy to determine because</p>
+<p><span class="math inline">\(\frac{x^2-1}{x-1} = \frac{(x+1)(x-1)}{x-1} = x+1\)</span>.</p>
+<p>The other two limits are not obvious.</p>
+<p>In this situation, L’Hôpital’s rule is often very helpful.</p>
+<p><img src="images/lopital.png" /></p>
+<div class="theorem">
+<p><span id="thm:thmlopital" class="theorem"><strong>Theorem 5.3  (The rule of L'Hôpital) </strong></span>Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> in <span class="math inline">\(x = a\)</span> be differentiable functions with <span class="math inline">\(g&#39; (a) \neq 0\)</span> and</p>
+<p><span class="math inline">\(\lim _{x \rightarrow a} f(x) = 0\)</span> and <span class="math inline">\(\lim _{x \rightarrow a} g(x) = 0\)</span></p>
+<p>or</p>
+<p><span class="math inline">\(\lim _{x \rightarrow a} f(x) = \infty\)</span> and <span class="math inline">\(\lim _{x \rightarrow a} g(x) = \infty\)</span>.</p>
+<p>If <span class="math inline">\(\lim _{x \rightarrow a} \frac{f&#39;(x)}{g&#39;(x)}\)</span> exists or if the limit is <span class="math inline">\(\pm\infty\)</span>, then it holds</p>
+<p><span class="math inline">\(\lim _{x \rightarrow a} \frac{f(x)}{g(x)} = \lim _{x \rightarrow a} \frac{f&#39;(x)}{g&#39;(x) }\)</span> .</p>
+</div>
+<div class="exercise">
+<p><span id="exr:lopital" class="exercise"><strong>Exercise 5.1  (Limits with L'Hôpital's rule) </strong></span>Check the following limits using L’Hôpital’s rule:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(\lim _{x \rightarrow 1} \frac{x^2-1}{x-1} = 2\)</span>,</p></li>
+<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ \sin x}{x} = 1\)</span>,</p></li>
+<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ 1 - \cos x}{x} = 0\)</span></p></li>
+</ol>
+<p>Note: <span class="math inline">\(\sin&#39; (x) = \cos(x)\)</span> and <span class="math inline">\(\cos&#39; (x) = − \sin(x)\)</span>.</p>
+<details>
+<summary>
+Answer
+</summary>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(\lim _{x \rightarrow 1} \frac{x^2-1}{x-1} = \lim _{x \rightarrow 1} \frac{(x^2-1)&#39;}{(x-1)&#39;} = \lim _{x \rightarrow 1} \frac{2x}{1} =2\)</span>,</p></li>
+<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ \sin x}{x} = \lim _{x \rightarrow 0} \frac{(\sin \ x)&#39;}{(x)&#39;} = \lim _{x \rightarrow 0} \frac{\cos \  x}{1} =1\)</span>,</p></li>
+<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ 1 - \cos x}{x} = \  \lim _{x \rightarrow 0} \frac{(1-\cos \ x)&#39;}{(x)&#39;} = \lim _{x \rightarrow 0} \frac{-(- \sin \  x)}{1} = 0\)</span><br />
+</p></li>
+</ol>
+</details>
+</div>
+</div>
+<div id="higher-order-derivatives" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Higher order derivatives<a href="differential-calculus.html#higher-order-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Repeated differentiation yields higher-order derivatives <span class="math inline">\(f&#39;\)</span> , <span class="math inline">\(f&#39;&#39;\)</span> , <span class="math inline">\(f&#39;&#39;&#39;\)</span>, etc. (if they exist).</p>
+<p><span class="math inline">\(f&#39;\)</span> is the first derivative, <span class="math inline">\(f&#39;&#39;\)</span> is the second derivative, etc.</p>
+<ul>
+<li>We also write</li>
+</ul>
+<p><span class="math inline">\(f&#39;&#39;(x)= \frac{d^2f(x)}{dx^2}\)</span> , etc..</p>
+<ul>
+<li>The notation <span class="math inline">\(f^{ (n)}\)</span> is also used for the <span class="math inline">\(n\)</span>th derivative.</li>
+</ul>
+<div class="example">
+<p><span id="exm:ablhoh" class="example"><strong>Example 5.6  (Some higher-order derivatives) </strong></span>The first four derivatives of <span class="math inline">\(f (x) = x^ 4\)</span> are</p>
+<p><span class="math inline">\(f&#39; (x) = 4x^3 , \ f&#39;&#39;(x) = 12x^2 , \ f&#39;&#39;&#39;(x) = 24x, f^{(4)}(x) = 24\)</span>.
+All higher derivatives are <span class="math inline">\(0\)</span>, i.e. <span class="math inline">\(f ^{(n)} (x) = 0\)</span>, for <span class="math inline">\(n \geq 5\)</span>.</p>
+</div>
+<p>If the first two derivatives exist, then a function is said to be <strong>twice differentiable</strong>.</p>
+<p>The second derivative can be used to determine whether a function is convex or concave.</p>
+<div class="theorem">
+<p><span id="thm:thmconcon" class="theorem"><strong>Theorem 5.4  (Derivatives of convex and concave functions) </strong></span>Let <span class="math inline">\(D \subset \mathbb {R}\)</span> be an open interval and let <span class="math inline">\(f: D \rightarrow \mathbb {R}\)</span> be twice differentiable.
+<span class="math inline">\(f\)</span> is <strong>convex</strong> if and only if <span class="math inline">\(f&#39;&#39;(x) \geq 0\)</span> (<strong>concave</strong>: <span class="math inline">\(f&#39;&#39;(x)\leq 0\)</span>) for all <span class="math inline">\(x \in \mathbb{D}\)</span>.</p>
+</div>
+</div>
+<div id="taylors-theorem" class="section level2 hasAnchor" number="5.7">
+<h2><span class="header-section-number">5.7</span> Taylor’s theorem<a href="differential-calculus.html#taylors-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In practice, the following problem often arises:</p>
+<p>The value of a differentiable function <span class="math inline">\(f\)</span> is difficult to calculate at <span class="math inline">\(x\)</span>; but the function value and all derivatives at a neighboring point <span class="math inline">\(x_0\)</span> are known.</p>
+<div class="example">
+<p><span id="exm:taylor" class="example"><strong>Example 5.7  (Function value determination for ln(2)) </strong></span>The function value <span class="math inline">\(\ln(2)\)</span> is difficult to determine without a calculator.</p>
+<p>However, the following values of <span class="math inline">\(f (x) = \ln \ x\)</span> at the position <span class="math inline">\(x_0 = 1\)</span> are known:</p>
+<p><span class="math inline">\(f (1) = 0\)</span>; <span class="math inline">\(f&#39; (1) = 1\)</span>; <span class="math inline">\(f&#39;&#39;(x) = −1\)</span>; <span class="math inline">\(f&#39;&#39;&#39;(1) = 2\)</span>; <span class="math inline">\(f ^{(4)}(1) = −6\)</span>; etc.</p>
+</div>
+<p>From <span class="math inline">\(f (x_0)\)</span>, <span class="math inline">\(f&#39; (x_0)\)</span>, <span class="math inline">\(f&#39;&#39;(x_0)\)</span>, …, the function value <span class="math inline">\(f (x)\)</span> can be determined approximately.</p>
+<div class="example">
+<p><span id="exm:taylorprofit" class="example"><strong>Example 5.8  (Approximation of a profit function) </strong></span>Consider the exponential form of the inverse demand function (a more realistic model for demand functions!):</p>
+<p><span class="math display">\[p(q) = 100\cdot e^{-0.01\cdot q} = 100\cdot\exp(-0.01 q).\]</span></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p>The profit function for a monopolist can be computed as:</p>
+<p><span class="math display">\[\pi(q) = p(q)\cdot q -C(q),\]</span></p>
+<p>where <span class="math inline">\(C(q)\)</span> is the cost function. Assume the cost function adapts the linear representation <span class="math inline">\(C(q)=10-0.01q\)</span>.</p>
+<p>Then the profit is:</p>
+<p><span class="math display">\[\pi(q) = p(q)\cdot q -C(q) = \exp(-0.01 q) \cdot q - 10 - 0.01\cdot q.\]</span></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-29-1.png" width="672" />
+Note: we can not solve for <span class="math inline">\(q\)</span> if we set the profit to zero to find the break-even point (the red point on the graph)! (Try that :))</p>
+<p>The question is: How can we find the Break-Even point.</p>
+</div>
+<div class="theorem">
+<p><span id="thm:thmtaylor" class="theorem"><strong>Theorem 5.5  (Taylor's theorem) </strong></span>Let <span class="math inline">\(f\)</span> be an <span class="math inline">\(n\)</span>-fold differentiable function.</p>
+<p>The Taylor formula (also Taylor expansion) of <span class="math inline">\(f (x)\)</span> in the area around <span class="math inline">\(x_0\)</span> is given by</p>
+<p><span class="math display">\[\begin{align*} f(x)&amp;=f(x_0)+\sum_{k=1}^{n} \left(\frac{f^{(k)}(x_0)}{k!} (x-x_0)^k\right) + R_n(x).
+\end{align*}\]</span></p>
+<p>where</p>
+<p><span class="math display">\[\begin{align*} f(x_0)+\sum_{k=1}^{n} \left(\frac{f^{(k)}(x_0)}{k!} (x-x_0)^k\right)&amp;=f(x_0)+ f^\prime(x_0)(x-x_0) + \frac{f^{\prime\prime}(x_0)}{2}(x-x_0)^2 \\
+&amp;+ \frac{f^{\prime\prime\prime}(x_0)}{6}(x-x_0)^3+\ldots + \frac{f^{(n)}(x_0)}{n!} (x-x_0)^n
+\end{align*}\]</span></p>
+<p>is the <strong>Taylor polynomial</strong> and</p>
+<p><span class="math display">\[ R_n(x)= \frac{f^{(n+1)}( \xi) }{(n+1)!} (x-x_0)^{n+1} \]</span></p>
+<p>with <span class="math inline">\(\xi \in [x_0,x]\)</span> is the <strong>remainder</strong>.</p>
+</div>
+<p>If <span class="math inline">\(R_n(x) \rightarrow 0\)</span> for <span class="math inline">\(n \rightarrow \infty\)</span>, then the function value <span class="math inline">\(f (x)\)</span> can be approximated by the Taylor polynomial.</p>
+<p>In particular,</p>
+<p><span class="math display">\[f (x_0) + f&#39; (x_0)(x − x_0)\]</span></p>
+<p>is a <strong>first-order Taylor expansion</strong> and it is a <strong>linear</strong> approximation of <span class="math inline">\(f (x)\)</span>.</p>
+<p><img src="images/taylor.png" /></p>
+<div class="example">
+<p><span id="exm:taylorff" class="example"><strong>Example 5.9  (Function value approximation for ln(2)) </strong></span>We determine <span class="math inline">\(f (x) = \ln(x)\)</span> using the Taylor approximation with <span class="math inline">\(x_0 = 1\)</span> from Example <a href="differential-calculus.html#exm:taylor">5.7</a>.</p>
+<p>The following applies:
+<span class="math inline">\(f&#39;(x)= \frac{1}{x}\)</span>,</p>
+<p><span class="math inline">\(f&#39;&#39;(x)= - \frac{1}{x^2}\)</span>,</p>
+<p><span class="math inline">\(f&#39;&#39;&#39;(x)= - \frac{2}{x^3}\)</span>,</p>
+<p><span class="math inline">\(f^{(n)}(x)= \frac{(-1)^{n+1}(n-1)!}{x^n}\)</span></p>
+<p>Approximation by nth order Taylor polynomial:
+<span class="math inline">\(f(x) \approx (x-1)- \frac{(x-1)^2}{2} + ... + (-1)^{n+1} \ \frac{(x- 1)^n}{n}\)</span></p>
+<p>Convergence of the remainder for <span class="math inline">\(1 &lt; x ≤ 2\)</span>:</p>
+<p>from <span class="math inline">\(1 &lt; ξ &lt; x ≤ 2\)</span>, i.e. <span class="math inline">\(0 &lt; (x − 1)/ ξ ≤ 1/ 1 = 1\)</span>,</p>
+<p>follows:</p>
+<p><span class="math inline">\(R_n(x)= \frac{(-1)^{n+2} \ n!}{ \xi ^{n+1}(n+1)!}(x-1)^{n+1 }\)</span></p>
+<p><span class="math inline">\(= (-1)^n\frac{(x-1)^{n+1} }{ \xi ^{n+1}(n+1)} \rightarrow 0\)</span></p>
+<p>for <span class="math inline">\(n \rightarrow \infty\)</span>.</p>
+<p>We determine <span class="math inline">\(\ln(2)\)</span> approximately using the Taylor polynomial <span class="math inline">\(10\)</span>th order:</p>
+<p><span class="math inline">\(\ln 2 ≈ 1 − 1/2 + 1/3 − 1/4 + 1/5 − 1/6 + 1/7 − 1/8 + 1/9 − 1/10 = 0.6456\)</span>.
+The error is in <span class="math inline">\((\frac{1}{2^{11} \cdot 11}, 1/11)= \left[ 0.000044; 0.0909091] \right]\)</span>.</p>
+<p><img src="images/taylor2.png" /></p>
+</div>
+<div class="exercise">
+<p><span id="exr:taylor" class="exercise"><strong>Exercise 5.2  (Interest rate sensitivity with Taylor approximation) </strong></span>For a portfolio of interest rate instruments, let <span class="math inline">\(P(r)\)</span> be the market price depending on the interest rate <span class="math inline">\(r&gt;0\)</span> (with a flat yield curve). Furthermore, <span class="math display">\[\operatorname{DUR}(r):=-P&#39;(r)\]</span> denotes the <em>absolute duration</em>, which describes the change in the market price of the portfolio in the event of an absolute change in interest rates in the form of a sensitivity.</p>
+<p>For the current market interest rate <span class="math inline">\(r=0.05\)</span>, the market price of the portfolio is <span class="math inline">\(2,400,000\)</span> and <span class="math inline">\(\operatorname{DUR}(0.05)=3,200,000\)</span> applies.</p>
+Using <em>Taylor’s first-order approximation</em>, approximate the market price of the portfolio as interest rates rise to $0.07 and fall to $0.03.
+<details>
+<summary>
+Answer
+</summary>
+<img src="images/taylor3.png" />
+</details>
+</div>
+<!--TODO:
+
+- App Ableiten üben
+- Beispiel mit profit (Satz von Taylor)-->
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="continuity-of-functions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="optimization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-differential.rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

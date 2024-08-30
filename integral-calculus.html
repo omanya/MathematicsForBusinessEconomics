@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Integral calculus | Mathematics for Business and Economics</title>
+  <meta name="description" content="Chapter 7 Integral calculus | Mathematics for Business and Economics" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Integral calculus | Mathematics for Business and Economics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Integral calculus | Mathematics for Business and Economics" />
+  
+  
+  
+
+<meta name="author" content="Maria Osipenko" />
+
+
+<meta name="date" content="2024-08-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="optimization.html"/>
+<link rel="next" href="systems-of-linear-equations.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Wirtschaftsmathematik</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-do-we-need-the-mathematics-for-business-and-economics"><i class="fa fa-check"></i>Why do we need the mathematics for business and economics?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#example-utility-maximization"><i class="fa fa-check"></i>Example: utility maximization</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-basics.html"><a href="the-basics.html"><i class="fa fa-check"></i><b>2</b> The basics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="the-basics.html"><a href="the-basics.html#sets-and-number-sets"><i class="fa fa-check"></i><b>2.1</b> Sets and Number Sets</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="the-basics.html"><a href="the-basics.html#operations-on-sets"><i class="fa fa-check"></i><b>2.1.1</b> Operations on Sets</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="the-basics.html"><a href="the-basics.html#number-sets"><i class="fa fa-check"></i><b>2.2</b> Number sets</a></li>
+<li class="chapter" data-level="2.3" data-path="the-basics.html"><a href="the-basics.html#point-sets-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Point sets in <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="the-basics.html"><a href="the-basics.html#intervals-as-sets-of-points-in-mathbbrn"><i class="fa fa-check"></i><b>2.3.1</b> Intervals as sets of points in <span class="math inline">\(\mathbb{R^n}\)</span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-distance"><i class="fa fa-check"></i><b>2.3.2</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: Distance</a></li>
+<li class="chapter" data-level="2.3.3" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-epsilon-neighborhood"><i class="fa fa-check"></i><b>2.3.3</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\epsilon-\)</span>neighborhood</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="the-basics.html"><a href="the-basics.html#functions"><i class="fa fa-check"></i><b>2.4</b> Functions</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="the-basics.html"><a href="the-basics.html#linear-functions"><i class="fa fa-check"></i><b>2.4.1</b> Linear Functions</a></li>
+<li class="chapter" data-level="2.4.2" data-path="the-basics.html"><a href="the-basics.html#quadratic-functions"><i class="fa fa-check"></i><b>2.4.2</b> Quadratic Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="the-basics.html"><a href="the-basics.html#power-exponential-and-logarithmic-functions"><i class="fa fa-check"></i><b>2.5</b> Power, exponential and logarithmic functions</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="the-basics.html"><a href="the-basics.html#convexity-and-concavity"><i class="fa fa-check"></i><b>2.5.1</b> Convexity and concavity</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html"><i class="fa fa-check"></i><b>3</b> Sequences, limits and series</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#sequences"><i class="fa fa-check"></i><b>3.1</b> Sequences</a></li>
+<li class="chapter" data-level="3.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergence-of-sequences"><i class="fa fa-check"></i><b>3.2</b> Convergence of sequences</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergent-sequences-and-their-limits"><i class="fa fa-check"></i><b>3.2.1</b> Convergent sequences and their limits</a></li>
+<li class="chapter" data-level="3.2.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#bounded-sequences"><i class="fa fa-check"></i><b>3.2.2</b> Bounded sequences</a></li>
+<li class="chapter" data-level="3.2.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#divergent-sequences"><i class="fa fa-check"></i><b>3.2.3</b> Divergent sequences</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#properties-of-sequences"><i class="fa fa-check"></i><b>3.3</b> Properties of sequences</a></li>
+<li class="chapter" data-level="3.4" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#series"><i class="fa fa-check"></i><b>3.4</b> Series</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#special-series"><i class="fa fa-check"></i><b>3.4.1</b> Special Series</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html"><i class="fa fa-check"></i><b>4</b> Continuity of functions</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#pointwise-continuity"><i class="fa fa-check"></i><b>4.1</b> Pointwise continuity</a></li>
+<li class="chapter" data-level="4.2" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#continuous-functions-and-their-properties"><i class="fa fa-check"></i><b>4.2</b> Continuous functions and their properties</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differential-calculus.html"><a href="differential-calculus.html"><i class="fa fa-check"></i><b>5</b> Differential calculus</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-tangent-line"><i class="fa fa-check"></i><b>5.1</b> Definition of the tangent line</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="differential-calculus.html"><a href="differential-calculus.html#secant-and-tangent-lines"><i class="fa fa-check"></i><b>5.1.1</b> Secant and tangent lines</a></li>
+<li class="chapter" data-level="5.1.2" data-path="differential-calculus.html"><a href="differential-calculus.html#from-the-secant-to-the-tangent-line"><i class="fa fa-check"></i><b>5.1.2</b> From the secant to the tangent line</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-derivative"><i class="fa fa-check"></i><b>5.2</b> Definition of the derivative</a></li>
+<li class="chapter" data-level="5.3" data-path="differential-calculus.html"><a href="differential-calculus.html#differentiability"><i class="fa fa-check"></i><b>5.3</b> Differentiability</a></li>
+<li class="chapter" data-level="5.4" data-path="differential-calculus.html"><a href="differential-calculus.html#derivation-rules"><i class="fa fa-check"></i><b>5.4</b> Derivation rules</a></li>
+<li class="chapter" data-level="5.5" data-path="differential-calculus.html"><a href="differential-calculus.html#the-rule-of-lhôpital"><i class="fa fa-check"></i><b>5.5</b> The rule of L’Hôpital</a></li>
+<li class="chapter" data-level="5.6" data-path="differential-calculus.html"><a href="differential-calculus.html#higher-order-derivatives"><i class="fa fa-check"></i><b>5.6</b> Higher order derivatives</a></li>
+<li class="chapter" data-level="5.7" data-path="differential-calculus.html"><a href="differential-calculus.html#taylors-theorem"><i class="fa fa-check"></i><b>5.7</b> Taylor’s theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="optimization.html"><a href="optimization.html"><i class="fa fa-check"></i><b>6</b> Optimization</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="optimization.html"><a href="optimization.html#necessary-conditions-for-maxima-and-minima"><i class="fa fa-check"></i><b>6.1</b> Necessary conditions for maxima and minima</a></li>
+<li class="chapter" data-level="6.2" data-path="optimization.html"><a href="optimization.html#second-order-conditions"><i class="fa fa-check"></i><b>6.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="6.3" data-path="optimization.html"><a href="optimization.html#optimization-on-an-interval"><i class="fa fa-check"></i><b>6.3</b> Optimization on an interval</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="integral-calculus.html"><a href="integral-calculus.html"><i class="fa fa-check"></i><b>7</b> Integral calculus</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="integral-calculus.html"><a href="integral-calculus.html#the-indefinite-integral"><i class="fa fa-check"></i><b>7.1</b> The indefinite integral</a></li>
+<li class="chapter" data-level="7.2" data-path="integral-calculus.html"><a href="integral-calculus.html#the-definite-integral"><i class="fa fa-check"></i><b>7.2</b> The definite integral</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="integral-calculus.html"><a href="integral-calculus.html#properties-and-elementary-calculation-rules"><i class="fa fa-check"></i><b>7.2.1</b> Properties and elementary calculation rules</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html"><i class="fa fa-check"></i><b>8</b> Systems of linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-two-linear-equations"><i class="fa fa-check"></i><b>8.1</b> Systems of two linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solution-by-substitution-and-elimination"><i class="fa fa-check"></i><b>8.1.1</b> Solution by substitution and elimination</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-equations-with-n-linear-equations"><i class="fa fa-check"></i><b>8.2</b> Systems of equations with <span class="math inline">\(n\)</span> linear equations</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solving-systems-of-equations-with-m-linear-equations"><i class="fa fa-check"></i><b>8.2.1</b> Solving systems of equations with <span class="math inline">\(m\)</span> linear equations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html"><i class="fa fa-check"></i><b>9</b> Matrices and Basic Matrix Operations</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#matrices"><i class="fa fa-check"></i><b>9.1</b> Matrices</a></li>
+<li class="chapter" data-level="9.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#basic-matrix-operations"><i class="fa fa-check"></i><b>9.2</b> Basic matrix operations</a></li>
+<li class="chapter" data-level="9.3" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#economic-applications"><i class="fa fa-check"></i><b>9.3</b> Economic Applications</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#monthly-consumer-spending"><i class="fa fa-check"></i><b>9.3.1</b> Monthly consumer spending</a></li>
+<li class="chapter" data-level="9.3.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#regional-migration"><i class="fa fa-check"></i><b>9.3.2</b> Regional migration</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#transpose-of-a-matrix"><i class="fa fa-check"></i><b>9.4</b> Transpose of a matrix</a></li>
+<li class="chapter" data-level="9.5" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#determinant-and-inverse-of-a-matrix"><i class="fa fa-check"></i><b>9.5</b> Determinant and inverse of a matrix</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#more-on-the-determinant-of-a-matrixast"><i class="fa fa-check"></i><b>9.5.1</b> More on the Determinant of a Matrix<span class="math inline">\(^\ast\)</span></a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#rank-and-determinantast"><i class="fa fa-check"></i><b>9.5.2</b> Rank and determinant<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html"><i class="fa fa-check"></i><b>10</b> Calculus with <span class="math inline">\(n\)</span> variables</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#continuity-of-a-function"><i class="fa fa-check"></i><b>10.1</b> Continuity of a function</a></li>
+<li class="chapter" data-level="10.2" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives"><i class="fa fa-check"></i><b>10.2</b> Partial derivatives</a></li>
+<li class="chapter" data-level="10.3" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives-of-higher-order"><i class="fa fa-check"></i><b>10.3</b> Partial derivatives of higher order</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#the-gradient-vector-and-the-hessian-matrix"><i class="fa fa-check"></i><b>10.3.1</b> The gradient vector and the Hessian matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#derivation-of-implicit-functionsast"><i class="fa fa-check"></i><b>10.4</b> Derivation of implicit functions<span class="math inline">\(^\ast\)</span></a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#contour-lines-indifference-curvesast"><i class="fa fa-check"></i><b>10.4.1</b> Contour lines / indifference curves<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="optimization-ii.html"><a href="optimization-ii.html"><i class="fa fa-check"></i><b>11</b> Optimization II</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="optimization-ii.html"><a href="optimization-ii.html#first-order-conditions"><i class="fa fa-check"></i><b>11.1</b> First-order conditions</a></li>
+<li class="chapter" data-level="11.2" data-path="optimization-ii.html"><a href="optimization-ii.html#second-order-conditions-1"><i class="fa fa-check"></i><b>11.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="11.3" data-path="optimization-ii.html"><a href="optimization-ii.html#optimization-under-constraints-lagrange-method"><i class="fa fa-check"></i><b>11.3</b> Optimization under constraints: Lagrange method</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathematics for Business and Economics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="integral-calculus" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Chapter 7</span> Integral calculus<a href="integral-calculus.html#integral-calculus" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In the following, we will deal with the question of whether and how the underlying function <span class="math inline">\(f (x)\)</span> can be derived from a given derivative function <span class="math inline">\(f&#39; (x)\)</span>.</p>
+<p>This process - the determination of the (indefinite) integral - is the inverse of differentiating.</p>
+<p>One application of the integral calculus is the determination of the area below a function graph.</p>
+<p>Further applications in economics result, for example, from the consideration of marginal costs and total costs.</p>
+<script>
+function checkAnswer_mmc(q) {
+      const selectedOptions = document.querySelectorAll('input[name="option'+q.id+'"]:checked');
+      if (selectedOptions.length === 2) {
+        const userAnswers = Array.from(selectedOptions).map(option => option.value);
+        const correctAnswers = q.answer;
+        const isCorrect = userAnswers.every(answer => correctAnswers.includes(answer));
+
+if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select two options.';
+      }
+    }
+// numeric
+function generateQuestion_num(id) {
+      // Generate two random numbers between 2 and 10
+      const num1 = Math.floor(Math.random() * 10) + 2;
+      const num2 = Math.floor(Math.random() * 10) + 2;
+      const x1 = Math.floor(Math.random() * 100) + 2;
+      const x2 = Math.floor(Math.random() * 100) + 2;
+      const x3 = Math.floor(Math.random() * 100) + 2;
+      const x4 = Math.floor(Math.random() * 100) + 2;
+      const x5 = Math.floor(Math.random() * 100) + 2;
+      const x6 = Math.floor(Math.random() * 100) + 2;
+
+       // Calculate the correct answer
+      let answer = num1*Math.sqrt(x1) + num2*Math.sqrt(x2);
+
+      // Return the question and answer as an object
+      return {
+       // question: num1 + "\\(\\sqrt{x}+\\)"+ num2 + "\\(\\sqrt{y}\\)" + " for \\(x=\\)" + x1 + " and \\(y=\\)" + x2,
+        question: [num1,num2,x1,x2,x3,x4,x5,x6],
+        answer: answer,
+        id: id
+      };
+    }
+
+function checkAnswer_num(q) {
+      const userAnswer = document.getElementById('answer'+q.id).value;
+      const isCorrect = Math.round(parseFloat(userAnswer)*100)/100 === Math.round(q.answer*100)/100;
+
+      if (isCorrect) {
+        document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+      } else {
+        document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+      }
+  }
+
+// plain multiple choice
+  function checkAnswer_match(q) {
+      const selectedOption = document.querySelector('input[name="option'+q.id+'"]:checked');
+      if (selectedOption) {
+        const userAnswer = selectedOption.value;
+        const isCorrect = userAnswer === q.answer;
+
+        if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select an option.';
+      }
+    }
+</script>
+<div class="example">
+<p><span id="exm:grenzkosten" class="example"><strong>Example 7.1  (marginal cost function) </strong></span>A firm produces a good with the following marginal cost function <span class="math inline">\(C&#39;\)</span> :</p>
+<p><span class="math inline">\(C&#39; (x) = 0.3x^ 2 − 4x + 21\)</span>.</p>
+<p>How can the company determine the total cost function <span class="math inline">\(C\)</span> from this?</p>
+<details>
+<summary>
+</summary>
+<p>So we are looking for a function <span class="math inline">\(C\)</span> such that its derivative is <span class="math inline">\(C&#39;\)</span>.</p>
+<p>One easily verifies that the function</p>
+<p><span class="math inline">\(C(x) = 0.1x^ 3 − 2x^ 2 + 21x\)</span></p>
+<p>meets this requirement.</p>
+<p>Note that any other function of the form</p>
+<p><span class="math inline">\(C(x) = 0.1x^ 3 − 2x^ 2 + 21x + c\)</span>, <span class="math inline">\(c\)</span> constant,</p>
+(e.g. <span class="math inline">\(c\)</span> = fixed costs) fulfills the condition.
+</details>
+</div>
+<div id="the-indefinite-integral" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> The indefinite integral<a href="integral-calculus.html#the-indefinite-integral" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>For the function <span class="math inline">\(f (x) = x^ 2\)</span> we already know that <span class="math inline">\(f&#39; (x) = 2x\)</span> applies.</p></li>
+<li><p>Conversely, if it is known that <span class="math inline">\(f&#39; (x) = 2x\)</span>, it is clear that <span class="math inline">\(f (x) = x^ 2\)</span> is a function with this derivative.</p></li>
+<li><p>Any other function of the form <span class="math inline">\(f (x) = x^ 2 + c\)</span> with <span class="math inline">\(c\)</span> constant, but has the same derivative!</p></li>
+<li><p>Starting from a derivation, the function itself cannot be determined unambiguously, but only up to an (unknown) constant.</p></li>
+<li><p>The reverse process of differentiation is called <strong>integration</strong> or <strong>integrating</strong>.</p></li>
+</ul>
+<p>In the example, the cost function (apart from the fixed costs) is obtained from the marginal cost function <span class="math inline">\(C&#39;\)</span> by integration.</p>
+<div class="definition">
+<p><span id="def:defstammfun" class="definition"><strong>Definition 7.1  (Indefinite integral) </strong></span>Let <span class="math inline">\(f\)</span> be a continuous function in the interval <span class="math inline">\([a,b]\)</span>. A differentiable function <span class="math inline">\(F\)</span> in <span class="math inline">\([a,b]\)</span> is called <strong>antiderivative</strong> of <span class="math inline">\(f\)</span> if:
+<span class="math inline">\(F&#39; (x) = f (x)\)</span> or <span class="math inline">\(dF / dx = f (x)\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:stammfun" class="example"><strong>Example 7.2  (Some antiderivatives) </strong></span></p>
+<ul>
+<li><p>Antiderivatives of <span class="math inline">\(f (x) = x\)</span> are about <span class="math inline">\(F(x)= \frac{1}{2}x^2\)</span> and <span class="math inline">\(F(x)= \frac{1}{2 }x^2 +7\)</span>.</p></li>
+<li><p>Antiderivative of <span class="math inline">\(f (x) = 1/x\)</span> , <span class="math inline">\(x &gt; 0\)</span>, <span class="math inline">\(F(x) = \ln x + c\)</span> (<span class="math inline">\(c\)</span>: constant), because <span class="math inline">\(F&#39; (x) = 1/x.\)</span></p></li>
+</ul>
+</div>
+<div class="definition">
+<p><span id="def:defunbestint" class="definition"><strong>Definition 7.2  (Indefinite integral) </strong></span>The set of all antiderivatives of f is called <strong>indefinite integral</strong> and denoted by <span class="math inline">\(\int f (x) dx\)</span>.
+The function <span class="math inline">\(f (x)\)</span> is called <strong>Integrand</strong>.</p>
+</div>
+<div class="example">
+<p><span id="exm:stammfun" class="example"><strong>Example 7.2  (Some integrals) </strong></span></p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\int 4x^ 3 dx = x^ 4 + c\)</span></li>
+<li><span class="math inline">\(\int 7t^ 6 dt = t^ 7 + c\)</span></li>
+<li><span class="math inline">\(\int e^ z dz = e^ z + c\)</span>.</li>
+</ol>
+</div>
+<p>The following rules help to find indefinite integrals.</p>
+<div class="theorem">
+<p><span id="thm:thmregelnint" class="theorem"><strong>Theorem 7.1  (Basic integrals) </strong></span>Let: <span class="math inline">\(g\)</span> be a continuous function; <span class="math inline">\(n\)</span>, <span class="math inline">\(c\)</span>, <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>
+real constants.
+<span class="math display">\[\begin{equation*}
+          \def\arraystretch{1.9}
+          \begin{array}[t]{l|llll}
+            \hline
+           &amp; \text{function } f(x) &amp; \int f(x)\, \text{d} x &amp; remark\\\hline\hline
+           1&amp; x^n &amp; \displaystyle \frac{x^{n+1}}{n+1} + c &amp; n\not=-1\\\hline
+           2&amp; (ax + b)^n &amp; \displaystyle \frac{1}{a} \cdot \frac{(ax +
+                         b)^{n+1}} {n+1} + c\\\hline
+          3&amp; \displaystyle \frac{1}{x} &amp; \ln |x| + c\\\hline
+          4&amp; \displaystyle\frac{1} {ax +b} &amp; \displaystyle \frac{1}{a} \ln
+                                            |ax+b| + c &amp; a\not=0\\\hline
+
+\end{array}
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+          \def\arraystretch{1.9}
+          \begin{array}[t]{l|llll}
+            \hline%
+           &amp; \text{function } f(x) &amp; \int f(x)\, \text{d} x &amp; remark\\\hline\hline
+           5&amp; \displaystyle\frac{g^\prime(x)}{g(x)} &amp; \ln |g(x)| + c\\\hline
+           6&amp; \text{e}^x &amp; \text{e}^x + c\\\hline
+           7&amp; \text{e}^{ax+b} &amp; \frac{1}{a} \text{e}^{ax+b} + c &amp; a\not=0\\\hline
+           8&amp; g^\prime(x) \text{e}^{g(x)} &amp; \text{e}^{g(x)} + c\\\hline
+          9&amp; g(x)\cdot g^\prime(x)&amp; \tfrac{1}{2}(g(x))^2 + c\\\hline
+          \end{array}
+        \end{equation*}\]</span></p>
+</div>
+<div class="example">
+<p><span id="exm:ints" class="example"><strong>Example 7.3  (Application of the rules) </strong></span></p>
+<ul>
+<li><p><span class="math inline">\(\int dx = \int 1 \cdot dx = \int x^0 \cdot dx = x + c\)</span> (Rule 1 with <span class="math inline">\(n = 0\)</span>)</p></li>
+<li><p><span class="math inline">\(\int \sqrt{y} \ dy= \int {y}^{1/2} dy= \color{blue}{\frac{2}{3}} {y}^{\color{red }{3/2}}+c\)</span> (Rule 1 with <span class="math inline">\(n=\frac 12\)</span> therefore <span class="math inline">\(n+1=\color{red}{\frac{3}{2}}\)</span> and <span class="math inline">\(\frac 1{n+1} = \color{blue}{\frac{2}{3}}\)</span>)</p></li>
+<li><p><span class="math inline">\(\int (\color{red}{3}z-2)^2 \ dz = \frac{1}{\color{red}{3}} \frac{(3z-2)^\color{ blue}{3}}{\color{blue}{3}}+c = \frac 19 (3z-2)^3+c\)</span> (Rule 2 with <span class="math inline">\(a=\color{red}{3}\ ) and \(n=2\)</span> therefore <span class="math inline">\(n+1=\color{blue}{3}\)</span>)</p></li>
+<li><p><span class="math inline">\(\int \frac 1{\color{blue}{2}x-5}\ dx = \frac 1{\color{blue}{2}}\ln|\color{blue}{2}x- 5|+c\)</span> (Rule 4 with <span class="math inline">\(a=\color{blue}{2}\)</span>)</p></li>
+<li><p><span class="math inline">\(\int \frac {\color{red}{x}}{\color{blue}{0.5x^2-1}}\ dx = \ln|\color{blue}{0.5x^2-1 }|+c\)</span> (Rule 5 with <span class="math inline">\(g(x)=\color{blue}{0.5x^2-1}\)</span> hence (g’(x) =  ))</p></li>
+<li><p><span class="math inline">\(\int e ^{\color{red}{0.5}t-7} \ dt = \color{blue}{2} \cdot e^{\color{red}{0.5}t- 7}+c\)</span> (Rule 7 with <span class="math inline">\(a=\color{red}{0.5}\)</span> therefore <span class="math inline">\(\frac 1a = \color{blue}{2}\)</span>)</p></li>
+<li><p><span class="math inline">\(\int \color{red}{4x}\cdot e ^{\color{blue}{2x^2}} \ dt = e^{\color{blue}{2x^2}}+c\)</span> (Rule 8 with <span class="math inline">\(g(x)={\color{blue}{2x^2}}\)</span> therefore <span class="math inline">\(g&#39;(x)={\color{red}{4x}}\)</span>)</p></li>
+<li><p><span class="math inline">\(\int 9\cdot\color{red}{(3x-2)} \ dx = \int 3\cdot 3\cdot\color{red}{(3x-2)} \ dx =3\cdot\ int \color{blue}{3}\cdot\color{red}{(3x-2)} \ dx = 3\cdot \frac 12\color{red}{(3x-2)}^2\)</span> (Rule 9 with <span class="math inline">\(g(x)=\color{red}{(3x-2)}\)</span> and therefore <span class="math inline">\(g&#39;(x) = \color{blue}{3}\)</span>)</p></li>
+</ul>
+</div>
+<div class="theorem">
+<p><span id="thm:thregint" class="theorem"><strong>Theorem 7.2  (Calculation rules for integrals) </strong></span>Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be continuous functions and <span class="math inline">\(k\)</span> be a constant. Then:</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(\int k \cdot f (x) dx = k \cdot \int f (x) dx\)</span></p></li>
+<li><p><span class="math inline">\(\int (f (x) + g(x)) dx =\int f (x) dx + \int g(x) dx\)</span></p></li>
+</ol>
+</div>
+<div class="example">
+<p><span id="exm:ints2" class="example"><strong>Example 7.4  (Application of the rules and Theorem <a href="integral-calculus.html#thm:thregint">7.2</a>) </strong></span></p>
+<ul>
+<li><p><span class="math inline">\(\int dx = \int \underbrace{12x}_{3\cdot4x}\cdot e^{2x^2+1} \cdot dx \stackrel{Thm.7.2 i}{=} 3\cdot{\color{red}{\int 4x\cdot e^{2x^2+1} \cdot dx}} = 3\cdot\color{red}{e^{2x^2+1} }+ c\)</span> (Rule 8 with <span class="math inline">\(g(x) = 2x^2+1\)</span> and <span class="math inline">\(g^\prime(x)=4x\)</span>).</p></li>
+<li><p><span class="math inline">\(\int \big(\underbrace{\frac2{3x+4}}_{\frac{2\cdot 1}{3x+4}} + e^x\big)dx\stackrel{Thm.7.2 i,ii}{=} 2\cdot\color{red}{\int \frac1{3x+4}dx} + \color{green}{\int e^xdx}= 2\cdot\color{red}{\frac13\ln|3x+4|} + \color{green}{e^x} + c\)</span> (Rule 4 with <span class="math inline">\(a=3\)</span>)</p></li>
+</ul>
+</div>
+<p>Apply the above calculation rules for solving the following problems.</p>
+<div class="exercise">
+<p><span id="exr:rechenint" class="exercise"><strong>Exercise 7.1  (Calculation of integrals) </strong></span>Calculate:</p>
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(\int \ 6x^2 dx\)</span></li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<span class="math inline">\(= 6 \cdot \int x^2dx= 6 \cdot \frac{x^{2+1}}{2+1} +c= 6 \cdot (x^3/3) + c= 2x^3 +c\)</span> (Rule 1)
+</details>
+<p><br><br>
+(ii) <span class="math inline">\(\int \frac{-1}{x} dx\)</span></p>
+<details>
+<summary>
+Answer
+</summary>
+<span class="math inline">\(= -1 \int \frac{1}{x} dx = -1 \cdot ln (x) + c = - ln(x) + c\)</span> (Rule 3)
+</details>
+<p><br><br>
+(iii) <span class="math inline">\(\int (8x^3 − 4x + 2) dx\)</span></p>
+<details>
+<summary>
+Answer
+</summary>
+<span class="math inline">\(= \int 8x^3dx + \int -4xdx + \int 2dx = 8 \cdot \int x^3dx + (-4) \cdot \int xdx + 2 \cdot \int 1dx\)</span>
+<span class="math inline">\(= 8 (x^4/ 4)-4 (x^2/2+2x+c = 2x^4 - 2x^2+2x+c\)</span> (Rule 1)
+</details>
+<p><br><br>
+(iv) <span class="math inline">\(\int x^{3/2} dx\)</span></p>
+<details>
+<summary>
+Answer
+</summary>
+<span class="math inline">\(= \frac{x ^{\frac{3}{2}+1 }}{ \frac{3}{2}+1 } +c = \frac{x^ \frac{5}{2} } { \frac{5}{2} } +c = \frac{2}{5} x ^ {\frac{5}{2}}+c\)</span> (Rule 2)
+</details>
+<p><br><br>
+(v) <span class="math inline">\(\int 6x \cdot \ e^{x^2} dx\)</span></p>
+<details>
+<summary>
+Answer
+</summary>
+<span class="math inline">\(= \int 3 \cdot 2x \cdot e^{x^2} dx = 3 \cdot \int 2x \cdot e^{x^2} dx = 3 \cdot e^{x^2} +c\)</span> (Rule 8)
+</details>
+<p><br><br>
+(vi) <span class="math inline">\(\int \frac{3x^2+2}{x^3+2x} dx\)</span></p>
+<details>
+<summary>
+Answer
+</summary>
+<span class="math inline">\(= ln (x^3+2x)+c\)</span> (Rule 5)
+</details>
+</div>
+<p>The generally unknown integration constant <span class="math inline">\(c\)</span> can be calculated with the help of additional information, such as the function value at a point.</p>
+<div class="example">
+<p><span id="exm:integrc" class="example"><strong>Example 7.5  (Calculation of the integration constant) </strong></span>If, as in the above exercise <span class="math inline">\((i)\)</span>, you additionally know the function value in e.g. in <span class="math inline">\(0\)</span>, you can use this to calculate the value for the integration constant. That is, from <span class="math inline">\(F(0)=10\)</span> and <span class="math inline">\(F(x)= 2x^3 + c\)</span>, one calculates:</p>
+<p><span class="math display">\[2\cdot 0^3 + c = 10\rightarrow c = 10.\]</span></p>
+<p>So the antiderivative is: <span class="math inline">\(F(x) = 2x^3 + 10.\)</span></p>
+</div>
+<div class="exercise">
+<p><span id="exr:integrc" class="exercise"><strong>Exercise 7.2  (Calculating integration constants) </strong></span>Determine the integral and the integration constant <span class="math inline">\(c\)</span>:</p>
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(F(x) = \int x^{1/2} dx\)</span>, <span class="math inline">\(F(0) = 5\)</span></li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(=\frac{x^{(1/2+1)}}{1/2+1} +c = \frac{x^{(3/2)}}{3/2} + c = \frac{2}{3}x^{(3/2)}+c = F(x).\)</span></p>
+<p>We know: <span class="math inline">\(F(0)=5\)</span>, i.e. <span class="math inline">\((2/3) \cdot 0^{(3/2)} +c =5 \Rightarrow \ c=5\)</span></p>
+<span class="math inline">\(\rightarrow F(x)=2/3x^{3/2}+5.\)</span>
+</details>
+<p><br><br>
+(ii) <span class="math inline">\(F(x) = \int (2x^3 + 4x) dx\)</span>, <span class="math inline">\(F(0) = 0\)</span></p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(= \int 2x^3dx + \int 4x dx = 2 \cdot \int x^3dx +4 \cdot \int x dx=2 \cdot x^4/4+4 \cdot x^2/2 +c=x^4/2+2x^2+c.\)</span></p>
+<p>We know: <span class="math inline">\(F(0)=0\)</span>, i.e. <span class="math inline">\(0^4/2+2 \cdot 0^2 +c=0 \Rightarrow c=0\)</span></p>
+<span class="math inline">\(\rightarrow F(x)=(x^4)/2+2x^2\)</span>
+</details>
+</div>
+<div id="qkosten" class="quiz">
+<p id="question">
+<span id="question-text13"></span>
+</p>
+<input type="number" id="answer13" placeholder="Enter your answer">
+<button onclick="checkAnswer_num(questionObj13)">Submit</button>
+<p id="result13">
+</p>
+</div>
+<script>
+
+ // Generate a random question
+    const questionObj13 = generateQuestion_num(13);
+// Display the question
+    document.getElementById('question-text13').textContent = "Calculate the integration constant for the antiderivative \\(F(x)\\) of \\[f(x)="+questionObj13.question[0] + "\\cdot\\sqrt{x}+"+ questionObj13.question[1] + "\\]" + " given that \\(F(1)=" + questionObj13.question[2] + "\\). Round to four decimal places.";
+    questionObj13.answer = questionObj13.question[2] - 2/3*questionObj13.question[0] - questionObj13.question[1]
+</script>
+<div class="exercise">
+<p><span id="exr:kosten" class="exercise"><strong>Exercise 7.3  (Total cost and unit cost) </strong></span>A firm produces with the following marginal cost function:</p>
+<p><span class="math inline">\(C&#39; (x) = 1.5x^2 − 4x + 4\)</span>.</p>
+<p>With an output of <span class="math inline">\(10\)</span> units of quantity, the total costs are <span class="math inline">\(372\)</span> monetary units.</p>
+<p>Find the total cost <span class="math inline">\(C(x)\)</span> and unit cost functions <span class="math inline">\(\frac{C(x)}{x}\)</span>.</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>Total cost function: find the antiderivative of <span class="math inline">\(C&#39;(x)\)</span>:</p>
+<p><span class="math display">\[\begin{align}C(x) &amp;= \int C&#39;(x) dx \)=\int (1.5x^2-4x+4) dx \\
+&amp;=\int 1.5x^2dx + \int (-4)xdx+ \int 4dx \\
+&amp;= 1.5 \int x^2dx + (-4) \int xdx+ 4\int 1dx \\
+&amp;= 1.5 \frac{x^3}{3} + (-4) \frac{x^2}{2} + 4x +c.
+\end{align}\]</span></p>
+<p><span class="math inline">\(c\)</span> is still being sought.</p>
+<p>Additionally given: <span class="math inline">\(C(10)=372\)</span>, i.e. <span class="math inline">\(0.5 \cdot 10^3 - 2 \cdot 10^2 + 4 \cdot 10 + c = 372.\)</span> Then: <span class="math inline">\(c =372-340=32.\)</span></p>
+<p>Total cost function: <span class="math inline">\(C(x) = 0.5x^3-2x^2+4x+32\)</span></p>
+<p>Unit cost function: <span class="math inline">\(\frac{C(x)}{x} =0.5x^2-2x+4+ \frac{32}{x}\)</span></p>
+</details>
+</div>
+</div>
+<div id="the-definite-integral" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> The definite integral<a href="integral-calculus.html#the-definite-integral" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let <span class="math inline">\(f\)</span> be a continuous and positive function.</p>
+<ul>
+<li><p>The definite integral, also Riemann integral, is defined as the area on an interval piece between the <span class="math inline">\(x\)</span> axis and the function graph of <span class="math inline">\(f\)</span> .</p></li>
+<li><p>For example, consider the function <span class="math inline">\(f (x) = 2x\)</span> on the interval <span class="math inline">\([0,1]\)</span>.</p></li>
+<li><p>One thing is clear: The area below <span class="math inline">\(f\)</span> is <span class="math inline">\(1\)</span> (height x width of the rectangle divided by <span class="math inline">\(2\)</span>).</p></li>
+<li><p>The integral calculus offers the mathematical apparatus to determine the area for non-linear functions.</p></li>
+</ul>
+<p><img src="_main_files/figure-html/unnamed-chunk-39-1.png" width="288" />
+<!--![](images/flaeche2.png)--></p>
+<details>
+<summary>
+Details
+</summary>
+<img src="images/flaeche.png" />
+</details>
+<div class="theorem">
+<p><span id="thm:thmingralrechnung" class="theorem"><strong>Theorem 7.3  (The main theorem of integral calculus) </strong></span>The function <span class="math inline">\(f\)</span> is continuous on the interval <span class="math inline">\([a,b]\)</span> and <span class="math inline">\(F\)</span> is an antiderivative (indefinite integral) of <span class="math inline">\(f\)</span> . Then:
+<span class="math inline">\(\int_{a}^{b} f(x)dx=F(b)-F(a)\)</span>.</p>
+<p>For the expression <span class="math inline">\(F(b) − F(a)\)</span> the notation <span class="math inline">\([F(x)]_a ^b\)</span> is also used.</p>
+<p>The constant of integration can be ignored because it cancels out:</p>
+<p><span class="math inline">\((F(b) + c) − (F(a) + c) = F(b) − F(a)\)</span>.</p>
+</div>
+<p>In practice, one determines the antiderivative, inserts the interval limits <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> and evaluates the difference <span class="math inline">\(F(b) − F(a)\)</span>.</p>
+<div class="example">
+<p><span id="exm:2x" class="example"><strong>Example 7.6  (Definite integrals) </strong></span>The example <span class="math inline">\(f (x) = 2x\)</span> on the interval <span class="math inline">\([0,1]\)</span> results in:</p>
+<p><span class="math inline">\(\int_{0}^{1} 2xdx = F(1)-F(0)= \left[ x^2 \right]_0^1 = 1^2 - 0^2 = 1\)</span>.</p>
+<p>A little more general:</p>
+<p><span class="math inline">\(\int_{0}^{b} 2xdx = \left[ x^2 \right]_0^b = b^2\)</span> .</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-40-1.png" width="288" /></p>
+<!--![](images/flaeche3.png)-->
+</div>
+<!--
+::: {.example #2x2 name="Definite integrals"}
+
+Let \(f (x) = (x^3 + e^x )(3x^2 + e^x )\).
+
+The antiderivative is \( F(x)= \frac{(x^3+e^x)^2}{2} \).
+
+The area on \([0,1]\) is:
+
+\( \int_{0}^{1} (x^3+e^x)(3x^2+e^x)dx = \left[ \frac{(x^3+e^x)^2}{ 2} \right] _0^1 = \frac{(1^3+e^1)^2}{2} - \frac{(0^3-e^0)^2}{2} = \frac{ (1+e)^2}{2} - \frac{1}{2} = 6.38.\)
+![](images/flaeche4.png)
+:::
+-->
+<div class="example">
+<p><span id="exm:2x2" class="example"><strong>Example 7.7  (Definite integrals) </strong></span>Let <span class="math inline">\(f (x) = x^3 + xe^{x^2}\)</span>.</p>
+<p>The antiderivative is <span class="math inline">\(F(x)= \frac14x^4 + \frac 12 \cdot e^{x^2}\)</span>.</p>
+<p>The area on <span class="math inline">\([0.5,1]\)</span> is:</p>
+<p><span class="math inline">\(\int_{1}^{2} x^3 + xe^{x^2}dx = \left[ \frac14x^4 + \frac 12 \cdot e^{x^2} \right] _{1}^2 = \frac14 \cdot 2^4 + \frac 12 \cdot e^{2^2}- \frac14 \cdot 1^4 - \frac 12 \cdot e^{1^2} = 29.69.\)</span></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+</div>
+<div class="exercise">
+<p><span id="exr:bestint" class="exercise"><strong>Exercise 7.4  (Calculate definite integrals) </strong></span>Given:</p>
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\(\int_{0}^{1} (4x^4+2x^3+4x+10) dx\)</span></li>
+</ol>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(= \int_{0}^{1} x^4dx + \int_{0}^{1} 2x^3dx + \int_{0}^{1} 4xdx + \int_{0}^{1} 10dx =\)</span></p>
+<p><span class="math inline">\(\int_{0}^{1} x^4dx + 2 \cdot \int_{0}^{1} x^3dx + 4 \cdot \int_{0}^{1} xdx + 10 \cdot \int_ {0}^{1} 1 \ \cdot dx=\)</span></p>
+<p><span class="math inline">\(\left[ \frac{x^5}{5} \right]_0^1 + 2 \cdot \left[ \frac{x^4}{4} \right]_0^1 + 4 \cdot \left [ \frac{x^2}{2} \right]_0^1 + 10 \cdot \left[ x \right]_0^1 =\)</span></p>
+<p><span class="math inline">\(\frac{1^5}{5} + 2 \cdot \frac{1^4}{4} +4 \cdot \frac{1^2}{2} + 10 \cdot 1 - ( \frac{ 0^5}{5} + 2 \cdot \frac{0^4}{4} + 4 \cdot \frac{0^2}{2} + 10 \cdot 0)=\)</span></p>
+<p><span class="math inline">\(\frac{1}{5}+ \frac{1}{2}+2+10=12.7\)</span></p>
+<img src="images/flaecheauf1.png" />
+</details>
+<p><br><br>
+(ii) <span class="math inline">\(\int_{0}^{8} {x}^{2/3} dx\)</span></p>
+<details>
+<summary>
+Answer
+</summary>
+<p><span class="math inline">\(= \left[ \frac{x^{2/3+1}}{ \frac{2}{3}+1 } \right]_0^8 = \left[ \frac{x^{5/3}}{ \frac{5}{3} } \right]_0^8 = \left[ \frac{3}{5} \cdot x^{5/3} \right]_0^8 =\)</span></p>
+<p><span class="math inline">\(\frac{3}{5} \cdot 8^{5/3} - \frac{3}{5} \cdot \sqrt[3]{8^5} =19.2\)</span></p>
+</details>
+<p><br><br>
+(iii) <span class="math inline">\(\int_{1}^{2} 6x \cdot e^{x^2} dx\)</span>.</p>
+<details>
+<summary>
+Answer
+</summary>
+<span class="math inline">\(= \left[ 3 \cdot e^{x^2} + c \right]_1^2 = 3 \cdot e^{2^2} - 3 \cdot e^{1^2} = 3 (e^4-e)= 155.6392\)</span>
+</details>
+</div>
+<div id="qbestint" class="quiz">
+<p id="question">
+<span id="question-text14"></span>
+</p>
+<input type="number" id="answer14" placeholder="Enter your answer">
+<button onclick="checkAnswer_num(questionObj14)">Submit</button>
+<p id="result14">
+</p>
+</div>
+<script>
+
+ // Generate a random question
+    const questionObj14 = generateQuestion_num(14);
+// Display the question
+    document.getElementById('question-text14').textContent = "Compute \\(\\int_{-"+questionObj14.question[0] + "}^{"+ questionObj14.question[1] + "}x^2\\cdot dx\\).";
+    questionObj14.answer = 1/3*(Math.pow(questionObj14.question[1],3) - Math.pow(-questionObj14.question[0],3))
+</script>
+<div id="properties-and-elementary-calculation-rules" class="section level3 hasAnchor" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Properties and elementary calculation rules<a href="integral-calculus.html#properties-and-elementary-calculation-rules" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The following properties make calculating with integrals easier.</p>
+<div class="theorem">
+<p><span id="thm:thminteig" class="theorem"><strong>Theorem 7.4  (Properties of definite integrals I) </strong></span>Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be two integrable functions on <span class="math inline">\([a,b]\)</span> and let <span class="math inline">\(k\)</span> be a real constant. Then:</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(\int_{a}^{b}k \cdot f(x)dx= k \cdot \int_a^b f(x)dx\)</span>,</p></li>
+<li><p><span class="math inline">\(\int_{a}^{b}(f(x)+g(x))dx= \int_a^b f(x)dx +\int_a^b g(x)dx\)</span>.</p></li>
+</ol>
+</div>
+<div class="theorem">
+<p><span id="thm:thminteig2" class="theorem"><strong>Theorem 7.5  (Properties of definite integrals II) </strong></span>Let <span class="math inline">\(f\)</span> be integrable in <span class="math inline">\([a,b]\)</span> and in <span class="math inline">\([b,c]\)</span>. Then:
+<span class="math inline">\(\int_{a}^{c} (f(x) dx = \int_a^b f(x)dx + \int_b^c f(x)dx\)</span>.
+<img src="images/int.png" /></p>
+</div>
+<div class="theorem">
+<p><span id="thm:thminteig3" class="theorem"><strong>Theorem 7.6  (Properties of definite integrals III) </strong></span>Let <span class="math inline">\(f\)</span> be integrable. Then:</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(\int_{a}^{a} (f(x) dx = \lim_{c \rightarrow a} \int_a^c f(x)dx =0\)</span>,</p></li>
+<li><p><span class="math inline">\(\int_{c}^{a} f(x) dx = - \int_a^c f(x)dx\)</span>.</p></li>
+</ol>
+</div>
+<div class="example">
+<p><span id="exm:kapitalzuw" class="example"><strong>Example 7.8  (capital growth) </strong></span>In numerous applications, the integral conveniently represents the course of an economic quantity over time.</p>
+<ul>
+<li><p>The function <span class="math inline">\(K(t)\)</span> describes the capital of a company over time.</p></li>
+<li><p>It is <span class="math inline">\(K(t + \Delta t) − K(t)\)</span> the capital increase or capital outflow in the time period <span class="math inline">\([t,t + \Delta t]\)</span> and <span class="math inline">\(\frac{K(t+ \triangle t)-K(t)}{ \triangle t}\)</span> is the (average) rate of change for that time period.</p></li>
+<li><p>The instantaneous rate of change in <span class="math inline">\(t\)</span> is</p></li>
+</ul>
+<p><span class="math inline">\(\lim_{ \triangle t \rightarrow 0} \frac{K(t+ \triangle t)-K(t)}{ \triangle t} = \frac{dK(t)}{dt} =I(t)\)</span>. (=investment)</p>
+<ul>
+<li>Since <span class="math inline">\(I(t)\)</span> is the derivative of <span class="math inline">\(K(t)\)</span>, it follows conversely that <span class="math inline">\(K(t)\)</span> is the (indefinite) integral of <span class="math inline">\(I(t)\)</span>. , i.e. <span class="math inline">\(\int I(t) dt = K(t)\)</span>.</li>
+</ul>
+<p>The sum of the net investments between two points in time <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is given by the instantaneous changes in capital, and the following applies:</p>
+<p><span class="math inline">\(K(b) − K(a) = \int_a^b I(t) dt\)</span>. (capital growth)</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-43-1.png" width="576" /></p>
+<!--![](images/kapitalzuw.png)-->
+<ul>
+<li>We calculate the capital growth between periods 1 and 2 for <span class="math inline">\(I(t)=2t^2+3t\)</span>:</li>
+</ul>
+<p><span class="math display">\[\begin{align*} \int_1^2 I(t)dt&amp;= \int _1^2(2t^2+3t)dt= \left[ 2 \cdot (t^3/3)+3 \cdot (t^2 /2)\right]_1^2\\
+
+&amp;= 2 \cdot (2^3/3) + 3 \cdot (2^2/2) - (2 \cdot (1^3/3) + 3 \cdot 1^2/2)) \\
+
+&amp;= 16/3+12/2-2/3-2/3=14/3+9/2=55/6.
+\end{align*}\]</span></p>
+<ul>
+<li>We calculate the capital growth between periods 1 and 4 for <span class="math inline">\(I(t)=\begin{cases}0.5(2t^2+3t),&amp;t\in[1,2)\\ e^t,&amp;t\in[2,4)\end{cases}\)</span></li>
+</ul>
+<p><img src="_main_files/figure-html/unnamed-chunk-44-1.png" width="576" />
+<span class="math display">\[\begin{align*} \int_1^4 I(t)dt&amp;\stackrel{Thm. 7.4 ii}= \int_1^2 I(t)dt + \int_2^4 I(t)dt\\
+&amp;= \underbrace{\int_1^20.5(2t^2+3t)dt}_{\stackrel{Thm. 7.4 i}=0.5\int_1^2(2t^2+3t)dt = 0.5\cdot 55/6 = 55/12} + \int _2^4e^tdt\\
+&amp;\\
+&amp;= \frac{55}{12} + \left[ e^t\right]_2^4 = \frac{55}{12} + (e^4 - e^2) \\
+&amp;= 51.7924.
+\end{align*}\]</span></p>
+</div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="optimization.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="systems-of-linear-equations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/07-integration.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

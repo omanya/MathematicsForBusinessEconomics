@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 11 Optimization II | Mathematics for Business and Economics</title>
+  <meta name="description" content="Chapter 11 Optimization II | Mathematics for Business and Economics" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 11 Optimization II | Mathematics for Business and Economics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 11 Optimization II | Mathematics for Business and Economics" />
+  
+  
+  
+
+<meta name="author" content="Maria Osipenko" />
+
+
+<meta name="date" content="2024-08-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="calculus-with-n-variables.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Wirtschaftsmathematik</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-do-we-need-the-mathematics-for-business-and-economics"><i class="fa fa-check"></i>Why do we need the mathematics for business and economics?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#example-utility-maximization"><i class="fa fa-check"></i>Example: utility maximization</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-basics.html"><a href="the-basics.html"><i class="fa fa-check"></i><b>2</b> The basics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="the-basics.html"><a href="the-basics.html#sets-and-number-sets"><i class="fa fa-check"></i><b>2.1</b> Sets and Number Sets</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="the-basics.html"><a href="the-basics.html#operations-on-sets"><i class="fa fa-check"></i><b>2.1.1</b> Operations on Sets</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="the-basics.html"><a href="the-basics.html#number-sets"><i class="fa fa-check"></i><b>2.2</b> Number sets</a></li>
+<li class="chapter" data-level="2.3" data-path="the-basics.html"><a href="the-basics.html#point-sets-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Point sets in <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="the-basics.html"><a href="the-basics.html#intervals-as-sets-of-points-in-mathbbrn"><i class="fa fa-check"></i><b>2.3.1</b> Intervals as sets of points in <span class="math inline">\(\mathbb{R^n}\)</span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-distance"><i class="fa fa-check"></i><b>2.3.2</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: Distance</a></li>
+<li class="chapter" data-level="2.3.3" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-epsilon-neighborhood"><i class="fa fa-check"></i><b>2.3.3</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\epsilon-\)</span>neighborhood</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="the-basics.html"><a href="the-basics.html#functions"><i class="fa fa-check"></i><b>2.4</b> Functions</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="the-basics.html"><a href="the-basics.html#linear-functions"><i class="fa fa-check"></i><b>2.4.1</b> Linear Functions</a></li>
+<li class="chapter" data-level="2.4.2" data-path="the-basics.html"><a href="the-basics.html#quadratic-functions"><i class="fa fa-check"></i><b>2.4.2</b> Quadratic Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="the-basics.html"><a href="the-basics.html#power-exponential-and-logarithmic-functions"><i class="fa fa-check"></i><b>2.5</b> Power, exponential and logarithmic functions</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="the-basics.html"><a href="the-basics.html#convexity-and-concavity"><i class="fa fa-check"></i><b>2.5.1</b> Convexity and concavity</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html"><i class="fa fa-check"></i><b>3</b> Sequences, limits and series</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#sequences"><i class="fa fa-check"></i><b>3.1</b> Sequences</a></li>
+<li class="chapter" data-level="3.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergence-of-sequences"><i class="fa fa-check"></i><b>3.2</b> Convergence of sequences</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergent-sequences-and-their-limits"><i class="fa fa-check"></i><b>3.2.1</b> Convergent sequences and their limits</a></li>
+<li class="chapter" data-level="3.2.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#bounded-sequences"><i class="fa fa-check"></i><b>3.2.2</b> Bounded sequences</a></li>
+<li class="chapter" data-level="3.2.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#divergent-sequences"><i class="fa fa-check"></i><b>3.2.3</b> Divergent sequences</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#properties-of-sequences"><i class="fa fa-check"></i><b>3.3</b> Properties of sequences</a></li>
+<li class="chapter" data-level="3.4" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#series"><i class="fa fa-check"></i><b>3.4</b> Series</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#special-series"><i class="fa fa-check"></i><b>3.4.1</b> Special Series</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html"><i class="fa fa-check"></i><b>4</b> Continuity of functions</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#pointwise-continuity"><i class="fa fa-check"></i><b>4.1</b> Pointwise continuity</a></li>
+<li class="chapter" data-level="4.2" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#continuous-functions-and-their-properties"><i class="fa fa-check"></i><b>4.2</b> Continuous functions and their properties</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differential-calculus.html"><a href="differential-calculus.html"><i class="fa fa-check"></i><b>5</b> Differential calculus</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-tangent-line"><i class="fa fa-check"></i><b>5.1</b> Definition of the tangent line</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="differential-calculus.html"><a href="differential-calculus.html#secant-and-tangent-lines"><i class="fa fa-check"></i><b>5.1.1</b> Secant and tangent lines</a></li>
+<li class="chapter" data-level="5.1.2" data-path="differential-calculus.html"><a href="differential-calculus.html#from-the-secant-to-the-tangent-line"><i class="fa fa-check"></i><b>5.1.2</b> From the secant to the tangent line</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-derivative"><i class="fa fa-check"></i><b>5.2</b> Definition of the derivative</a></li>
+<li class="chapter" data-level="5.3" data-path="differential-calculus.html"><a href="differential-calculus.html#differentiability"><i class="fa fa-check"></i><b>5.3</b> Differentiability</a></li>
+<li class="chapter" data-level="5.4" data-path="differential-calculus.html"><a href="differential-calculus.html#derivation-rules"><i class="fa fa-check"></i><b>5.4</b> Derivation rules</a></li>
+<li class="chapter" data-level="5.5" data-path="differential-calculus.html"><a href="differential-calculus.html#the-rule-of-lhôpital"><i class="fa fa-check"></i><b>5.5</b> The rule of L’Hôpital</a></li>
+<li class="chapter" data-level="5.6" data-path="differential-calculus.html"><a href="differential-calculus.html#higher-order-derivatives"><i class="fa fa-check"></i><b>5.6</b> Higher order derivatives</a></li>
+<li class="chapter" data-level="5.7" data-path="differential-calculus.html"><a href="differential-calculus.html#taylors-theorem"><i class="fa fa-check"></i><b>5.7</b> Taylor’s theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="optimization.html"><a href="optimization.html"><i class="fa fa-check"></i><b>6</b> Optimization</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="optimization.html"><a href="optimization.html#necessary-conditions-for-maxima-and-minima"><i class="fa fa-check"></i><b>6.1</b> Necessary conditions for maxima and minima</a></li>
+<li class="chapter" data-level="6.2" data-path="optimization.html"><a href="optimization.html#second-order-conditions"><i class="fa fa-check"></i><b>6.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="6.3" data-path="optimization.html"><a href="optimization.html#optimization-on-an-interval"><i class="fa fa-check"></i><b>6.3</b> Optimization on an interval</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="integral-calculus.html"><a href="integral-calculus.html"><i class="fa fa-check"></i><b>7</b> Integral calculus</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="integral-calculus.html"><a href="integral-calculus.html#the-indefinite-integral"><i class="fa fa-check"></i><b>7.1</b> The indefinite integral</a></li>
+<li class="chapter" data-level="7.2" data-path="integral-calculus.html"><a href="integral-calculus.html#the-definite-integral"><i class="fa fa-check"></i><b>7.2</b> The definite integral</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="integral-calculus.html"><a href="integral-calculus.html#properties-and-elementary-calculation-rules"><i class="fa fa-check"></i><b>7.2.1</b> Properties and elementary calculation rules</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html"><i class="fa fa-check"></i><b>8</b> Systems of linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-two-linear-equations"><i class="fa fa-check"></i><b>8.1</b> Systems of two linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solution-by-substitution-and-elimination"><i class="fa fa-check"></i><b>8.1.1</b> Solution by substitution and elimination</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-equations-with-n-linear-equations"><i class="fa fa-check"></i><b>8.2</b> Systems of equations with <span class="math inline">\(n\)</span> linear equations</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solving-systems-of-equations-with-m-linear-equations"><i class="fa fa-check"></i><b>8.2.1</b> Solving systems of equations with <span class="math inline">\(m\)</span> linear equations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html"><i class="fa fa-check"></i><b>9</b> Matrices and Basic Matrix Operations</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#matrices"><i class="fa fa-check"></i><b>9.1</b> Matrices</a></li>
+<li class="chapter" data-level="9.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#basic-matrix-operations"><i class="fa fa-check"></i><b>9.2</b> Basic matrix operations</a></li>
+<li class="chapter" data-level="9.3" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#economic-applications"><i class="fa fa-check"></i><b>9.3</b> Economic Applications</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#monthly-consumer-spending"><i class="fa fa-check"></i><b>9.3.1</b> Monthly consumer spending</a></li>
+<li class="chapter" data-level="9.3.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#regional-migration"><i class="fa fa-check"></i><b>9.3.2</b> Regional migration</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#transpose-of-a-matrix"><i class="fa fa-check"></i><b>9.4</b> Transpose of a matrix</a></li>
+<li class="chapter" data-level="9.5" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#determinant-and-inverse-of-a-matrix"><i class="fa fa-check"></i><b>9.5</b> Determinant and inverse of a matrix</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#more-on-the-determinant-of-a-matrixast"><i class="fa fa-check"></i><b>9.5.1</b> More on the Determinant of a Matrix<span class="math inline">\(^\ast\)</span></a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#rank-and-determinantast"><i class="fa fa-check"></i><b>9.5.2</b> Rank and determinant<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html"><i class="fa fa-check"></i><b>10</b> Calculus with <span class="math inline">\(n\)</span> variables</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#continuity-of-a-function"><i class="fa fa-check"></i><b>10.1</b> Continuity of a function</a></li>
+<li class="chapter" data-level="10.2" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives"><i class="fa fa-check"></i><b>10.2</b> Partial derivatives</a></li>
+<li class="chapter" data-level="10.3" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives-of-higher-order"><i class="fa fa-check"></i><b>10.3</b> Partial derivatives of higher order</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#the-gradient-vector-and-the-hessian-matrix"><i class="fa fa-check"></i><b>10.3.1</b> The gradient vector and the Hessian matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#derivation-of-implicit-functionsast"><i class="fa fa-check"></i><b>10.4</b> Derivation of implicit functions<span class="math inline">\(^\ast\)</span></a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#contour-lines-indifference-curvesast"><i class="fa fa-check"></i><b>10.4.1</b> Contour lines / indifference curves<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="optimization-ii.html"><a href="optimization-ii.html"><i class="fa fa-check"></i><b>11</b> Optimization II</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="optimization-ii.html"><a href="optimization-ii.html#first-order-conditions"><i class="fa fa-check"></i><b>11.1</b> First-order conditions</a></li>
+<li class="chapter" data-level="11.2" data-path="optimization-ii.html"><a href="optimization-ii.html#second-order-conditions-1"><i class="fa fa-check"></i><b>11.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="11.3" data-path="optimization-ii.html"><a href="optimization-ii.html#optimization-under-constraints-lagrange-method"><i class="fa fa-check"></i><b>11.3</b> Optimization under constraints: Lagrange method</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathematics for Business and Economics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="optimization-ii" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Chapter 11</span> Optimization II<a href="optimization-ii.html#optimization-ii" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<script>
+function checkAnswer_mmc(q) {
+      const selectedOptions = document.querySelectorAll('input[name="option'+q.id+'"]:checked');
+      if (selectedOptions.length === 2) {
+        const userAnswers = Array.from(selectedOptions).map(option => option.value);
+        const correctAnswers = q.answer;
+        const isCorrect = userAnswers.every(answer => correctAnswers.includes(answer));
+
+if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select two options.';
+      }
+    }
+// numeric
+function generateQuestion_num(id) {
+      // Generate two random numbers between 2 and 10
+      const num1 = Math.floor(Math.random() * 10) + 2;
+      const num2 = Math.floor(Math.random() * 10) + 2;
+      const x1 = Math.floor(Math.random() * 10) + 2;
+      const x2 = Math.floor(Math.random() * 10) + 2;
+      const x3 = Math.floor(Math.random() * 100) + 2;
+      const x4 = Math.floor(Math.random() * 100) + 2;
+      const x5 = Math.floor(Math.random() * 100) + 2;
+      const x6 = Math.floor(Math.random() * 100) + 2;
+
+       // Calculate the correct answer
+      let answer = num1*Math.sqrt(x1) + num2*Math.sqrt(x2);
+
+      // Return the question and answer as an object
+      return {
+       // question: num1 + "\\(\\sqrt{x}+\\)"+ num2 + "\\(\\sqrt{y}\\)" + " for \\(x=\\)" + x1 + " and \\(y=\\)" + x2,
+        question: [num1,num2,x1,x2,x3,x4,x5,x6],
+        answer: answer,
+        id: id
+      };
+    }
+
+function checkAnswer_num(q) {
+      const userAnswer = document.getElementById('answer'+q.id).value;
+      const isCorrect = Math.round(parseFloat(userAnswer)*100)/100 === Math.round(q.answer*100)/100;
+
+      if (isCorrect) {
+        document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+      } else {
+        document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+      }
+  }
+
+// plain multiple choice
+  function checkAnswer_match(q) {
+      const selectedOption = document.querySelector('input[name="option'+q.id+'"]:checked');
+      if (selectedOption) {
+        const userAnswer = selectedOption.value;
+        const isCorrect = userAnswer === q.answer;
+
+        if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select an option.';
+      }
+    }
+</script>
+<p>We now deal with finding extremes (maximum and minimum) of functions of several variables.</p>
+<div id="first-order-conditions" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> First-order conditions<a href="optimization-ii.html#first-order-conditions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As in the univariate case, we will first identify stationary points of multivariate functions <span class="math inline">\(f (x_1, ... , x_n).\)</span> For the sake of simplicity, we use the notation <span class="math inline">\({\bf x} = (x_1, ... , x_n)\)</span> for points in <span class="math inline">\(\mathbb {R} ^n\)</span>.</p>
+<p>Without constraints, the possible solution set of an optimization problem is the entire <span class="math inline">\(\mathbb {R} ^n.\)</span> With constraints, the solution set is restricted to a subset <span class="math inline">\(X \subset \mathbb {R} ^n.\)</span></p>
+<div class="definition">
+<p><span id="def:defstpunkt" class="definition"><strong>Definition 6.2  (Stationary points) </strong></span>The function <span class="math inline">\(f: \mathbb{R} ^n \rightarrow \mathbb{R}\)</span> has a <strong>stationary point</strong> at <span class="math inline">\({\bf x^∗} = (x_1^∗ , \ldots , x_n ^∗ )\)</span>, if:</p>
+<p><span class="math display">\[\begin{align}
+f_1(x_1^∗ , \ldots , x_n^∗) =&amp; 0\\
+f_2(x_1^∗ , \ldots , x_n^∗) =&amp; 0\\
+\ldots &amp;\\
+f_n(x_1^∗ , \ldots , x_n^∗) =&amp; 0
+\end{align}\]</span></p>
+</div>
+<p>As in the one-dimensional case, not all stationary points are extremes.</p>
+<p>In addition to <strong>inflection points</strong>, there are the so-called <strong>saddle points</strong>, at which the function attains a maximum in one direction and a minimum in another direction.
+<img src="images/minmaxn.png" />
+As in the univariate case, a <strong>necessary condition</strong> for <span class="math inline">\(f\)</span> to have a minimum or maximum at <span class="math inline">\({\bf x^∗}\)</span> is that <span class="math inline">\({\bf x^∗}\)</span> is a stationary point.</p>
+<div class="theorem">
+<p><span id="thm:thmnotbedn" class="theorem"><strong>Theorem 11.1  (Necessary conditions) </strong></span>Let <span class="math inline">\(f: \mathbb{R} ^n \rightarrow \mathbb{R}\)</span> be differentiable. If <span class="math inline">\(f\)</span> is a local maximum <span class="math inline">\(\color{red}{\text{(a local minimum)}}\)</span> at the position <span class="math inline">\(x^∗ = (x_1^∗ ,\ldots. , x_n ^∗)\)</span> has, so</p>
+<p><span class="math inline">\(f (x_1^∗ , \ldots , x_n^∗) ≥ f (x_1,\ldots , x_n)\)</span></p>
+<p><span class="math inline">\(\color{red}{f (x_1^∗ , \ldots , x_n^∗) \leq f (x_1,\ldots , x_n)}\)</span></p>
+<p>for all points <span class="math inline">\((x_1, \ldots , x_n)\)</span> in a neighborhood of <span class="math inline">\(x^∗\)</span> , then holds:</p>
+<p><span class="math display">\[\begin{align*}f_1(x_1^∗, \ldots , x_n ^∗ )&amp; = 0\\
+f_2(x_1^∗, \ldots , x_n^∗ )&amp; = 0\\
+  &amp;~~~\vdots\\
+f_n(x_1^∗, \ldots , x_n^∗)&amp; = 0.
+\end{align*}\]</span></p>
+</div>
+<p><img src="images/notbedn.png" /></p>
+<ul>
+<li><p>Graph (a) shows the tangent plane at the maximum of the function.</p></li>
+<li><p>Graph (b) shows the contour lines, i.e. a view from above, where the function values are the same on each line.</p></li>
+</ul>
+<div class="example">
+<p><span id="exm:monprofitn" class="example"><strong>Example 11.1  (Price discrimination in monopoly) </strong></span>A monopolist sells an identical product in two separate markets.</p>
+<p>The inverse demand functions are:</p>
+<p><span class="math inline">\(p_1(x_1) = 12 − x_1\)</span></p>
+<p><span class="math inline">\(p_2(x_2) = 10 − 2x_2\)</span>,</p>
+<p>where <span class="math inline">\(p_i\)</span> are the prices and <span class="math inline">\(x_i\)</span> are the output quantities on the respective markets.</p>
+<p>The firm’s cost function is <span class="math inline">\(C(x_1,x_2) = 1/2 (x_1 + x_2)^2.\)</span></p>
+<p>The profit function is, therefore:</p>
+<p><span class="math inline">\(\pi(x_1,x_2) = p_1x_1 + p_2x_2 − C(x_1,x_2) = 12x_1 − x_1^2 + 10x_2 − 2x_2^2 − 1/2 (x_1 + x_2)^2\)</span> .</p>
+<p>The first-order conditions are:</p>
+<p><span class="math inline">\(\pi_1(x_1^∗,x_2^∗) = 12 − 2_1x^∗ − (x_1^∗ + x_2^∗ ) = 0\)</span></p>
+<p><span class="math inline">\(\pi_2(x_1^∗,x_2^∗) = 10 − 4x_2^∗ − (x_1^∗ + x_2^∗ ) = 0\)</span></p>
+<p>These conditions show that in order to maximize profit, the marginal returns in both markets must necessarily be the same, since the marginal costs <span class="math inline">\((x_1^∗ + x_2^∗ )\)</span> are identical.</p>
+<p>The profit-maximizing supply quantities are then: <span class="math inline">\(x_1^∗ = 3.57\)</span> and <span class="math inline">\(x_2^∗ = 1.29\)</span> (higher sales volume in market <span class="math inline">\(1\)</span>).</p>
+<p><img src="images/monprofit.png" /></p>
+<p>The optimal prices are <span class="math inline">\(p_1^∗ = 8.43\)</span> and <span class="math inline">\(p_2^∗ = 7.43\)</span> (the price is higher in market <span class="math inline">\(1\)</span>).</p>
+</div>
+</div>
+<div id="second-order-conditions-1" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Second-order conditions<a href="optimization-ii.html#second-order-conditions-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The first-order conditions are merely <strong>necessary</strong> but <strong>not sufficient</strong> for an extreme value.</p>
+<p>Second-order conditions allow checking whether a stationary point is a minimum or a maximum.</p>
+<p>Intuitively: If at a stationary point <span class="math inline">\(x^∗\)</span> a small movement in <strong>any direction</strong> away from <span class="math inline">\(x^∗\)</span> is accompanied by a decreasing (increasing) function value, then <span class="math inline">\(f\)</span> at the position <span class="math inline">\(x^∗\)</span> a local maximum (minimum).
+We consider the second-order conditions in the bivariate case (<span class="math inline">\(n = 2\)</span>).</p>
+<div class="theorem">
+<p><span id="thm:thmbzo" class="theorem"><strong>Theorem 6.2  (Second order conditions) </strong></span>Let <span class="math inline">\(f: \mathbb{R} ^2 \rightarrow \mathbb{R}\)</span> be a function with continuous second partial derivatives in a neighborhood of the stationary point <span class="math inline">\((x_1^∗ , x_2^∗ )\)</span>.</p>
+<p>Let:</p>
+<p><span class="math display">\[D = f_{x_1x_1} (x_1^∗ ,x_2^∗ ) f_{x_2x_2} (x_1^∗,x_2^∗ ) − f_{x_1x_2}^2 (x_1^∗ ,x_2^∗ ) .\]</span></p>
+<ol style="list-style-type: lower-roman">
+<li>If <span class="math inline">\(D &gt; 0\)</span> and <span class="math inline">\(f_{x_1x_1} (x_1^∗ ,x_2^∗ ) &gt; 0\)</span>, then <span class="math inline">\(f\)</span> has <span class="math inline">\((x_1^∗ ,x_2 ^∗ )\)</span> a local minimum.</li>
+<li>If <span class="math inline">\(D &gt; 0\)</span> and <span class="math inline">\(f_{x_1x_1} (x_1^∗ ,x_2^∗ ) &lt; 0\)</span>, then <span class="math inline">\(f\)</span> has <span class="math inline">\((x_1^∗ ,x_2 ^∗ )\)</span> a local maximum.</li>
+<li>If <span class="math inline">\(D &lt; 0\)</span>, then <span class="math inline">\(f\)</span> has a saddle point at <span class="math inline">\((x_1^∗ ,x_2^∗ )\)</span>.</li>
+<li>If <span class="math inline">\(D = 0\)</span>, then a conclusion is not possible.</li>
+</ol>
+</div>
+<p>Interpretation: <span class="math inline">\(D\)</span> is the determinant of the Hessian matrix.</p>
+<div class="example">
+<p><span id="exm:stpunkte1" class="example"><strong>Example 11.2  (Stationary points I) </strong></span>We determine the local extrema and saddle points of the function:</p>
+<p><span class="math display">\[f (x,y) = 3x^2 − 2xy + y^2 − 8y.\]</span></p>
+<p>The first-order conditions are:</p>
+<p><span class="math inline">\(f_x=6x − 2y = 0\)</span></p>
+<p><span class="math inline">\(f_y=−2x + 2y − 8 = 0\)</span></p>
+<p>Solution: <span class="math inline">\(x^*=2, y^*=6.\)</span></p>
+<p>Hence, there is a stationary point at <span class="math inline">\((x,y) = (2,6)\)</span>.</p>
+<p>The Hessian matrix i:</p>
+<p><span class="math display">\[\begin{bmatrix} f_{xx} \ \ f_{xy} \\ f_{xy} \ \ f_{yy} \end{bmatrix} = \begin{bmatrix} 6 \ \ \ -2 \\ -2 \ \ \ \ 2\end{bmatrix} \]</span></p>
+<p>So <span class="math inline">\(D = 6 \cdot 2 − (−2)^2 = 12 − 4 = 8 &gt; 0\)</span>.</p>
+<p>Together with <span class="math inline">\(f_{xx} = 6 &gt; 0\)</span> it follows that <span class="math inline">\(f\)</span> has a local <strong>minimum</strong> at <span class="math inline">\((2,6)\)</span>.</p>
+<p><img src="images/stpunkte1.png" /></p>
+</div>
+<div class="example">
+<p><span id="exm:stpunkte2" class="example"><strong>Example 11.3  (Stationary points II) </strong></span>We determine all local extrema and saddle points of:</p>
+<p><span class="math display">\[f (x,y) = 4xy − x^4 − y^4.\]</span></p>
+<p>The first order conditions are:</p>
+<p><span class="math inline">\(f_x=4y − 4x^3 = 0\)</span>, so <span class="math inline">\(y = x^3.\)</span></p>
+<p><span class="math inline">\(f_y=4x − 4y^3 = 0\)</span>, so <span class="math inline">\(x = y^3\)</span></p>
+<p>The stationary points are <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((1,1)\)</span>, <span class="math inline">\((−1, − 1)\)</span>.</p>
+<p>With <span class="math inline">\(f_{xx} (x,y) = −12x^2\)</span> , <span class="math inline">\(f_{yy} (x,y) = −12y^2\)</span> , <span class="math inline">\(f_{xy} (x,y) = 4\)</span> follows:</p>
+<p><span class="math display">\[\begin{equation*}
+        \begin{array}[t]{c|cccc}
+          \hline %
+          (x_0,y_0) &amp; f_{xx}(x_0,y_0) &amp; f_{yy}(x_0,y_0) &amp;
+                                                          f_{xy}(x_0,y_0)
+          &amp; D=f_{xx} f_{yy} - f_{xy}^2\\\hline
+          (0,0) &amp; 0 &amp; 0 &amp; 4 &amp; -16\\
+          (1,1) &amp; -12 &amp; -12 &amp; 4 &amp; 128\\
+          (-1,-1) &amp; -12 &amp; -12 &amp; 4 &amp; 128\\\hline
+        \end{array}
+      \end{equation*}\]</span></p>
+<p>Hence <span class="math inline">\(f\)</span> has local <strong>maxima</strong> at the positions <span class="math inline">\((1,1)\)</span> and <span class="math inline">\((−1, − 1)\)</span>; whereas <span class="math inline">\((0,0)\)</span> is a <strong>saddle point</strong>.</p>
+<p><img src="images/stpunkte22.png" /></p>
+</div>
+<p><strong>Generalizing to functions of <span class="math inline">\(n\)</span> variables<span class="math inline">\(^\ast\)</span></strong></p>
+<ul>
+<li><p>To generalize to the case with <span class="math inline">\(n\)</span> variables, note that <span class="math inline">\(D\)</span> is the determinant of the Hessian matrix.</p></li>
+<li><p>In addition, <span class="math inline">\(f_{xx}\)</span> corresponds to the determinant of the <span class="math inline">\(1 × 1\)</span> sub-matrix of the Hessian matrix, which starts in row 1 and column 1.</p></li>
+<li><p>In the general case with <span class="math inline">\(n\)</span> variables, the determinants of the <span class="math inline">\(k × k\)</span> submatrices of the Hessian matrix together determine whether a stationary point corresponds to a maximum or a minimum.</p></li>
+<li><p>If the determinants are all positive, then the Hessian is <strong>positive definite</strong> and the function has a <strong>minimum</strong> at the stationary point.</p></li>
+</ul>
+<p>If the signs of the determinants alternate starting with a negative sign, then the Hessian matrix is <strong>negative definite</strong> and the function has a <strong>maximum</strong> at the stationary point.</p>
+<div class="exercise">
+<p><span id="exr:maxminn" class="exercise"><strong>Exercise 11.1  (Extrema of multivariate function) </strong></span>For the function:</p>
+<p><span class="math display">\[f(x,y)=x^2+ y^2+xy+x+5y\]</span></p>
+<p>determine maximum and minimum points.</p>
+<details>
+<summary>
+Answer
+</summary>
+<ul>
+<li>The partial derivatives are:</li>
+</ul>
+<p><span class="math display">\[f_x(x,y)=2x+y+1,\]</span>
+<span class="math display">\[f_y(x,y)=2y+x+5.\]</span></p>
+<ul>
+<li><p>Determine the zeros of the gradient:</p>
+<ul>
+<li><p>sets the two partial derivatives equal to zero, the system yields:
+<span class="math display">\[2x+y+1 = 0,\]</span>
+<span class="math display">\[x+2y+5=0.\]</span></p></li>
+<li><p>Using Gaussian elimination (e.g. multiply the second equation by <span class="math inline">\(2\)</span> and subtract from the first equation):
+<span class="math display">\[2x+y+1 = 0,\]</span>
+<span class="math display">\[-\]</span>
+<span class="math display">\[2x+4y+10=0.\]</span>
+<span class="math display">\[\leadsto -3y-9=0\rightarrow y=-3.\]</span></p></li>
+<li><p>Inserting it into the second equation gives:
+<span class="math display">\[x+2(-3)+5=0\rightarrow x=1.\]</span></p></li>
+</ul></li>
+</ul>
+<p>So the only zero point of the gradient is:
+<span class="math display">\[x=1,y=-3.\]</span></p>
+<ul>
+<li><p>Check whether maximum or minimum:</p>
+<ul>
+<li><p>Hesse matrix:
+<span class="math display">\[H(x,y)=\begin{pmatrix}2&amp;1\\1&amp;2\end{pmatrix}\]</span></p></li>
+<li><p><span class="math inline">\(\det(H)\)</span>
+<span class="math display">\[\det(H)=2\cdot 2-1\cdot1 = 1&gt;0\]</span></p></li>
+<li><p><span class="math inline">\(f_{xx}\)</span>
+<span class="math display">\[f_{xx}(x,y)=2 &gt;0,\]</span></p></li>
+</ul></li>
+</ul>
+<p>So the stationary point is the minimum of the function.</p>
+</details>
+</div>
+</div>
+<div id="optimization-under-constraints-lagrange-method" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Optimization under constraints: Lagrange method<a href="optimization-ii.html#optimization-under-constraints-lagrange-method" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We now turn to the following problem:</p>
+<p><span class="math display">\[\max_{x_1,x_2} f (x_1,x_2), \text{(objective function)},\]</span></p>
+<p>under the condition:</p>
+<p><span class="math display">\[g(x_1,x_2) = 0, \text{(constraint/ restriction)}.\]</span></p>
+<p>Note:</p>
+<ul>
+<li><p><span class="math inline">\(f\)</span> is called <strong>objective function</strong>.</p></li>
+<li><p><span class="math inline">\(g = 0\)</span> is the <strong>constraint</strong> or <strong>restriction</strong>.</p></li>
+<li><p>Throughout we assume that <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are continuously differentiable. (A function is continuously differentiable if it is differentiable and the derivative is continuous.)</p></li>
+<li><p>To solve the problem we introduce the new variable <span class="math inline">\(\lambda\)</span>, the so-called Lagrange multiplier and form the Lagrange function:</p></li>
+</ul>
+<p><span class="math display">\[\mathcal{L} (x_1,x_2, \lambda)=f(x_1,x_2)+ \lambda g(x_1,x_2).\]</span></p>
+<ul>
+<li>Now one determines the stationary points of <span class="math inline">\(\mathcal{L}\)</span> with respect to the variables <span class="math inline">\(x_1,x_2\)</span> and <span class="math inline">\(\lambda\)</span> using the first-order conditions:</li>
+</ul>
+<p><span class="math display">\[\begin{align}
+
+\frac{ \partial \mathcal{L} }{ \partial x_1 } &amp;=f_1(x_1^*,x_2^*)+ \lambda ^*g_1(x_1^*,x_2^*)=0 \\
+
+\frac{ \partial \mathcal{L} }{ \partial x_2 } &amp;=f_2(x_1^*,x_2^*)+ \lambda ^*g_2(x_1^*,x_2^*)=0 \\
+
+\frac{ \partial \mathcal{L} }{ \partial \lambda } &amp;=g(x_1^*,x_2^*)=0
+\end{align}\]</span></p>
+<ul>
+<li><p>Note that <span class="math inline">\(\frac{ \partial \mathcal{L} }{ \partial \lambda } =0\)</span> delivers the constraint itself.</p></li>
+<li><p>In order for the Lagrange method to be applicable, the following must apply:</p></li>
+</ul>
+<p><span class="math inline">\(g_1(x_1^* ,x_2^*) \neq 0\)</span> or <span class="math inline">\(g_2(x_1^∗ ,x_2^∗) \neq 0.\)</span> That is, <span class="math inline">\((x_1^∗ ,x_2^∗ )\)</span> is not a stationary point of <span class="math inline">\(g.\)</span></p>
+<div class="theorem">
+<p><span id="thm:thmlagrange" class="theorem"><strong>Theorem 11.2  (Lagrangian method) </strong></span>Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be continuously differentiable. Furthermore, let <span class="math inline">\((x_1^∗, x_2^∗)\)</span> be a solution to the problem:</p>
+<p><span class="math display">\[\max_{x_1,x_2} f (x_1,x_2)\]</span></p>
+<p>under the condition:</p>
+<p><span class="math display">\[g(x_1,x_2) = 0.\]</span></p>
+<p>Suppose further that <span class="math inline">\((x_1^∗,x_2^∗)\)</span> is not a stationary point of <span class="math inline">\(g\)</span>.</p>
+<p>Then there exists a real number <span class="math inline">\(\lambda^∗\)</span> such that <span class="math inline">\((x_1^∗, x_2^∗,\lambda^∗)\)</span> is a stationary point of the Lagrangian:</p>
+<p><span class="math display">\[\mathcal{L} (x_1,x_2, \lambda)=f(x_1,x_2)+ \lambda g(x_1,x_2). \]</span></p>
+<p>In other words, at the position <span class="math inline">\((x_1^∗, x_2^∗,\lambda^∗)\)</span> the following applies:</p>
+<p><span class="math inline">\(\frac{ \partial \mathcal{L} }{ \partial x_1 } =0\)</span>, <span class="math inline">\(\frac{ \partial \mathcal{L} }{ \partial x_2 } =0\)</span>, <span class="math inline">\(\frac{ \partial \mathcal{L} }{ \partial \lambda } =0.\)</span></p>
+</div>
+<div class="example">
+<p><span id="exm:optlagr" class="example"><strong>Example 11.4  (Optimization with Lagrangian method) </strong></span>We solve the following optimization problem:</p>
+<p><span class="math display">\[\max_{ x_1,x_2} x_1^{0.25} x_2^{0.75}\]</span></p>
+<p>under the condition:</p>
+<p><span class="math display">\[100 − 2x_1 − 4x_2 = 0.\]</span></p>
+<p>The Lagrangian is:</p>
+<p><span class="math display">\[\mathcal{L} (x_1,x_2, \lambda)= x_1^{0.25}x_2^{0.75} + \lambda(100-2x_1-4x_2).\]</span></p>
+<p>The first-order conditions are:</p>
+<p><span class="math display">\[\begin{align}
+
+0.25x_1^{ −0.75} x_2{ 0.75} − 2\lambda &amp;= 0\\
+
+0.75x_1^{ 0.25} x_2^{−0.25} − 4\lambda &amp;= 0\\
+
+100 − 2x_1 − 4x_2 &amp;= 0.
+\end{align}\]</span></p>
+<p>Eliminating <span class="math inline">\(\lambda\)</span> in the first two equations yields: <span class="math inline">\(x_2 = 3/ 2 x_1\)</span></p>
+<p>and substituting into the third equation gives <span class="math inline">\(x_1^∗ = 12.5\)</span> and <span class="math inline">\(x_2^∗ = 18.75.\)</span></p>
+<p>For <span class="math inline">\(\lambda^∗\)</span> we get <span class="math inline">\(\lambda^∗ = 0.25x_1^{ −0.75} x_2^{ 0.75} /2 = 0.75x_1^{ 0.25} x_2^{ −0 .25} /4 = 0.169425.\)</span></p>
+<p><img src="images/lagropt.png" /></p>
+<p>The green line contains all function values that satisfy the constraint. The red dot marks the maximum on the restriction set.</p>
+</div>
+<p>In generall holds:</p>
+<ul>
+<li>The value <span class="math inline">\(\lambda^ ∗\)</span> is given as:</li>
+</ul>
+<p><span class="math display">\[\lambda ^*= -\frac{ f_1(x_1^*,x_2^*) }{ g_1(x_1^*,x_2^*) } = -\frac{ f_2(x_1^*,x_2^*) } { g_2(x_1^*,x_2^*) }.\]</span></p>
+<ul>
+<li><p>The value of the Lagrange multiplier <span class="math inline">\(\lambda^ ∗\)</span> (multiplied by <span class="math inline">\(−1\)</span> if necessary - this depends on the form of the constraint, e.g. <span class="math inline">\(x+y-100=0\)</span> and <span class="math inline">\(100-x-y=0\)</span>) corresponds to the sensitivity of the optimal solution to a slight relaxation of the constraint.</p></li>
+<li><p>This value is also called the <strong>shadow price</strong> of the constraint.</p></li>
+<li><p>The second-order conditions are set up using the Hessian matrix of the Lagrange function:</p></li>
+</ul>
+<p><span class="math display">\[H(x,y,\lambda)= \begin{pmatrix}
+\mathcal L_{11}&amp; \mathcal L_{12}&amp; \mathcal L_{13}\\
+\mathcal L_{21}&amp; \mathcal L_{22}&amp; \mathcal L_{23}\\
+\mathcal L_{31}&amp; \mathcal L_{32}&amp; \mathcal L_{33}
+\end{pmatrix},\]</span></p>
+<p>which consists of the second order partial derivatives of the Lagrange function.</p>
+<ul>
+<li>Plugging in the obtained values <span class="math inline">\(x^*,y^*,\lambda^*\)</span> gives:</li>
+</ul>
+<p><span class="math display">\[H^*= \begin{pmatrix}
+\mathcal L^*_{11}&amp; \mathcal L^*_{12}&amp; \mathcal L^*_{13}\\
+\mathcal L^*_{21}&amp; \mathcal L^*_{22}&amp; \mathcal L^*_{23}\\
+\mathcal L^*_{31}&amp; \mathcal L^*_{32}&amp; \mathcal L^*_{33}
+\end{pmatrix} = \begin{bmatrix} f_{11}+ \lambda^*g_{11} \ \ \ f_{12}+ \lambda ^*g_{12} \ \ \ g_1 \\ f_{21}+ \lambda^*g_{21} \ \ \ f_{22}+ \lambda ^*g_{22} \ \ \ g_2 \\ g_1 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ g_2 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0 \end{bmatrix}\]</span></p>
+<ul>
+<li>The determinant of this <span class="math inline">\(3 × 3\)</span> Hessian matrix is:</li>
+</ul>
+<p><span class="math display" id="eq:det">\[\begin{align}\det(H^*) &amp;= \mathcal L^*_{11}(\mathcal L^*_{22}\mathcal L^*_{33}-\mathcal L^*_{23}\mathcal L^*_{32})-\mathcal L^*_{12}(\mathcal L^*_{21}\mathcal L^*_{33}-\mathcal L^*_{23}\mathcal L^*_{31}) +\mathcal L^*_{13}(\mathcal L^*_{21}\mathcal L^*_{32}-\mathcal L^*_{22}\mathcal L^*_{31}) \\
+
+&amp;=\mathcal L^*_{11} \cdot (-\mathcal L^*_{23}\mathcal L^*_{32})-\mathcal L^*_{12} \cdot (-\mathcal L^*_{23}\mathcal L^*_{31}) + \mathcal L^*_{13}(\mathcal L^*_{21}\mathcal L^*_{32}-\mathcal L^*_{22}\mathcal L^*_{31}) \\
+
+&amp;=-(f_{11}+ \lambda^*g_{11}) \cdot g_2^2+ 2(f_{12}+ \lambda ^*g_{12}) \cdot g_2g_1-(f_{22}+ \lambda^*g_{22})g_1^2. \tag{11.1}
+\end{align}\]</span></p>
+<p>We will calculate the determinant using software (excel).</p>
+<div class="theorem">
+<p><span id="thm:thmlocmaxmin" class="theorem"><strong>Theorem 11.3  (Sufficient conditions for a local maximum/minimum) </strong></span>Let <span class="math inline">\((x_1^∗, x_2^∗ ,\lambda^∗ )\)</span> be a stationary point of the Lagrangian:</p>
+<p><span class="math display">\[\mathcal{L} (x_1,x_2, \lambda)=f(x_1,x_2)+ \lambda g(x_1,x_2).\]</span></p>
+<p>Then:</p>
+<ol style="list-style-type: lower-roman">
+<li><span class="math inline">\((x_1^∗ ,x_2^∗ )\)</span> is a local maximum of <span class="math inline">\(f\)</span> under the constraint <span class="math inline">\(g(x_1,x_2) = 0\)</span>, if <span class="math inline">\(\det(H^∗ ) &gt; 0\)</span>;</li>
+</ol>
+<p>(ii)<span class="math inline">\((x_1^∗ ,x_2^∗ )\)</span> is a local minimum of <span class="math inline">\(f\)</span> under the constraint <span class="math inline">\(g(x_1,x_2) = 0\)</span>, if <span class="math inline">\(\det(H^∗ ) &lt; 0\)</span>.</p>
+</div>
+<div class="example">
+<p><span id="exm:optlagr2" class="example"><strong>Example 11.5  (Optimization with the Lagrange method) </strong></span>We continue the previous example <a href="optimization-ii.html#exm:optlagr">11.4</a> .</p>
+<p>The Hessian matrix is:</p>
+<p><span class="math inline">\(H^*(x_1,x_2)= \begin{bmatrix} - \frac{0.1875x_2^{0.75}}{x_1^{1.75}} \ \ \frac{0.1875}{x_1 ^{0.75}x_2^{0.25}} \ \ -2 \\ \frac{0.1875}{x_1^{0.75}x_2^{0.25}} \ \ -\frac{0 ,1875x_1^{0.25}}{x_2^{1.25}} \ \ -4 \\-2 \ \ \ \ \ \ \ \ \ \ \ \ \ -4 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0 \end{bmatrix}\)</span></p>
+<p>The determinant at <span class="math inline">\((x_1^∗ , x_2^∗ , λ^∗ )\)</span> is <span class="math inline">\(\det(H^*) = 0.5783.\)</span>So <span class="math inline">\(f\)</span> has a maximum at <span class="math inline">\((x_1^∗ , x_2^∗ ).\)</span></p>
+</div>
+<div class="example">
+<p><span id="exm:nutzenmaxl" class="example"><strong>Example 11.6  (utility maximization) </strong></span>We consider the example of utility maximization <a href="index.html#exm:nutzenmax">1.1</a> from Chapter 1.</p>
+<p>The problem to be solved is:</p>
+<p><span class="math display">\[\max_{x,y} U(x,y) = \max_{x,y} \sqrt x + \sqrt y,\]</span></p>
+<p>under the condition <span class="math inline">\(x + 3y = 100\)</span> (budget constraint).</p>
+<p>For the Lagrange method, we rewrite the budget constraint in the form <span class="math inline">\(100 − x − 3y = 0\)</span>.</p>
+<p>The Lagrangian is:</p>
+<p><span class="math display">\[\mathcal{L} (x,y, \lambda)= \sqrt{x} + \sqrt{y} + \lambda (100-x-3y).\]</span></p>
+<p>The first order conditions (FOC) are:</p>
+<p><span class="math display">\[\begin{align}
+\frac{ \partial \mathcal{L} }{ \partial x } (x,y, \lambda )= \frac{1}{2 \sqrt{x} } - \lambda &amp;=0 \\
+
+\frac{ \partial \mathcal{L} }{ \partial y } (x,y, \lambda )= \frac{1}{2 \sqrt{y} } - 3\lambda &amp;=0 \\
+
+\frac{ \partial \mathcal{L} }{ \partial \lambda } (x,y, \lambda )= 100-x-3y =0.
+\end{align}\]</span></p>
+<p>The solution is <span class="math inline">\(x^∗ = 75\)</span>, <span class="math inline">\(y^∗ = 100/12 = 8.3333\)</span> and <span class="math inline">\(λ^∗ = 0.05774\)</span>.</p>
+<p>Here <span class="math inline">\(\lambda^∗\)</span> expresses the marginal utility, i.e. the rate of change of the optimal utility when the budget constraint is relaxed.</p>
+<p>The Hessian is:</p>
+<p><span class="math display">\[H(x,y,\lambda)=\begin{pmatrix}\frac{\partial^2\mathcal L}{\partial x^2}&amp; \frac{\partial^2\mathcal L}{\partial x\partial y}&amp; \frac{\partial^2\mathcal L}{\partial x\partial\lambda}\\
+\frac{\partial^2\mathcal L}{\partial y\partial x}&amp; \frac{\partial^2\mathcal L}{\partial y^2}&amp; \frac{\partial^2\mathcal L}{\partial y\partial\lambda}\\
+\frac{\partial^2\mathcal L}{\partial \lambda\partial x}&amp; \frac{\partial^2\mathcal L}{\lambda\partial y}&amp; \frac{\partial^2\mathcal L}{\partial\lambda^2}
+\end{pmatrix} =
+\begin{pmatrix}-\frac{1}{4x^{3/2}}&amp; 0&amp; -1\\
+0&amp; -\frac{1}{4y^{3/2}}&amp; -3\\
+-1&amp; -3&amp; 0
+\end{pmatrix}
+\]</span></p>
+<p>Plugging in <span class="math inline">\(x^∗ = 75\)</span>, <span class="math inline">\(y^∗ = 100/12 = 8,3333\)</span> and <span class="math inline">\(λ^∗ = 0,05774\)</span> gives
+<span class="math display">\[H^*=\begin{pmatrix}-0,0003849&amp; 0&amp; -1\\
+0&amp; -0,0103923&amp; -3\\
+-1&amp; -3&amp; \end{pmatrix} \]</span></p>
+<p>The determinant of the Hessian (Formula <a href="optimization-ii.html#eq:det">(11.1)</a>):</p>
+<p><span class="math display">\[\det(H^*) = \frac{1}{4(x^*)^{3/2}} \cdot (-3)^2 +  \frac{1}{4(y^*)^{3/2}} \cdot (-1)^2 = 0,0139&gt;0,\]</span></p>
+<p>or in Excel:</p>
+<p><img src="images/mdetbsp2.png" /></p>
+<p>so it is a maximum.</p>
+</div>
+<div class="exercise">
+<p><span id="exr:lagrmeth" class="exercise"><strong>Exercise 11.2  (Lagrangian method) </strong></span>Let <span class="math inline">\(f(x,y)=3x+2y+5\)</span>, where <span class="math inline">\(x&gt;0\)</span>, <span class="math inline">\(y&gt;0\)</span> holds.</p>
+<p>Determine the point where the extreme of <span class="math inline">\(f\)</span> is reached under the constraint <span class="math inline">\(x^2+2y^2=275\)</span>. Is the point a maximum or a minimum?</p>
+<details>
+<summary>
+Answer
+</summary>
+<ul>
+<li><p>The Lagrange-Function:
+<span class="math display">\[\mathcal L(x,y,\lambda) = 3x+2y+5+\lambda(275-x^2-2y^2).\]</span></p></li>
+<li><p>The FOC:</p></li>
+</ul>
+<p><span class="math display">\[\begin{align}\frac{ \partial  \mathcal{L}  }{ \partial x } (x,y, \lambda )&amp;= 3  - 2\lambda\cdot x =0 \leadsto x=\color{blue}{\frac3{2\lambda}} \\
+
+\frac{ \partial  \mathcal{L}  }{ \partial y } (x,y, \lambda )&amp;= 2-4\lambda \cdot y=0 \leadsto y=\frac2{4\lambda} = \color{red}{\frac 1{2\lambda} }\\
+
+\frac{ \partial  \mathcal{L}  }{ \partial  \lambda  } (x,y, \lambda )&amp;= 275-x^2-2y^2 =0.
+
+\end{align}\]</span></p>
+<ul>
+<li>Plugging in the expressions for <span class="math inline">\(x,y\)</span> from the first two euqations in the last one gives:</li>
+</ul>
+<p><span class="math display">\[\begin{align}275 - \left(\color{blue}{\frac3{2\lambda}}\right)^2 - 2\cdot \left(\color{red}{\frac1{2\lambda}}\right)^2 &amp;=0\\
+275 - \frac 9{4\lambda^2} - \frac 2{4\lambda^2}&amp;=0\\
+-\frac{11}{4\lambda^2}&amp;=-275\\
+\lambda^2&amp;=\frac{-11}{-275\cdot 4}=0,01=(0,1)^2\\
+\lambda^*&amp;=0,1.
+\end{align}\]</span></p>
+<ul>
+<li>Plugging in <span class="math inline">\(\lambda^*=0,1\)</span> in the expressions for <span class="math inline">\(x,y\)</span> delivers:</li>
+</ul>
+<p><span class="math display">\[x^*=\color{blue}{\frac3{2\cdot 0,1}}=15\text{ und } y^*=\color{red}{\frac 1{2\cdot 0,1} }=5.\]</span></p>
+<ul>
+<li>The Hessian is:</li>
+</ul>
+<p><span class="math display">\[H(x,y,\lambda)=\begin{pmatrix}-2\lambda&amp;0&amp;-2x\\0&amp;-4\lambda&amp;-4y\\-2x&amp;-4y&amp;0\end{pmatrix}\]</span></p>
+<ul>
+<li><span class="math inline">\(H^*=H(x^*,y^*,\lambda^*)\)</span> (plug in the calculated values for <span class="math inline">\((x^*,y^*,\lambda^*)\)</span> into the Hessian):</li>
+</ul>
+<p><span class="math display">\[H^*=H(x^*,y^*,\lambda^*)=\begin{pmatrix}-0,20&amp;0&amp;-30\\0&amp;-0,4&amp;-20\\-30&amp;-20&amp;0\end{pmatrix}\]</span></p>
+<ul>
+<li>The determinant is (calculate with Excel):
+<span class="math display">\[\det(H^*) = 440&gt;0\]</span></li>
+</ul>
+<p><img src="images/mdetbsp.png" /></p>
+<p>So, it is a maximum in <span class="math inline">\((x^*,y^*,\lambda^*)\)</span>.</p>
+</details>
+</div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="calculus-with-n-variables.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/11-optimierung2.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

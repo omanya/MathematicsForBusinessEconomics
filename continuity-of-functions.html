@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Continuity of functions | Mathematics for Business and Economics</title>
+  <meta name="description" content="Chapter 4 Continuity of functions | Mathematics for Business and Economics" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Continuity of functions | Mathematics for Business and Economics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Continuity of functions | Mathematics for Business and Economics" />
+  
+  
+  
+
+<meta name="author" content="Maria Osipenko" />
+
+
+<meta name="date" content="2024-08-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="sequences-limits-and-series.html"/>
+<link rel="next" href="differential-calculus.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Wirtschaftsmathematik</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-do-we-need-the-mathematics-for-business-and-economics"><i class="fa fa-check"></i>Why do we need the mathematics for business and economics?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#example-utility-maximization"><i class="fa fa-check"></i>Example: utility maximization</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-basics.html"><a href="the-basics.html"><i class="fa fa-check"></i><b>2</b> The basics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="the-basics.html"><a href="the-basics.html#sets-and-number-sets"><i class="fa fa-check"></i><b>2.1</b> Sets and Number Sets</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="the-basics.html"><a href="the-basics.html#operations-on-sets"><i class="fa fa-check"></i><b>2.1.1</b> Operations on Sets</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="the-basics.html"><a href="the-basics.html#number-sets"><i class="fa fa-check"></i><b>2.2</b> Number sets</a></li>
+<li class="chapter" data-level="2.3" data-path="the-basics.html"><a href="the-basics.html#point-sets-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Point sets in <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="the-basics.html"><a href="the-basics.html#intervals-as-sets-of-points-in-mathbbrn"><i class="fa fa-check"></i><b>2.3.1</b> Intervals as sets of points in <span class="math inline">\(\mathbb{R^n}\)</span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-distance"><i class="fa fa-check"></i><b>2.3.2</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: Distance</a></li>
+<li class="chapter" data-level="2.3.3" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-epsilon-neighborhood"><i class="fa fa-check"></i><b>2.3.3</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\epsilon-\)</span>neighborhood</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="the-basics.html"><a href="the-basics.html#functions"><i class="fa fa-check"></i><b>2.4</b> Functions</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="the-basics.html"><a href="the-basics.html#linear-functions"><i class="fa fa-check"></i><b>2.4.1</b> Linear Functions</a></li>
+<li class="chapter" data-level="2.4.2" data-path="the-basics.html"><a href="the-basics.html#quadratic-functions"><i class="fa fa-check"></i><b>2.4.2</b> Quadratic Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="the-basics.html"><a href="the-basics.html#power-exponential-and-logarithmic-functions"><i class="fa fa-check"></i><b>2.5</b> Power, exponential and logarithmic functions</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="the-basics.html"><a href="the-basics.html#convexity-and-concavity"><i class="fa fa-check"></i><b>2.5.1</b> Convexity and concavity</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html"><i class="fa fa-check"></i><b>3</b> Sequences, limits and series</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#sequences"><i class="fa fa-check"></i><b>3.1</b> Sequences</a></li>
+<li class="chapter" data-level="3.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergence-of-sequences"><i class="fa fa-check"></i><b>3.2</b> Convergence of sequences</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergent-sequences-and-their-limits"><i class="fa fa-check"></i><b>3.2.1</b> Convergent sequences and their limits</a></li>
+<li class="chapter" data-level="3.2.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#bounded-sequences"><i class="fa fa-check"></i><b>3.2.2</b> Bounded sequences</a></li>
+<li class="chapter" data-level="3.2.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#divergent-sequences"><i class="fa fa-check"></i><b>3.2.3</b> Divergent sequences</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#properties-of-sequences"><i class="fa fa-check"></i><b>3.3</b> Properties of sequences</a></li>
+<li class="chapter" data-level="3.4" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#series"><i class="fa fa-check"></i><b>3.4</b> Series</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#special-series"><i class="fa fa-check"></i><b>3.4.1</b> Special Series</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html"><i class="fa fa-check"></i><b>4</b> Continuity of functions</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#pointwise-continuity"><i class="fa fa-check"></i><b>4.1</b> Pointwise continuity</a></li>
+<li class="chapter" data-level="4.2" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#continuous-functions-and-their-properties"><i class="fa fa-check"></i><b>4.2</b> Continuous functions and their properties</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differential-calculus.html"><a href="differential-calculus.html"><i class="fa fa-check"></i><b>5</b> Differential calculus</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-tangent-line"><i class="fa fa-check"></i><b>5.1</b> Definition of the tangent line</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="differential-calculus.html"><a href="differential-calculus.html#secant-and-tangent-lines"><i class="fa fa-check"></i><b>5.1.1</b> Secant and tangent lines</a></li>
+<li class="chapter" data-level="5.1.2" data-path="differential-calculus.html"><a href="differential-calculus.html#from-the-secant-to-the-tangent-line"><i class="fa fa-check"></i><b>5.1.2</b> From the secant to the tangent line</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-derivative"><i class="fa fa-check"></i><b>5.2</b> Definition of the derivative</a></li>
+<li class="chapter" data-level="5.3" data-path="differential-calculus.html"><a href="differential-calculus.html#differentiability"><i class="fa fa-check"></i><b>5.3</b> Differentiability</a></li>
+<li class="chapter" data-level="5.4" data-path="differential-calculus.html"><a href="differential-calculus.html#derivation-rules"><i class="fa fa-check"></i><b>5.4</b> Derivation rules</a></li>
+<li class="chapter" data-level="5.5" data-path="differential-calculus.html"><a href="differential-calculus.html#the-rule-of-lhôpital"><i class="fa fa-check"></i><b>5.5</b> The rule of L’Hôpital</a></li>
+<li class="chapter" data-level="5.6" data-path="differential-calculus.html"><a href="differential-calculus.html#higher-order-derivatives"><i class="fa fa-check"></i><b>5.6</b> Higher order derivatives</a></li>
+<li class="chapter" data-level="5.7" data-path="differential-calculus.html"><a href="differential-calculus.html#taylors-theorem"><i class="fa fa-check"></i><b>5.7</b> Taylor’s theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="optimization.html"><a href="optimization.html"><i class="fa fa-check"></i><b>6</b> Optimization</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="optimization.html"><a href="optimization.html#necessary-conditions-for-maxima-and-minima"><i class="fa fa-check"></i><b>6.1</b> Necessary conditions for maxima and minima</a></li>
+<li class="chapter" data-level="6.2" data-path="optimization.html"><a href="optimization.html#second-order-conditions"><i class="fa fa-check"></i><b>6.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="6.3" data-path="optimization.html"><a href="optimization.html#optimization-on-an-interval"><i class="fa fa-check"></i><b>6.3</b> Optimization on an interval</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="integral-calculus.html"><a href="integral-calculus.html"><i class="fa fa-check"></i><b>7</b> Integral calculus</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="integral-calculus.html"><a href="integral-calculus.html#the-indefinite-integral"><i class="fa fa-check"></i><b>7.1</b> The indefinite integral</a></li>
+<li class="chapter" data-level="7.2" data-path="integral-calculus.html"><a href="integral-calculus.html#the-definite-integral"><i class="fa fa-check"></i><b>7.2</b> The definite integral</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="integral-calculus.html"><a href="integral-calculus.html#properties-and-elementary-calculation-rules"><i class="fa fa-check"></i><b>7.2.1</b> Properties and elementary calculation rules</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html"><i class="fa fa-check"></i><b>8</b> Systems of linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-two-linear-equations"><i class="fa fa-check"></i><b>8.1</b> Systems of two linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solution-by-substitution-and-elimination"><i class="fa fa-check"></i><b>8.1.1</b> Solution by substitution and elimination</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-equations-with-n-linear-equations"><i class="fa fa-check"></i><b>8.2</b> Systems of equations with <span class="math inline">\(n\)</span> linear equations</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solving-systems-of-equations-with-m-linear-equations"><i class="fa fa-check"></i><b>8.2.1</b> Solving systems of equations with <span class="math inline">\(m\)</span> linear equations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html"><i class="fa fa-check"></i><b>9</b> Matrices and Basic Matrix Operations</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#matrices"><i class="fa fa-check"></i><b>9.1</b> Matrices</a></li>
+<li class="chapter" data-level="9.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#basic-matrix-operations"><i class="fa fa-check"></i><b>9.2</b> Basic matrix operations</a></li>
+<li class="chapter" data-level="9.3" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#economic-applications"><i class="fa fa-check"></i><b>9.3</b> Economic Applications</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#monthly-consumer-spending"><i class="fa fa-check"></i><b>9.3.1</b> Monthly consumer spending</a></li>
+<li class="chapter" data-level="9.3.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#regional-migration"><i class="fa fa-check"></i><b>9.3.2</b> Regional migration</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#transpose-of-a-matrix"><i class="fa fa-check"></i><b>9.4</b> Transpose of a matrix</a></li>
+<li class="chapter" data-level="9.5" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#determinant-and-inverse-of-a-matrix"><i class="fa fa-check"></i><b>9.5</b> Determinant and inverse of a matrix</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#more-on-the-determinant-of-a-matrixast"><i class="fa fa-check"></i><b>9.5.1</b> More on the Determinant of a Matrix<span class="math inline">\(^\ast\)</span></a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#rank-and-determinantast"><i class="fa fa-check"></i><b>9.5.2</b> Rank and determinant<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html"><i class="fa fa-check"></i><b>10</b> Calculus with <span class="math inline">\(n\)</span> variables</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#continuity-of-a-function"><i class="fa fa-check"></i><b>10.1</b> Continuity of a function</a></li>
+<li class="chapter" data-level="10.2" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives"><i class="fa fa-check"></i><b>10.2</b> Partial derivatives</a></li>
+<li class="chapter" data-level="10.3" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives-of-higher-order"><i class="fa fa-check"></i><b>10.3</b> Partial derivatives of higher order</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#the-gradient-vector-and-the-hessian-matrix"><i class="fa fa-check"></i><b>10.3.1</b> The gradient vector and the Hessian matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#derivation-of-implicit-functionsast"><i class="fa fa-check"></i><b>10.4</b> Derivation of implicit functions<span class="math inline">\(^\ast\)</span></a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#contour-lines-indifference-curvesast"><i class="fa fa-check"></i><b>10.4.1</b> Contour lines / indifference curves<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="optimization-ii.html"><a href="optimization-ii.html"><i class="fa fa-check"></i><b>11</b> Optimization II</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="optimization-ii.html"><a href="optimization-ii.html#first-order-conditions"><i class="fa fa-check"></i><b>11.1</b> First-order conditions</a></li>
+<li class="chapter" data-level="11.2" data-path="optimization-ii.html"><a href="optimization-ii.html#second-order-conditions-1"><i class="fa fa-check"></i><b>11.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="11.3" data-path="optimization-ii.html"><a href="optimization-ii.html#optimization-under-constraints-lagrange-method"><i class="fa fa-check"></i><b>11.3</b> Optimization under constraints: Lagrange method</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathematics for Business and Economics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="continuity-of-functions" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Continuity of functions<a href="continuity-of-functions.html#continuity-of-functions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Continuity of functions is an important concept used in a variety of fields, including economics.</p>
+<p>Intuitively, a function is continuous if its graph has no “breaks” or “jumps”.</p>
+<script>
+function checkAnswer_mmc(q) {
+      const selectedOptions = document.querySelectorAll('input[name="option'+q.id+'"]:checked');
+      if (selectedOptions.length === 2) {
+        const userAnswers = Array.from(selectedOptions).map(option => option.value);
+        const correctAnswers = q.answer;
+        const isCorrect = userAnswers.every(answer => correctAnswers.includes(answer));
+
+if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select two options.';
+      }
+    }
+// numeric
+function generateQuestion_num(id) {
+      // Generate two random numbers between 2 and 10
+      const num1 = Math.floor(Math.random() * 10) + 2;
+      const num2 = Math.floor(Math.random() * 10) + 2;
+      const x1 = Math.floor(Math.random() * 100) + 2;
+      const x2 = Math.floor(Math.random() * 100) + 2;
+      const x3 = Math.floor(Math.random() * 100) + 2;
+      const x4 = Math.floor(Math.random() * 100) + 2;
+      const x5 = Math.floor(Math.random() * 100) + 2;
+      const x6 = Math.floor(Math.random() * 100) + 2;
+
+       // Calculate the correct answer
+      let answer = num1*Math.sqrt(x1) + num2*Math.sqrt(x2);
+
+      // Return the question and answer as an object
+      return {
+       // question: num1 + "\\(\\sqrt{x}+\\)"+ num2 + "\\(\\sqrt{y}\\)" + " for \\(x=\\)" + x1 + " and \\(y=\\)" + x2,
+        question: [num1,num2,x1,x2,x3,x4,x5,x6],
+        answer: answer,
+        id: id
+      };
+    }
+
+function checkAnswer_num(q) {
+      const userAnswer = document.getElementById('answer'+q.id).value;
+      const isCorrect = Math.round(parseFloat(userAnswer)*100)/100 === Math.round(q.answer*100)/100;
+
+      if (isCorrect) {
+        document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+      } else {
+        document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+      }
+  }
+
+// plain multiple choice
+  function checkAnswer_match(q) {
+      const selectedOption = document.querySelector('input[name="option'+q.id+'"]:checked');
+      if (selectedOption) {
+        const userAnswer = selectedOption.value;
+        const isCorrect = userAnswer === q.answer;
+
+        if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select an option.';
+      }
+    }
+</script>
+<div class="example">
+<p><span id="exm:prodfun" class="example"><strong>Example 4.1  (production function) </strong></span>A production function links inputs and outputs of a production process; formally: the output <span class="math inline">\(y = f (x)\)</span> is generated using the input <span class="math inline">\(x\)</span> and the production function <span class="math inline">\(f\)</span>.
+The production function of a car manufacturer is <span class="math inline">\(y = x/1050\)</span>, where <span class="math inline">\(y\)</span> denotes the number of cars (output) and <span class="math inline">\(x\)</span> denotes the number of screws (input).</p>
+<p><img src="images/prodfun.png" />
+The domain of the function is <span class="math inline">\(\left\{ 1050n:n \in \mathbb{N} \right\}\)</span> = <span class="math inline">\(\left\{ 1,050, 2,100, 3,150, ... \right\}\)</span>.</p>
+<p>In practice it is easier to work with the production function <span class="math inline">\(y = x/1050\)</span>, with <span class="math inline">\(x \in \mathbb{R_+}\)</span>, e.g. to solve decision problems.</p>
+<p><img src="images/prodfun2.png" /></p>
+</div>
+<div class="exercise">
+<p><span id="exr:bonus" class="exercise"><strong>Exercise 4.1  (Bonus) </strong></span>The sellers of the guitar factory where Sophia is currently doing her internship receive monthly:</p>
+<ol style="list-style-type: lower-roman">
+<li><p>a base salary of <span class="math inline">\(800€\)</span>;</p></li>
+<li><p>plus a commission of <span class="math inline">\(1\%\)</span> per <span class="math inline">\(€\)</span> on the sales volume;</p></li>
+<li><p>plus a bonus of <span class="math inline">\(500€\)</span> if turnover exceeds <span class="math inline">\(20,000€\)</span>.</p></li>
+</ol>
+<p><img src="images/gitarrenman.png" /></p>
+<p>Let <span class="math inline">\(S\)</span> be the sales volume for a month; the salary of a seller is:</p>
+<p><span class="math inline">\(P = \begin{cases} 800+0.01\cdot S, &amp; if \ S&lt;20000 \\ 1300+0.01\cdot S &amp;if \ S \geq 20000 \end{cases}\)</span></p>
+<p>One day before the end of the month, three salespeople have achieved the following sales volumes: <span class="math inline">\(€26000\)</span>, <span class="math inline">\(€18500\)</span>, <span class="math inline">\(€6000\)</span>.</p>
+<p>Who will work the hardest on the final day?</p>
+<details>
+<summary>
+Answer
+</summary>
+<p>Employee 2, because then he will probably reach the threshold for the bonus payment (€20000).</p>
+<p><img src="images/bonus.png" /></p>
+</details>
+<p>What could possibly be a better motivational incentive for guitar salespeople?</p>
+<p>Two possible answers (other alternatives are conceivable):</p>
+<details>
+<summary>
+Option 1
+</summary>
+<ol style="list-style-type: decimal">
+<li>A multi-level bonus</li>
+</ol>
+<img src="images/gitarrenman1.png" />
+</details>
+<details>
+<summary>
+Option 2
+</summary>
+<ol start="2" style="list-style-type: decimal">
+<li>A continuous salary function with a steeper slope from <span class="math inline">\(€20000\)</span> sales.</li>
+</ol>
+<img src="images/bonus_s.png" />
+</details>
+</div>
+<div id="qstetigkeit1" class="quiz">
+<img src="images/funaufg.png" />
+<script>
+
+
+// Generate a random question
+  const questionObj9 = {
+      question: 'Which of the following functions are continuous? Choose appropriate answer options 1-4 (from left to right).',
+      options: ['1', '2', '3', '4'],
+      answer: ['1','2'],
+      id: 9
+    };
+</script>
+<p class="question">
+<span id="question-text9"></span>
+</p>
+<div class="options">
+<p><label>
+<input type="checkbox" name="option9" value=1> 1
+</label>
+<label>
+<input type="checkbox" name="option9" value=2> 2
+</label>
+<label>
+<input type="checkbox" name="option9" value=3> 3
+</label>
+<label>
+<input type="checkbox" name="option9" value=4> 4
+</label></p>
+</div>
+<button onclick="checkAnswer_mmc(questionObj9)">
+Submit
+</button>
+<p id="result9">
+</p>
+<script>
+    // Display the question
+    document.getElementById('question-text9').textContent = questionObj9.question;
+
+</script>
+</div>
+<div id="pointwise-continuity" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Pointwise continuity<a href="continuity-of-functions.html#pointwise-continuity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We first consider the continuity of a function <span class="math inline">\(f (x)\)</span> at a point.</p>
+<div class="definition">
+<p><span id="def:defpstetig" class="definition"><strong>Definition 4.1  (Pointwise continuity) </strong></span>The function <span class="math inline">\(f:D \rightarrow \mathbb{R}\)</span>, with <span class="math inline">\(D \subseteq \mathbb{R}\)</span>, is continuous in <span class="math inline">\(a \in D\)</span>, if for every sequence <span class="math inline">\(( x_n)_{n \in \mathbb{N} }\)</span>, which converges to <span class="math inline">\(a\)</span>, it holds that <span class="math inline">\(f (x_n)\)</span> converges to <span class="math inline">\(f (a)\)</span>.</p>
+<p>Formally:
+<span class="math inline">\(\lim\limits_{n \rightarrow \infty} x_n=a \ \Rightarrow \ \lim\limits_{n \rightarrow \infty} f(x_n)=f(a)\)</span> .</p>
+<p>Since this applies to every sequence, we can neglect the reference to a specific sequence and write:
+<span class="math inline">\(\lim \limits_{x \rightarrow a} f(x)=f(a)\)</span>.</p>
+</div>
+<p>The following examples show how pointwise continuity can be understood.</p>
+<div class="example">
+<p><span id="exm:stet1" class="example"><strong>Example 4.2  (Pointwise continuity I) </strong></span>We show that <span class="math inline">\(f (x) = x^2\)</span> , <span class="math inline">\(x \in \mathbb{R}\)</span>, is continuous for any <span class="math inline">\(a \in \mathbb{R}\)</span>.</p>
+<p>Let <span class="math inline">\((x_n)_{n \in \mathbb{N} }\)</span> be a sequence with <span class="math inline">\(\lim\limits_{n \rightarrow \infty} x_n=a\)</span>.</p>
+<p>If we choose any <span class="math inline">\(δ &gt; 0\)</span>, then <span class="math inline">\(|x_n − a| &lt; \delta\)</span> applies to all <span class="math inline">\(n\)</span> that are large enough (e.g. <span class="math inline">\(n &gt; N_\delta\)</span>).</p>
+<p>Then, we have:</p>
+<p><span class="math inline">\(\lvert f(x)-f(a) \rvert = \lvert x_n^2-a^2 \rvert\)</span></p>
+<p><span class="math inline">\(= \lvert (x_n-a) (x_n-a+2a)\rvert\)</span></p>
+<p><span class="math inline">\(= \lvert x_n-a \rvert \lvert x_n-a+2a \rvert\)</span></p>
+<p><span class="math inline">\(\leq \lvert x_n-a \rvert ( \lvert x_n-a \rvert+ \lvert 2a \rvert )\)</span></p>
+<p><span class="math inline">\(&lt; \delta ( \delta+2 \lvert a \rvert )\)</span></p>
+<p>Since <span class="math inline">\(\delta &gt; 0\)</span> can be chosen arbitrarily small, the result is that the distance <span class="math inline">\(|f (x_n) − f (a)|\)</span> becomes arbitrarily small if only <span class="math inline">\(n\)</span> is large enough chooses.
+<img src="images/stet1.png" /></p>
+</div>
+<div class="example">
+<p><span id="exm:nutzenmax" class="example"><strong>Example 1.1  (Discontinuity of a function at 0) </strong></span>The function <span class="math inline">\(f(x) = \begin{cases} +1, &amp;if \ x \leq 0\\ -1, &amp;if\ x&gt;0 \end{cases}\)</span>, is discontinuous at <span class="math inline">\(0\)</span>.</p>
+<p>We choose the sequence for <span class="math inline">\(x\)</span> <span class="math inline">\(x_n = 1/n \cdot (−1)^n\)</span> , <span class="math inline">\(n \in \mathbb{N}\)</span> which converges to zero.</p>
+<p>The following graphic shows <span class="math inline">\(x_n\)</span> and <span class="math inline">\(f (x_n) = (−1)^n\)</span> , <span class="math inline">\(n = 1, ... , 20\)</span>.</p>
+<p><img src="images/stet2.png" /></p>
+<p>So it turns out that <span class="math inline">\(\lim_ {x \rightarrow \infty } x_n = 0\)</span>, whereas <span class="math inline">\(f (x_n)\)</span> has no limit, from which the discontinuity of <span class="math inline">\(f\)</span> at the point <span class="math inline">\(0\)</span> follows.</p>
+<p>The same can be seen from the following graph: Although <span class="math inline">\(x_1,x_2, ...\)</span> tend towards <span class="math inline">\(0\)</span>, the values f<span class="math inline">\((x_1),f (x_2), ...\)</span> jump between <span class="math inline">\(−1\)</span> and <span class="math inline">\(1\)</span> back and forth.</p>
+<p><img src="images/stet3.png" /></p>
+<p>Even if the function <span class="math inline">\(f(x) = \begin{pmatrix} +1, if \ x \leq 0\\ -1, if\ x&gt;0 \end{pmatrix}\)</span>, from the previous example is discontinuous in <span class="math inline">\(0\)</span>, it satisfies a weaker form of continuity in <span class="math inline">\(0\)</span>.</p>
+</div>
+<p>Another perspective on the point-wise continuity of a function is provided by the following direction-dependent consideration of the function’s behavior.</p>
+<div class="definition">
+<p><span id="def:deflrstetigkeit" class="definition"><strong>Definition 4.2  (Left and right continuity) </strong></span></p>
+<ul>
+<li>A function <span class="math inline">\(f:D \rightarrow \mathbb{R}\)</span> is <strong>left-continuous</strong> in <span class="math inline">\(a \in D\)</span>, if for every sequence <span class="math inline">\((x_n)_{n\in \mathbb N }\)</span>, which converges from below to <span class="math inline">\(a\)</span>, <span class="math inline">\(f (x_n)\)</span> converges to <span class="math inline">\(f (a)\)</span>, i.e.
+<span class="math inline">\(\lim _{x \uparrow a} f(x)= \lim _{x \rightarrow a^-} f(x) = f(a)\)</span>.</li>
+</ul>
+<p><img src="images/lstet.png" /></p>
+<ul>
+<li>Similarly <span class="math inline">\(f:D \rightarrow \mathbb{R}\)</span> is <strong>right continuous</strong> in <span class="math inline">\(a \in D\)</span> if <span class="math inline">\(f (x_n)\)</span> converges to <span class="math inline">\(f (a)\)</span> for every sequence <span class="math inline">\((x_n)_{n\in \mathbb N}\)</span> converging to <span class="math inline">\(a\)</span> from above, i.e.</li>
+</ul>
+<p><span class="math inline">\(\lim _{x \downarrow a} f(x)= \lim _{x \rightarrow a^+} f(x) = f(a)\)</span>.</p>
+<p><img src="images/rstet.png" /></p>
+</div>
+<p>By considering limit values, one can check the pointwise left and right continuity. The following theorem also gives us an approach on how to use the concepts of left and right continuity for determining whether or not a function is continuous at a given point.</p>
+<div class="theorem">
+<p><span id="thm:thmstetig" class="theorem"><strong>Theorem 4.1  (pointwise continuity) </strong></span>A function <span class="math inline">\(f:D \rightarrow \mathbb{R}\)</span> is continuous in <span class="math inline">\(a \in D\)</span> if and only if
+<span class="math inline">\(\lim _{x \uparrow a} f(x)= \lim _{x \downarrow a} f(x) = f(a)\)</span>.</p>
+</div>
+<iframe src="https://www.geogebra.org/m/Jf7rP6uK" allowtransparency="true" width="485" height="900" frameborder="0" scrolling="no" allowfullscreen>
+</iframe>
+<div class="example">
+<p><span id="exm:stet" class="example"><strong>Example 4.3  (check continuity) </strong></span>Let <span class="math inline">\(f:[0,10] \rightarrow \mathbb{R}\)</span> be defined as</p>
+<p><span class="math inline">\(f(x) = \begin{cases} \lvert x-2 \rvert -2, &amp;\text{if} \ 0 \leq x&lt;2 \ \text{or} \ 2 &lt; x \leq 6 \\ \frac{2}{x-6 } -2, &amp;\text{if} \ 6&lt; x &lt;8 \\ (x-9)^3-1, &amp;\text{if} \ 8 \leq x \leq 10 \\ 1, &amp;\text{if} \ x=2 \end{cases}\)</span>.</p>
+<p><img src="images/stet4.png" /></p>
+<p>The function <span class="math inline">\(f\)</span> is discontinuous in three points:</p>
+<p><span class="math inline">\(f (6) = 2\)</span>, but <span class="math inline">\(\lim_{x\downarrow 6} f (x) = \infty\)</span>;</p>
+<p><span class="math inline">\(f (8) = −2\)</span> applies, but <span class="math inline">\(\lim_{x\uparrow 8} f (x) = −1\)</span>.</p>
+<p>It is <span class="math inline">\(f (2) = 1\)</span>, but <span class="math inline">\(\lim_{x\uparrow 2} f (x) = \lim_{x\downarrow 2} f (x) = −2 \neq f (2)\)</span> .</p>
+</div>
+</div>
+<div id="continuous-functions-and-their-properties" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Continuous functions and their properties<a href="continuity-of-functions.html#continuous-functions-and-their-properties" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Continuity on a domain of a function:</p>
+<ul>
+<li><p>So far we have considered continuity at a point <span class="math inline">\((a \in D)\)</span>.</p></li>
+<li><p>Now we extend this deﬁnition to a range.</p></li>
+</ul>
+<div class="definition">
+<p><span id="def:defstetigkeitalg" class="definition"><strong>Definition 4.3  (Continuous function) </strong></span>A function <span class="math inline">\(f : D \rightarrow R, D \subseteq \mathbb R\)</span> is called continuous on <span class="math inline">\(D\)</span> if it is continuous at every point <span class="math inline">\(a \in D\)</span>.</p>
+</div>
+<p>The following theorems give us the properties of continuous functions.</p>
+<div class="theorem">
+<p><span id="thm:thmsteteig" class="theorem"><strong>Theorem 4.2  (Continuous functions) </strong></span>Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> be continuous functions, and let <span class="math inline">\(c \in \mathbb {R}\)</span>. Then the following functions are also continuous:</p>
+<ol style="list-style-type: lower-roman">
+<li><p><span class="math inline">\(c f (x)\)</span>,</p></li>
+<li><p><span class="math inline">\(f (x) + c\)</span>,</p></li>
+<li><p><span class="math inline">\(f (x) \pm g(x)\)</span>,</p></li>
+<li><p><span class="math inline">\(f (x) \cdot g(x)\)</span>,</p></li>
+<li><p><span class="math inline">\(f (x)/g(x)\)</span>, for <span class="math inline">\(g(x) \ \neq 0\)</span>,</p></li>
+<li><p><span class="math inline">\(f^{ (−1)} (x)\)</span>, if it exists.</p></li>
+</ol>
+</div>
+<div class="theorem">
+<p><span id="thm:thmkomp" class="theorem"><strong>Theorem 4.3  (Composition of continuous functions) </strong></span>Let <span class="math inline">\(f : D \rightarrow \mathbb {R}\)</span> and <span class="math inline">\(g : E \rightarrow \mathbb {R}\)</span> be functions with <span class="math inline">\(f (D) \subset E\)</span> if <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are continuous, then the function is also</p>
+<p><span class="math inline">\(g \circ f:D \rightarrow \mathbb{R} , \ g(f(x))\)</span>,</p>
+<p>continuous.</p>
+</div>
+<div id="q2" class="quiz">
+<p id="question">
+<span id="question-text10"></span>
+</p>
+<input type="number" id="answer10" placeholder="Enter your answer">
+<button onclick="checkAnswer_num(questionObj10)">Submit</button>
+<p id="result10">
+</p>
+</div>
+<script>
+
+ // Generate a random question
+    const questionObj10 = generateQuestion_num(10);
+// Display the question
+    document.getElementById('question-text10').textContent = "Determine \\(k\\in\\mathbb R\\) such that the following function is continuous on \\(\\mathbb R\\): \\[f(x) = \\begin{cases} "+ questionObj10.question[1] + "x^2 + " + questionObj10.question[2] + "x,&\\text{ if } x\\geq" + questionObj10.question[0]+",\\\\ -" + questionObj10.question[3] + "x+k,&\\text{ if } x<" + questionObj10.question[0] +"\\end{cases}\\]";
+    questionObj10.answer = questionObj10.question[1]*Math.pow(questionObj10.question[0],2) + questionObj10.question[2]*questionObj10.question[0]+questionObj10.question[3]*questionObj10.question[0]
+</script>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="sequences-limits-and-series.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="differential-calculus.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-stetigkeit.rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

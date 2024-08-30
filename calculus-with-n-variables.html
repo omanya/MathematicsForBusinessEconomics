@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 10 Calculus with \(n\) variables | Mathematics for Business and Economics</title>
+  <meta name="description" content="Chapter 10 Calculus with \(n\) variables | Mathematics for Business and Economics" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 10 Calculus with \(n\) variables | Mathematics for Business and Economics" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 10 Calculus with \(n\) variables | Mathematics for Business and Economics" />
+  
+  
+  
+
+<meta name="author" content="Maria Osipenko" />
+
+
+<meta name="date" content="2024-08-30" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="matrices-and-basic-matrix-operations.html"/>
+<link rel="next" href="optimization-ii.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Wirtschaftsmathematik</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-do-we-need-the-mathematics-for-business-and-economics"><i class="fa fa-check"></i>Why do we need the mathematics for business and economics?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#example-utility-maximization"><i class="fa fa-check"></i>Example: utility maximization</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="the-basics.html"><a href="the-basics.html"><i class="fa fa-check"></i><b>2</b> The basics</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="the-basics.html"><a href="the-basics.html#sets-and-number-sets"><i class="fa fa-check"></i><b>2.1</b> Sets and Number Sets</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="the-basics.html"><a href="the-basics.html#operations-on-sets"><i class="fa fa-check"></i><b>2.1.1</b> Operations on Sets</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="the-basics.html"><a href="the-basics.html#number-sets"><i class="fa fa-check"></i><b>2.2</b> Number sets</a></li>
+<li class="chapter" data-level="2.3" data-path="the-basics.html"><a href="the-basics.html#point-sets-in-mathbb-rn"><i class="fa fa-check"></i><b>2.3</b> Point sets in <span class="math inline">\(\mathbb R^n\)</span></a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="the-basics.html"><a href="the-basics.html#intervals-as-sets-of-points-in-mathbbrn"><i class="fa fa-check"></i><b>2.3.1</b> Intervals as sets of points in <span class="math inline">\(\mathbb{R^n}\)</span></a></li>
+<li class="chapter" data-level="2.3.2" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-distance"><i class="fa fa-check"></i><b>2.3.2</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: Distance</a></li>
+<li class="chapter" data-level="2.3.3" data-path="the-basics.html"><a href="the-basics.html#properties-of-mathbb-rn-epsilon-neighborhood"><i class="fa fa-check"></i><b>2.3.3</b> Properties of <span class="math inline">\(\mathbb R^n\)</span>: <span class="math inline">\(\epsilon-\)</span>neighborhood</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="the-basics.html"><a href="the-basics.html#functions"><i class="fa fa-check"></i><b>2.4</b> Functions</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="the-basics.html"><a href="the-basics.html#linear-functions"><i class="fa fa-check"></i><b>2.4.1</b> Linear Functions</a></li>
+<li class="chapter" data-level="2.4.2" data-path="the-basics.html"><a href="the-basics.html#quadratic-functions"><i class="fa fa-check"></i><b>2.4.2</b> Quadratic Functions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="the-basics.html"><a href="the-basics.html#power-exponential-and-logarithmic-functions"><i class="fa fa-check"></i><b>2.5</b> Power, exponential and logarithmic functions</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="the-basics.html"><a href="the-basics.html#convexity-and-concavity"><i class="fa fa-check"></i><b>2.5.1</b> Convexity and concavity</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html"><i class="fa fa-check"></i><b>3</b> Sequences, limits and series</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#sequences"><i class="fa fa-check"></i><b>3.1</b> Sequences</a></li>
+<li class="chapter" data-level="3.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergence-of-sequences"><i class="fa fa-check"></i><b>3.2</b> Convergence of sequences</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#convergent-sequences-and-their-limits"><i class="fa fa-check"></i><b>3.2.1</b> Convergent sequences and their limits</a></li>
+<li class="chapter" data-level="3.2.2" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#bounded-sequences"><i class="fa fa-check"></i><b>3.2.2</b> Bounded sequences</a></li>
+<li class="chapter" data-level="3.2.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#divergent-sequences"><i class="fa fa-check"></i><b>3.2.3</b> Divergent sequences</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#properties-of-sequences"><i class="fa fa-check"></i><b>3.3</b> Properties of sequences</a></li>
+<li class="chapter" data-level="3.4" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#series"><i class="fa fa-check"></i><b>3.4</b> Series</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="sequences-limits-and-series.html"><a href="sequences-limits-and-series.html#special-series"><i class="fa fa-check"></i><b>3.4.1</b> Special Series</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html"><i class="fa fa-check"></i><b>4</b> Continuity of functions</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#pointwise-continuity"><i class="fa fa-check"></i><b>4.1</b> Pointwise continuity</a></li>
+<li class="chapter" data-level="4.2" data-path="continuity-of-functions.html"><a href="continuity-of-functions.html#continuous-functions-and-their-properties"><i class="fa fa-check"></i><b>4.2</b> Continuous functions and their properties</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="differential-calculus.html"><a href="differential-calculus.html"><i class="fa fa-check"></i><b>5</b> Differential calculus</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-tangent-line"><i class="fa fa-check"></i><b>5.1</b> Definition of the tangent line</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="differential-calculus.html"><a href="differential-calculus.html#secant-and-tangent-lines"><i class="fa fa-check"></i><b>5.1.1</b> Secant and tangent lines</a></li>
+<li class="chapter" data-level="5.1.2" data-path="differential-calculus.html"><a href="differential-calculus.html#from-the-secant-to-the-tangent-line"><i class="fa fa-check"></i><b>5.1.2</b> From the secant to the tangent line</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-derivative"><i class="fa fa-check"></i><b>5.2</b> Definition of the derivative</a></li>
+<li class="chapter" data-level="5.3" data-path="differential-calculus.html"><a href="differential-calculus.html#differentiability"><i class="fa fa-check"></i><b>5.3</b> Differentiability</a></li>
+<li class="chapter" data-level="5.4" data-path="differential-calculus.html"><a href="differential-calculus.html#derivation-rules"><i class="fa fa-check"></i><b>5.4</b> Derivation rules</a></li>
+<li class="chapter" data-level="5.5" data-path="differential-calculus.html"><a href="differential-calculus.html#the-rule-of-lhôpital"><i class="fa fa-check"></i><b>5.5</b> The rule of L’Hôpital</a></li>
+<li class="chapter" data-level="5.6" data-path="differential-calculus.html"><a href="differential-calculus.html#higher-order-derivatives"><i class="fa fa-check"></i><b>5.6</b> Higher order derivatives</a></li>
+<li class="chapter" data-level="5.7" data-path="differential-calculus.html"><a href="differential-calculus.html#taylors-theorem"><i class="fa fa-check"></i><b>5.7</b> Taylor’s theorem</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="optimization.html"><a href="optimization.html"><i class="fa fa-check"></i><b>6</b> Optimization</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="optimization.html"><a href="optimization.html#necessary-conditions-for-maxima-and-minima"><i class="fa fa-check"></i><b>6.1</b> Necessary conditions for maxima and minima</a></li>
+<li class="chapter" data-level="6.2" data-path="optimization.html"><a href="optimization.html#second-order-conditions"><i class="fa fa-check"></i><b>6.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="6.3" data-path="optimization.html"><a href="optimization.html#optimization-on-an-interval"><i class="fa fa-check"></i><b>6.3</b> Optimization on an interval</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="integral-calculus.html"><a href="integral-calculus.html"><i class="fa fa-check"></i><b>7</b> Integral calculus</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="integral-calculus.html"><a href="integral-calculus.html#the-indefinite-integral"><i class="fa fa-check"></i><b>7.1</b> The indefinite integral</a></li>
+<li class="chapter" data-level="7.2" data-path="integral-calculus.html"><a href="integral-calculus.html#the-definite-integral"><i class="fa fa-check"></i><b>7.2</b> The definite integral</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="integral-calculus.html"><a href="integral-calculus.html#properties-and-elementary-calculation-rules"><i class="fa fa-check"></i><b>7.2.1</b> Properties and elementary calculation rules</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html"><i class="fa fa-check"></i><b>8</b> Systems of linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-two-linear-equations"><i class="fa fa-check"></i><b>8.1</b> Systems of two linear equations</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solution-by-substitution-and-elimination"><i class="fa fa-check"></i><b>8.1.1</b> Solution by substitution and elimination</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#systems-of-equations-with-n-linear-equations"><i class="fa fa-check"></i><b>8.2</b> Systems of equations with <span class="math inline">\(n\)</span> linear equations</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="systems-of-linear-equations.html"><a href="systems-of-linear-equations.html#solving-systems-of-equations-with-m-linear-equations"><i class="fa fa-check"></i><b>8.2.1</b> Solving systems of equations with <span class="math inline">\(m\)</span> linear equations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html"><i class="fa fa-check"></i><b>9</b> Matrices and Basic Matrix Operations</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#matrices"><i class="fa fa-check"></i><b>9.1</b> Matrices</a></li>
+<li class="chapter" data-level="9.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#basic-matrix-operations"><i class="fa fa-check"></i><b>9.2</b> Basic matrix operations</a></li>
+<li class="chapter" data-level="9.3" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#economic-applications"><i class="fa fa-check"></i><b>9.3</b> Economic Applications</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#monthly-consumer-spending"><i class="fa fa-check"></i><b>9.3.1</b> Monthly consumer spending</a></li>
+<li class="chapter" data-level="9.3.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#regional-migration"><i class="fa fa-check"></i><b>9.3.2</b> Regional migration</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#transpose-of-a-matrix"><i class="fa fa-check"></i><b>9.4</b> Transpose of a matrix</a></li>
+<li class="chapter" data-level="9.5" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#determinant-and-inverse-of-a-matrix"><i class="fa fa-check"></i><b>9.5</b> Determinant and inverse of a matrix</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#more-on-the-determinant-of-a-matrixast"><i class="fa fa-check"></i><b>9.5.1</b> More on the Determinant of a Matrix<span class="math inline">\(^\ast\)</span></a></li>
+<li class="chapter" data-level="9.5.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#rank-and-determinantast"><i class="fa fa-check"></i><b>9.5.2</b> Rank and determinant<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html"><i class="fa fa-check"></i><b>10</b> Calculus with <span class="math inline">\(n\)</span> variables</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#continuity-of-a-function"><i class="fa fa-check"></i><b>10.1</b> Continuity of a function</a></li>
+<li class="chapter" data-level="10.2" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives"><i class="fa fa-check"></i><b>10.2</b> Partial derivatives</a></li>
+<li class="chapter" data-level="10.3" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#partial-derivatives-of-higher-order"><i class="fa fa-check"></i><b>10.3</b> Partial derivatives of higher order</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#the-gradient-vector-and-the-hessian-matrix"><i class="fa fa-check"></i><b>10.3.1</b> The gradient vector and the Hessian matrix</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#derivation-of-implicit-functionsast"><i class="fa fa-check"></i><b>10.4</b> Derivation of implicit functions<span class="math inline">\(^\ast\)</span></a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="calculus-with-n-variables.html"><a href="calculus-with-n-variables.html#contour-lines-indifference-curvesast"><i class="fa fa-check"></i><b>10.4.1</b> Contour lines / indifference curves<span class="math inline">\(^\ast\)</span></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="optimization-ii.html"><a href="optimization-ii.html"><i class="fa fa-check"></i><b>11</b> Optimization II</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="optimization-ii.html"><a href="optimization-ii.html#first-order-conditions"><i class="fa fa-check"></i><b>11.1</b> First-order conditions</a></li>
+<li class="chapter" data-level="11.2" data-path="optimization-ii.html"><a href="optimization-ii.html#second-order-conditions-1"><i class="fa fa-check"></i><b>11.2</b> Second-order conditions</a></li>
+<li class="chapter" data-level="11.3" data-path="optimization-ii.html"><a href="optimization-ii.html#optimization-under-constraints-lagrange-method"><i class="fa fa-check"></i><b>11.3</b> Optimization under constraints: Lagrange method</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathematics for Business and Economics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="calculus-with-n-variables" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Chapter 10</span> Calculus with <span class="math inline">\(n\)</span> variables<a href="calculus-with-n-variables.html#calculus-with-n-variables" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<script>
+function checkAnswer_mmc(q) {
+      const selectedOptions = document.querySelectorAll('input[name="option'+q.id+'"]:checked');
+      if (selectedOptions.length === 2) {
+        const userAnswers = Array.from(selectedOptions).map(option => option.value);
+        const correctAnswers = q.answer;
+        const isCorrect = userAnswers.every(answer => correctAnswers.includes(answer));
+
+if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select two options.';
+      }
+    }
+// numeric
+function generateQuestion_num(id) {
+      // Generate two random numbers between 2 and 10
+      const num1 = Math.floor(Math.random() * 10) + 2;
+      const num2 = Math.floor(Math.random() * 10) + 2;
+      const x1 = Math.floor(Math.random() * 10) + 2;
+      const x2 = Math.floor(Math.random() * 10) + 2;
+      const x3 = Math.floor(Math.random() * 100) + 2;
+      const x4 = Math.floor(Math.random() * 100) + 2;
+      const x5 = Math.floor(Math.random() * 100) + 2;
+      const x6 = Math.floor(Math.random() * 100) + 2;
+
+       // Calculate the correct answer
+      let answer = num1*Math.sqrt(x1) + num2*Math.sqrt(x2);
+
+      // Return the question and answer as an object
+      return {
+       // question: num1 + "\\(\\sqrt{x}+\\)"+ num2 + "\\(\\sqrt{y}\\)" + " for \\(x=\\)" + x1 + " and \\(y=\\)" + x2,
+        question: [num1,num2,x1,x2,x3,x4,x5,x6],
+        answer: answer,
+        id: id
+      };
+    }
+
+function checkAnswer_num(q) {
+      const userAnswer = document.getElementById('answer'+q.id).value;
+      const isCorrect = Math.round(parseFloat(userAnswer)*100)/100 === Math.round(q.answer*100)/100;
+
+      if (isCorrect) {
+        document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+      } else {
+        document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+      }
+  }
+
+// plain multiple choice
+  function checkAnswer_match(q) {
+      const selectedOption = document.querySelector('input[name="option'+q.id+'"]:checked');
+      if (selectedOption) {
+        const userAnswer = selectedOption.value;
+        const isCorrect = userAnswer === q.answer;
+
+        if (isCorrect) {
+          document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        } else {
+          document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
+        }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select an option.';
+      }
+    }
+</script>
+<p>So far in calculus we have looked at functions with one variable.</p>
+<!--![](images/introanalysisn.png)-->
+<p>However, application examples in linear algebra have already shown that typical problems involve functions of several variables. For example, a firm’s output level typically depends on several input variables.</p>
+<p>Therefore we extend the notions of continuity and differentiability to functions of several variables. This is the basis for the (constrained) optimization of functions of several variables.</p>
+<div id="continuity-of-a-function" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Continuity of a function<a href="calculus-with-n-variables.html#continuity-of-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>Let <span class="math inline">\(x = (x_1, ... , x_n)\)</span> be a point in <span class="math inline">\(\mathbb {R}^n\)</span> , and <span class="math inline">\(f (x) = f (x_1, ... , x_n ) = y\)</span> denote a function with <span class="math inline">\(n\)</span> variables.</p></li>
+<li><p>In the univariate case (<span class="math inline">\(n = 1\)</span>), it was sufficient to consider how the function approaches the point <span class="math inline">\(f (a)\)</span> from the right and from the left to determine whether <span class="math inline">\(f\)</span> is continuous at point <span class="math inline">\(a\)</span>:</p></li>
+</ul>
+<p><span class="math display">\[\lim_{ x\rightarrow a^-} f (x) = \lim_{x\rightarrow a^+} f (x) = f (a).\]</span></p>
+<ul>
+<li>In the multivariate case, there are infinitely many ways to approach <span class="math inline">\(f (a)\)</span> (see figure on the right).</li>
+</ul>
+<p><img src="images/stetign.png" /></p>
+<p>The definition of continuity for functions in <span class="math inline">\(\mathbb {R}\)</span> is: a function <span class="math inline">\(f : D\rightarrow \mathbb{R}\)</span> is continuous in <span class="math inline">\(a \in D\)</span> if for every sequence with <span class="math inline">\(\lim_{n\rightarrow\infty} x_n = a\)</span> applies: <span class="math inline">\(\lim_{n\rightarrow \infty} f (x_n) = f (a)\)</span>.</p>
+<p>That is, for every sequence whose subsequent terms are almost all “close” to <span class="math inline">\(a\)</span>, the associated function values are almost all “close” to <span class="math inline">\(f (a)\)</span>, where “close” is determined through the (Euclidean) distance <span class="math inline">\(|x_n − a|.\)</span></p>
+<p>In the multivariate case, continuity is defined analogously for a function in <span class="math inline">\(\mathbb {R}^n\)</span> by (again) taking the <strong>Euclidean distance</strong> as a basis:</p>
+<p><span class="math display">\[d(x,a)= \sqrt{ \sum_{i=1}^{n} (x_i-a_i)^2} = ||{\bf x}-{\bf a}||.\]</span></p>
+<ul>
+<li>Special case <span class="math inline">\(\mathbb{R}^2\)</span> :</li>
+</ul>
+<p><span class="math display">\[d(x,a)= \sqrt{ (x_1-a_1)^2 + (x_2-a_2)^2}.\]</span></p>
+<div class="definition">
+<p><span id="def:defcontn" class="definition"><strong>Definition 10.1  (Continuity of functions with n variables) </strong></span>A function <span class="math inline">\(f\)</span> in <span class="math inline">\(\mathbb {R}^n\)</span> is continuous at point <span class="math inline">\({\bf a} = (a_1,\ldots, a_n)^\top\)</span>, if for every <span class="math inline">\(\varepsilon&gt;0\)</span> there exists <span class="math inline">\(\delta&gt;0\)</span> such that from <span class="math inline">\(||{\bf x} - {\bf a}||&lt;\delta\)</span> follows <span class="math inline">\(||f({\bf x}) - f({\bf a})||&lt;\varepsilon.\)</span></p>
+</div>
+</div>
+<div id="partial-derivatives" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Partial derivatives<a href="calculus-with-n-variables.html#partial-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If a function has a continuous derivative, it is said to be <strong>differentiable</strong>. We now extend the concept of <strong>derivatives</strong> for functions <span class="math inline">\(f (x_1, ... , x_n)\)</span> in <span class="math inline">\(\mathbb {R}^n\)</span>.</p>
+<p>The (first) partial derivative of <span class="math inline">\(f\)</span> after the <span class="math inline">\(i\)</span>-th variable <span class="math inline">\(x_i\)</span> is obtained by deriving <span class="math inline">\(f\)</span> after <span class="math inline">\(x_i\)</span>, where the remaining variables <span class="math inline">\(x_1, ... , x_{i−1}, x_{i+1}, ... , x_n\)</span> are treated as constants.</p>
+<div class="definition">
+<p><span id="def:defpartderivative" class="definition"><strong>Definition 10.2  (Partial Derivative) </strong></span>Let <span class="math inline">\(f: \mathbb{R}^n \rightarrow \mathbb{R}\)</span> be differentiable in each variable. The (first) partial derivatives of <span class="math inline">\(f\)</span> for <span class="math inline">\(i = 1, ... , n\)</span> are given by:</p>
+<p><span class="math display">\[ \frac{ \partial f(x_1, ... x_n)}{ \partial x_i} =\lim_{ \Delta x_i \rightarrow 0} \frac{f(x_1, ... , x_{i-1} , x_i+ \Delta x_i, x_{i+1}, ... , x_n) -f(x_1, ... , x_n) }{ \Delta x_i }. \]</span></p>
+<p>Shorthand:</p>
+<p><span class="math display">\[\frac{ \partial f}{ \partial x_i } = f_{x_i}=f_i.\]</span></p>
+</div>
+<p>Since the partial derivatives are univariate derivatives, the usual derivation rules apply.</p>
+<p>In the bivariate case (two variables: <span class="math inline">\(n = 2\)</span>), i.e. <span class="math inline">\(f: \mathbb{R}^n \rightarrow \mathbb{R}\)</span>, the following applies:</p>
+<p><span class="math inline">\(f_{x_1}(x_1,x_2)= \frac{ \partial f(x_1, x_2)}{ \partial x_1} =\lim _{ \Delta x_1 \rightarrow 0} \frac{f(x_1, + \Delta x_1, x_{2} -f(x_1,x_2) }{ \Delta x_1 }\)</span> (partial derivative to <span class="math inline">\(x_1\)</span>)</p>
+<p><span class="math inline">\(f_{x_2}(x_1,x_2)= \frac{ \partial f(x_1, x_2)}{ \partial x_2} =\lim _{ \Delta x_2 \rightarrow 0} \frac{f(x_1,x_2 + \Delta x_2) -f(x_1,x_2) }{ \Delta x_2 }\)</span> (partial derivative with respect to <span class="math inline">\(x_2\)</span>)</p>
+<p>The following figure illustrates the partial derivatives:
+<img src="images/partialab.png" /></p>
+<details>
+<summary>
+Details
+</summary>
+<img src="images/partialabb.png" />
+</details>
+<div class="example">
+<p><span id="exm:partialab" class="example"><strong>Example 10.1  (Partial derivatives of a function of two variables) </strong></span>Let <span class="math inline">\(f (x_1,x_2) = x_1^2 x_2\)</span>.</p>
+<p>If <span class="math inline">\(x_2\)</span> is kept constant, then the function is quadratic in <span class="math inline">\(x_1\)</span> with the scaling factor <span class="math inline">\(x_2\)</span>.</p>
+<p>If <span class="math inline">\(x_1\)</span> is kept constant, then the function is linear in <span class="math inline">\(x_2\)</span> with slope <span class="math inline">\(x_1^2\)</span> .</p>
+<p>This is reflected in the partial derivatives:</p>
+<p><span class="math display">\[ f_{x_1}=\frac{ \partial f (x_1, x_2)}{ \partial x_1 } = 2x_1x_2, \]</span>
+<span class="math display">\[ f_{x_2}=\frac{ \partial f (x_1, x_2)}{ \partial x_2 } = x_1^2. \]</span></p>
+</div>
+<div class="exercise">
+<p><span id="exr:grenzprodn" class="exercise"><strong>Exercise 10.1  (marginal productivity) </strong></span>Determine and interpret the partial derivatives of the production function</p>
+<p><span class="math inline">\(f (L,K) = 10L^{1/2} K^{1/2}\)</span>.</p>
+Here <span class="math inline">\(L\)</span> represents the labor factor and <span class="math inline">\(K\)</span> the capital factor.
+<details>
+<summary>
+Answer
+</summary>
+<img src="images/grenzprod1.png" />
+</details>
+</div>
+<div id="qpartab" class="quiz">
+<p id="question">
+<span id="question-text19"></span>
+</p>
+<input type="number" id="answer19" placeholder="Enter your answer">
+<button onclick="checkAnswer_num(questionObj19)">Submit</button>
+<p id="result19">
+</p>
+<script>
+
+ // Generate a random question
+    const questionObj19 = generateQuestion_num(19);
+// Display the question
+    document.getElementById('question-text19').textContent = "For the function \\[f(x,y)=x^2y+"+questionObj19.question[0] + "y^2\\]" + " compute " + "\\[f_y(x,y)=\\frac{\\partial f}{\\partial y}\\]" + "in \\((x=0,y=" + questionObj19.question[1] + ")\\)";
+    questionObj19.answer = questionObj19.question[0]*2*questionObj19.question[1]
+</script>
+</div>
+<p>Partial derivatives <span class="math inline">\(\frac{\partial f}{\partial x_i}\)</span> depend in general on the values of the remaining variables <span class="math inline">\(x_1, \ldots , x_{i−1}, x_{i+1},\ldots, x_n\)</span>.</p>
+<p>Functions in the class of additive separable functions have the property that their partial derivatives are independent of the other variables.</p>
+<div class="definition">
+<p><span id="def:defsepfun" class="definition"><strong>Definition 10.3  (Additive separable functions) </strong></span>A function <span class="math inline">\(f (x_1, ... , x_n)\)</span> is <strong>additive separable</strong> if it can be written as follows:</p>
+<p><span class="math display">\[f (x_1, ... , x_n) = g_1 (x_1) + g_2 (x_2) + \ldots + g_n (x_n),\]</span></p>
+<p>where <span class="math inline">\(g_i\)</span> , <span class="math inline">\(i = 1, ... , n\)</span>, are univariate functions.</p>
+</div>
+<p>In the case of an additive separable function,</p>
+<p><span class="math display">\[\frac{\partial f}{\partial x_i} = g^\prime_i(x_i).\]</span></p>
+<div class="example">
+<p><span id="exm:nutzensep" class="example"><strong>Example 10.2  (Alex's utility function is an additive separable) </strong></span>Alex’s utility function, which we examined in the example <a href="index.html#exm:nutzenf">1.3</a>, is additive separable because:</p>
+<p><span class="math display">\[U(x,y) = \underbrace{\sqrt{x}}_{g(x)} + \underbrace{\sqrt{y}}_{g(y)}.\]</span></p>
+<p>Therefore:</p>
+<p><span class="math display">\[U_x(x,y) = U_x(x) = (\sqrt{x})^\prime = \frac 12(x)^{-\frac12} = \frac 12\cdot \frac 1{x^{ \frac12}} = \frac1{2\sqrt{x}}.\]</span></p>
+<p>and</p>
+<p><span class="math display">\[U_y(x,y) = U_y(y) = (\sqrt{y})^\prime = \frac1{2\sqrt{y}}.\]</span></p>
+</div>
+<p>The chain rule applies to partial derivatives.</p>
+<div class="theorem">
+<p><span id="thm:thmpketten" class="theorem"><strong>Theorem 10.1  (chain rule) </strong></span>Let <span class="math inline">\(f (x_1(t), x_2(t))\)</span> be an additive separable function whose variables <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> both depend on <span class="math inline">\(t\)</span> (e.g. time). Then:</p>
+<p><span class="math display" id="eq:kettenr">\[\begin{equation}
+\frac{df}{dt} =  \frac{\partial f}{\partial x_1} \frac{dx_1}{dt} +   \frac{ \partial f}{ \partial x_2 }  \frac{dx_2}{dt} \tag{10.1}
+\end{equation}\]</span></p>
+<details>
+<summary>
+Proof
+</summary>
+<span class="math display">\[\begin{align*}\frac{\text{d} f}{\text{d} t}
+     &amp; = \lim_{\Delta t\rightarrow 0} \frac{f(x_1(t+\Delta t),
+        x_2(t+\Delta t)) - f(x_1(t),x_2(t))} {\Delta t}\\
+      &amp;= \lim_{\Delta t\rightarrow 0} \frac{f(x_1(t+\Delta t),
+          x_2(t+\Delta t)) - f(x_1(t), x_2(t+\Delta t))}{\Delta t} \\
+        &amp; + \lim_{\Delta t\rightarrow 0} \frac{f(x_1(t),
+          x_2(t+\Delta t)) - f(x_1(t),x_2(t))} {\Delta
+          t}\\
+        &amp;= \lim_{\Delta t\rightarrow 0} \frac{f(x_1(t+\Delta t),
+          x_2(t+\Delta t)) - f(x_1(t), x_2(t+\Delta
+          t))}{\underbrace{\Delta x_1}_{=x_1(t+\Delta t)-x_1(t)}}
+        \frac{\Delta x_1}{\Delta t} \\[5pt]
+        &amp;\phantom{=\,} + \lim_{\Delta t\rightarrow 0} \frac{f(x_1(t),
+          x_2(t+\Delta t)) - f(x_1(t),x_2(t))}{\Delta x_2}
+        \frac{\Delta x_2}{\Delta t}\\
+        &amp;= \frac{\partial f}{\partial x_1}
+        \frac{\text{d} x_1}{\text{d}}+ \frac{\partial f}{\partial
+          x_2}\frac{\text{d} x_2}{\text{d} t}
+      \end{align*}\]</span>
+</details>
+</div>
+<div class="example">
+<p><span id="exm:pkettene" class="example"><strong>Example 10.3  (chain rule) </strong></span>Let <span class="math inline">\(f (x_1,x_2) = 3x_1 + 5x_2\)</span> with <span class="math inline">\(x_1(t) = t^2\)</span> and <span class="math inline">\(x_2(t) = 4t^3\)</span> .</p>
+<p>The chain rule gives</p>
+<p><span class="math inline">\(\frac{df}{dt} = 3\frac{ d t^2}{ \ dt} + 5\frac{d4t^3}{dt} =6t+60t^2\)</span></p>
+<p>The same result can be obtained by directly substituting the functions <span class="math inline">\(x_1(t)\)</span> and <span class="math inline">\(x_2(t)\)</span> into <span class="math inline">\(f\)</span> and then deriving them.</p>
+</div>
+<div class="example">
+<p><span id="exm:pkettee2" class="example"><strong>Example 10.4  (Chain rule for the utility function) </strong></span>If you want to consider the utility function from example <a href="index.html#exm:nutzenf">1.3</a> as a function of externalities/emissions (e.g. CO<span class="math inline">\(2\)</span>) that are associated with the consumption of the two goods, and given the emission functions:</p>
+<p><span class="math display">\[t(x) = \frac12x, x&gt;0; ~ t(y)=2y-1, y\geq 1\]</span></p>
+<p>one can derive the utility function according to the externality <span class="math inline">\(t\)</span> as follows:</p>
+<ul>
+<li><span class="math inline">\(x,y\)</span> as functions of <span class="math inline">\(t\)</span> (switch the emission functions to <span class="math inline">\(x,y\)</span>):</li>
+</ul>
+<p><span class="math display">\[x(t)=2t \text{ and } y(t)=\frac12(t+1).\]</span></p>
+<ul>
+<li>Use the above chain rule to derive <span class="math inline">\(U(x(t),y(t))\)</span> from <span class="math inline">\(t\)</span>:</li>
+</ul>
+<p><span class="math display">\[\begin{align}\frac{dU}{dt} &amp;= \color{blue}{\frac{\partial U}{\partial x}}\cdot \color{red}{\frac{dx}{ dt}} + \color{green}{\frac{\partial U}{\partial y}}\cdot \color{purple}{\frac{dy}{dt}}\\
+&amp;=\color{blue}{\frac1{2\sqrt{x}}}\cdot \color{red}{2} + \color{green}{\frac1{2\sqrt{y}}}\cdot \ color{purple}{\frac12}\\
+&amp;=\frac1{\sqrt{\underbrace{x}}_{=2t}} + \frac1{4\sqrt{\underbrace{y}}_{=0.5(t+1)}}\\
+&amp;=\frac1{\sqrt{2t}} + \frac1{4\sqrt{0.5(t+1)}}.
+\end{align}\]</span></p>
+</div>
+</div>
+<div id="partial-derivatives-of-higher-order" class="section level2 hasAnchor" number="10.3">
+<h2><span class="header-section-number">10.3</span> Partial derivatives of higher order<a href="calculus-with-n-variables.html#partial-derivatives-of-higher-order" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Analogous to the univariate case, partial derivatives of higher order are obtained by multiple derivations.</p>
+<div class="definition">
+<p><span id="def:defpartiellab2" class="definition"><strong>Definition 10.4  (Partial derivatives of the second order) </strong></span>Let <span class="math inline">\(f: \mathbb{R}^n \rightarrow \mathbb{R}\)</span> be a sufficiently differentiable function. The second order partial derivatives are given by:</p>
+<p><span class="math display">\[\frac{ \partial^2 f(x_1, \ldots, x_n)}{ \partial x_i \partial x_j} : = \frac{ \partial f_{x_i} (x_1, ..., x_n)}{ \partial x_j} ,\ \ \ i,j=1, ... , n.\]</span></p>
+<p>Shorthand:</p>
+<p><span class="math display">\[\frac{ \partial^2 f}{ \partial x_i \partial x_j} = f_{x_ix_j}=f_{ij}.\]</span></p>
+</div>
+<ul>
+<li><p>The number of second-order partial derivatives is <span class="math inline">\(n^2\)</span> and results from the number of combinations of <span class="math inline">\(i,j = 1, ... , n\)</span>.</p></li>
+<li><p>The derivatives <span class="math inline">\(f_{ij}, i \neq j\)</span>, are called <strong>cross derivatives</strong>.</p></li>
+</ul>
+<div class="example">
+<p><span id="exm:partab3" class="example"><strong>Example 10.5  (Partial derivatives of the second order) </strong></span>Let <span class="math inline">\(f: \mathbb{R}^2 \rightarrow \mathbb{R}\)</span>. The second order partial derivatives are given by:</p>
+<p><span class="math inline">\(f_{11}(x_1, x_2) = \frac{ \partial^2 f (x_1, x_2)}{ \partial x_1^2}\)</span></p>
+<p><span class="math inline">\(f_{12}(x_1, x_2) = \frac{ \partial^2 f (x_1, x_2)}{ \partial x_1\partial x_2}\)</span></p>
+<p><span class="math inline">\(f_{21}(x_1, x_2) = \frac{ \partial^2 f (x_1, x_2)}{ \partial x_2\partial x_1}\)</span></p>
+<p><span class="math inline">\(f_{22}(x_1, x_2) = \frac{ \partial^2 f (x_1, x_2)}{ \partial x_2^2}.\)</span></p>
+<p>For a function <span class="math inline">\(f(x_1,x_2)=x_1^2\cdot x_2\)</span>, the second order partial derivatives are given by:</p>
+<p><span class="math inline">\(f_{11} (x_1,x_2) = \frac{ \partial^2 f (x_1, x_2)}{ \partial x_1^2} = \frac{ \partial f_1 (x_1, x_2)}{ \partial x_1} = 2x_2,\)</span>
+<span class="math inline">\(f_{12} (x_1,x_2) = \frac{ \partial^2 f (x_1, x_2)}{ \partial x_1\partial x_2} = \frac{ \partial f_1 (x_1, x_2)}{ \partial x_2} = 2x_1,\)</span>
+<span class="math inline">\(f_{21} (x_1,x_2) = \frac{ \partial^2 f (x_1, x_2)}{ \partial x_2\partial x_1} = \frac{ \partial f_2 (x_1, x_2)}{ \partial x_1} = 2x_1,\)</span>
+<span class="math inline">\(f_{22} (x_1,x_2) = \frac{ \partial^2 f (x_1, x_2)}{ \partial x_2^2} = \frac{ \partial f_2 (x_1, x_2)}{ \partial x_2} = 0.\)</span></p>
+</div>
+<div id="qpartab2" class="quiz">
+<p id="question">
+<span id="question-text191"></span>
+</p>
+<input type="number" id="answer191" placeholder="Enter your answer">
+<button onclick="checkAnswer_num(questionObj191)">Submit</button>
+<p id="result191">
+</p>
+<script>
+
+ // Generate a random question
+    const questionObj191 = generateQuestion_num(191);
+// Display the question
+    document.getElementById('question-text191').textContent = "For the function \\[f(x,y)=x^2y+"+questionObj19.question[0] + "y^2\\]" + "compute" + "\\[f_{xy}(x,y)=\\frac{\\partial^2 f}{\\partial x\\partial y}\\]" + "in \\(x=" + questionObj191.question[1] + ",y=" + questionObj19.question[1] + "\\):"
+    questionObj191.answer = 2*questionObj191.question[1]
+</script>
+</div>
+<!--Die partiellen Ableitungen erster und zweiter Ordnung können in jeweils in einem Vektor und einer Matrix erfasst werden.-->
+<div id="the-gradient-vector-and-the-hessian-matrix" class="section level3 hasAnchor" number="10.3.1">
+<h3><span class="header-section-number">10.3.1</span> The gradient vector and the Hessian matrix<a href="calculus-with-n-variables.html#the-gradient-vector-and-the-hessian-matrix" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The first-order, resp. second-order partial derivatives are
+conveniently captured in vector, resp. matrix form.</p>
+<div class="definition">
+<p><span id="def:defgrad" class="definition"><strong>Definition 10.5  (Gradient vector) </strong></span>Let <span class="math inline">\(f:\mathbb R^n\rightarrow\mathbb R\)</span> be a differentiable function.
+The <strong>gradient vector</strong> is the vector of the first-order partial
+derivatives:
+<span class="math display">\[\begin{equation*}
+       \nabla f =
+       \begin{bmatrix}
+         f_1\\
+         f_2\\
+         \vdots\\
+         f_n
+       \end{bmatrix}
+       \quad\text{ or }\quad \nabla f^\top =
+       \begin{bmatrix}
+         f_1 &amp; f_2 &amp; \cdots &amp; f_n
+       \end{bmatrix}.
+     \end{equation*}\]</span></p>
+</div>
+<ul>
+<li>The operator <span class="math inline">\(\nabla\)</span>, an upside-down <span class="math inline">\(\Delta\)</span>, is called <strong>nabla</strong>.</li>
+<li>The term <strong>gradient</strong> refers to the elements of the vector
+indicating the <em>grade</em> or <em>steepness</em> of the function
+in each direction.</li>
+</ul>
+<div class="example">
+<p><span id="exm:gradientvec" class="example"><strong>Example 10.6  (Gradient Vector) </strong></span>Let <span class="math inline">\(f(x_1,x_2)=5-2x_1+3x_2\)</span>.</p>
+<ul>
+<li>The first derivatives are
+<span class="math display">\[\begin{equation*}
+       f_1=-2, \quad f_2=3.
+       \phantom{movethistotheleftmovemove}
+     \end{equation*}\]</span></li>
+<li>The gradient vector is
+<span class="math display">\[\begin{equation*}
+       \nabla f =
+       \begin{bmatrix}
+         -2\\
+         3
+       \end{bmatrix}
+     \end{equation*}\]</span></li>
+</ul>
+</div>
+<div class="definition">
+<p><span id="def:defhesse" class="definition"><strong>Definition 10.6  (Hessian matrix) </strong></span>Let <span class="math inline">\(f: \mathbb{R}^n \rightarrow \mathbb{R}\)</span> be a doubly differentiable function. The <strong>Hesse/ Hessian matrix</strong> contains the second-order partial derivatives:</p>
+<p><span class="math inline">\(H = \begin{bmatrix} f_{11} \ \ f_{12} \ \ ... \ \ f_{1n} \\ f_{21} \ \ f_{22} \ \ ... \ \ f_{2n} \\ ..\ \ .. \ \ .. \ \ .. \ \ .. \\ f_{n1} \ \ f_{n2} \ \ ... \ \ f_{nn} \end{bmatrix}\)</span></p>
+</div>
+<div class="example">
+<p><span id="exm:gundh" class="example"><strong>Example 10.7  (Gradient and Hessian matrix) </strong></span>Let <span class="math inline">\(f (x_1, x_2) = x_1^2 x_2\)</span>.</p>
+<p>The first partial derivatives (summarized as a vector, the so-called gradient) and the Hessian matrix are given as:
+<span class="math display">\[] G(x_1, x_2) =\nabla f=  \begin{bmatrix} 2x_1 \cdot x_2 \\ x_1^2   \end{bmatrix}  \]</span></p>
+<!--![](images/GH.png)-->
+<p><span class="math display">\[H(x_1, x_2) =  \begin{bmatrix} 2x_2 \ \ 2x_1 \\ 2x_1 \ \ 0  \ \  \end{bmatrix}.  \]</span></p>
+</div>
+<div class="theorem">
+<p><span id="thm:thmschwarz" class="theorem"><strong>Theorem 10.2  (Young's theorem, Schwarz's theorem) </strong></span>Let <span class="math inline">\(f (x_1, ... ,x_n)\)</span> be a function with continuous partial derivatives of first and second order. Then the order of differentiation in cross-derivatives is irrelevant.
+Formally:</p>
+<p><span class="math inline">\(f_{ij} = f_{ji}, \ \ i,j = 1, ... , n\)</span>.</p>
+</div>
+<p>It follows from Young’s theorem that the Hessian matrix is <strong>symmetric</strong>.</p>
+<div class="exercise">
+<p><span id="exr:grahes" class="exercise"><strong>Exercise 10.2  (The Gradient vector and the Hessian matrix) </strong></span>For the function <span class="math inline">\(f(x,y) = x^2 -5xy^2\)</span> compute the Gradient vector and the Hessian matrix.</p>
+<details>
+<summary>
+Answer
+</summary>
+The Gradiant vector is:
+<span class="math display">\[ G(x, y) =  \nabla f=\begin{bmatrix} f_x\\ f_y\end{bmatrix}=\begin{bmatrix} 2x- 5y^2\\ - 10xy  \end{bmatrix}.  \]</span>
+The Hessian matrix is:
+<span class="math display">\[H(x,y) =  \begin{bmatrix} f_{xx} &amp; f_{xy}\\ f_{yx}&amp; f_{yy}\end{bmatrix}=  \begin{bmatrix} 2 &amp; -10y\\ -10y &amp; -10x\end{bmatrix}.\]</span>
+</details>
+</div>
+</div>
+</div>
+<div id="derivation-of-implicit-functionsast" class="section level2 hasAnchor" number="10.4">
+<h2><span class="header-section-number">10.4</span> Derivation of implicit functions<span class="math inline">\(^\ast\)</span><a href="calculus-with-n-variables.html#derivation-of-implicit-functionsast" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>So far we always have functions in <strong>explicit form</strong>
+expressed, i.e. in the form
+<span class="math display">\[\begin{equation*}
+      y=F(x_1,\ldots,x_n).
+    \end{equation*}\]</span>
+In many economic problems, however, lies one
+functional relationship between two variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> in <strong>implicit form</strong>:
+<span class="math display">\[\begin{equation*}
+      F(x_1,\ldots,x_n,y)=0.
+    \end{equation*}\]</span>
+This equation defines the variable <span class="math inline">\(y\)</span> as <strong>implicit
+Function</strong> of the variables <span class="math inline">\(x_1,\ldots,x_n\)</span>, i.e. <span class="math inline">\(y=y(x_1,\ldots,x_n)\)</span>.</p>
+<p>In some cases it is possible to use an implicit function
+convert to an explicit function by rearranging;
+in many cases this is not possible (e.g.: <span class="math inline">\(F(x,y)=x^3 \text{e}^y - 2y \text{e}^x + 2=0\)</span>).</p>
+<p>Interestingly, in these cases, the derivative <span class="math inline">\(y&#39;(x)\)</span> can still be determined.</p>
+<div class="example">
+<p><span id="exm:implfun" class="example"><strong>Example 10.8  (Implicit functions) </strong></span></p>
+<ul>
+<li>Let <span class="math inline">\(F(x,y)=2y+4x-10=0\)</span>. Then: <span class="math inline">\(y=f(x)=5-2x\)</span>.</li>
+<li>Let <span class="math inline">\(F(x,y)=\text{e}^{x^2+y}-5=0\)</span>. Then: <span class="math inline">\(y=\ln(5)-x^2\)</span>.</li>
+<li>Let <span class="math inline">\(F(x,y)=x^2-3xy + y^3-7=0\)</span>. Then <span class="math inline">\(y=y(x)\)</span> can be determined numerically (see figure).</li>
+</ul>
+<p><img src="images/implfun.png" /></p>
+<ul>
+<li>It turns out that <span class="math inline">\(F(x,y)=0\)</span> is not necessarily a
+Function <span class="math inline">\(f:\mathbb R\rightarrow\mathbb R\)</span>, <span class="math inline">\(y=f(x)\)</span>, describes; the
+Function term is to be understood as “local”.</li>
+</ul>
+</div>
+<div class="example">
+<p><span id="exm:implizitgewinn" class="example"><strong>Example 10.9  (Profit maximization) </strong></span>We also consider a profit-maximizing company
+Production function <span class="math inline">\(y=f(x)\)</span>. A unit of input <span class="math inline">\(x\)</span>
+costs <span class="math inline">\(w\)</span> euros.</p>
+<ul>
+<li><p>At a price level of <span class="math inline">\(p\)</span> euro/unit, the profit is
+given as
+<span class="math display">\[\begin{equation*}
+      \Pi(x) = p\cdot f(x) - w\cdot x.
+    \end{equation*}\]</span></p></li>
+<li><p>At maximum profit applies:
+<span class="math display" id="eq:gew">\[\begin{equation}
+      p\, f^\prime(x) - w=0.\tag{10.2}
+    \end{equation}\]</span></p></li>
+<li><p>For exogenous variables <span class="math inline">\(p\)</span> and <span class="math inline">\(w\)</span>, the company chooses <span class="math inline">\(x\)</span> such that <a href="calculus-with-n-variables.html#eq:gew">(10.2)</a> holds.</p></li>
+<li><p>The possibility of <strong>implicit differentiation</strong>
+means that one does not rely on production functions
+where <a href="calculus-with-n-variables.html#eq:gew">(10.2)</a> is explicitly resolved, that is, <span class="math inline">\(x\)</span> can not be determined explicitly as a function of <span class="math inline">\(p\)</span> and <span class="math inline">\(w\)</span>.</p></li>
+</ul>
+</div>
+<div class="theorem">
+<p><span id="thm:thm1" class="theorem"><strong>Theorem 3.1  (Derivation of implicit functions) </strong></span>Let <span class="math inline">\(F(x,y)=c\)</span> be an implicit function with continuous derivatives of
+first-order in a neighborhood around <span class="math inline">\((x_0,y_0)\)</span>.
+If <span class="math inline">\(F_y(x_0,y_0)\not=0\)</span>, then there is a continuous
+function <span class="math inline">\(y=y(x)\)</span> defined on an interval <span class="math inline">\(I\)</span> around <span class="math inline">\(x_0\)</span> such that</p>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(F(x,y(x))=c\)</span> for all <span class="math inline">\(x\in I\)</span>,</p></li>
+<li><p><span class="math inline">\(y(x_0)=y_0\)</span>, and</p></li>
+<li><p>It applies
+<span class="math display" id="eq:impldif">\[\begin{equation}
+     y^\prime(x_0)= -\frac{F_x(x_0,y_0)} {F_y(x_0,y_0)}. \tag{10.3}
+   \end{equation}\]</span></p></li>
+</ol>
+</div>
+<ul>
+<li>Equation <a href="calculus-with-n-variables.html#eq:impldif">(10.3)</a> is calculated using the chain rule
+<a href="calculus-with-n-variables.html#eq:kettenr">(10.1)</a>:
+<span class="math display">\[\begin{equation*}
+   \frac{\partial}{\partial x} F(x_0,y(x_0))= F_x(x_0,y(x_0)) + F_y(x_0,y(x_0)) \cdot y^\prime(x_0),
+\end{equation*}\]</span>
+where the derivative is <span class="math inline">\(0\)</span> since the function
+<span class="math inline">\(F(x,y(x))\)</span> is constant in <span class="math inline">\(x\in I\)</span>.
+<!--
+% \begin{frame}
+%   \frametitle{Implicit differentiation}
+%   \begin{proof}
+%     \begin{itemize}
+%       \addtolength{\itemsep}{3pt} \setlength{\itemindent}{3pt}
+%     \item Let $F(x,y)=c$, and consider the first-order total
+%       differential (at $x_0,y_0$; omitted here for ease of notation):
+%       \begin{equation*}
+%         F_x\, \dd x + F_y\, \dd y=0. 
+%       \end{equation*}
+%       \vspace*{-\baselineskip}
+%     \item Rearranging gives
+%       \begin{equation*}
+%         \frac{\dd y}{\dd x} = -\frac{F_x}{F_y}. 
+%       \end{equation*}
+%     \end{itemize}
+%   \end{proof}
+% \end{frame}
+--></li>
+</ul>
+<div class="example">
+<p><span id="exm:impldif" class="example"><strong>Example 10.10  (Implicit Derivation) </strong></span>Look at the equation
+<span class="math display">\[\begin{equation*}
+        F(x,y)=x^2-3xy + y^3-7=0,
+      \end{equation*}\]</span>
+at point <span class="math inline">\((x_0,y_0)=(4,3).\)</span></p>
+<p>It applies
+<span class="math display">\[\begin{align*}
+          F_x (x,y)&amp;= 2x-3y\quad \text{and }
+                F_x(4,3)=-1,
+                \\
+          F_y (x,y)&amp;= -3x + 3y^2\quad \text{
+                and } F_y(4,3)=15.
+        \end{align*}\]</span>
+Since <span class="math inline">\(F_y\not=0\)</span> are the condition for the implicit
+Differentiation fulfilled and it applies
+<span class="math display">\[\begin{equation*}
+        f^\prime(x_0) = -\frac{F_x(x_0,y_0)} {F_y(x_0,y_0)} =
+        \frac{1}{15}.
+      \end{equation*}\]</span></p>
+</div>
+<!--
+% \begin{frame}
+%   \frametitle{Implizite Differenzierung}
+%   \begin{example}
+%     \begin{itemize}
+%       \addtolength{\itemsep}{2pt} \setlength{\itemindent}{3pt}
+%     \item Als Fortsetzung von Beispiel \ref{example:implicit}
+%       betrachten wir den Effekt einer Preissteigerung um $\Delta p$
+%       auf die Inputmenge $x$.
+%     \item Die profitmaximierende Wahl ist die implizite Funktion 
+%       \begin{equation*}
+%         p\, f^\prime(x(p))-w=0,
+%       \end{equation*}
+%       wobei die optimale Inputmenge $x$ vom Preis $p$ abh\"angt. 
+%     \item Implizite Differenzierung ergibt
+%       \begin{equation*}
+%         x^\prime(p) = -\frac{f^\prime(x(p))} {p\,
+%           f^{\prime\prime}(x(p))}. 
+%       \end{equation*}
+%       \vspace*{-\baselineskip}
+%     \item W\"ahlt man  $f(x)=x^{1/2}$,
+%       $p=10$, $w=1$, we have $x^\ast=25$ and with $p=10.01$ we find
+%       $x^\ast=25.05$, so that $\Delta x=0.05$. 
+%     \item On the other hand,
+%       $\displaystyle %
+%       \Delta x\approx x^\prime(p) \cdot \Delta p = \frac{x}{5}\cdot
+%         \Delta p = \frac{25}{5}\cdot 0.01=0.05$. 
+%     \end{itemize}
+%   \end{example}
+% \end{frame}
+
+
+% \begin{frame}
+%   \frametitle{Implicit differentiation}
+%   \begin{itemize}
+%   \item The Implicit Function Theorem can be generalised to functions
+%     of several variables. 
+%   \end{itemize}
+%   \begin{theorem}[Implicit Function Theorem]
+%         Let $F(x_1,\ldots, x_n,y)=c$ be an implicit function with
+%         continuous first 
+%     derivatives in some neighbourhood around $(x_1^0, x_2^0, \ldots,
+%     x_n^0,y_0)$. %
+%     If $F_y(x_1^0, \ldots, x_n^0,y_0)\not=0$, then there exists a
+%     continuous function 
+%     $y=f(x_1,\ldots,x_n)$ defined in a neighbourhood $I$ around
+%     $x^0=(x_1^0,\ldots, x_n^0)$ such
+%     that 
+%     \begin{enumerate}[(i)]
+%     \item $F(x,y(x))=0$ for all $x=(x_1,\ldots,x_n)\in I$,
+%     \item $f(x_0)=y_0$, and
+%     \item
+%       \begin{equation*}
+%         f_i(x_0)= -\frac{F_{x_i}(x_0,y_0)} {F_y(x_0,y_0)}. 
+%       \end{equation*}
+%     \end{enumerate}
+%   \end{theorem}
+% \end{frame}
+-->
+<div id="contour-lines-indifference-curvesast" class="section level3 hasAnchor" number="10.4.1">
+<h3><span class="header-section-number">10.4.1</span> Contour lines / indifference curves<span class="math inline">\(^\ast\)</span><a href="calculus-with-n-variables.html#contour-lines-indifference-curvesast" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Consider a function <span class="math inline">\(y=f(x_1,x_2)\)</span>. This can a production function, a utility function, or a cost function.
+Often it is useful to consider a certain function value that is achieved by different combinations of the input variables <span class="math inline">\((x_1,x_2)\)</span> (e.g. all
+consumption bundles of two goods that provide the same utility level, or all
+input combinations that provide the same production output):
+<span class="math display">\[\begin{equation*}
+      \{(x_1,x_2)|f(x_1,x_2)=y_0\}.
+    \end{equation*}\]</span>
+The graphical representation of such sets in the <span class="math inline">\(x_1\)</span>-<span class="math inline">\(x_2\)</span> coordinate system results in so-called <strong>contour lines</strong> or <strong>indifference curves</strong> (in the case of
+utility functions).
+Contour lines can also be created using the implicit
+differentiation.</p>
+<ul>
+<li>Let <span class="math inline">\(f(x_1,x_2)=2 x_1 + 3 x_2\)</span> describe a consumer utility.</li>
+<li>For any indifference curve, i.e. any curve such that the
+equation <span class="math inline">\(2 x_1+3 x_2=y\)</span> is satisfied for fixed <span class="math inline">\(y\)</span>,
+holds:
+<span class="math display">\[\begin{equation*}
+      \frac{\text{d} x_2}{\text{d} x_1} = -\frac{2}{3}.
+    \end{equation*}\]</span></li>
+</ul>
+<p><img src="images/indifkurven.png" /></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="matrices-and-basic-matrix-operations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="optimization-ii.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/10-analysisn.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
