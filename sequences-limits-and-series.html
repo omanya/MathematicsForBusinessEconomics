@@ -23,7 +23,7 @@
 <meta name="author" content="Maria Osipenko" />
 
 
-<meta name="date" content="2025-03-14" />
+<meta name="date" content="2025-04-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -233,6 +233,10 @@ if (isCorrect) {
         } else {
           document.getElementById('result'+q.id).textContent = `Sorry, incorrect.`;
         }
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Please select two options.';
+      }
+    }
 // numeric
 function generateQuestion_num(id) {
       // Generate two random numbers between 2 and 10
@@ -365,7 +369,7 @@ Answer
     };
 </script>
 <p class="question">
-Frage: <span id="question-text7"></span>
+<span id="question-text7"></span>
 </p>
 <div class="options">
 <p><label>
@@ -410,19 +414,16 @@ Submit
 <ul>
 <li><p>A sequence with a limit <strong>converges</strong>.</p></li>
 <li><p>A sequence that does not converge <strong>diverges</strong>.</p></li>
-<li><p>Notation: If the sequence <span class="math inline">\(a_n, n = 1,2, ...\)</span> converges to the limit <span class="math inline">\(a\)</span>, then we write:</p></li>
 </ul>
-<p><span class="math inline">\(\lim \limits_{n \rightarrow \infty } a_n=a\)</span> or</p>
-<p><span class="math inline">\(a_n \rightarrow a\)</span> for <span class="math inline">\(n \rightarrow \infty\)</span>.</p>
 <div id="convergent-sequences-and-their-limits" class="section level3 hasAnchor" number="3.2.1">
 <h3><span class="header-section-number">3.2.1</span> Convergent sequences and their limits<a href="sequences-limits-and-series.html#convergent-sequences-and-their-limits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="definition">
 <p><span id="def:defkonv" class="definition"><strong>Definition 3.2  (limit) </strong></span>The sequence <span class="math inline">\((a_n) _{n\in \mathbb N}\)</span> has the <strong>limit</strong> <span class="math inline">\(a \in \mathbb {R}\)</span>, if for each any <span class="math inline">\(\varepsilon &gt; 0\)</span> an index <span class="math inline">\(N\)</span> exists such that:</p>
 <p><span class="math inline">\(|a_n − a| &lt; \varepsilon\)</span>, for all <span class="math inline">\(n &gt; N\)</span>.</p>
 <p>A sequence with a limit is called <strong>convergent</strong>, and the limit is written as</p>
-<p><span class="math inline">\(\lim\limits_{n \rightarrow \infty } a_n=a\)</span>.</p>
-<p>or:</p>
-<p><span class="math inline">\(a_n \rightarrow a\)</span> for <span class="math inline">\(n \rightarrow \infty\)</span>.</p>
+<p><span class="math display">\[\lim \limits_{n \rightarrow \infty } a_n=a \]</span></p>
+<p>or</p>
+<p><span class="math display">\[a_n \rightarrow a\text{ for } n \rightarrow \infty.\]</span></p>
 </div>
 <div class="example">
 <p><span id="exm:grenzwert" class="example"><strong>Example 3.3  (Checking convergence) </strong></span>We examine the sequence <span class="math inline">\((a_n) _{n\in \mathbb N}\)</span> with <span class="math inline">\(a_n = 1/n\)</span>.</p>

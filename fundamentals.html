@@ -23,7 +23,7 @@
 <meta name="author" content="Maria Osipenko" />
 
 
-<meta name="date" content="2025-03-14" />
+<meta name="date" content="2025-04-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -292,11 +292,11 @@ function checkAnswer_num(q) {
 <div id="sets-and-number-sets" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Sets and Number Sets<a href="fundamentals.html#sets-and-number-sets" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In our utility maximization example, we considered which consumption options (<span class="math inline">\(x=\# donuts\)</span> and <span class="math inline">\(y= \# coffee\)</span>) that the student Alex can afford. As we have seen, there are several financeable consumption combinations <span class="math inline">\((x,y)\)</span>
-for Alex to choose from. It makes sense to consider those consumption options that meet certain criteria as a set. Alex will maximize his utility by selecting the consumption combination that brings him the maximum utility from this set of consumption bundles available to him.
-Doch was ist eine Menge und wie kann man sie definieren?</p>
+for Alex to choose from. It makes sense to consider those consumption options that meet certain criteria as a set. Alex will maximize his utility by selecting the consumption combination that brings him the maximum utility from this set of consumption bundles available to him.</p>
+<p>But what is a set and how can it be defined?</p>
 <div class="definition">
-<p><span id="def:def1" class="definition"><strong>Definition 2.1  (Sets) </strong></span>A set is a collection of objects, called elements. The set can be either a finite collection or an infinite collection of objects.</p>
-<p>The set can be specified through:</p>
+<p><span id="def:def1" class="definition"><strong>Definition 2.1  (Sets) </strong></span>A set is a collection of objects, called elements. A set can be either a finite collection or an infinite collection of objects.</p>
+<p>A set can be specified through:</p>
 <ul>
 <li>listing its elements using ” {” and ” }“, with the elements separated by commas (explicit representation):</li>
 </ul>
@@ -534,7 +534,7 @@ Example: <span class="math inline">\(\sqrt2\)</span> is irrational.</p>
 <p><span id="def:def5" class="definition"><strong>Definition 2.5  (Subsets on real numbers) </strong></span><br>The set <span class="math inline">\(\mathbb R_{++}\subset \mathbb R\)</span>
 contains the <strong>(strictly) positive numbers</strong>. The following applies:</p>
 <ol style="list-style-type: decimal">
-<li><span class="math inline">\(\mathbb R++\)</span> is closed under addition and multiplication.</li>
+<li><span class="math inline">\(\mathbb R_{++}\)</span> is closed under addition and multiplication.</li>
 <li>Exactly one of the following properties applies to each <span class="math inline">\(a\in\mathbb R\)</span>:
 <span class="math inline">\(a\in \mathbb R_{++}\)</span> or <span class="math inline">\(a=0\)</span> or <span class="math inline">\(−a\in \mathbb R_{++}\)</span>.</li>
 </ol>
@@ -545,7 +545,7 @@ contains the <strong>(strictly) positive numbers</strong>. The following applies
 <p><span id="def:def6" class="definition"><strong>Definition 2.6  (Inequalities) </strong></span><br>
 The strict inequality <span class="math inline">\(&gt;\)</span> and the weak inequality <span class="math inline">\(\geq\)</span> are defined as follows:</p>
 <ol style="list-style-type: decimal">
-<li><p>If <span class="math inline">\(a+b\in \mathbb R_{++}\)</span>, then <span class="math inline">\(a&gt;b\)</span></p></li>
+<li><p>If <span class="math inline">\(a-b\in \mathbb R_{++}\)</span>, then <span class="math inline">\(a&gt;b\)</span></p></li>
 <li><p>If <span class="math inline">\(−(a−b)\in \mathbb R_{++}\)</span>, then <span class="math inline">\(b&gt;a\)</span></p></li>
 <li><p>If <span class="math inline">\(a − b\in \mathbb R_+\)</span>, then <span class="math inline">\(a\geq b\)</span></p></li>
 <li><p>If <span class="math inline">\(−(a−b)\in \mathbb R_+\)</span>, then <span class="math inline">\(b\geq a\)</span>.</p></li>
@@ -751,7 +751,7 @@ Proof:
 </div>
 <div id="point-sets-in-mathbb-rn" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Point sets in <span class="math inline">\(\mathbb R^n\)</span><a href="fundamentals.html#point-sets-in-mathbb-rn" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Often one has the situation in which several objects or persons or their behavior have to be compared. The latter are represented by one or more values. We can always represent these individual values ​​from <span class="math inline">\(\mathbb R\)</span> or tuples of several values ​​from <span class="math inline">\(\mathbb R ^ 2, \mathbb R^3,\ldots\)</span> as points in the appropriate coordinate system. This makes it possible to determine the similarity of objects or people by measuring the distance between points.</p>
+<p>Often one has the situation in which several objects or persons or their characteristics have to be compared. The latter are represented by one or more values. We can always represent these individual values as points in <span class="math inline">\(\mathbb R\)</span> or tuples of several values as points in <span class="math inline">\(\mathbb R ^ 2, \mathbb R^3,\ldots\)</span> and visulaize as points in the appropriate coordinate system. This makes it possible to determine the similarity of objects or people by measuring the distance between points.</p>
 <ul>
 <li>The real line <span class="math inline">\(\mathbb {R}\)</span> is suitable if each object is described by only one number. This then marks a point on the number line:
 <br><img src="images/R1.png" /></li>
@@ -789,7 +789,7 @@ In the first case we would write the corresponding interval as <span class="math
 </div>
 <p>Accordingly, for <span class="math inline">\(a, b \in R, \ a &lt; b\)</span> one distinguishes:</p>
 <ul>
-<li><p>limited quantities:</p>
+<li><p>finite intervals:</p>
 <ul>
 <li><p>Closed interval: <span class="math inline">\(\left[ a, b \right] = \left\{ {x ∈ \mathbb{R} : a \leq x \leq b} \right\}\)</span></p></li>
 <li><p>Half-open interval:
@@ -797,7 +797,7 @@ In the first case we would write the corresponding interval as <span class="math
 <span class="math inline">\((a, \infty) = \left\{ {x \in \mathbb{R} : a &lt; x}\right\}\)</span></p></li>
 <li><p>Open interval: <span class="math inline">\((a, b) = \left\{ {x \in R : a &lt; x &lt; b}\right\}\)</span></p></li>
 </ul></li>
-<li><p>Unlimited quantities:</p>
+<li><p>infinite intervals:</p>
 <ul>
 <li>Unlimited interval
 <span class="math inline">\([a, ∞) = \left\{ {x \in \mathbb R : a \leq x}\right\}\)</span>
@@ -906,7 +906,7 @@ In the first case we would write the corresponding interval as <span class="math
 </ol>
 <details>
 <summary>
-Antwort
+Answer
 </summary>
 <p>
 1.<span class="math inline">\(\sqrt{(2-3)^2} = 1\)</span>
