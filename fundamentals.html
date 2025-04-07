@@ -23,7 +23,7 @@
 <meta name="author" content="Maria Osipenko" />
 
 
-<meta name="date" content="2025-04-02" />
+<meta name="date" content="2025-04-07" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -448,8 +448,8 @@ Answer
 <div class="exercise">
 <p><span id="exr:mengenop3" class="exercise"><strong>Exercise 2.3  (Alex's consumption set and budget) </strong></span><br>
 <img src="images/Alex.png" />
-<br>Alex’s consumption set is given as <span class="math inline">\(C=\{(x_1,x_2):x_1\geq 0,x_2\geq 0\}\)</span>.</p>
-<p>The corresponding budget constraint set for Alex is <span class="math inline">\(B=\{(x_1,x_2):p_1x_1+p_2x_2\leq M\}\)</span>,</p>
+<br>Alex’s consumption set is given as <span class="math inline">\(C=\{(x_1,x_2):0\leq x_1\leq 30,0\leq x_2\leq 40\}\)</span>.</p>
+<p>The corresponding budget constraint set for Alex is <span class="math inline">\(B=\{(x_1,x_2):2x_1+4x_2\leq 200\}\)</span>,</p>
 <p>where <span class="math inline">\(x_1,x_2\)</span> denotes the quantities of goods, <span class="math inline">\(p_1,p_2\)</span> the prices and <span class="math inline">\(M\)</span> the income.</p>
 <p>Illustrate the following quantities in a diagram:</p>
 <ul>
@@ -457,14 +457,11 @@ Answer
 <li><span class="math inline">\(B\cap C\)</span></li>
 </ul>
 <p>Interpret each of the sets.</p>
-<details>
-<summary>
-Answer
-</summary>
-<p>
-<img src="images/KonsumBudget.png" alt="" width="500" height="270" role="presentation" class="img-responsive atto_image_button_text-bottom">
-</p>
-</details>
+<!--<details>
+    <summary>Answer</summary>
+    <p><img src="images/KonsumBudget.png" alt="" width="500" height="270" role="presentation" class="img-responsive atto_image_button_text-bottom">
+    </p>
+</details>-->
 </div>
 </div>
 </div>
@@ -473,7 +470,7 @@ Answer
 <div class="definition">
 <p><span id="def:def4" class="definition"><strong>Definition 2.4  (Some number sets) </strong></span>The set of <strong>natural numbers</strong> is <span class="math inline">\(\mathbb N= \mathbb Z_+ = \{1,2,3,...\}\)</span></p>
 <p>The set of <strong>integers</strong> is <span class="math inline">\(\mathbb Z = \{...,−3,−2,−1,0,1,2,3,...\}\)</span></p>
-<p>The set of <strong>rational numbers</strong> is <span class="math inline">\(\mathbb Q=\{a,b:a\in \mathbb Z, b\in \mathbb Z\setminus\{0\}\}\)</span></p>
+<p>The set of <strong>rational numbers</strong> is <span class="math inline">\(\mathbb Q=\{\frac ab:a\in \mathbb Z, b\in \mathbb Z\setminus\{0\}\}\)</span></p>
 </div>
 <p>Properties:</p>
 <ul>
@@ -484,18 +481,18 @@ The following applies: <span class="math inline">\(\mathbb{N}\subset \mathbb{Z}\
 The set <span class="math inline">\(\mathbb {N}\)</span> is closed under addition and multiplication, i.e. for all <span class="math inline">\(a, b \in \mathbb {N}\)</span> the following applies: <span class="math inline">\(a + b \in \mathbb { N}\)</span>, <span class="math inline">\(a\in {N}\)</span>.
 </li>
 <li>
-The set <span class="math inline">\(\mathbb {Z}\)</span> is closed uncdot b addition, subtraction and multiplication, i.e. for all <span class="math inline">\(a, b \in \mathbb {Z}\)</span> the following applies: <span class="math inline">\(a + b \in \mathbb{Z}\)</span>, <span class="math inline">\(a - b \in \mathbb{Z}\)</span>,
+The set <span class="math inline">\(\mathbb {Z}\)</span> is closed under addition, subtraction and multiplication, i.e. for all <span class="math inline">\(a, b \in \mathbb {Z}\)</span> the following applies: <span class="math inline">\(a + b \in \mathbb{Z}\)</span>, <span class="math inline">\(a - b \in \mathbb{Z}\)</span>,
 <span class="math inline">\(a \cdot b \in\)</span> <span class="math inline">\(\mathbb {Z}\)</span>.
 </li>
 <li>
 The set <span class="math inline">\(\mathbb{Q}\)</span> is closed under addition, subtraction, multiplication and division (with the exception of division by 0), i.e. for all <span class="math inline">\(a, b \in \mathbb{Q}\)</span> , c <span class="math inline">\(\neq 0\)</span> holds: <br><span class="math inline">\(a + b \in \mathbb{Q}\)</span>, <span class="math inline">\(a - b \in \mathbb{Q}\)</span>, <span class="math inline">\(a \cdot b \in \mathbb {Q}\)</span>, <span class="math inline">\(a/c \in \mathbb {Q}\)</span>.
 </li>
 </ul>
-<p>examples</p>
+<p>Examples:</p>
 <ul>
-<li>The set <span class="math inline">\(\mathbb N\)</span>: number of employees in a company, number of customers in a company</li>
-<li>The quantity <span class="math inline">\(\mathbb Z\)</span>: Growth of customers or employees numbers (absolute)</li>
-<li>The quantity <span class="math inline">\(\mathbb Q\)</span>: Percentage of existing customers/employees working full-time</li>
+<li><span class="math inline">\(\mathbb N\)</span>: Number of employees in a company, number of customers in a company</li>
+<li><span class="math inline">\(\mathbb Z\)</span>: Change in customers or employees volumes (absolute)</li>
+<li><span class="math inline">\(\mathbb Q\)</span>: Percentage of existing customers/employees working full-time</li>
 </ul>
 <div class="exercise">
 <p><span id="exr:zahlen" class="exercise"><strong>Exercise 2.4  (Number sets) </strong></span>Show by counterexample that <span class="math inline">\(\mathbb N\)</span> is not closed under subtraction and division.</p>
@@ -562,7 +559,7 @@ The strict inequality <span class="math inline">\(&gt;\)</span> and the weak ine
 <p>Often one does not want to look at mere numbers, but rather at the <strong>deviations</strong> from a target value without considerring the direction of the deviation. In this case you need the amounts of these deviations.</p>
 <div class="definition">
 <p><span id="def:def7" class="definition"><strong>Definition 2.7  (Absolute value) </strong></span>The absolute value (also absolute value, “sign killer”) of <span class="math inline">\(x\in\mathbb R\)</span> is defined as</p>
-<p><span class="math inline">\(v=\begin{cases}x, &amp;\text{ if } x\geq 0,\\ -x, &amp;\text{ if } x&lt;0\end{cases}\)</span></p>
+<p><span class="math inline">\(|x|=\begin{cases}x, &amp;\text{ if } x\geq 0,\\ -x, &amp;\text{ if } x&lt;0\end{cases}\)</span></p>
 </div>
 <p>As an example, consider the deviations of monthly sales from the annual average:</p>
 <ul>
@@ -593,7 +590,7 @@ Proof:
       where: 'result3'
     };
      const questionObj31 = {
-      question: 'Which set of figures best describes the proportion of employees on parental leave?',
+      question: 'Which set of numbers best describes the proportion of employees on parental leave?',
       options: ['\\(\\mathbb N\\)','\\(\\mathbb Z\\)' ,'\\(\\mathbb Q\\)', '\\(\\mathbb R\\)', '\\(\\mathbb R_{++}\\)'],
       answer: '3',
       id: 31,
@@ -751,7 +748,7 @@ Proof:
 </div>
 <div id="point-sets-in-mathbb-rn" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Point sets in <span class="math inline">\(\mathbb R^n\)</span><a href="fundamentals.html#point-sets-in-mathbb-rn" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Often one has the situation in which several objects or persons or their characteristics have to be compared. The latter are represented by one or more values. We can always represent these individual values as points in <span class="math inline">\(\mathbb R\)</span> or tuples of several values as points in <span class="math inline">\(\mathbb R ^ 2, \mathbb R^3,\ldots\)</span> and visulaize as points in the appropriate coordinate system. This makes it possible to determine the similarity of objects or people by measuring the distance between points.</p>
+<p>Often one has the situation in which several objects or persons or their characteristics have to be compared. The latter are represented by one or more values. We can always represent these individual values as points in <span class="math inline">\(\mathbb R\)</span> or tuples of several values as points in <span class="math inline">\(\mathbb R ^ 2, \mathbb R^3,\ldots\)</span> and visualize as points in the appropriate coordinate system. This makes it possible to determine the similarity of objects or people by measuring the distance between points.</p>
 <ul>
 <li>The real line <span class="math inline">\(\mathbb {R}\)</span> is suitable if each object is described by only one number. This then marks a point on the number line:
 <br><img src="images/R1.png" /></li>
@@ -765,7 +762,7 @@ Proof:
 <br><img src="images/R2.png" /></li>
 </ul>
 <div class="example">
-<p><span id="exm:r2" class="example"><strong>Example 2.5  (Two dimensional real space) </strong></span>The consumers Alex, Tina and Amy are compared with regard to their account balance (<span class="math inline">\(x\)</span>) and the change in their consumer spending (<span class="math inline">\(y\)</span>) over the last month. Alex’s behavior is represented by the tuple (balance; change in consumer spending <span class="math inline">\(=(x;y)\)</span>) <span class="math inline">\((500; 300)\)</span>, Tinas by <span class="math inline">\((250; -200)\)</span> and Amy’s by <span class="math inline">\((-600; 200)\)</span> described.
+<p><span id="exm:r2" class="example"><strong>Example 2.5  (Two dimensional real space) </strong></span>The consumers Alex, Tina and Amy are compared with regard to their account balance (<span class="math inline">\(x\)</span>) and the change in their consumer spending (<span class="math inline">\(y\)</span>) over the last month. Alex’s behavior is represented by the tuple (balance; change in consumer spending <span class="math inline">\(=(x;y)\)</span>) <span class="math inline">\((500; 300)\)</span>, Tina’s by <span class="math inline">\((250; -200)\)</span> and Amy’s by <span class="math inline">\((-600; 200)\)</span> described.
 What do the different consumer behaviors of these consumers look like as points in the coordinate system?</p>
 </div>
 <ul>
