@@ -1,0 +1,337 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="-15 -10 328 328">
+ <title>Graphs of n vs E(T) in the coupon collector's problem</title>
+ <desc>Graphs of the number of coupons, n vs the expected number of tries to collect them, E(T) = ceiling(n H(n)) in the coupon collector's problem, drawn by CMG Lee.</desc>
+ <defs>
+  <path id="grid_x" d="M 0 0 V 300"/>
+  <path id="grid_y" d="M 0 0 H -2"/>
+  <g id="grid_x_5">
+   <use xlink:href="#grid_x" transform="translate(10,0)"/>
+   <use xlink:href="#grid_x" transform="translate(20,0)"/>
+   <use xlink:href="#grid_x" transform="translate(30,0)"/>
+   <use xlink:href="#grid_x" transform="translate(40,0)"/>
+   <use xlink:href="#grid_x" transform="translate(50,0)" stroke-opacity="0.5"/>
+  </g>
+  <g id="grid_y_5">
+   <use xlink:href="#grid_y"/>
+   <use xlink:href="#grid_y" transform="translate(0,10)"/>
+   <use xlink:href="#grid_y" transform="translate(0,20)"/>
+   <use xlink:href="#grid_y" transform="translate(0,30)"/>
+   <use xlink:href="#grid_y" transform="translate(0,40)"/>
+   <use xlink:href="#grid_y" transform="translate(0,50)" stroke-opacity="0.5"/>
+  </g>
+  <g id="grid" stroke="#000000" stroke-width="0.25" stroke-opacity="0.25">
+   <use xlink:href="#grid_y_5" transform="translate(0,50)"/>
+   <use xlink:href="#grid_y_5" transform="translate(0,100)"/>
+   <use xlink:href="#grid_y_5" transform="translate(0,150)"/>
+   <use xlink:href="#grid_y_5" transform="translate(0,200)"/>
+   <use xlink:href="#grid_y_5" transform="translate(0,250)"/>
+   <use xlink:href="#grid_y_5" transform="translate(0,300)"/>
+   <use xlink:href="#grid_y_5" transform="translate(0,350)"/>
+   <use xlink:href="#grid_y_5"/>
+   <use xlink:href="#grid_x_5"/>
+   <use xlink:href="#grid_x_5" transform="translate(50,0)"/>
+   <use xlink:href="#grid_x_5" transform="translate(100,0)"/>
+   <use xlink:href="#grid_x_5" transform="translate(150,0)"/>
+   <use xlink:href="#grid_x_5" transform="translate(200,0)"/>
+   <use xlink:href="#grid_x_5" transform="translate(250,0)"/>
+   <g stroke-opacity="0.75">
+    <use xlink:href="#grid_x"/>
+    <use xlink:href="#grid_y"/>
+   </g>
+   <g stroke="none" fill="#000000">
+    <g transform="translate(0,-1)">
+     <text x="0"   y="0">0</text>
+     <text x="50"  y="0">50</text>
+     <text x="100" y="0">100</text>
+     <text x="150" y="0">150</text>
+     <text x="200" y="0">200</text>
+     <text x="250" y="0">250</text>
+    </g>
+    <g font-style="italic">
+     <text x="290" y="-1">E(T)</text>
+     <text x="-8" y="313">n</text>
+    </g>
+   </g>
+  </g>
+ </defs>
+ <g font-family="sans-serif" font-size="9" letter-spacing="-1" text-anchor="middle" stroke-linejoin="round" fill="none">
+  <rect x="-4999" y="-4999" width="9999" height="9999" fill="#ffffff"/>
+  <use xlink:href="#grid"/>
+  <g font-style="italic" text-anchor="end" stroke-width="0.5" stroke-dasharray="1,1" fill="#000000">
+   <path d="M 0,0 L  61,305" stroke="#990000"/><text transform="translate( 61,305)" x="5" y="9" stroke="none">E(T)=n</text>
+   <path d="M 0,0 L 122,305" stroke="#ff0000"/><text transform="translate(122,305)" x="5" y="9" stroke="none">E(T)=2n</text>
+   <path d="M 0,0 L 183,305" stroke="#cc6600"/><text transform="translate(183,305)" x="5" y="9" stroke="none">E(T)=3n</text>
+   <path d="M 0,0 L 244,305" stroke="#ff9900"/><text transform="translate(244,305)" x="5" y="9" stroke="none">E(T)=4n</text>
+   <path d="M 0,0 L 305,305" stroke="#009900"/><text transform="translate(305,305)" x="5" y="9" stroke="none">E(T)=5n</text>
+  </g>
+  <g text-anchor="start" fill="#000000" stroke="#000000" stroke-opacity="0.25" stroke-width="4">
+
+  <text transform="translate(1,5) rotate(-30)" x="2" y="2" font-size="7" stroke="none">&#160;1</text>
+  <path d="M 1,5 H 0"/>
+  <text x="-2" y="10" dy="3" text-anchor="end" stroke="none">2</text>
+  <text transform="translate(3,10) rotate(-30)" x="2" y="2" font-size="7" stroke="none">3</text>
+  <path d="M 3,10 H 0"/>
+  <text transform="translate(6,15) rotate(-30)" x="2" y="2" font-size="7" stroke="none">&#160;6</text>
+  <path d="M 6,15 H 0"/>
+  <text x="-2" y="20" dy="3" text-anchor="end" stroke="none">4</text>
+  <text transform="translate(9,20) rotate(-30)" x="2" y="2" font-size="7" stroke="none">9</text>
+  <path d="M 9,20 H 0"/>
+  <text transform="translate(12,25) rotate(-30)" x="2" y="2" font-size="7" font-weight="bold" stroke="none">12</text>
+  <path d="M 12,25 H 0" stroke-opacity="0.5"/>
+  <text x="-2" y="30" dy="3" text-anchor="end" stroke="none">6</text>
+  <text transform="translate(15,30) rotate(-30)" x="2" y="2" font-size="7" stroke="none">15</text>
+  <path d="M 15,30 H 0"/>
+  <text transform="translate(19,35) rotate(-30)" x="2" y="2" font-size="7" stroke="none">19</text>
+  <path d="M 19,35 H 0"/>
+  <text x="-2" y="40" dy="3" text-anchor="end" stroke="none">8</text>
+  <text transform="translate(22,40) rotate(-30)" x="2" y="2" font-size="7" stroke="none">22</text>
+  <path d="M 22,40 H 0"/>
+  <text transform="translate(26,45) rotate(-30)" x="2" y="2" font-size="7" stroke="none">26</text>
+  <path d="M 26,45 H 0"/>
+  <text x="-2" y="50" dy="3" text-anchor="end" stroke="none">10</text>
+  <text transform="translate(30,50) rotate(-30)" x="2" y="2" font-size="7" font-weight="bold" stroke="none">30</text>
+  <path d="M 30,50 H 0" stroke-opacity="0.5"/>
+  <text transform="translate(34,55) rotate(-30)" x="2" y="2" font-size="7" stroke="none">34</text>
+  <path d="M 34,55 H 0"/>
+  <text x="-2" y="60" dy="3" text-anchor="end" stroke="none">12</text>
+  <text transform="translate(38,60) rotate(-30)" x="2" y="2" font-size="7" stroke="none">38</text>
+  <path d="M 38,60 H 0"/>
+  <text transform="translate(42,65) rotate(-30)" x="2" y="2" font-size="7" stroke="none">42</text>
+  <path d="M 42,65 H 0"/>
+  <text x="-2" y="70" dy="3" text-anchor="end" stroke="none">14</text>
+  <text transform="translate(46,70) rotate(-30)" x="2" y="2" font-size="7" stroke="none">46</text>
+  <path d="M 46,70 H 0"/>
+  <text transform="translate(50,75) rotate(-30)" x="2" y="2" font-size="7" font-weight="bold" stroke="none">50</text>
+  <path d="M 50,75 H 0" stroke-opacity="0.5"/>
+  <text x="-2" y="80" dy="3" text-anchor="end" stroke="none">16</text>
+  <text transform="translate(55,80) rotate(-30)" x="2" y="2" font-size="7" stroke="none">55</text>
+  <path d="M 55,80 H 0"/>
+  <text transform="translate(59,85) rotate(-30)" x="2" y="2" font-size="7" stroke="none">59</text>
+  <path d="M 59,85 H 0"/>
+  <text x="-2" y="90" dy="3" text-anchor="end" stroke="none">18</text>
+  <text transform="translate(63,90) rotate(-30)" x="2" y="2" font-size="7" stroke="none">63</text>
+  <path d="M 63,90 H 0"/>
+  <text transform="translate(68,95) rotate(-30)" x="2" y="2" font-size="7" stroke="none">68</text>
+  <path d="M 68,95 H 0"/>
+  <text x="-2" y="100" dy="3" text-anchor="end" stroke="none">20</text>
+  <text transform="translate(72,100) rotate(-30)" x="2" y="2" font-size="7" font-weight="bold" stroke="none">72</text>
+  <path d="M 72,100 H 0" stroke-opacity="0.5"/>
+  <text transform="translate(77,105) rotate(-30)" x="2" y="2" font-size="7" stroke="none">77</text>
+  <path d="M 77,105 H 0"/>
+  <text x="-2" y="110" dy="3" text-anchor="end" stroke="none">22</text>
+  <text transform="translate(82,110) rotate(-30)" x="2" y="2" font-size="7" stroke="none">82</text>
+  <path d="M 82,110 H 0"/>
+  <text transform="translate(86,115) rotate(-30)" x="2" y="2" font-size="7" stroke="none">86</text>
+  <path d="M 86,115 H 0"/>
+  <text x="-2" y="120" dy="3" text-anchor="end" stroke="none">24</text>
+  <text transform="translate(91,120) rotate(-30)" x="2" y="2" font-size="7" stroke="none">91</text>
+  <path d="M 91,120 H 0"/>
+  <text transform="translate(96,125) rotate(-30)" x="2" y="2" font-size="7" font-weight="bold" stroke="none">96</text>
+  <path d="M 96,125 H 0" stroke-opacity="0.5"/>
+  <text x="-2" y="130" dy="3" text-anchor="end" stroke="none">26</text>
+  <text transform="translate(101,130) rotate(-30)" x="2" y="2" font-size="7" stroke="none">101</text>
+  <path d="M 101,130 H 0"/>
+  <text transform="translate(106,135) rotate(-30)" x="2" y="2" font-size="7" stroke="none">106</text>
+  <path d="M 106,135 H 0"/>
+  <text x="-2" y="140" dy="3" text-anchor="end" stroke="none">28</text>
+  <text transform="translate(110,140) rotate(-30)" x="2" y="2" font-size="7" stroke="none">110</text>
+  <path d="M 110,140 H 0"/>
+  <text transform="translate(115,145) rotate(-30)" x="2" y="2" font-size="7" stroke="none">115</text>
+  <path d="M 115,145 H 0"/>
+  <text x="-2" y="150" dy="3" text-anchor="end" stroke="none">30</text>
+  <text transform="translate(120,150) rotate(-30)" x="2" y="2" font-size="7" font-weight="bold" stroke="none">120</text>
+  <path d="M 120,150 H 0" stroke-opacity="0.5"/>
+  <text transform="translate(125,155) rotate(-30)" x="2" y="2" font-size="7" stroke="none">125</text>
+  <path d="M 125,155 H 0"/>
+  <text x="-2" y="160" dy="3" text-anchor="end" stroke="none">32</text>
+  <text transform="translate(130,160) rotate(-30)" x="2" y="2" font-size="7" stroke="none">130</text>
+  <path d="M 130,160 H 0"/>
+  <text transform="translate(135,165) rotate(-30)" x="2" y="2" font-size="7" stroke="none">135</text>
+  <path d="M 135,165 H 0"/>
+  <text x="-2" y="170" dy="3" text-anchor="end" stroke="none">34</text>
+  <text transform="translate(141,170) rotate(-30)" x="2" y="2" font-size="7" stroke="none">141</text>
+  <path d="M 141,170 H 0"/>
+  <text transform="translate(146,175) rotate(-30)" x="2" y="2" font-size="7" font-weight="bold" stroke="none">146</text>
+  <path d="M 146,175 H 0" stroke-opacity="0.5"/>
+  <text x="-2" y="180" dy="3" text-anchor="end" stroke="none">36</text>
+  <text transform="translate(151,180) rotate(-30)" x="2" y="2" font-size="7" stroke="none">151</text>
+  <path d="M 151,180 H 0"/>
+  <text transform="translate(156,185) rotate(-30)" x="2" y="2" font-size="7" stroke="none">156</text>
+  <path d="M 156,185 H 0"/>
+  <text x="-2" y="190" dy="3" text-anchor="end" stroke="none">38</text>
+  <text transform="translate(161,190) rotate(-30)" x="2" y="2" font-size="7" stroke="none">161</text>
+  <path d="M 161,190 H 0"/>
+  <text transform="translate(166,195) rotate(-30)" x="2" y="2" font-size="7" stroke="none">166</text>
+  <path d="M 166,195 H 0"/>
+  <text x="-2" y="200" dy="3" text-anchor="end" stroke="none">40</text>
+  <text transform="translate(172,200) rotate(-30)" x="2" y="2" font-size="7" font-weight="bold" stroke="none">172</text>
+  <path d="M 172,200 H 0" stroke-opacity="0.5"/>
+  <text transform="translate(177,205) rotate(-30)" x="2" y="2" font-size="7" stroke="none">177</text>
+  <path d="M 177,205 H 0"/>
+  <text x="-2" y="210" dy="3" text-anchor="end" stroke="none">42</text>
+  <text transform="translate(182,210) rotate(-30)" x="2" y="2" font-size="7" stroke="none">182</text>
+  <path d="M 182,210 H 0"/>
+  <text transform="translate(188,215) rotate(-30)" x="2" y="2" font-size="7" stroke="none">188</text>
+  <path d="M 188,215 H 0"/>
+  <text x="-2" y="220" dy="3" text-anchor="end" stroke="none">44</text>
+  <text transform="translate(193,220) rotate(-30)" x="2" y="2" font-size="7" stroke="none">193</text>
+  <path d="M 193,220 H 0"/>
+  <text transform="translate(198,225) rotate(-30)" x="2" y="2" font-size="7" font-weight="bold" stroke="none">198</text>
+  <path d="M 198,225 H 0" stroke-opacity="0.5"/>
+  <text x="-2" y="230" dy="3" text-anchor="end" stroke="none">46</text>
+  <text transform="translate(204,230) rotate(-30)" x="2" y="2" font-size="7" stroke="none">204</text>
+  <path d="M 204,230 H 0"/>
+  <text transform="translate(209,235) rotate(-30)" x="2" y="2" font-size="7" stroke="none">209</text>
+  <path d="M 209,235 H 0"/>
+  <text x="-2" y="240" dy="3" text-anchor="end" stroke="none">48</text>
+  <text transform="translate(215,240) rotate(-30)" x="2" y="2" font-size="7" stroke="none">215</text>
+  <path d="M 215,240 H 0"/>
+  <text transform="translate(220,245) rotate(-30)" x="2" y="2" font-size="7" stroke="none">220</text>
+  <path d="M 220,245 H 0"/>
+  <text x="-2" y="250" dy="3" text-anchor="end" stroke="none">50</text>
+  <text transform="translate(225,250) rotate(-30)" x="2" y="2" font-size="7" font-weight="bold" stroke="none">225</text>
+  <path d="M 225,250 H 0" stroke-opacity="0.5"/>
+  <text transform="translate(231,255) rotate(-30)" x="2" y="2" font-size="7" stroke="none">231</text>
+  <path d="M 231,255 H 0"/>
+  <text x="-2" y="260" dy="3" text-anchor="end" stroke="none">52</text>
+  <text transform="translate(236,260) rotate(-30)" x="2" y="2" font-size="7" stroke="none">236</text>
+  <path d="M 236,260 H 0"/>
+  <text transform="translate(242,265) rotate(-30)" x="2" y="2" font-size="7" stroke="none">242</text>
+  <path d="M 242,265 H 0"/>
+  <text x="-2" y="270" dy="3" text-anchor="end" stroke="none">54</text>
+  <text transform="translate(248,270) rotate(-30)" x="2" y="2" font-size="7" stroke="none">248</text>
+  <path d="M 248,270 H 0"/>
+  <text transform="translate(253,275) rotate(-30)" x="2" y="2" font-size="7" font-weight="bold" stroke="none">253</text>
+  <path d="M 253,275 H 0" stroke-opacity="0.5"/>
+  <text x="-2" y="280" dy="3" text-anchor="end" stroke="none">56</text>
+  <text transform="translate(259,280) rotate(-30)" x="2" y="2" font-size="7" stroke="none">259</text>
+  <path d="M 259,280 H 0"/>
+  <text transform="translate(264,285) rotate(-30)" x="2" y="2" font-size="7" stroke="none">264</text>
+  <path d="M 264,285 H 0"/>
+  <text x="-2" y="290" dy="3" text-anchor="end" stroke="none">58</text>
+  <text transform="translate(270,290) rotate(-30)" x="2" y="2" font-size="7" stroke="none">270</text>
+  <path d="M 270,290 H 0"/>
+  <text transform="translate(276,295) rotate(-30)" x="2" y="2" font-size="7" stroke="none">276</text>
+  <path d="M 276,295 H 0"/>
+  <text x="-2" y="300" dy="3" text-anchor="end" stroke="none">60</text>
+  <text transform="translate(281,300) rotate(-30)" x="2" y="2" font-size="7" font-weight="bold" stroke="none">281</text>
+  <path d="M 281,300 H 0" stroke-opacity="0.5"/>
+  </g>
+ </g>
+</svg>
+
+<!-- Perl script to create above; please do not remove.
+#!/usr/bin/perl
+use strict;
+use POSIX;  # for floor()
+
+my $n_max = 60;
+my $out_graph = "";
+
+sub round { return floor($_[0] + 0.5); }
+
+for (my $n = 1; $n <= $n_max; ++$n) {
+ my $h = 0;
+ for (my $i = 1; $i <= $n; ++$i) { $h += 1 / $i; }
+ my $e = ceil($n * $h);
+ print "$n:$e\n";
+ my $x = $e;
+ my $y = $n * 5;
+ my $stroke = ($n % 5 == 0 ? qq` stroke-opacity="0.5"` : qq``);
+ my $bold   = ($n % 5 == 0 ? qq` font-weight="bold"`   : qq``);
+ my $pad    = ($n == 1 || $n == 3 ? qq`&#160;`         : qq``);
+ if ($n % 2 == 0) {
+  $out_graph .= qq`
+  <text x="-2" y="${y}" dy="3" text-anchor="end" stroke="none">${n}</text>`;
+ }
+ $out_graph .= qq`
+  <text transform="translate(${x},${y}) rotate(-30)" x="2" y="2" font-size="7"${bold} stroke="none">${pad}${e}</text>
+  <path d="M ${x},${y} H 0"${stroke}/>`;
+#  <text x="${x}" y="${y}" dx="2" dy="2" font-size="6" stroke="none">${e}</text>
+}
+
+my $double_dash = "-" . "-";
+my $file_out = $0; $file_out =~ s/[^\.]*$/svg/;
+open (FILE_OUT, ">$file_out");
+print FILE_OUT qq`<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="-15 -10 328 328">
+ <title>Graphs of n vs E(T) in the coupon collector's problem</title>
+ <desc>Graphs of the number of coupons, n vs the expected number of tries to collect them, E(T) = ceiling(n H(n)) in the coupon collector's problem, drawn by CMG Lee.</desc>
+ <defs>
+  <path id="grid_x" d="M 0 0 V 300"/>
+  <path id="grid_y" d="M 0 0 H -2"/>
+  <g id="grid_x_5">
+   <use xlink:href="#grid_x" transform="translate(10,0)"/>
+   <use xlink:href="#grid_x" transform="translate(20,0)"/>
+   <use xlink:href="#grid_x" transform="translate(30,0)"/>
+   <use xlink:href="#grid_x" transform="translate(40,0)"/>
+   <use xlink:href="#grid_x" transform="translate(50,0)" stroke-opacity="0.5"/>
+  </g>
+  <g id="grid_y_5">
+   <use xlink:href="#grid_y"/>
+   <use xlink:href="#grid_y" transform="translate(0,10)"/>
+   <use xlink:href="#grid_y" transform="translate(0,20)"/>
+   <use xlink:href="#grid_y" transform="translate(0,30)"/>
+   <use xlink:href="#grid_y" transform="translate(0,40)"/>
+   <use xlink:href="#grid_y" transform="translate(0,50)" stroke-opacity="0.5"/>
+  </g>
+  <g id="grid" stroke="#000000" stroke-width="0.25" stroke-opacity="0.25">
+   <use xlink:href="#grid_y_5" transform="translate(0,50)"/>
+   <use xlink:href="#grid_y_5" transform="translate(0,100)"/>
+   <use xlink:href="#grid_y_5" transform="translate(0,150)"/>
+   <use xlink:href="#grid_y_5" transform="translate(0,200)"/>
+   <use xlink:href="#grid_y_5" transform="translate(0,250)"/>
+   <use xlink:href="#grid_y_5" transform="translate(0,300)"/>
+   <use xlink:href="#grid_y_5" transform="translate(0,350)"/>
+   <use xlink:href="#grid_y_5"/>
+   <use xlink:href="#grid_x_5"/>
+   <use xlink:href="#grid_x_5" transform="translate(50,0)"/>
+   <use xlink:href="#grid_x_5" transform="translate(100,0)"/>
+   <use xlink:href="#grid_x_5" transform="translate(150,0)"/>
+   <use xlink:href="#grid_x_5" transform="translate(200,0)"/>
+   <use xlink:href="#grid_x_5" transform="translate(250,0)"/>
+   <g stroke-opacity="0.75">
+    <use xlink:href="#grid_x"/>
+    <use xlink:href="#grid_y"/>
+   </g>
+   <g stroke="none" fill="#000000">
+    <g transform="translate(0,-1)">
+     <text x="0"   y="0">0</text>
+     <text x="50"  y="0">50</text>
+     <text x="100" y="0">100</text>
+     <text x="150" y="0">150</text>
+     <text x="200" y="0">200</text>
+     <text x="250" y="0">250</text>
+    </g>
+    <g font-style="italic">
+     <text x="290" y="-1">E(T)</text>
+     <text x="-8" y="313">n</text>
+    </g>
+   </g>
+  </g>
+ </defs>
+ <g font-family="sans-serif" font-size="9" letter-spacing="-1" text-anchor="middle" stroke-linejoin="round" fill="none">
+  <rect x="-4999" y="-4999" width="9999" height="9999" fill="#ffffff"/>
+  <use xlink:href="#grid"/>
+  <g font-style="italic" text-anchor="end" stroke-width="0.5" stroke-dasharray="1,1" fill="#000000">
+   <path d="M 0,0 L  61,305" stroke="#990000"/><text transform="translate( 61,305)" x="5" y="9" stroke="none">E(T)=n</text>
+   <path d="M 0,0 L 122,305" stroke="#ff0000"/><text transform="translate(122,305)" x="5" y="9" stroke="none">E(T)=2n</text>
+   <path d="M 0,0 L 183,305" stroke="#cc6600"/><text transform="translate(183,305)" x="5" y="9" stroke="none">E(T)=3n</text>
+   <path d="M 0,0 L 244,305" stroke="#ff9900"/><text transform="translate(244,305)" x="5" y="9" stroke="none">E(T)=4n</text>
+   <path d="M 0,0 L 305,305" stroke="#009900"/><text transform="translate(305,305)" x="5" y="9" stroke="none">E(T)=5n</text>
+  </g>
+  <g text-anchor="start" fill="#000000" stroke="#000000" stroke-opacity="0.25" stroke-width="4">
+${out_graph}
+  </g>
+ </g>
+</svg>
+
+<!${double_dash} Perl script to create above; please do not remove.
+`;
+open (FILE_IN, $0);
+while (<FILE_IN>) { print FILE_OUT $_; }
+close FILE_IN;
+print FILE_OUT "# ${double_dash}>";
+close FILE_OUT;
+# -->

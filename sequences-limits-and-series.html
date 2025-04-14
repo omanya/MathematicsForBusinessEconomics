@@ -23,7 +23,7 @@
 <meta name="author" content="Maria Osipenko" />
 
 
-<meta name="date" content="2025-04-07" />
+<meta name="date" content="2025-04-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -296,7 +296,7 @@ function checkAnswer_num(q) {
 <div class="definition">
 <p><span id="def:deffolge" class="definition"><strong>Definition 3.1  (Sequence) </strong></span>A <strong>sequence</strong> is a function <span class="math inline">\(f : \mathbb N \rightarrow \mathbb {R}\)</span>.</p>
 </div>
-<p>In other words, it is a function whose domain is the natural numbers and whose domain is the real numbers.</p>
+<p>In other words, it is a function whose domain is the natural numbers and whose codomain is the real numbers.</p>
 <ul>
 <li><p>Notation: <span class="math inline">\(f(n),n= 1,2,3,...\)</span></p></li>
 <li><p>The following notation is also often used: <span class="math inline">\(({a}_{n}) _{i \in \mathbb{N} }\)</span>, where <span class="math inline">\(a_n=f(n)\)</span></p></li>
@@ -319,22 +319,22 @@ function checkAnswer_num(q) {
 <li><p><strong>New customers</strong>
 In a company, the monthly customer additions in the first quarter of 2022 are <span class="math inline">\(a_1=120,560, \ a_2=133,847\)</span> and <span class="math inline">\(a_3=123,432\)</span>. It is a finite sequence of numbers, with real numbers assigned to the months of January (1), February (2) and March (3).</p></li>
 <li><p><strong>Employees</strong>
-The number of employees increases monthly by <span class="math inline">\(2\)</span> %. Starting from March 2022 (<span class="math inline">\(a_0=128,432\)</span>), we then have the following sequence members (unrounded):
-<span class="math inline">\(a_1=128,432.00 \cdot 1.02 =131,000.64\)</span> (April)</p></li>
+The number of employees increases monthly by <span class="math inline">\(2\)</span> %. Starting from March 2022 (<span class="math inline">\(a_0=128432\)</span>), we then have the following sequence members (not rounded):
+<span class="math inline">\(a_1=128432 \cdot 1.02 =131000.64\)</span> (April)</p></li>
 </ul>
-<p><span class="math inline">\(a_2=131,000.64 \cdot 1.02 =133,620.65\)</span> (May)</p>
-<p><span class="math inline">\(a_3=133,620.65 \cdot 1.02 =136,293.07\)</span> (June)</p>
-<p>In this example we have the special feature that you can calculate the individual members of the sequence. The functional rule for the nth element of the sequence applies:</p>
-<p><span class="math inline">\(a_n=128,432 \times 1.02^n\)</span></p>
-<p>If we put <span class="math inline">\(n=3\)</span> (for the month of June), then we have <span class="math inline">\(128,432 \cdot 1.02^3\)</span>, i.e. <span class="math inline">\(136,293.07\)</span>. Such a sequence, which satisfies a functional rule, is also called a geometric sequence (see below). Note that a functional relationship cannot be specified for every sequence.</p>
+<p><span class="math inline">\(a_2=131000.64 \cdot 1.02 =133620.65\)</span> (May)</p>
+<p><span class="math inline">\(a_3=133620.65 \cdot 1.02 =136293.07\)</span> (June)</p>
+<p>In this example, we have the special feature that you can calculate the individual members of the sequence. The functional rule for the <span class="math inline">\(n\)</span>th element of the sequence applies:</p>
+<p><span class="math inline">\(a_n=128432 \times 1.02^n\)</span></p>
+<p>If we put <span class="math inline">\(n=3\)</span> (for the month of June), then we have <span class="math inline">\(128432 \cdot 1.02^3\)</span>, i.e. <span class="math inline">\(136293.07\)</span>. Such a sequence, which satisfies a functional rule, is also called a geometric sequence.</p>
 </div>
-<p>Auch reine Zahlenfolgen werden meist mittels einer Funktionsvorschrift angegeben.</p>
+<p>Pure numerical sequences are also usually specified using a function rule.</p>
 <div class="example">
 <p><span id="exm:folgen" class="example"><strong>Example 3.2  (Sequences of numbers) </strong></span><img src="images/folgen.png" /></p>
 </div>
 <p>Observations:</p>
 <ul>
-<li><p>The terms in the sequences <span class="math inline">\((1/n)_{n\in \mathbb N}\)</span> and <span class="math inline">\((-1/n)_{n\in \mathbb N}\)</span> approach zero; they have a limit.</p></li>
+<li><p>The terms in the sequences <span class="math inline">\((1/n)_{n\in \mathbb N}\)</span> and <span class="math inline">\((-1/n)_{n\in \mathbb N}\)</span> approach a fixed number (here zero); they have a limit.</p></li>
 <li><p>Although no element in the sequence takes on the value zero, the limit value is zero.</p></li>
 <li><p>The other two sequences do not approach any finite value.</p></li>
 </ul>
@@ -617,13 +617,13 @@ The sequence <span class="math inline">\({\displaystyle (a_{n})_{n\in \mathbb {N
 Limit value calculation
 </summary>
 <p>We start by looking at the denominator and finding the highest power of <span class="math inline">\(n\)</span> (here it is <span class="math inline">\(n^2\)</span>). Then we exclude <span class="math inline">\(n^2\)</span> from the numerator and denominator. (I.e. each summand is divided by <span class="math inline">\(n^2\)</span>):</p>
-<p><span class="math display">\[\lim _{n\rightarrow\infty}\frac{2n^2-4n+5}{6-5n^2+7n} = \lim _{n\rightarrow\infty}\frac{n^2\cdot\ left(\frac{2n^2}{n^2}-\frac{4n}{n^2}+\frac5{n^2}\right)}{n^2\cdot\left(\frac6{n ^2}-\frac{5n^2}{n^2}+\frac{7n}{n^2}\right)}.\]</span></p>
+<p><span class="math display">\[\lim_{n\rightarrow\infty}\frac{2n^2-4n+5}{6-5n^2+7n} = \lim_{n\rightarrow\infty}\frac{n^2\cdot\left(\frac{2n^2}{n^2}-\frac{4n}{n^2}+\frac5{n^2}\right)}{n^2\cdot\left(\frac6{n^2}-\frac{5n^2}{n^2}+\frac{7n}{n^2}\right)}.\]</span></p>
 <p>Now we reduce the individual fractions in the numerator and denominator as much as we can. <span class="math inline">\(n^2/n^2\)</span> in the large fraction can also be reduced:</p>
-<p><span class="math display">\[= \lim_{n\rightarrow\infty}\frac{n^2\cdot\left(2-\frac{4}{n}+\frac5{n^2}\right)}{n^2\ cdot\left(\frac6{n^2}-5+\frac{7}{n}\right)} = \lim_{n\rightarrow\infty}\frac{2-\frac{4}{n}+ \frac5{n^2}}{\frac6{n^2}-5+\frac{7}{n}}.\]</span></p>
+<p><span class="math display">\[= \lim_{n\rightarrow\infty}\frac{n^2\cdot\left(2-\frac{4}{n}+\frac5{n^2}\right)}{n^2\cdot\left(\frac6{n^2}-5+\frac{7}{n}\right)} = \lim_{n\rightarrow\infty}\frac{2-\frac{4}{n}+ \frac5{n^2}}{\frac6{n^2}-5+\frac{7}{n}}.\]</span></p>
 <p>In the next step, we apply <span class="math inline">\(\lim _{n\rightarrow\infty}\)</span> to each summand in the numerator and denominator individually:</p>
-<p><span class="math display">\[=\frac{\lim _{n\rightarrow\infty}\left(2-\frac{4}{n}+\frac5{n^2}\right)}{\lim _{n\rightarrow\infty} \left(\frac6{n^2}-5+\frac{7}{n}\right)} = \frac{\lim _{n\rightarrow\infty}2-\lim _{n\rightarrow\infty}\ frac{4}{n}+\lim _{n\rightarrow\infty}\frac5{n^2}}{\lim _{n\rightarrow\infty}\frac6{n^2}-\lim _{n\rightarrow\ infty}5+\lim_{n\rightarrow\infty}\frac{7}{n}}.\]</span></p>
+<p><span class="math display">\[=\frac{\lim _{n\rightarrow\infty}\left(2-\frac{4}{n}+\frac5{n^2}\right)}{\lim _{n\rightarrow\infty} \left(\frac6{n^2}-5+\frac{7}{n}\right)} = \frac{\lim _{n\rightarrow\infty}2-\lim _{n\rightarrow\infty}\frac{4}{n}+\lim _{n\rightarrow\infty}\frac5{n^2}}{\lim _{n\rightarrow\infty}\frac6{n^2}-\lim_{n\rightarrow\infty}5+\lim_{n\rightarrow\infty}\frac{7}{n}}.\]</span></p>
 <p>As we have seen, all sequences where a number is divided by <span class="math inline">\(n, n^2,n^3,\ldots\)</span> converge to zero as <span class="math inline">\(n\)</span> increases. Furthermore, the limit of a number is the number itself. Therefore:</p>
-<p><span class="math display">\[\frac{\overbrace{\lim _{n\rightarrow\infty}2}^{\rightarrow 2}-\overbrace{\lim _{n\rightarrow\infty}\frac{4}{n}}^{\ rightarrow0}+\overbrace{\lim _{n\rightarrow\infty}\frac5{n^2}}^{\rightarrow 0}}{\underbrace{\lim _{n\rightarrow\infty}\frac6{n^2} }_{\rightarrow 0}-\underbrace{\lim _{n\rightarrow\infty}5}_{\rightarrow 5}+\underbrace{\lim _{n\rightarrow\infty}\frac{7}{n}} _{\rightarrow0}} = \frac{2-0+0}{0-5+0} = -\frac25.\]</span></p>
+<p><span class="math display">\[\frac{\overbrace{\lim_{n\rightarrow\infty}2}^{\rightarrow 2}-\overbrace{\lim_{n\rightarrow\infty}\frac{4}{n}}^{\rightarrow 0}+\overbrace{\lim _{n\rightarrow\infty}\frac5{n^2}}^{\rightarrow 0}}{\underbrace{\lim _{n\rightarrow\infty}\frac6{n^2} }_{\rightarrow 0}-\underbrace{\lim _{n\rightarrow\infty}5}_{\rightarrow 5}+\underbrace{\lim _{n\rightarrow\infty}\frac{7}{n}} _{\rightarrow0}} = \frac{2-0+0}{0-5+0} = -\frac25.\]</span></p>
 <p>So the limit is:</p>
 <p><span class="math display">\[\lim_{n\rightarrow\infty}\frac{2n^2-4n+5}{6-5n^2+7n}=-\frac25.\]</span></p>
 </details>
@@ -637,19 +637,21 @@ Limit value calculation
 </summary>
 <p>Since the sequence contains the term <span class="math inline">\((-1)^n\)</span>, which takes the value either <span class="math inline">\(1\)</span> or <span class="math inline">\(-1\)</span> depending on whether <span class="math inline">\(n\)</span> is even or odd, we must Here we look at two subsequences: for <span class="math inline">\(n\)</span> even and odd. If the two subsequences have the same limit, then this limit will apply to the entire sequence according to theorem <a href="sequences-limits-and-series.html#thm:thmkonv3">3.4</a>.</p>
 <ul>
-<li><p>For <span class="math inline">\(n\)</span> even <span class="math inline">\((n=2k)\)</span> the corresponding subsequence is:
-<span class="math display">\[(-1)^{2k}\cdot\frac{4n^3}{5n^4-n^2} = \frac{4n^3}{5n^4-n^2}.\]</span>
-We calculate the limit as follows:
-<span class="math display">\[\begin{align}\lim _{n\rightarrow\infty}\frac{4n^3}{5n^4-n^2} &amp;= \lim _{n\rightarrow\infty}\frac{n^4\ cdot\frac{4n^3}{n^4}}{n^4\cdot\left(\frac{5n^4}{n^4}-\frac{n^2}{n^4}\right )}\\
-&amp;=\lim_{n\rightarrow\infty}\frac{n^4\cdot\frac{4}{n}}{n^4\cdot\left(5-\frac{1}{n^2}\ right)}=\lim_{n\rightarrow\infty}\frac{\overbrace{\frac{4}{n}}^{\rightarrow0}}{\underbrace{5}_{\rightarrow 5}-\underbrace{ \frac{1}{n^2}}_{\rightarrow 0}} = \frac0{5-0} = 0.
-\end{align}\]</span></p></li>
-<li><p>For <span class="math inline">\(n\)</span> odd <span class="math inline">\((n=2k+1)\)</span> the corresponding subsequence is:
-<span class="math display">\[(-1)^{2k+1}\cdot\frac{4n^3}{5n^4-n^2} = -\frac{4n^3}{5n^4-n^2}.\ ]
-We calculate the limit as follows:
-\[\begin{align}\lim _{n\rightarrow\infty}-\frac{4n^3}{5n^4-n^2} &amp;= \lim _{n\rightarrow\infty}-\frac{n^ 4\cdot\frac{4n^3}{n^4}}{n^4\cdot\left(\frac{5n^4}{n^4}-\frac{n^2}{n^4} \right)}\\
-&amp;=\lim_{n\rightarrow\infty}-\frac{\overbrace{\frac{4}{n}}^{\rightarrow0}}{\underbrace{5}_{\rightarrow 5}-\underbrace{\ frac{1}{n^2}}_{\rightarrow 0}} = -\frac0{5-0} = 0.
-\end{align}\]</span></p></li>
+<li>For <span class="math inline">\(n\)</span> even <span class="math inline">\((n=2k)\)</span> the corresponding subsequence is:
+<span class="math display">\[(-1)^{2k}\cdot\frac{4n^3}{5n^4-n^2} = \frac{4n^3}{5n^4-n^2}.\]</span></li>
 </ul>
+<p>We calculate the limit as follows:
+<span class="math display">\[\begin{align}\lim_{n\rightarrow\infty}\frac{4n^3}{5n^4-n^2} &amp;= \lim_{n\rightarrow\infty}\frac{n^4\cdot\frac{4n^3}{n^4}}{n^4\cdot\left(\frac{5n^4}{n^4}-\frac{n^2}{n^4}\right)}\\
+&amp;=\lim_{n\rightarrow\infty}\frac{n^4\cdot\frac{4}{n}}{n^4\cdot\left(5-\frac{1}{n^2}\right)}=\lim_{n\rightarrow\infty}\frac{\overbrace{\frac{4}{n}}^{\rightarrow0}}{\underbrace{5}_{\rightarrow 5}-\underbrace{ \frac{1}{n^2}}_{\rightarrow 0}} = \frac0{5-0} = 0.
+\end{align}\]</span></p>
+<ul>
+<li>For <span class="math inline">\(n\)</span> odd <span class="math inline">\((n=2k+1)\)</span> the corresponding subsequence is:
+<span class="math display">\[(-1)^{2k+1}\cdot\frac{4n^3}{5n^4-n^2} = -\frac{4n^3}{5n^4-n^2}.\]</span></li>
+</ul>
+<p>We calculate the limit as follows:
+<span class="math display">\[\begin{align}\lim_{n\rightarrow\infty}-\frac{4n^3}{5n^4-n^2} &amp;= \lim_{n\rightarrow\infty}-\frac{n^4\cdot\frac{4n^3}{n^4}}{n^4\cdot\left(\frac{5n^4}{n^4}-\frac{n^2}{n^4} \right)}\\
+&amp;=\lim_{n\rightarrow\infty}-\frac{\overbrace{\frac{4}{n}}^{\rightarrow 0}}{\underbrace{5}_{\rightarrow 5}-\underbrace{\frac{1}{n^2}}_{\rightarrow 0}} = -\frac0{5-0} = 0.
+\end{align}\]</span></p>
 The two subsequences therefore have the same limit <span class="math inline">\(0\)</span>. Consequently, the entire sequence converges to <span class="math inline">\(0\)</span> if <span class="math inline">\(n\rightarrow \infty\)</span>.
 </details>
 </div>
@@ -667,9 +669,9 @@ Limit value calculation
 &amp;= 3n
 \end{align}\]</span> results.</p>
 <p>We calculate:
-<span class="math display">\[\begin{align}\lim _{n\rightarrow\infty}{\sqrt{4n^2+3n}-{2n}} &amp;= \lim _{n\rightarrow\infty}\frac{\left(\sqrt {4n^2+3n}-{2n}\right)\left(\sqrt{4n^2+3n}+{2n}\right)}{\sqrt{4n^2+3n}+{2n}}\ \
+<span class="math display">\[\begin{align}\lim _{n\rightarrow\infty}{\sqrt{4n^2+3n}-{2n}} &amp;= \lim _{n\rightarrow\infty}\frac{\left(\sqrt {4n^2+3n}-{2n}\right)\left(\sqrt{4n^2+3n}+{2n}\right)}{\sqrt{4n^2+3n}+{2n}}\\
 &amp;=\lim_{n\rightarrow\infty}\frac{3n}{\sqrt{4n^2+3n}+{2n}} = \lim_{n\rightarrow\infty}\frac{3n}{\sqrt{ n^2(4+\frac3n)}+{2n}} \\
-&amp;= \lim _{n\rightarrow\infty}\frac{3n}{n\cdot\sqrt{4+\frac3n}+{2n}} = \lim _{n\rightarrow\infty}\frac{3n}{n \cdot\left(\sqrt{4+\frac3n}+{2}\right)}\\
+&amp;= \lim_{n\rightarrow\infty}\frac{3n}{n\cdot\sqrt{4+\frac3n}+{2n}} = \lim _{n\rightarrow\infty}\frac{3n}{n \cdot\left(\sqrt{4+\frac3n}+{2}\right)}\\
 &amp;=\lim_{n\rightarrow\infty}\frac{3}{\sqrt{4+\underbrace{\frac3n}_{\rightarrow0}}+{2}} = \frac{3}{\sqrt{4 +0}+2} = \frac 34.
 \end{align}\]</span></p>
 <p>In the second line of the equation we used: <span class="math inline">\(\sqrt{n^2(4+\frac3n)} = \sqrt{n^2}\cdot\sqrt{4+\frac3n} = n\cdot \sqrt{ 4+\frac3n}.\)</span></p>
@@ -719,10 +721,10 @@ Answer
 </summary>
 <ul>
 <li>
-For <span class="math inline">\(n\)</span> even (<span class="math inline">\(n=2k\)</span>) the corresponding subsequence <span class="math inline">\(({-1})^{2k+1}\frac{1}{2k} = -\frac{ 1}{{2k+1}}\)</span> according to theorem <a href="sequences-limits-and-series.html#thm:thmkonv">3.2</a> (ii) to <span class="math inline">\(0\)</span>.
+For <span class="math inline">\(n\)</span> even (<span class="math inline">\(n=2k\)</span>) the corresponding subsequence <span class="math inline">\(({-1})^{2k}\frac{1}{2k} = \frac{ 1}{{2k}}\)</span> converges according to theorem <a href="sequences-limits-and-series.html#thm:thmkonv">3.2</a> (ii) to <span class="math inline">\(0\)</span>.
 </li>
 <li>
-For <span class="math inline">\(n\)</span> odd (<span class="math inline">\(n=2k+1\)</span>) the corresponding subsequence <span class="math inline">\(({-1})^{2(k+1)}\frac{1}{{2k) converges +1}} = \frac{1}{{2k+1}}\)</span> according to theorem <a href="sequences-limits-and-series.html#thm:thmkonv">3.2</a> (ii) also converges to <span class="math inline">\(0\)</span>.
+For <span class="math inline">\(n\)</span> odd (<span class="math inline">\(n=2k+1\)</span>) the corresponding subsequence <span class="math inline">\(({-1})^{2(k+1)}\frac{1}{{2k+1}} = -\frac{1}{{2k+1}}\)</span> converges according to theorem <a href="sequences-limits-and-series.html#thm:thmkonv">3.2</a> (ii) also to <span class="math inline">\(0\)</span>.
 </li>
 <li>
 Therefore <span class="math inline">\(\lim\limits_{n \rightarrow \infty} ({-1})^{n+1}\cdot\frac{1}{n} =0\)</span> according to theorem <a href="sequences-limits-and-series.html#thm:thmkonv3">3.4</a>.
@@ -818,7 +820,7 @@ Show that <span class="math inline">\(a_n = 1/{2^n}\)</span> , <span class="math
 <summary>
 Answer
 </summary>
-The sequence <span class="math inline">\(a_n = \frac1{2^n}={\left(\frac 12\right)}^n\)</span> is bounded for <span class="math inline">\(n&gt;1\)</span> through <span class="math inline">\(\frac 12\)</span> from above and through <span class="math inline">\(0\)</span> is bounded from below (see properties of the power function). So the sequence is bounden by <span class="math inline">\(K=\frac 12\)</span> for <span class="math inline">\(n&gt;1\)</span>. In addition, <span class="math inline">\(a_{n+1}=\frac 1{2^{(n+1)}}=\frac 1{2^{n}\cdot 2} =a_n\cdot \frac 12\lt a_n\)</span> i.e. strictly monotonically decreasing. According to theorem <a href="sequences-limits-and-series.html#thm:monfolge">3.5</a> the sequence converges.
+The sequence <span class="math inline">\(a_n = \frac1{2^n}={\left(\frac 12\right)}^n\)</span> is bounded for <span class="math inline">\(n&gt;1\)</span> through <span class="math inline">\(\frac 12\)</span> from above and through <span class="math inline">\(0\)</span> from below (see properties of the power function). So the sequence is bounden by <span class="math inline">\(K=\frac 12\)</span> for <span class="math inline">\(n&gt;1\)</span>. In addition, <span class="math inline">\(a_{n+1}=\frac 1{2^{(n+1)}}=\frac 1{2^{n}\cdot 2} =a_n\cdot \frac 12\lt a_n\)</span> i.e. strictly monotonically decreasing. According to theorem <a href="sequences-limits-and-series.html#thm:monfolge">3.5</a> the sequence converges.
 </details>
 </div>
 <div class="exercise">
@@ -1013,7 +1015,7 @@ Let time <span class="math inline">\(T\)</span> be the number of draws needed to
 \end{align}\]</span></p>
 </li>
 </ul>
-<img src="images/coupon_collector_problem.svg" alt="By Cmglee - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=30224158" />
+<img src="images/Coupon_collector_problem.svg" alt="By Cmglee - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=30224158" />
 By Cmglee - Own work, CC BY-SA 3.0, <a href="https://commons.wikimedia.org/w/index.php?curid=30224158" class="uri">https://commons.wikimedia.org/w/index.php?curid=30224158</a>
 </details>
 </div>

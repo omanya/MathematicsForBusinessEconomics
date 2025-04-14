@@ -23,7 +23,7 @@
 <meta name="author" content="Maria Osipenko" />
 
 
-<meta name="date" content="2025-04-07" />
+<meta name="date" content="2025-04-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -448,9 +448,9 @@ Answer
 <div class="exercise">
 <p><span id="exr:mengenop3" class="exercise"><strong>Exercise 2.3  (Alex's consumption set and budget) </strong></span><br>
 <img src="images/Alex.png" />
-<br>Alex’s consumption set is given as <span class="math inline">\(C=\{(x_1,x_2):0\leq x_1\leq 30,0\leq x_2\leq 40\}\)</span>.</p>
-<p>The corresponding budget constraint set for Alex is <span class="math inline">\(B=\{(x_1,x_2):2x_1+4x_2\leq 200\}\)</span>,</p>
-<p>where <span class="math inline">\(x_1,x_2\)</span> denotes the quantities of goods, <span class="math inline">\(p_1,p_2\)</span> the prices and <span class="math inline">\(M\)</span> the income.</p>
+<br>Alex’s consumption set is given as <span class="math inline">\(C^\ast=\{(x_1,x_2):0\leq x_1\leq 30,0\leq x_2\leq 40\}\)</span>.</p>
+<p>The corresponding budget constraint set for Alex is <span class="math inline">\(B=\{(x_1,x_2):p_1x_1+p_2x_2\leq M\}\)</span>,</p>
+<p>where <span class="math inline">\(x_1,x_2\)</span> denotes the quantities of goods, <span class="math inline">\(p_1=2,p_2=4\)</span> the prices and <span class="math inline">\(M=200\)</span> the income.</p>
 <p>Illustrate the following quantities in a diagram:</p>
 <ul>
 <li><span class="math inline">\(B,C\)</span></li>
@@ -995,10 +995,10 @@ If <span class="math inline">\(\epsilon = 0.1\)</span> is set, then it is all po
 <p>where <span class="math inline">\(y\)</span> is called the image or the function value of <span class="math inline">\(f\)</span> at the position <span class="math inline">\(x\)</span>.</p>
 <div class="definition">
 <p><span id="def:definvfunction" class="definition"><strong>Definition 2.11  (Inverse function) </strong></span>Let <span class="math inline">\(f : X \rightarrow Y\)</span> with <span class="math inline">\(y = f (x)\)</span>.</p>
-<p>If each element <span class="math inline">\(y \in Y\)</span> is the image of exactly one point <span class="math inline">\(x \in X\)</span>, then the inverse function exists, written as <span class="math inline">\(f^{(−1)}\)</span>, and it satisfies the following equation : <span class="math display">\[ {f}^{-1} \ ( y )= x.\]</span></p>
+<p>If each element <span class="math inline">\(y \in Y\)</span> is the image of exactly one point <span class="math inline">\(x \in X\)</span>, then the inverse function exists, written as <span class="math inline">\(f^{−1}\)</span>, and it satisfies the following equation : <span class="math display">\[ {f}^{-1} \ ( y )= x.\]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:fun1" class="example"><strong>Example 2.11  (Function and its inverse) </strong></span>Let <span class="math inline">\(y = f (x) = {x}^{2}\)</span> with <span class="math inline">\(X = \mathbb{R^+}\)</span>. Then,
+<p><span id="exm:fun1" class="example"><strong>Example 2.11  (Function and its inverse) </strong></span>Let <span class="math inline">\(y = f (x) = {x}^{2}\)</span> with <span class="math inline">\(X = \mathbb{R_+}\)</span>. Then,
 <span class="math display">\[{f}^{-1} ( y ) = \sqrt{ y}, \]</span> because <span class="math inline">\(\sqrt{y} = \sqrt{x^2} = x\)</span>.</p>
 </div>
 <p>Let <span class="math inline">\(g : Y \rightarrow Z\)</span> be another function with <span class="math inline">\(z = g( y )\)</span>.</p>
@@ -1011,11 +1011,11 @@ If <span class="math inline">\(\epsilon = 0.1\)</span> is set, then it is all po
 </div>
 <div id="linear-functions" class="section level3 hasAnchor" number="2.4.1">
 <h3><span class="header-section-number">2.4.1</span> Linear Functions<a href="fundamentals.html#linear-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In the utility maximization example, Alex had the budget constraint <span class="math inline">\(x \cdot P_X + y \cdot P_Y = 100.\)</span>, which was expressed as a linear function <span class="math inline">\(y(x)=\frac{100}{P_Y}-\frac {P_X} {P_Y} x\)</span> could be represented.</p>
-<p>In addition, many cost functions can be modeled as linear functions of the quantities produced. In this case, the costs consist of a fixed amount <span class="math inline">\(b\)</span> and grow proportionally to the produced quantity <span class="math inline">\(x\)</span> with the factor <span class="math inline">\(b\)</span>, so that <span class="math inline">\(K(x) = ax+b\)</span> .</p>
+<p>In the utility maximization example, Alex had the budget constraint <span class="math inline">\(x \cdot P_X + y \cdot P_Y = 100,\)</span> which was expressed as a linear function <span class="math inline">\(y(x)=\frac{100}{P_Y}-\frac {P_X} {P_Y} \cdot x.\)</span></p>
+<p>In addition, cost functions can be modeled as linear functions of the quantities produced. In this case, the total production costs consist of a fixed amount <span class="math inline">\(b\)</span> and grow proportionally to the produced quantity <span class="math inline">\(x\)</span> with the factor <span class="math inline">\(a\)</span>, so that <span class="math inline">\(K(x) = ax+b\)</span> .</p>
 <div class="definition">
-<p><span id="def:deflin" class="definition"><strong>Definition 2.13  (Linear function) </strong></span>Let <span class="math inline">\(a, b\)</span> be real numbers. The function <span class="math inline">\(f : \mathbb{R} → \mathbb{R}\)</span> with</p>
-<p><span class="math inline">\(f (x) = a \cdot x + b\)</span>, <span class="math inline">\(x ∈ \mathbb{R}\)</span>,</p>
+<p><span id="def:deflin" class="definition"><strong>Definition 2.13  (Linear function) </strong></span>Let <span class="math inline">\(a, b\)</span> be real numbers. The function <span class="math inline">\(f : \mathbb{R} \rightarrow \mathbb{R}\)</span> with</p>
+<p><span class="math inline">\(f (x) = a \cdot x + b\)</span>, <span class="math inline">\(x \in \mathbb{R}\)</span>,</p>
 <p>is a <strong>linear function</strong>.</p>
 </div>
 <div class="example">
@@ -1024,7 +1024,7 @@ If <span class="math inline">\(\epsilon = 0.1\)</span> is set, then it is all po
 <img src="images/linfun.png" /></p>
 </div>
 <ul>
-<li><p>The parameter <span class="math inline">\(a\)</span> determines the gradient of the linear function.</p></li>
+<li><p>The parameter <span class="math inline">\(a\)</span> determines the gradient (derivative) of the linear function.</p></li>
 <li><p>Let <span class="math inline">\(y_1 = a \cdot x_1 + b\)</span>, <span class="math inline">\(y_2 = a \cdot x_2 + b\)</span>,
 it follows <span class="math inline">\(y_2 − y_1 = a\ (x_2 − x_1)\)</span>, so that <span class="math inline">\(a = \frac{y_2-y_1}{x_2-x_1} = \frac{\Delta y}{\Delta x} .\)</span> <span class="math inline">\(\Delta y\)</span> denotes the “change in <span class="math inline">\(y\)</span>”, <span class="math inline">\(\Delta x\)</span> denotes the “change in <span class="math inline">\(x\)</span>”.</p></li>
 <li><p>The ratio <span class="math inline">\(\Delta y/\Delta x\)</span> is the slope, <span class="math inline">\(a\)</span> is the slope coefficient.</p></li>
@@ -1034,14 +1034,14 @@ it follows <span class="math inline">\(y_2 − y_1 = a\ (x_2 − x_1)\)</span>, 
 <img src="images/linfunpar.png" /></p>
 <div class="example">
 <p><span id="exm:kostenf" class="example"><strong>Example 2.14  (Cost function and marginal cost function) </strong></span>The cost of a bicycle manufactory is €50,000 per month and €25 per bicycle.
-The cost function (in EUR) is <span class="math display">\[ C(q) = 50,000 + 25q \]</span></p>
+The cost function (in EUR) is <span class="math display">\[ C(q) = 50000 + 25q \]</span></p>
 <p>The marginal cost, i.e. the cost of producing an additional bike, is <span class="math display">\[C^\prime (q) = 25\]</span>
-Because of the linearity, the marginal cost is €25 independent of the production level/amount <span class="math inline">\(q\)</span> produced.</p>
+Because of the linearity, the marginal cost is €25 independent of the production level <span class="math inline">\(q\)</span> produced.</p>
 </div>
 </div>
 <div id="quadratic-functions" class="section level3 hasAnchor" number="2.4.2">
 <h3><span class="header-section-number">2.4.2</span> Quadratic Functions<a href="fundamentals.html#quadratic-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Some cost functions cannot be represented by a linear function. Then the costs grow disproportionately to the quantity. To describe such costs one then uses quadratic terms in the quantity produced.</p>
+<p>Some costs grow disproportionately to the quantity and, thus, cannot be represented by a linear function. To describe such costs one then uses quadratic terms in the quantity produced.</p>
 <div class="definition">
 <p><span id="def:defquadf" class="definition"><strong>Definition 2.14  (Quadatic function) </strong></span>Let <span class="math inline">\(a, b, c\)</span> be constant real numbers. A quadratic function has the form
 <span class="math display">\[ y = a \cdot x^2 + b \cdot x + c, ~~x \in \mathbb {R}, a \neq 0 \]</span></p>
@@ -1056,7 +1056,7 @@ Because of the linearity, the marginal cost is €25 independent of the producti
 It is more realistic to assume that greater output comes with additional costs. For example, increased demand can increase the price of commodities.
 This is captured by an additional term, e.g. <span class="math inline">\(0.001 q^2\)</span>. This term is very small for small <span class="math inline">\(q\)</span>, but grows strongly with increasing production level <span class="math inline">\(q\)</span>.
 Now the cost function is</p>
-<p><span class="math inline">\(C(q) = 50,000 + 25q + 0.001q^2\)</span>,</p>
+<p><span class="math inline">\(C(q) = 50000 + 25q + 0.001q^2\)</span>,</p>
 <p>with marginal costs</p>
 <p><span class="math inline">\(C^\prime (q) = 25 + 0.002q\)</span>.
 The marginal cost is €25.20 for a production of 100 bikes per week, rising to €45 for an increase in production to 10,000 bikes per week.</p>
@@ -1065,12 +1065,11 @@ The marginal cost is €25.20 for a production of 100 bikes per week, rising to 
 </div>
 <div id="power-exponential-and-logarithmic-functions" class="section level2 hasAnchor" number="2.5">
 <h2><span class="header-section-number">2.5</span> Power, exponential and logarithmic functions<a href="fundamentals.html#power-exponential-and-logarithmic-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Growth processes are usually neither linear nor quadratic in the variable time. Rapid growth well described using exponential and power functions.</p>
+<p>Growth processes are usually neither linear nor quadratic in the variable time. Rapid growth is well described using exponential and power functions.</p>
 <p>During the corona pandemic, the number of infections was monitored very closely. Suppose every infected person infects two more people per week. Then the growth looks like this:
-<img src="images/corona.gif" />
-At this point we need the definition and calculation rules for the exponents that can describe such a growth.</p>
-<p>We write <span class="math inline">\({a}^{n}\)</span> for the <span class="math inline">\(n-fold\)</span> product of a number <span class="math inline">\(a\)</span> with itself (<span class="math inline">\(n \in \mathbb{N}\)</span>). The number <span class="math inline">\(n\)</span> is called an exponent.</p>
-<p>This can be extended to <span class="math inline">\(n \in \mathbb{R}\)</span>.</p>
+<img src="images/corona.gif" /></p>
+<p>At this point we need the definition and calculation rules for the exponents that can describe such a growth.</p>
+<p>We write <span class="math inline">\({a}^{n}\)</span> for the <span class="math inline">\(n-fold\)</span> product of a number <span class="math inline">\(a\)</span> with itself (<span class="math inline">\(n \in \mathbb{N}\)</span>). The number <span class="math inline">\(n\)</span> is called an exponent. This can be extended to <span class="math inline">\(n \in \mathbb{R}\)</span>.</p>
 <div class="theorem" names="rules for exponents">
 <p><span id="thm:th2" class="theorem"><strong>Theorem 2.2  </strong></span><br/>
 <span class="math inline">\(a^n \cdot a^m = {a}^{n+m}\)</span></p>
@@ -1096,30 +1095,31 @@ At this point we need the definition and calculation rules for the exponents tha
 </div>
 <ul>
 <li><p>Exponential functions capture growth effects (e.g. populations, money).</p></li>
-<li><p>The Euler constant <span class="math inline">\(e = 2.718...\)</span> is often used as the basis. (more later)</p></li>
-<li><p>Note: The exponent is now the function variable.</p></li>
+<li><p>The Euler constant <span class="math inline">\(e = 2.718...\)</span> is often used as the basis (continuous growth).</p></li>
+<li><p>Note: The exponent is now the input variable to the function.</p></li>
 </ul>
-<p>Now if we want to invert an exponential function, e.g. to find out how many weeks it takes to reach a certain number of infected people, we use the <strong>logarithm function</strong>.</p>
+<p>Now, if we want to invert an exponential function, e.g. to find out how many weeks it takes to reach a certain number of infected people, we use the <strong>logarithm function</strong>.</p>
 <div class="definition">
 <p><span id="def:deflogfun" class="definition"><strong>Definition 2.17  (logarithm function) </strong></span>If <span class="math inline">\(x = b^y\)</span> , with <span class="math inline">\(b &gt; 0\)</span> and <span class="math inline">\(b \neq 1\)</span>, then <span class="math inline">\(y\)</span> is the logarithm of <span class="math inline">\(x\)</span> to the base <span class="math inline">\(b\)</span>, written as
 <span class="math inline">\(y = \log_b x\)</span>, <span class="math inline">\(x \in \mathbb{R}_+\)</span></p>
 <p><br>
 <img src="images/logfun.png" /></p>
 </div>
-<p>The logarithm to the base <span class="math inline">\(e (10)\)</span> is called the <strong>natural logarithm</strong> (<strong>decade logarithm</strong>), written as
-<span class="math inline">\(y = \ln \ x\)</span> <span class="math inline">\((y = \log \ x)\)</span>.</p>
+<p>The logarithm to the base <span class="math inline">\(e\)</span> is called the <strong>natural logarithm</strong> (for the base <span class="math inline">\(10\)</span> - <strong>decade logarithm</strong>), written as
+<span class="math inline">\(y = \ln \ x,\)</span> and <span class="math inline">\((y = \log \ x)\)</span> respectively.</p>
 <p>The logarithm of <span class="math inline">\(x\)</span> to the base <span class="math inline">\(b\)</span> answers the question:
 “How many times do you multiply <span class="math inline">\(b\)</span> by itself to get <span class="math inline">\(x\)</span>?”</p>
 <div class="theorem">
-<p><span id="thm:th2" class="theorem"><strong>Theorem 2.2  (rules for logarithms) </strong></span><span class="math inline">\(\log_b(xz) = \log_b\  x + \log_b\  z\)</span></p>
+<p><span id="thm:th2" class="theorem"><strong>Theorem 2.2  (rules for logarithms) </strong></span><br>
+<span class="math inline">\(\log_b(xz) = \log_b\  x + \log_b\  z\)</span></p>
 <p><span class="math inline">\(\log_b(x/z) = \log_b \ x − \log_b \ z\)</span></p>
 <p><span class="math inline">\(\log_b(x ^a) = a \ \log_b \ x\)</span></p>
 </div>
 <ul>
-<li><p>Remark: From the last property it follows that <span class="math inline">\(\log_b \ x = \ln \ x / \ln\ b\)</span> .
+<li><p>Remark: From the last property it follows that <span class="math display">\[\log_b \ x = \ln \ x / \ln\ b. \]</span>
 Because: If you set <span class="math inline">\(y = \frac{\ln\ x}{\ln\ b}\)</span> , then: <span class="math inline">\(\ln \ x = y \ \ln\ b = \ln(b^y )\)</span>.
 So <span class="math inline">\(b^y = x\)</span> and therefore <span class="math inline">\(y = \log_b x\)</span>.</p></li>
-<li><p>On the pocket calculator you can determine any logarithm using the natural logarithm.</p></li>
+<li><p>On the pocket calculator you can determine any logarithm using the natural logarithm representation above.</p></li>
 </ul>
 <div id="q3" class="quiz">
 <p>The world population is growing. This process can be modeled with the help of an exponential function (albeit very simplified).</p>
