@@ -89,7 +89,6 @@ def:defstetigkeitalg
 thm:thmsteteig
 thm:thmkomp
 def:deftangente
-exm:tangente
 def:ableitung
 def:differential
 exm:kosten
@@ -98,17 +97,11 @@ exm:differenzierbarkeit
 thm:thm1deffirenz
 def:defdiffint
 thm:thmregeln
-exm:grenzerl
-exm:durchkosten
-thm:thmlopital
-exr:lopital
 exm:ablhoh
 thm:thmconcon
-exm:taylor
 exm:taylorprofit
 thm:thmtaylor
 exm:taylorff
-exr:taylor
 def:defmaxmin
 thm:thmnbmaxmin
 exm:beo
@@ -166,7 +159,7 @@ exm:exaddsubmatrizen
 def:defskprodmatrizen
 exm:exmultsksubmatrizen
 def:defskalarprodukt
-fig:unnamed-chunk-51
+fig:unnamed-chunk-56
 exm:exkalarprodukt
 def:defnorm
 exm:exnorm
@@ -273,11 +266,9 @@ continuous-functions-and-their-properties
 differential-calculus
 definition-of-the-tangent-line
 secant-and-tangent-lines
-from-the-secant-to-the-tangent-line
 definition-of-the-derivative
 differentiability
 derivation-rules
-the-rule-of-lhôpital
 higher-order-derivatives
 taylors-theorem
 optimization

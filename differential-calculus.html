@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Differential calculus | Mathematics for Business and Economics</title>
   <meta name="description" content="Chapter 5 Differential calculus | Mathematics for Business and Economics" />
-  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Differential calculus | Mathematics for Business and Economics" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Maria Osipenko" />
 
 
-<meta name="date" content="2025-04-14" />
+<meta name="date" content="2025-05-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -129,14 +129,12 @@
 <li class="chapter" data-level="5.1" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-tangent-line"><i class="fa fa-check"></i><b>5.1</b> Definition of the tangent line</a>
 <ul>
 <li class="chapter" data-level="5.1.1" data-path="differential-calculus.html"><a href="differential-calculus.html#secant-and-tangent-lines"><i class="fa fa-check"></i><b>5.1.1</b> Secant and tangent lines</a></li>
-<li class="chapter" data-level="5.1.2" data-path="differential-calculus.html"><a href="differential-calculus.html#from-the-secant-to-the-tangent-line"><i class="fa fa-check"></i><b>5.1.2</b> From the secant to the tangent line</a></li>
 </ul></li>
 <li class="chapter" data-level="5.2" data-path="differential-calculus.html"><a href="differential-calculus.html#definition-of-the-derivative"><i class="fa fa-check"></i><b>5.2</b> Definition of the derivative</a></li>
 <li class="chapter" data-level="5.3" data-path="differential-calculus.html"><a href="differential-calculus.html#differentiability"><i class="fa fa-check"></i><b>5.3</b> Differentiability</a></li>
 <li class="chapter" data-level="5.4" data-path="differential-calculus.html"><a href="differential-calculus.html#derivation-rules"><i class="fa fa-check"></i><b>5.4</b> Derivation rules</a></li>
-<li class="chapter" data-level="5.5" data-path="differential-calculus.html"><a href="differential-calculus.html#the-rule-of-lhôpital"><i class="fa fa-check"></i><b>5.5</b> The rule of L’Hôpital</a></li>
-<li class="chapter" data-level="5.6" data-path="differential-calculus.html"><a href="differential-calculus.html#higher-order-derivatives"><i class="fa fa-check"></i><b>5.6</b> Higher order derivatives</a></li>
-<li class="chapter" data-level="5.7" data-path="differential-calculus.html"><a href="differential-calculus.html#taylors-theorem"><i class="fa fa-check"></i><b>5.7</b> Taylor’s theorem</a></li>
+<li class="chapter" data-level="5.5" data-path="differential-calculus.html"><a href="differential-calculus.html#higher-order-derivatives"><i class="fa fa-check"></i><b>5.5</b> Higher order derivatives</a></li>
+<li class="chapter" data-level="5.6" data-path="differential-calculus.html"><a href="differential-calculus.html#taylors-theorem"><i class="fa fa-check"></i><b>5.6</b> Taylor’s theorem</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="optimization.html"><a href="optimization.html"><i class="fa fa-check"></i><b>6</b> Optimization</a>
 <ul>
@@ -220,6 +218,7 @@
             <section class="normal" id="section-">
 <div id="differential-calculus" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Differential calculus<a href="differential-calculus.html#differential-calculus" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<script src="https://unpkg.com/mathjs@12.4.1/lib/browser/math.js"></script>
 <script>
 function checkAnswer_mmc(q) {
       const selectedOptions = document.querySelectorAll('input[name="option'+q.id+'"]:checked');
@@ -288,6 +287,58 @@ function checkAnswer_num(q) {
         document.getElementById('result'+q.id).textContent = 'Please select an option.';
       }
     }
+    
+    
+  // symbolic
+function generateQuestion_symb(id) {
+      // Generate two random numbers between 2 and 10
+      const num1 = Math.floor(Math.random() * 10) + 2;
+      const num2 = Math.floor(Math.random() * 10) + 2;
+      const x1 = Math.floor(Math.random() * 100) + 2;
+      const x2 = Math.floor(Math.random() * 100) + 2;
+      const x3 = Math.floor(Math.random() * 100) + 2;
+      const x4 = Math.floor(Math.random() * 100) + 2;
+      const x5 = Math.floor(Math.random() * 100) + 2;
+      const x6 = Math.floor(Math.random() * 100) + 2;
+
+       // Calculate the correct answer
+      let answer = "answer";
+      let symb = "x";
+
+      // Return the question and answer as an object
+      return {
+       // question: num1 + "\\(\\sqrt{x}+\\)"+ num2 + "\\(\\sqrt{y}\\)" + " for \\(x=\\)" + x1 + " and \\(y=\\)" + x2,
+        question: [num1,num2,x1,x2,x3,x4,x5,x6],
+        answer: answer,
+        symb: symb,
+        id: id
+      };
+    }
+  
+function checkAnswer_symb(q) {
+      const userAnswer = document.getElementById('answer'+q.id).value;
+      let xarr = Array(21).fill().map((element, index) => index - 10);
+
+      let isCorrect = true;
+      var i = 0;
+      while(isCorrect&i<=20){
+        var ansev = math.evaluate(userAnswer,{x: xarr[i], z: xarr[i], y: xarr[i], t:xarr[i], a:xarr[i], b:xarr[i],c:xarr[i]});//user answer
+        var corev = math.evaluate(q.answer,{x: xarr[i], z: xarr[i], y: xarr[i], t:xarr[i], a:xarr[i], b:xarr[i],c:xarr[i]});//correct answer
+        i = i+1;
+        if(math.compare(ansev, corev)!=0){
+          isCorrect = false;
+        }
+      }
+        
+  if (isCorrect) {
+        document.getElementById('result'+q.id).textContent = 'Congratulations! Your answer is correct.';
+        document.getElementById('result'+q.id).style.color = "green";
+      } else {
+        document.getElementById('result'+q.id).textContent = 'Sorry, incorrect. The right answer is: ' + q.answer + '.';
+        document.getElementById('result'+q.id).style.color = "red";
+      }
+  }
+
 </script>
 <p>The derivation of a function describes the change in one variable in response to the change in another variable.</p>
 <p>Examples in economics:</p>
@@ -330,9 +381,6 @@ For example, profit maximization: “A profit-maximizing firm increases its outp
 <p><span class="math inline">\({m}_{PQ}= \frac{f(x_2)-f(x_1)}{x_2-x_1}=: \frac{\triangle y}{ \triangle x}\)</span> ,</p>
 <p>where <span class="math inline">\(\Delta y = f (x_2) − f (x_1)\)</span> and <span class="math inline">\(\Delta x = x_2 − x_1\)</span>.</p>
 <p><img src="images/sekante.png" /></p>
-</div>
-<div id="from-the-secant-to-the-tangent-line" class="section level3 hasAnchor" number="5.1.2">
-<h3><span class="header-section-number">5.1.2</span> From the secant to the tangent line<a href="differential-calculus.html#from-the-secant-to-the-tangent-line" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ul>
 <li><p>Now fix <span class="math inline">\(P = (x_0,f (x_0))\)</span> and consider a sequence of values <span class="math inline">\(({x_n})_{n \in \mathbb{N}}\)</span>, which against <span class="math inline">\(x_0\)</span> converges.</p></li>
 <li><p>This is equivalent to the formulation that <span class="math inline">\(\Delta x_n = x_n − x_0\)</span> converges to <span class="math inline">\(0\)</span>.</p></li>
@@ -345,31 +393,39 @@ For example, profit maximization: “A profit-maximizing firm increases its outp
 <p><span class="math inline">\(m^* = \lim _{ \triangle x \rightarrow 0} \frac{f(x_0+ \triangle x) -f(x_0) }{ \triangle x}\)</span></p>
 <p>exists, then the straight line through <span class="math inline">\((x_0,f (x_0))\)</span> with slope <span class="math inline">\(m^*\)</span> is the <strong>tangent</strong> of <span class="math inline">\(f\)</span> at the point <span class="math inline">\(x_0.\)</span></p>
 </div>
-<div class="example">
-<p><span id="exm:tangente" class="example"><strong>Example 5.1  (secant and tangent) </strong></span>Let <span class="math inline">\(f (x) = x^2\)</span> , <span class="math inline">\(P = (2, 4)\)</span> and <span class="math inline">\(Q=(4, 16)\)</span>.</p>
-<ul>
-<li><p>One easily checks that <span class="math inline">\(\Delta x = 2\)</span> and <span class="math inline">\(\Delta y = 12\)</span>, so that the slope of the secants is <span class="math inline">\(\Delta y/\Delta x = 12/2 = 6\)</span>.</p></li>
-<li><p>If one chooses <span class="math inline">\(Q&#39; = (5,25)\)</span>, the secant slope is <span class="math inline">\(\Delta y/\Delta x = 21/3 = 7\)</span>.</p></li>
-<li><p>Now choose the sequence <span class="math inline">\(\Delta x_n = 1/n\)</span>, <span class="math inline">\(n \geq 1\)</span>.</p></li>
-<li><p>Then: <span class="math inline">\(\Delta x_n \rightarrow 0\)</span>, if <span class="math inline">\(n \rightarrow \infty\)</span>.</p></li>
-</ul>
-<p>For any point <span class="math inline">\(x\)</span> we determine the slope of the tangent:</p>
-<p><span class="math display">\[\begin{align*}\frac{f(x+ \triangle x_n)-f(x)}{ \triangle x_n}  &amp;= \frac{(x+1/n)^2-x^2}{1/n} \\
+<!--::: {.example #tangente name="secant and tangent"}
 
-&amp; = \frac{x^2+2x/n+1/n^2-x^2}{1/n}\\
-&amp;= 2x + \frac{1}{n},
-\end{align*}\]</span></p>
-<p>and</p>
-<p><span class="math inline">\(\lim_{ \triangle x \rightarrow 0} \frac{f(x+ \triangle x_n)-f(x)}{ \triangle x_n} = \lim_{n\rightarrow\infty}(2x+1/n) = 2x\)</span> (= the derivative of <span class="math inline">\(f(x)=x^2\)</span> ).</p>
-<p><img src="images/extangente.png" /></p>
-</div>
+Let \(f (x) = x^2\) , \(P = (2, 4)\) and \(Q=(4, 16)\).
+
+- One easily checks that \(\Delta x = 2\) and \(\Delta y = 12\), so that the slope of the secants is \(\Delta y/\Delta x = 12/2 = 6\).
+
+- If one chooses \(Q' = (5,25)\), the secant slope is \(\Delta y/\Delta x = 21/3 = 7\).
+
+- Now choose the sequence \(\Delta x_n = 1/n\), \(n \geq 1\).
+
+- Then: \(\Delta x_n \rightarrow 0\), if \(n \rightarrow \infty\).
+
+For any point \(x\) we determine the slope of the tangent:
+
+\begin{align*}\frac{f(x+ \triangle x_n)-f(x)}{ \triangle x_n}  &= \frac{(x+1/n)^2-x^2}{1/n} \\
+
+& = \frac{x^2+2x/n+1/n^2-x^2}{1/n}\\
+&= 2x + \frac{1}{n}, 
+\end{align*}
+
+and
+
+\( \lim_{ \triangle x \rightarrow 0} \frac{f(x+ \triangle x_n)-f(x)}{ \triangle x_n} = \lim_{n\rightarrow\infty}(2x+1/n) = 2x \) (= the derivative of \(f(x)=x^2\) ).
+
+![](images/extangente.png)
+:::-->
 </div>
 </div>
 <div id="definition-of-the-derivative" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Definition of the derivative<a href="differential-calculus.html#definition-of-the-derivative" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="definition">
 <p><span id="def:ableitung" class="definition"><strong>Definition 5.2  (Derivative) </strong></span>The <strong>derivative</strong> (the <strong>differential quotient</strong>) of a function <span class="math inline">\(f\)</span> at the point <span class="math inline">\(x\)</span>, written as <span class="math inline">\(f&#39; (x)\)</span>, is the slope of the tangent at that point:</p>
-<p><span class="math inline">\(f&#39;(x)= \lim_{ \triangle x \rightarrow 0 } \frac{f(x+ \triangle x) - f(x)}{ \triangle x}\)</span> .</p>
+<p><span class="math inline">\(f&#39;(x)=  \lim_{ \triangle x \rightarrow 0 } \frac{f(x+ \triangle x) - f(x)}{ \triangle x}\)</span> .</p>
 </div>
 <p>The so-called Leibniz notation of the derivative is <span class="math inline">\(f&#39;(x)= \frac{df(x)}{dx}\)</span>,</p>
 <p>where the differential operator <span class="math inline">\(d\)</span> expresses an infinitesimally small change.</p>
@@ -377,9 +433,9 @@ For example, profit maximization: “A profit-maximizing firm increases its outp
 <p><span id="def:differential" class="definition"><strong>Definition 5.3  (Differential) </strong></span>Let <span class="math inline">\(f\)</span> be a function with derivative <span class="math inline">\(f&#39;\)</span>. The <strong>differential</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(x\)</span> is
 <span class="math inline">\(df (x) = f &#39; (x) dx\)</span>.</p>
 </div>
-<p>The differential expresses that <span class="math inline">\(f\)</span> changes at the point <span class="math inline">\(x\)</span> approximately by <span class="math inline">\(f&#39; (x) dx\)</span>, where - to put it bluntly - <span class="math inline">\(dx\)</span> is an infinitesimal change of <span class="math inline">\(x\)</span> denotes and <span class="math inline">\(f&#39;\)</span> specifies the direction of change of <span class="math inline">\(f\)</span>.</p>
+<p>The differential expresses that <span class="math inline">\(f\)</span> changes at the point <span class="math inline">\(x\)</span> approximately by <span class="math inline">\(f&#39; (x) dx\)</span>, where <span class="math inline">\(dx\)</span> is an infinitesimal change of <span class="math inline">\(x\)</span> and <span class="math inline">\(f&#39;\)</span> specifies the direction of change of <span class="math inline">\(f\)</span>.</p>
 <div class="example">
-<p><span id="exm:kosten" class="example"><strong>Example 5.2  (Total cost and marginal cost) </strong></span>A firm’s total cost function <span class="math inline">\(y \mapsto C( y )\)</span> expresses costs as a function of the number <span class="math inline">\(y\)</span> units produced.</p>
+<p><span id="exm:kosten" class="example"><strong>Example 5.1  (Total cost and marginal cost) </strong></span>A firm’s total cost function <span class="math inline">\(y \mapsto C( y )\)</span> expresses costs as a function of the number <span class="math inline">\(y\)</span> units produced.</p>
 <ul>
 <li><p>The ratio <span class="math inline">\(\frac{ \triangle C}{ \triangle y} = \frac{C(y+ \triangle y) - C( y )}{ \triangle y}\)</span> reflects the average additional cost per unit if additional <span class="math inline">\(\Delta y\)</span> units are produced.</p></li>
 <li><p>The limit of this ratio when <span class="math inline">\(\Delta y \rightarrow 0\)</span>, is the instantaneous rate of change; in economics, this rate represents the marginal cost (or marginal cost):
@@ -405,7 +461,7 @@ For example, profit maximization: “A profit-maximizing firm increases its outp
 <p>If <span class="math inline">\(f\)</span> is differentiable in <span class="math inline">\(x\)</span>, then the <strong>left derivative</strong> and the <strong>right derivative</strong> exist and take the same value:</p>
 <p><span class="math inline">\(\lim_{ \triangle x \uparrow 0 \ } \frac{ f(x+ \triangle x)-f(x)}{ \triangle x } = \lim_{ \triangle x \downarrow 0 \ } \frac{ f(x+ \triangle x)-f(x)}{ \triangle x }\)</span>.</p>
 <div class="example">
-<p><span id="exm:differenzierbarkeit" class="example"><strong>Example 5.3  (Differentiability) </strong></span>We consider the function <span class="math inline">\(f(x)=\begin{cases} x, &amp;if~ x&lt;1 \\ 2-x, &amp;if \ x \geq 1 \end{cases}\)</span>.</p>
+<p><span id="exm:differenzierbarkeit" class="example"><strong>Example 5.2  (Differentiability) </strong></span>We consider the function <span class="math inline">\(f(x)=\begin{cases} x, &amp;if~ x&lt;1 \\ 2-x, &amp;if \ x \geq 1 \end{cases}\)</span>.</p>
 <p>Although the function is continuous at the point <span class="math inline">\(x = 1\)</span>, it is not differentiable at this point.</p>
 <p>Because: At the point <span class="math inline">\(x = 1\)</span> applies
 <span class="math inline">\(\lim_{ \triangle x \uparrow 0 } \frac{ f(1+ \triangle x)-f(1)}{ \triangle x } = \lim_{ \triangle x \uparrow 0 } \frac{ 1+ \triangle x-1 }{ \triangle x } =1\)</span></p>
@@ -584,7 +640,8 @@ For the inverse we use <span class="math inline">\(y=f(x)\)</span> and get with
 For the derivative of the logarithm, first note that
 that
 <span class="math inline">\(\ln (a^x)=x\cdot \ln(a)\)</span>, <span class="math inline">\(\ln(a/b)=\ln (a)-\ln (b)\)</span> and that
-<span class="math inline">\(\displaystyle \lim_{n\rightarrow \infty}  \left(1+\frac{x}{n}\right)^n=\text{e}^x\)</span>. Then:
+<span class="math inline">\(\displaystyle \lim_{n\rightarrow \infty}
+      \left(1+\frac{x}{n}\right)^n=\text{e}^x\)</span>. Then:
 <span class="math display">\[\begin{equation*}
         \ln^\prime(x)%
         = \frac{\ln(x+\Delta x)-\ln (x)} {\Delta x} %
@@ -607,96 +664,207 @@ that
         \left(\ln(\text{e}^x)\right)^\prime = x^\prime=1,
       \end{equation*}\]</span>
 and therefore, by applying the chain rule:
-<span class="math inline">\(\left(\ln\text{e}^x\right)^\prime=\frac{1}{\text{e}^x} (\text{e}^x)^\prime  =1,\)</span>
+<span class="math inline">\(\left(\ln\text{e}^x\right)^\prime=\frac{1}{\text{e}^x} (\text{e}^x)^\prime
+        =1,\)</span>
 from which <span class="math inline">\(\left(\text{e}^x\right)^\prime=\text{e}^x\)</span> follows.
 </li>
 </ul>
 </details>
 </div>
-<div class="example">
-<p><span id="exm:prodfun" class="example"><strong>Example 4.1  (Production function and marginal productivity) </strong></span>Consider the production function <span class="math inline">\(TP(L) = L^a\)</span> , <span class="math inline">\(a &gt; 0\)</span>, which maps the input <span class="math inline">\(L\)</span> (work) to the output <span class="math inline">\(TP (L)\)</span>.
-The marginal productivity is</p>
-<p><span class="math inline">\(MP (L) = dTP (L)/ \ dL = aL^{a−1}\)</span> ; if</p>
-<p><span class="math inline">\(a &gt; 1\)</span>, then <span class="math inline">\(MP (L)\)</span> is increasing in <span class="math inline">\(L\)</span>,</p>
-<p><span class="math inline">\(a = 1\)</span>, then <span class="math inline">\(TP (L) = L\)</span> and <span class="math inline">\(MP (L) = 1\)</span>,</p>
-<p><span class="math inline">\(a &lt; 1\)</span>, then <span class="math inline">\(MP (L)\)</span> falls in <span class="math inline">\(L\)</span>.</p>
-<p><img src="images/prodfun3.png" /></p>
+<p>For the examples and application of the rules, see the <a href="https://qio-project.github.io/Skript_Vorkurs/funktionen-und-optimierung.html#ableitung">pre-math course</a>.</p>
+<div id="qablt3" class="quiz">
+<p id="question">
+<span id="question-text516"></span>
+</p>
+<p>
+\(f’(x)=\)<input type="text" id="answer516" placeholder="Antwort eingeben">
+</p>
+<button onclick="checkAnswer_symb(questionObj516)">
+Check
+</button>
+<p id="result516">
+</p>
+<script>
+
+ // Generate a random question
+    const questionObj516 = generateQuestion_symb(516);
+// Display the question
+    document.getElementById('question-text516').textContent = "Find the derivative of the functions below! Input the answer as a function  (e.g. to input \\(2x^2+1\\) type 2*x^2+1 or 2x^2+1) \\[f(x)=-"+questionObj516.question[0] + "x^3 - "+ questionObj516.question[1] + "x^2 - " + questionObj516.question[2] + "x\\]";
+    questionObj516.answer = math.derivative((-1)*questionObj516.question[0] + "x^3 - "+ questionObj516.question[1] + "x^2 - x*" + questionObj516.question[2],"x").toString();
+    questionObj516.symb = "x";
+</script>
+<p id="question">
+<span id="question-text517"></span>
+</p>
+<p>
+\(f’’(x)=\)<input type="text" id="answer517" placeholder="Antwort eingeben">
+</p>
+<button onclick="checkAnswer_symb(questionObj517)">
+Check
+</button>
+<p id="result517">
+</p>
+<script>
+
+ // Generate a random question
+    const questionObj517 = generateQuestion_symb(517);
+// Display the question
+    document.getElementById('question-text517').textContent = " ";
+    questionObj517.answer = math.derivative(math.derivative((-1)*questionObj516.question[0] + "x^3 - "+ questionObj516.question[1] + "x^2 - x*" + questionObj516.question[2],"x").toString(),"x").toString();
+    questionObj517.symb = "x";
+</script>
+<script>
+  // Generate a random question
+    const questionObj518 = {
+      question: 'The function above for \\(x>0\\) is',
+      options: ['concave','convex' ,'neither concave nor convex'],
+      answer: '1',
+      id: 518
+    };
+</script>
+<p class="question">
+<span id="question-text518"></span>
+</p>
+<div class="options">
+<label>
+<input type="radio" name="option518" value=1> concave
+</label>
+<label>
+<input type="radio" name="option518" value=2> convex
+</label>
+<label>
+<input type="radio" name="option518" value=3> neither concave nor convex
+</label>
 </div>
-<div class="example">
-<p><span id="exm:grenzerl" class="example"><strong>Example 5.4  (Marginal revenue with the product rule) </strong></span>The revenue (sales) is determined from the price of a good multiplied by the quantity sold, i.e. <span class="math inline">\(TR(q) = pq\)</span>.</p>
-<ul>
-<li><p>A competing firm will assume the price to be constant (market price): <span class="math inline">\(\bar{p}\)</span>; the marginal revenue is therefore <span class="math inline">\(MR(q) = dTR(q)/dq = \bar{p}\)</span>.</p></li>
-<li><p>From the point of view of a monopolist, quantity and price are determined by the demand function <span class="math inline">\(q = D(p)\)</span> or by its inverse <span class="math inline">\(p = D ^{(−1)}(q) =: p(q)\)</span>.</p></li>
-<li><p>The total revenue of the monopolist is</p></li>
-</ul>
-<p><span class="math inline">\(TR(q) = p(q) q\)</span></p>
-<p>and the marginal revenue is</p>
-<p><span class="math inline">\(MR(q)=TR&#39;(q)= \frac{dTR(q)}{dq} = \frac{dp}{dq}q + p(q) \frac{dq}{dq} = p&#39; (q)q+p(q)\)</span></p>
-<ul>
-<li>Typically, <span class="math inline">\(p&#39; (q) &lt; 0\)</span>.</li>
-</ul>
+<button onclick="checkAnswer_match(questionObj518)">Submit</button>
+<p id="result518">
+</p>
+<script>
+  // Display the question
+    document.getElementById('question-text518').textContent = questionObj518.question;
+</script>
 </div>
-<div class="example">
-<p><span id="exm:durchkosten" class="example"><strong>Example 5.5  (Average and marginal cost with quotient rule) </strong></span>The average function of a function <span class="math inline">\(f (x)\)</span>, <span class="math inline">\(x ≥ 0\)</span>, is given by</p>
-<p><span class="math inline">\(A(x)= \frac{f(x)}{x}\)</span> .</p>
-<p>The quotient rule gives</p>
-<p><span class="math inline">\(A&#39;(x)= \frac{f&#39;(x)x-1f(x)}{x^2} = \frac{1}{x} \left[ f&#39;(x)-A(x) \right]\)</span> .</p>
-<p>with <span class="math inline">\(f&#39;\)</span> being the marginal cost.</p>
-<p>Therefore:</p>
-<ol style="list-style-type: lower-roman">
-<li><p>If <span class="math inline">\(f&#39; (x) &lt; A(x)\)</span>, then <span class="math inline">\(A&#39;(x) &lt; 0\)</span>;</p></li>
-<li><p>if <span class="math inline">\(f&#39; (x) = A(x)\)</span>, then <span class="math inline">\(A&#39; (x) = 0\)</span> (Minimum);</p></li>
-<li><p>if <span class="math inline">\(f&#39; (x) &gt; A(x)\)</span>, then <span class="math inline">\(A&#39; (x) &gt; 0\)</span>.</p></li>
-</ol>
-<p><img src="images/durchkosten.png" /></p>
-</div>
+<!--::: {.example #prodfun name="Production function and marginal productivity"}
+Consider the production function \(TP(L) = L^a\) , \(a > 0\), which maps the input \(L\) (work) to the output \(TP (L)\).
+The marginal productivity is
+
+\(MP (L) = dTP (L)/ \ dL = aL^{a−1}\) ; if
+
+\(a > 1\), then \(MP (L)\) is increasing in \(L\),
+
+\(a = 1\), then \(TP (L) = L\) and \(MP (L) = 1\),
+
+\(a < 1\), then \(MP (L)\) falls in \(L\).
+
+![](images/prodfun3.png)
+:::
+
+::: {.example #grenzerl name="Marginal revenue with the product rule"}
+
+The revenue (sales) is determined from the price of a good multiplied by the quantity sold, i.e. \(TR(q) = pq\).
+
+- A competing firm will assume the price to be constant (market price): \( \bar{p} \); the marginal revenue is therefore \(MR(q) = dTR(q)/dq = \bar{p} \).
+
+- From the point of view of a monopolist, quantity and price are determined by the demand function \(q = D(p)\) or by its inverse \(p = D ^{(−1)}(q) =: p(q)\).
+
+- The total revenue of the monopolist is
+
+\(TR(q) = p(q) q\)
+
+and the marginal revenue is
+
+\( MR(q)=TR'(q)= \frac{dTR(q)}{dq} = \frac{dp}{dq}q + p(q) \frac{dq}{dq} = p' (q)q+p(q) \)
+
+- Typically, \(p' (q) < 0\).
+:::
+
+::: {.example #durchkosten name="Average and marginal cost with quotient rule"}
+
+The average function of a function \(f (x)\), \(x ≥ 0\), is given by
+
+\( A(x)= \frac{f(x)}{x} \) .
+
+The quotient rule gives
+
+\( A'(x)= \frac{f'(x)x-1f(x)}{x^2} = \frac{1}{x} \left[ f'(x)-A(x) \right] \) .
+
+with \(f'\) being the marginal cost.
+
+Therefore:
+
+(i) If \(f' (x) < A(x)\), then \(A'(x) < 0\);
+
+(ii) if \(f' (x) = A(x)\), then \(A' (x) = 0\) (Minimum);
+
+(iii) if \(f' (x) > A(x)\), then \(A' (x) > 0\).
+
+![](images/durchkosten.png)
+:::
+-->
 <!--App Ableitung üben.-->
-</div>
-<div id="the-rule-of-lhôpital" class="section level2 hasAnchor" number="5.5">
-<h2><span class="header-section-number">5.5</span> The rule of L’Hôpital<a href="differential-calculus.html#the-rule-of-lhôpital" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>If <span class="math inline">\(f (x) → 0\)</span> and <span class="math inline">\(g(x) → 0\)</span> for <span class="math inline">\(x → a\)</span>, then existence and determination of the limit <span class="math inline">\(\lim _{x \rightarrow a} \frac{f(x)}{g(x)}\)</span> not obvious at first.</p>
-<p>Examples:</p>
-<ol style="list-style-type: lower-alpha">
-<li><p><span class="math inline">\(\lim _{x \rightarrow 1} \frac{x^2-1}{x-1} = 2\)</span>,</p></li>
-<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ \sin x}{x} = 1\)</span>,</p></li>
-<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ 1 - \cos x}{x} = 0\)</span></p></li>
-</ol>
-<p>The first limit is easy to determine because</p>
-<p><span class="math inline">\(\frac{x^2-1}{x-1} = \frac{(x+1)(x-1)}{x-1} = x+1\)</span>.</p>
-<p>The other two limits are not obvious.</p>
-<p>In this situation, L’Hôpital’s rule is often very helpful.</p>
-<p><img src="images/lopital.png" /></p>
-<div class="theorem">
-<p><span id="thm:thmlopital" class="theorem"><strong>Theorem 5.3  (The rule of L'Hôpital) </strong></span>Let <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> in <span class="math inline">\(x = a\)</span> be differentiable functions with <span class="math inline">\(g&#39; (a) \neq 0\)</span> and</p>
-<p><span class="math inline">\(\lim _{x \rightarrow a} f(x) = 0\)</span> and <span class="math inline">\(\lim _{x \rightarrow a} g(x) = 0\)</span></p>
-<p>or</p>
-<p><span class="math inline">\(\lim _{x \rightarrow a} f(x) = \infty\)</span> and <span class="math inline">\(\lim _{x \rightarrow a} g(x) = \infty\)</span>.</p>
-<p>If <span class="math inline">\(\lim _{x \rightarrow a} \frac{f&#39;(x)}{g&#39;(x)}\)</span> exists or if the limit is <span class="math inline">\(\pm\infty\)</span>, then it holds</p>
-<p><span class="math inline">\(\lim _{x \rightarrow a} \frac{f(x)}{g(x)} = \lim _{x \rightarrow a} \frac{f&#39;(x)}{g&#39;(x) }\)</span> .</p>
-</div>
-<div class="exercise">
-<p><span id="exr:lopital" class="exercise"><strong>Exercise 5.1  (Limits with L'Hôpital's rule) </strong></span>Check the following limits using L’Hôpital’s rule:</p>
-<ol style="list-style-type: lower-alpha">
-<li><p><span class="math inline">\(\lim _{x \rightarrow 1} \frac{x^2-1}{x-1} = 2\)</span>,</p></li>
-<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ \sin x}{x} = 1\)</span>,</p></li>
-<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ 1 - \cos x}{x} = 0\)</span></p></li>
-</ol>
-<p>Note: <span class="math inline">\(\sin&#39; (x) = \cos(x)\)</span> and <span class="math inline">\(\cos&#39; (x) = − \sin(x)\)</span>.</p>
+<!--## The rule of L'Hôpital*
+
+If \(f (x) → 0\) and \(g(x) → 0\) for \(x → a\), then existence and determination of the limit \( \lim _{x \rightarrow a} \frac{f(x)}{g(x)} \) not obvious at first.
+
+Examples:
+
+a) \( \lim _{x \rightarrow 1} \frac{x^2-1}{x-1} = 2 \),
+
+b) \( \lim _{x \rightarrow 0} \frac{ \sin x}{x} = 1 \),
+
+c) \( \lim _{x \rightarrow 0} \frac{ 1 - \cos x}{x} = 0 \)
+
+The first limit is easy to determine because
+
+\( \frac{x^2-1}{x-1} = \frac{(x+1)(x-1)}{x-1} = x+1 \).
+
+The other two limits are not obvious.
+
+In this situation, L'Hôpital's rule is often very helpful.
+
+![](images/lopital.png)
+
+::: {#thmlopital .theorem name="The rule of L'Hôpital"}
+Let \(f\) and \(g\) in \(x = a\) be differentiable functions with \(g' (a) \neq 0\) and
+
+\( \lim _{x \rightarrow a} f(x) = 0 \) and \( \lim _{x \rightarrow a} g(x) = 0 \)
+
+or
+
+\( \lim _{x \rightarrow a} f(x) = \infty \) and \( \lim _{x \rightarrow a} g(x) = \infty \).
+
+If \( \lim _{x \rightarrow a} \frac{f'(x)}{g'(x)} \) exists or if the limit is \(\pm\infty\), then it holds
+
+
+\( \lim _{x \rightarrow a} \frac{f(x)}{g(x)} = \lim _{x \rightarrow a} \frac{f'(x)}{g'(x) } \) .
+:::
+
+::: {.exercise #lopital name="Limits with L'Hôpital's rule"}
+
+Check the following limits using L'Hôpital's rule:
+
+a) \( \lim _{x \rightarrow 1} \frac{x^2-1}{x-1} = 2 \),
+
+b) \( \lim _{x \rightarrow 0} \frac{ \sin x}{x} = 1 \),
+
+c) \( \lim _{x \rightarrow 0} \frac{ 1 - \cos x}{x} = 0 \)
+
+Note: \(\sin' (x) = \cos(x)\) and \(\cos' (x) = − \sin(x)\).
+
 <details>
-<summary>
-Answer
-</summary>
-<ol style="list-style-type: lower-alpha">
-<li><p><span class="math inline">\(\lim _{x \rightarrow 1} \frac{x^2-1}{x-1} = \lim _{x \rightarrow 1} \frac{(x^2-1)&#39;}{(x-1)&#39;} = \lim _{x \rightarrow 1} \frac{2x}{1} =2\)</span>,</p></li>
-<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ \sin x}{x} = \lim _{x \rightarrow 0} \frac{(\sin \ x)&#39;}{(x)&#39;} = \lim _{x \rightarrow 0} \frac{\cos \  x}{1} =1\)</span>,</p></li>
-<li><p><span class="math inline">\(\lim _{x \rightarrow 0} \frac{ 1 - \cos x}{x} = \  \lim _{x \rightarrow 0} \frac{(1-\cos \ x)&#39;}{(x)&#39;} = \lim _{x \rightarrow 0} \frac{-(- \sin \  x)}{1} = 0\)</span><br />
-</p></li>
-</ol>
+<summary>Answer</summary>
+
+a) \(  \lim _{x \rightarrow 1}  \frac{x^2-1}{x-1} = \lim _{x \rightarrow 1}  \frac{(x^2-1)'}{(x-1)'} =  \lim _{x \rightarrow 1}  \frac{2x}{1} =2 \),
+
+b) \(  \lim _{x \rightarrow 0}  \frac{ \sin x}{x} = \lim _{x \rightarrow 0}  \frac{(\sin \ x)'}{(x)'} =  \lim _{x \rightarrow 0}  \frac{\cos \  x}{1} =1  \),
+
+c) \(  \lim _{x \rightarrow 0}  \frac{ 1 - \cos x}{x} = \  \lim _{x \rightarrow 0}  \frac{(1-\cos \ x)'}{(x)'} =  \lim _{x \rightarrow 0}  \frac{-(- \sin \  x)}{1} = 0  \)  
 </details>
+:::
+-->
 </div>
-</div>
-<div id="higher-order-derivatives" class="section level2 hasAnchor" number="5.6">
-<h2><span class="header-section-number">5.6</span> Higher order derivatives<a href="differential-calculus.html#higher-order-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="higher-order-derivatives" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Higher order derivatives<a href="differential-calculus.html#higher-order-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Repeated differentiation yields higher-order derivatives <span class="math inline">\(f&#39;\)</span> , <span class="math inline">\(f&#39;&#39;\)</span> , <span class="math inline">\(f&#39;&#39;&#39;\)</span>, etc. (if they exist).</p>
 <p><span class="math inline">\(f&#39;\)</span> is the first derivative, <span class="math inline">\(f&#39;&#39;\)</span> is the second derivative, etc.</p>
 <ul>
@@ -707,42 +875,48 @@ Answer
 <li>The notation <span class="math inline">\(f^{ (n)}\)</span> is also used for the <span class="math inline">\(n\)</span>th derivative.</li>
 </ul>
 <div class="example">
-<p><span id="exm:ablhoh" class="example"><strong>Example 5.6  (Some higher-order derivatives) </strong></span>The first four derivatives of <span class="math inline">\(f (x) = x^ 4\)</span> are</p>
-<p><span class="math inline">\(f&#39; (x) = 4x^3 , \ f&#39;&#39;(x) = 12x^2 , \ f&#39;&#39;&#39;(x) = 24x, f^{(4)}(x) = 24\)</span>.
+<p><span id="exm:ablhoh" class="example"><strong>Example 5.3  (Some higher-order derivatives) </strong></span>The first four derivatives of <span class="math inline">\(f (x) = x^ 4\)</span> are</p>
+<p><span class="math inline">\(f&#39; (x) = 4x^3 ,
+\ f&#39;&#39;(x) = 12x^2 ,
+\ f&#39;&#39;&#39;(x) = 24x,
+f^{(4)}(x) = 24\)</span>.
 All higher derivatives are <span class="math inline">\(0\)</span>, i.e. <span class="math inline">\(f ^{(n)} (x) = 0\)</span>, for <span class="math inline">\(n \geq 5\)</span>.</p>
 </div>
 <p>If the first two derivatives exist, then a function is said to be <strong>twice differentiable</strong>.</p>
 <p>The second derivative can be used to determine whether a function is convex or concave.</p>
 <div class="theorem">
-<p><span id="thm:thmconcon" class="theorem"><strong>Theorem 5.4  (Derivatives of convex and concave functions) </strong></span>Let <span class="math inline">\(D \subset \mathbb {R}\)</span> be an open interval and let <span class="math inline">\(f: D \rightarrow \mathbb {R}\)</span> be twice differentiable.
+<p><span id="thm:thmconcon" class="theorem"><strong>Theorem 5.3  (Derivatives of convex and concave functions) </strong></span>Let <span class="math inline">\(D \subset \mathbb {R}\)</span> be an open interval and let <span class="math inline">\(f: D \rightarrow \mathbb {R}\)</span> be twice differentiable.
 <span class="math inline">\(f\)</span> is <strong>convex</strong> if and only if <span class="math inline">\(f&#39;&#39;(x) \geq 0\)</span> (<strong>concave</strong>: <span class="math inline">\(f&#39;&#39;(x)\leq 0\)</span>) for all <span class="math inline">\(x \in \mathbb{D}\)</span>.</p>
 </div>
 </div>
-<div id="taylors-theorem" class="section level2 hasAnchor" number="5.7">
-<h2><span class="header-section-number">5.7</span> Taylor’s theorem<a href="differential-calculus.html#taylors-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="taylors-theorem" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Taylor’s theorem<a href="differential-calculus.html#taylors-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In practice, the following problem often arises:</p>
 <p>The value of a differentiable function <span class="math inline">\(f\)</span> is difficult to calculate at <span class="math inline">\(x\)</span>; but the function value and all derivatives at a neighboring point <span class="math inline">\(x_0\)</span> are known.</p>
-<div class="example">
-<p><span id="exm:taylor" class="example"><strong>Example 5.7  (Function value determination for ln(2)) </strong></span>The function value <span class="math inline">\(\ln(2)\)</span> is difficult to determine without a calculator.</p>
-<p>However, the following values of <span class="math inline">\(f (x) = \ln \ x\)</span> at the position <span class="math inline">\(x_0 = 1\)</span> are known:</p>
-<p><span class="math inline">\(f (1) = 0\)</span>; <span class="math inline">\(f&#39; (1) = 1\)</span>; <span class="math inline">\(f&#39;&#39;(x) = −1\)</span>; <span class="math inline">\(f&#39;&#39;&#39;(1) = 2\)</span>; <span class="math inline">\(f ^{(4)}(1) = −6\)</span>; etc.</p>
-</div>
+<!--::: {.example #taylor name="Function value determination for ln(2)"}
+The function value \(\ln(2)\) is difficult to determine without a calculator.
+
+However, the following values of \(f (x) = \ln \ x\) at the position \(x_0 = 1\) are known:
+
+\(f (1) = 0\); \(f' (1) = 1\); \(f''(x) = −1\); \(f'''(1) = 2\); \(f ^{(4)}(1) = −6\); etc.
+:::
+-->
 <p>From <span class="math inline">\(f (x_0)\)</span>, <span class="math inline">\(f&#39; (x_0)\)</span>, <span class="math inline">\(f&#39;&#39;(x_0)\)</span>, …, the function value <span class="math inline">\(f (x)\)</span> can be determined approximately.</p>
 <div class="example">
-<p><span id="exm:taylorprofit" class="example"><strong>Example 5.8  (Approximation of a profit function) </strong></span>Consider the exponential form of the inverse demand function (a more realistic model for demand functions!):</p>
+<p><span id="exm:taylorprofit" class="example"><strong>Example 5.4  (Approximation of a profit function) </strong></span>Consider the exponential form of the inverse demand function (a more realistic model for demand functions!):</p>
 <p><span class="math display">\[p(q) = 100\cdot e^{-0.01\cdot q} = 100\cdot\exp(-0.01 q).\]</span></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
 <p>The profit function for a monopolist can be computed as:</p>
 <p><span class="math display">\[\pi(q) = p(q)\cdot q -C(q),\]</span></p>
 <p>where <span class="math inline">\(C(q)\)</span> is the cost function. Assume the cost function adapts the linear representation <span class="math inline">\(C(q)=10-0.01q\)</span>.</p>
 <p>Then the profit is:</p>
 <p><span class="math display">\[\pi(q) = p(q)\cdot q -C(q) = \exp(-0.01 q) \cdot q - 10 - 0.01\cdot q.\]</span></p>
-<p><img src="_main_files/figure-html/unnamed-chunk-29-1.png" width="672" />
+<p><img src="_main_files/figure-html/unnamed-chunk-33-1.png" width="672" />
 Note: we can not solve for <span class="math inline">\(q\)</span> if we set the profit to zero to find the break-even point (the red point on the graph)! (Try that :))</p>
 <p>The question is: How can we find the Break-Even point.</p>
 </div>
 <div class="theorem">
-<p><span id="thm:thmtaylor" class="theorem"><strong>Theorem 5.5  (Taylor's theorem) </strong></span>Let <span class="math inline">\(f\)</span> be an <span class="math inline">\(n\)</span>-fold differentiable function.</p>
+<p><span id="thm:thmtaylor" class="theorem"><strong>Theorem 5.4  (Taylor's theorem) </strong></span>Let <span class="math inline">\(f\)</span> be an <span class="math inline">\(n\)</span>-fold differentiable function.</p>
 <p>The Taylor formula (also Taylor expansion) of <span class="math inline">\(f (x)\)</span> in the area around <span class="math inline">\(x_0\)</span> is given by</p>
 <p><span class="math display">\[\begin{align*} f(x)&amp;=f(x_0)+\sum_{k=1}^{n} \left(\frac{f^{(k)}(x_0)}{k!} (x-x_0)^k\right) + R_n(x).
 \end{align*}\]</span></p>
@@ -760,36 +934,76 @@ Note: we can not solve for <span class="math inline">\(q\)</span> if we set the 
 <p>is a <strong>first-order Taylor expansion</strong> and it is a <strong>linear</strong> approximation of <span class="math inline">\(f (x)\)</span>.</p>
 <p><img src="images/taylor.png" /></p>
 <div class="example">
-<p><span id="exm:taylorff" class="example"><strong>Example 5.9  (Function value approximation for ln(2)) </strong></span>We determine <span class="math inline">\(f (x) = \ln(x)\)</span> using the Taylor approximation with <span class="math inline">\(x_0 = 1\)</span> from Example <a href="differential-calculus.html#exm:taylor">5.7</a>.</p>
-<p>The following applies:
-<span class="math inline">\(f&#39;(x)= \frac{1}{x}\)</span>,</p>
-<p><span class="math inline">\(f&#39;&#39;(x)= - \frac{1}{x^2}\)</span>,</p>
-<p><span class="math inline">\(f&#39;&#39;&#39;(x)= - \frac{2}{x^3}\)</span>,</p>
-<p><span class="math inline">\(f^{(n)}(x)= \frac{(-1)^{n+1}(n-1)!}{x^n}\)</span></p>
-<p>Approximation by nth order Taylor polynomial:
-<span class="math inline">\(f(x) \approx (x-1)- \frac{(x-1)^2}{2} + ... + (-1)^{n+1} \ \frac{(x- 1)^n}{n}\)</span></p>
-<p>Convergence of the remainder for <span class="math inline">\(1 &lt; x ≤ 2\)</span>:</p>
-<p>from <span class="math inline">\(1 &lt; ξ &lt; x ≤ 2\)</span>, i.e. <span class="math inline">\(0 &lt; (x − 1)/ ξ ≤ 1/ 1 = 1\)</span>,</p>
-<p>follows:</p>
-<p><span class="math inline">\(R_n(x)= \frac{(-1)^{n+2} \ n!}{ \xi ^{n+1}(n+1)!}(x-1)^{n+1 }\)</span></p>
-<p><span class="math inline">\(= (-1)^n\frac{(x-1)^{n+1} }{ \xi ^{n+1}(n+1)} \rightarrow 0\)</span></p>
-<p>for <span class="math inline">\(n \rightarrow \infty\)</span>.</p>
-<p>We determine <span class="math inline">\(\ln(2)\)</span> approximately using the Taylor polynomial <span class="math inline">\(10\)</span>th order:</p>
-<p><span class="math inline">\(\ln 2 ≈ 1 − 1/2 + 1/3 − 1/4 + 1/5 − 1/6 + 1/7 − 1/8 + 1/9 − 1/10 = 0.6456\)</span>.
-The error is in <span class="math inline">\((\frac{1}{2^{11} \cdot 11}, 1/11)= \left[ 0.000044; 0.0909091] \right]\)</span>.</p>
-<p><img src="images/taylor2.png" /></p>
+<p><span id="exm:taylorff" class="example"><strong>Example 5.5  (Approximation of a profit function) </strong></span>Example <a href="differential-calculus.html#exm:taylorprofit">5.4</a> cont. Approximate the profit function (Notation:<span class="math inline">\(\exp(y) = e^y\)</span>):</p>
+<p><span class="math display">\[\pi(q) = \exp(-0.01 q) \cdot q - 10 - 0.01\cdot q\]</span></p>
+<p>near <span class="math inline">\(q_0=10\)</span> via the first order Taylor expansion :</p>
+<p><span class="math display">\[\pi(q)\approx \pi(q_0) + \pi^\prime(q_0)(q-q_0).\]</span></p>
+<ul>
+<li><span class="math inline">\(\pi(q_0) = \pi(10) = \exp(-0.01 \cdot 10) \cdot 10 - 10 - 0.01\cdot 10 = e^{-0.1}\cdot 10 -10.1 = -1.0516.\)</span></li>
+<li><span class="math inline">\(\pi^\prime(q) = -0.01\exp(-0.01q)q + \exp(-0.01q) - 0.01\)</span> (Product rule, Chain rule)</li>
+<li><span class="math inline">\(\pi^\prime(q_0)= \pi^\prime(10)= -0.01\exp(-0.01\cdot 10)\cdot 10 + \exp(-0.01\cdot 10) - 0.01 = 0.8044.\)</span></li>
+</ul>
+<p>Then:</p>
+<p><span class="math display">\[\pi(q)\approx -1.0516 + 0.8044\cdot (q-10).\]</span></p>
+<p>Now we can set the approximation equals zero and find the approximative Break-Even-point.</p>
+<p><span class="math display">\[-1.0516 + 0.8044\cdot (q-10)=0\rightarrow q \approx 11.3073.\]</span></p>
+<p>The result:</p>
+<p><img src="_main_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+<p>Our approximation of the Break-Even-Point (green) very close to the actual value (red).</p>
 </div>
-<div class="exercise">
-<p><span id="exr:taylor" class="exercise"><strong>Exercise 5.2  (Interest rate sensitivity with Taylor approximation) </strong></span>For a portfolio of interest rate instruments, let <span class="math inline">\(P(r)\)</span> be the market price depending on the interest rate <span class="math inline">\(r&gt;0\)</span> (with a flat yield curve). Furthermore, <span class="math display">\[\operatorname{DUR}(r):=-P&#39;(r)\]</span> denotes the <em>absolute duration</em>, which describes the change in the market price of the portfolio in the event of an absolute change in interest rates in the form of a sensitivity.</p>
-<p>For the current market interest rate <span class="math inline">\(r=0.05\)</span>, the market price of the portfolio is <span class="math inline">\(2,400,000\)</span> and <span class="math inline">\(\operatorname{DUR}(0.05)=3,200,000\)</span> applies.</p>
-Using <em>Taylor’s first-order approximation</em>, approximate the market price of the portfolio as interest rates rise to $0.07 and fall to $0.03.
+<!--::: {.example #taylorff name="Function value approximation for ln(2)"}
+
+We determine \(f (x) = \ln(x)\) using the Taylor approximation with \(x_0 = 1\) from Example \@ref(exm:taylor).
+
+The following applies:
+\( f'(x)= \frac{1}{x} \),
+
+\( f''(x)= - \frac{1}{x^2} \),
+
+\( f'''(x)= - \frac{2}{x^3} \),
+
+\( f^{(n)}(x)= \frac{(-1)^{n+1}(n-1)!}{x^n} \)
+
+Approximation by nth order Taylor polynomial:
+\( f(x) \approx (x-1)- \frac{(x-1)^2}{2} + ... + (-1)^{n+1} \ \frac{(x- 1)^n}{n} \)
+
+Convergence of the remainder for \(1 < x ≤ 2\):
+
+from \(1 < ξ < x ≤ 2\), i.e. \(0 < (x − 1)/ ξ ≤ 1/ 1 = 1\),
+
+follows:
+
+\( R_n(x)= \frac{(-1)^{n+2} \ n!}{ \xi ^{n+1}(n+1)!}(x-1)^{n+1 } \)
+
+\( = (-1)^n\frac{(x-1)^{n+1} }{ \xi ^{n+1}(n+1)} \rightarrow 0 \)
+
+for \( n \rightarrow \infty \).
+
+
+We determine \(\ln(2)\) approximately using the Taylor polynomial \(10\)th order:
+
+\(\ln 2 ≈ 1 − 1/2 + 1/3 − 1/4 + 1/5 − 1/6 + 1/7 − 1/8 + 1/9 − 1/10 = 0.6456\).
+The error is in \( (\frac{1}{2^{11} \cdot 11}, 1/11)= \left[ 0.000044; 0.0909091] \right] \).
+
+![](images/taylor2.png)
+
+:::
+
+
+::: {.exercise #taylor name="Interest rate sensitivity with Taylor approximation"}
+
+For a portfolio of interest rate instruments, let $P(r)$ be the market price depending on the interest rate $r>0$ (with a flat yield curve). Furthermore, $$\operatorname{DUR}(r):=-P'(r)$$ denotes the *absolute duration*, which describes the change in the market price of the portfolio in the event of an absolute change in interest rates in the form of a sensitivity.
+
+For the current market interest rate $r=0.05$, the market price of the portfolio is $2,400,000$ and $\operatorname{DUR}(0.05)=3,200,000$ applies.
+
+Using *Taylor's first-order approximation*, approximate the market price of the portfolio as interest rates rise to $0.07 and fall to $0.03.
 <details>
-<summary>
-Answer
-</summary>
-<img src="images/taylor3.png" />
+<summary>Answer</summary>
+
+![](images/taylor3.png)
 </details>
-</div>
+:::
+-->
 <!--TODO:
 
 - App Ableiten üben
@@ -817,42 +1031,42 @@ Answer
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-differential.rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["_main.pdf", "_main.epub"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/05-differential.rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["_main.pdf", "_main.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
 });
 });
 </script>
