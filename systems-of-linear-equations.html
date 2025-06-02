@@ -23,7 +23,7 @@
 <meta name="author" content="Maria Osipenko" />
 
 
-<meta name="date" content="2025-05-19" />
+<meta name="date" content="2025-06-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -173,7 +173,7 @@
 <li class="chapter" data-level="9.4" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#transpose-of-a-matrix"><i class="fa fa-check"></i><b>9.4</b> Transpose of a matrix</a></li>
 <li class="chapter" data-level="9.5" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#determinant-and-inverse-of-a-matrix"><i class="fa fa-check"></i><b>9.5</b> Determinant and inverse of a matrix</a>
 <ul>
-<li class="chapter" data-level="9.5.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#more-on-the-determinant-of-a-matrixast"><i class="fa fa-check"></i><b>9.5.1</b> More on the Determinant of a Matrix<span class="math inline">\(^\ast\)</span></a></li>
+<li class="chapter" data-level="9.5.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#more-on-the-determinant-of-a-matrix"><i class="fa fa-check"></i><b>9.5.1</b> More on the Determinant of a Matrix</a></li>
 <li class="chapter" data-level="9.5.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#rank-and-determinantast"><i class="fa fa-check"></i><b>9.5.2</b> Rank and determinant<span class="math inline">\(^\ast\)</span></a></li>
 </ul></li>
 </ul></li>
@@ -289,26 +289,52 @@ function checkAnswer_num(q) {
 </script>
 <p>Many economic models are based on linear equation systems:</p>
 <ul>
-<li>production planning under linear resource constraints:
-Production constraint for two quantities <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> on Machine 1 (2 hours for a unit of <span class="math inline">\(x\)</span> and 3 hours for a unit of <span class="math inline">\(y\)</span>): <span class="math inline">\(2x+3y = 8\)</span>.
-Production constraint for two quantities <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> on Machine 2 (4 hours for a unit of <span class="math inline">\(x\)</span> and 0.5 hours for a unit of <span class="math inline">\(y\)</span>): <span class="math inline">\(4x+0.5y = 8\)</span>.</li>
+<li>Firm production planning under linear resource constraints: What is the optimal production for a firm?</li>
 </ul>
-<p>What is the optimal production?</p>
+<p>Production constraint for two quantities <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> on Machine 1 (2 hours for a unit of <span class="math inline">\(x\)</span> and 3 hours for a unit of <span class="math inline">\(y\)</span>): <span class="math inline">\(2x+3y = 8\)</span>.
+Production constraint for two quantities <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> on Machine 2 (4 hours for a unit of <span class="math inline">\(x\)</span> and 0.5 hours for a unit of <span class="math inline">\(y\)</span>): <span class="math inline">\(4x+0.5y = 8\)</span>.</p>
 <ul>
-<li>finding market equilibrium given linear demand and supply functions:
-Inverse demand: <span class="math inline">\(p(q)=400-0.3q\)</span> versus inverse supply: <span class="math inline">\(p(q)=40+0.3q\)</span>.</li>
+<li>Finding market equilibrium given linear demand and supply functions: What is the equilibrium price?</li>
 </ul>
-<p>What is the equilibrium price?</p>
+<p>Inverse demand: <span class="math inline">\(p(q)=400-0.3q\)</span> versus inverse supply: <span class="math inline">\(p(q)=40+0.3q\)</span>.</p>
+<!-- 
+- Calibrating national income models (finding equilibrium income \(Y\) and consumption \(C\)):
+
+
+\begin{align*}
+Y &= C+I+G\\
+C&=C_0 +bY\\
+I&=I_0+aY
+\end{align*}
+
+for given initial investment \(I_0=50\), consumption \(C_0=65\), and government expenditures \(G=20\), as well as \(b=0.7\), \(a=0.1\).
+What is the equilibrium income and consumption?-->
 <ul>
-<li>calibrating national income models (finding equilibrium incom <span class="math inline">\(Y\)</span> and consumption <span class="math inline">\(C\)</span>):</li>
+<li>Determining production in an economy: What is the optimal production for an economy?</li>
 </ul>
-<p><span class="math display">\[\begin{align*}
-Y &amp;= C+I+G\\
-C&amp;=C_0 +bY\\
-I&amp;=I_0+aY
-\end{align*}\]</span></p>
-<p>for given initial investment <span class="math inline">\(I_0=50\)</span>, consumption <span class="math inline">\(C_0=65\)</span>, and government expenditures <span class="math inline">\(G=20\)</span>, as well as <span class="math inline">\(b=0.7\)</span>, <span class="math inline">\(a=0.1\)</span>.</p>
-<p>What is the equilibrium income and consumption?</p>
+<div class="example">
+<p><span id="exm:prodsys" class="example"><strong>Example 8.1  (Linear production model) </strong></span>We consider an economy with <span class="math inline">\(n + 1\)</span> goods.</p>
+<ul>
+<li><p>Each of the goods <span class="math inline">\(1, . . . , n\)</span> is the result of a production process.</p></li>
+<li><p>A production process is characterized by a set of quantities of goods that are required to produce one unit of the production good.</p></li>
+<li><p>Good <span class="math inline">\(0\)</span> denotes the factor labor that is not produced by a process but is used in every production process.</p></li>
+<li><p>The following input-output table shows the production process for a 3-goods economy (without the labor factor):</p></li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
+        \begin{array}{l|lll}
+         out\downarrow;~ in\rightarrow&amp; x_1&amp;x_2&amp;x_3\\
+         x_1&amp; 0 &amp; 0.4 &amp; 0.3\\
+         x_2&amp; 0.2 &amp; 0.12 &amp; 0.14\\
+         x_3&amp; 0.5 &amp; 0.2 &amp; 0.05
+        \end{array}
+\end{equation*}\]</span></p>
+<ul>
+<li><p>The entry <span class="math inline">\(a_{ij}\)</span> in the <span class="math inline">\(i\)</span>th row and <span class="math inline">\(j\)</span>th column denotes the quantity of goods <span class="math inline">\(i\)</span> that is required to produce a unit of goods <span class="math inline">\(j\)</span>: Producing one unit of good <span class="math inline">\(2\)</span> requires <span class="math inline">\(0.4\)</span> units of good <span class="math inline">\(1\)</span>, as well as <span class="math inline">\(0.12\)</span> units of good <span class="math inline">\(2\)</span> and <span class="math inline">\(0.2\)</span> units of good <span class="math inline">\(3\)</span>.</p></li>
+<li><p>There is an exogenous demand for <span class="math inline">\(130\)</span> units of good <span class="math inline">\(1\)</span>, for <span class="math inline">\(74\)</span> units of good <span class="math inline">\(2\)</span>, and for <span class="math inline">\(95\)</span> units of good <span class="math inline">\(3\)</span>.</p></li>
+</ul>
+<p>What production volume meets the demand?</p>
+<p>The solution is: the economy must produce <span class="math inline">\(300\)</span> units of good <span class="math inline">\(1\)</span>, <span class="math inline">\(200\)</span> units of good <span class="math inline">\(2\)</span>, and <span class="math inline">\(300\)</span> units of good <span class="math inline">\(3\)</span> in order to meet the exogenous demand.</p>
+</div>
 <p><span class="math inline">\(\leadsto\)</span> In this Chapter, we will review the methods for solving systems of linear equations.</p>
 <div class="definition">
 <p><span id="def:deflineq" class="definition"><strong>Definition 8.1  (Systems of linear equations) </strong></span>A <strong>linear equation</strong> with <span class="math inline">\(n\)</span> variables (“unknowns”) has the form:</p>
@@ -318,7 +344,7 @@ I&amp;=I_0+aY
 <li><p><span class="math inline">\(a_1, ... , a_n\)</span> and <span class="math inline">\(b\)</span> known constants (e.g. prices), so-called parameters, are and</p></li>
 <li><p><span class="math inline">\(x_1, ... , x_n\)</span> denote the variables (e.g. quantities of goods).</p></li>
 </ul>
-<p>A <strong>system of linear equations (LGS)</strong> consists of two or more linear equations. A <strong>solution</strong> is an assignment of variables such that all equations are true/satisfied at the same time.</p>
+<p>A <strong>linear system of equations (LSE)</strong> consists of two or more linear equations. A <strong>solution</strong> is an assignment of variables such that all equations are true/satisfied at the same time.</p>
 </div>
 <div id="qlingl" class="quiz">
 <script>
@@ -409,32 +435,9 @@ The company therefore has \(53605€\) after paying the tax and after paying the
 :::
 
 -->
-<div class="example">
-<p><span id="exm:prodsys" class="example"><strong>Example 8.1  (Linear production model) </strong></span>We consider an economy with <span class="math inline">\(n + 1\)</span> goods.</p>
-<ul>
-<li><p>Each of the goods <span class="math inline">\(1, . . . , n\)</span> is the result of a production process.</p></li>
-<li><p>A production process is characterized by a set of quantities of goods that are required to produce one unit of the production good.</p></li>
-<li><p>Good <span class="math inline">\(0\)</span> denotes the factor labor that is not produced by a process but is used in every production process.</p></li>
-<li><p>The following input-output table shows the production process for a 3-goods economy (without the labor factor):</p></li>
-</ul>
-<p><span class="math display">\[\begin{equation*}
-        \begin{array}{l|lll}
-         out\downarrow;~ in\rightarrow&amp; x_1&amp;x_2&amp;x_3\\
-         x_1&amp; 0 &amp; 0.4 &amp; 0.3\\
-         x_2&amp; 0.2 &amp; 0.12 &amp; 0.14\\
-         x_3&amp; 0.5 &amp; 0.2 &amp; 0.05
-        \end{array}
-\end{equation*}\]</span></p>
-<ul>
-<li><p>The entry <span class="math inline">\(a_{ij}\)</span> in the <span class="math inline">\(i\)</span>th row and <span class="math inline">\(j\)</span>th column denotes the quantity of goods <span class="math inline">\(i\)</span> that is required to produce a unit of goods <span class="math inline">\(j\)</span>: Producing one unit of good <span class="math inline">\(2\)</span> requires <span class="math inline">\(0.4\)</span> units of good <span class="math inline">\(1\)</span>, as well as <span class="math inline">\(0.12\)</span> units of good <span class="math inline">\(2\)</span> and <span class="math inline">\(0.2\)</span> units of good <span class="math inline">\(3\)</span>.</p></li>
-<li><p>There is an exogenous demand for <span class="math inline">\(130\)</span> units of good <span class="math inline">\(1\)</span>, for <span class="math inline">\(74\)</span> units of good <span class="math inline">\(2\)</span>, and for <span class="math inline">\(95\)</span> units of good <span class="math inline">\(3\)</span>.</p></li>
-</ul>
-<p>What production volume meets the demand?</p>
-<p>The solution is: the economy must produce <span class="math inline">\(300\)</span> units of good <span class="math inline">\(1\)</span>, <span class="math inline">\(200\)</span> units of good <span class="math inline">\(2\)</span>, and <span class="math inline">\(300\)</span> units of good <span class="math inline">\(3\)</span> in order to meet the exogenous demand.</p>
-</div>
 <div id="systems-of-two-linear-equations" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> Systems of two linear equations<a href="systems-of-linear-equations.html#systems-of-two-linear-equations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We start with smallest LGS - LGS with just two linear equations.</p>
+<p>We start with smallest LGS with just two linear equations.</p>
 <div class="example">
 <p><span id="exm:2gl" class="example"><strong>Example 8.2  (LGS with two equations and two unknowns) </strong></span>Let’s consider the following system with two linear equations:</p>
 <ul>
@@ -643,7 +646,7 @@ Solving by substitution
 <p>(8b) <span class="math inline">\(−0.2x_1 + 0.88x_2 − 0.14x_3 = 74\)</span></p>
 <p>(8c) <span class="math inline">\(−0.5x_1 − 0.2x_2 + 0.95x_3 = 95\)</span></p>
 <p>To eliminate <span class="math inline">\(x_1\)</span>, a suitable multiple of the first equation is added to the second and third equation.</p>
-<p>More precisely: (8a) is multiplied by <span class="math inline">\(0,2\)</span> and added to (8b); this gives:</p>
+<p>More precisely: (8a) is multiplied by <span class="math inline">\(0.2\)</span> and added to (8b); this gives:</p>
 <p><span class="math inline">\(0.8x_2 − 0.2x_3 = 100\)</span>.</p>
 <p>Similarly, adding <span class="math inline">\(0.5\)</span> times (8a) to (8c) results in:</p>
 <p><span class="math inline">\(−0.4x_2 + 0.8x_3 = 160\)</span>.</p>
@@ -688,7 +691,7 @@ Solving by substitution
 <p>(13a) <span class="math inline">\(x_1 − 0.4x_2 − 0.3x_3 = 130\)</span></p>
 <p>(13b) <span class="math inline">\(x_2 = 200\)</span></p>
 <p>(13c) <span class="math inline">\(x_3 = 300\)</span></p>
-<p>Similarly, <span class="math inline">\(x_2\)</span> and <span class="math inline">\(x_3\)</span> are eliminated from (13a) by multiplying <span class="math inline">\(0,3\)</span> times (13c) and <span class="math inline">\(0,4\)</span> times (13b). (13a) added; finally one gets:</p>
+<p>Similarly, <span class="math inline">\(x_2\)</span> and <span class="math inline">\(x_3\)</span> are eliminated from (13a) by multiplying <span class="math inline">\(0.3\)</span> times (13c) and <span class="math inline">\(0.4\)</span> times (13b). (13a) added; finally one gets:</p>
 <p>(14a) <span class="math inline">\(x_1 = 300\)</span></p>
 <p>(14b) <span class="math inline">\(x_2 = 200\)</span></p>
 <p>(14c) <span class="math inline">\(x_3 = 300\)</span>.</p>

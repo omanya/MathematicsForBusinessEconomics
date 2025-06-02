@@ -23,7 +23,7 @@
 <meta name="author" content="Maria Osipenko" />
 
 
-<meta name="date" content="2025-05-19" />
+<meta name="date" content="2025-06-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -173,7 +173,7 @@
 <li class="chapter" data-level="9.4" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#transpose-of-a-matrix"><i class="fa fa-check"></i><b>9.4</b> Transpose of a matrix</a></li>
 <li class="chapter" data-level="9.5" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#determinant-and-inverse-of-a-matrix"><i class="fa fa-check"></i><b>9.5</b> Determinant and inverse of a matrix</a>
 <ul>
-<li class="chapter" data-level="9.5.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#more-on-the-determinant-of-a-matrixast"><i class="fa fa-check"></i><b>9.5.1</b> More on the Determinant of a Matrix<span class="math inline">\(^\ast\)</span></a></li>
+<li class="chapter" data-level="9.5.1" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#more-on-the-determinant-of-a-matrix"><i class="fa fa-check"></i><b>9.5.1</b> More on the Determinant of a Matrix</a></li>
 <li class="chapter" data-level="9.5.2" data-path="matrices-and-basic-matrix-operations.html"><a href="matrices-and-basic-matrix-operations.html#rank-and-determinantast"><i class="fa fa-check"></i><b>9.5.2</b> Rank and determinant<span class="math inline">\(^\ast\)</span></a></li>
 </ul></li>
 </ul></li>
@@ -323,7 +323,7 @@ For example:
 <li>Column and row vectors can be converted into one another by <strong>transposing</strong> them, i.e. swapping the dimensions. Write <span class="math inline">\(x^\top\)</span> to get a transposed version of <span class="math inline">\(x\)</span>.</li>
 </ul>
 <div class="example">
-<p><span id="exm:maschinenlaufzeit" class="example"><strong>Example 9.1  (machine runtime) </strong></span>In the exercise <a href="systems-of-linear-equations.html#exr:maschinen">8.1</a>, we solved the following system of three equations:</p>
+<p><span id="exm:maschinenlaufzeit" class="example"><strong>Example 9.1  (machine runtime) </strong></span>In the exercise <a href="systems-of-linear-equations.html#exr:maschinen">8.1</a>, we are supposed to solve the following system of three linear equations:</p>
 <p><span class="math display">\[\begin{align*}
 2x_1 + 2x_2 +2x_3 &amp;= 8,\\
 3x_1 + 4x_2 +x_3 &amp;=8,\\
@@ -381,8 +381,8 @@ For example:
 <li><p>A <strong>square matrix</strong> is a matrix with the same number of rows and columns (<span class="math inline">\(m = n\)</span>).</p></li>
 <li><p>A <strong>diagonal matrix</strong> is a square matrix that has zeros everywhere except on the main diagonal.</p></li>
 <li><p>An upper (lower) <strong>triangular matrix</strong> is a matrix that has non-zero entries only above (below) the diagonal.</p></li>
-<li><p>A <strong>identity matrix</strong> is a diagonal matrix whose diagonal elements are all one. The identity matrix with dimension <span class="math inline">\(n × n\)</span> is denoted by <span class="math inline">\(I_n\)</span>. Example for <span class="math inline">\(n = 4\)</span>:
-<span class="math display">\[I_4 = \begin{pmatrix} 1 \ \   0 \ \  0 \ \ 0 \\ 0 \ \ 1 \ \ 0 \ \ 0 \\ 0 \ \ 0 \ \ 1 \ \ 0 \\ 0 \ \ 0 \ \ 0 \ \ 1  \end{pmatrix}\]</span></p></li>
+<li><p>A <strong>identity matrix</strong> is a diagonal matrix whose diagonal elements are all one. The identity matrix with dimension <span class="math inline">\(n × n\)</span> is denoted by <span class="math inline">\(I_n\)</span>. Example for <span class="math inline">\(n = 3\)</span>:
+<span class="math display">\[I_3 = \begin{pmatrix} 1 \ \   0 \ \  0 \\ 0 \ \ 1 \ \ 0 \\ 0 \ \ 0 \ \ 1  \end{pmatrix}\]</span></p></li>
 </ul>
 </div>
 </div>
@@ -605,10 +605,10 @@ Figure 9.1: Illustation of the dot product
     \end{align*}\]</span></p>
 </div>
 <div class="example">
-<p><span id="exm:exkalarprodukt1" class="example"><strong>Example 9.7  (scalar product) </strong></span><br>
+<p><span id="exm:exkalarprodukt1" class="example"><strong>Example 9.7  (angle between vectors) </strong></span><br>
 Continuation of <a href="matrices-and-basic-matrix-operations.html#exm:exkalarprodukt">9.5</a>.</p>
 <ul>
-<li><p>The <strong>scalar product</strong> <span class="math inline">\(\bf x^\top y\)</span> of <span class="math inline">\(\bf x = \begin{pmatrix}
+<li><p>The <strong>dot product</strong> <span class="math inline">\(\bf x^\top y\)</span> of <span class="math inline">\(\bf x = \begin{pmatrix}
       3 &amp; 3
     \end{pmatrix}\)</span> and <span class="math inline">\(\bf y = \begin{pmatrix}
       1\\
@@ -626,67 +626,90 @@ Continuation of <a href="matrices-and-basic-matrix-operations.html#exm:exkalarpr
 \end{align}\]</span></p>
 <p><img src="_main_files/figure-html/unnamed-chunk-59-1.png" width="672" /></p>
 </div>
-<p>The remaining case is when the dot product is zero. In this case the vectors are perpendicular to each other. Such vectors form, for example, useful coordinate systems. It also makes sense if the vectors that form the basis of such coordinate systems have the length <span class="math inline">\(1\)</span> (intuitively: one step in each direction). When you bring the length of vectors to <span class="math inline">\(1\)</span>, you term it <strong>normalize</strong>. The following definition makes the terms more precise.</p>
-<div class="definition">
-<p><span id="def:defortho" class="definition"><strong>Definition 9.9  (Orthogonal and orthonormal vectors) </strong></span>Two vectors are <strong>orthogonal</strong> if their dot product is zero. This means that the two vectors are perpendicular to each other.
-Vectors that are pairwise orthogonal and all have length one are said to be <strong>orthonormal</strong>.</p>
-</div>
-<div class="exercise">
-<p><span id="exr:ortho" class="exercise"><strong>Exercise 9.1  (find an orthogonal vector) </strong></span>Consider <span class="math inline">\(\mathbf x =   \begin{pmatrix}
-        3 &amp; -3 &amp; a
-      \end{pmatrix}\)</span> and <span class="math inline">\(\bf y =  \begin{pmatrix}
+<p>The remaining case is when the dot product is zero. In this case the vectors are perpendicular to each other. Such vectors form, for example, useful coordinate systems.</p>
+<!--It also makes sense if the vectors that form the basis of such coordinate systems have the length \(1\) (intuitively: one step in each direction). When you bring the length of vectors to \(1\), you term it **normalize**. The following definition makes the terms more precise.
+
+::: {#defortho .definition name="Orthogonal and orthonormal vectors"}
+Two vectors are **orthogonal** if their dot product is zero. This means that the two vectors are perpendicular to each other.
+Vectors that are pairwise orthogonal and all have length one are said to be **orthonormal**.
+:::
+
+::: {.exercise #ortho name="find an orthogonal vector"}
+
+Consider \(\mathbf x =   \begin{pmatrix}
+        3 & -3 & a
+      \end{pmatrix}\) and \(\bf y =  \begin{pmatrix}
         1\\
         1\\
        -5
-      \end{pmatrix}.\)</span></p>
-<p>Find <span class="math inline">\(a\)</span> such that the vectors are orthogonal.</p>
+      \end{pmatrix}.\) 
+
+Find \(a\) such that the vectors are orthogonal.
+
 <details>
-<summary>
-Answer
-</summary>
-<p>The dot product is:</p>
-<p><span class="math display">\[3\cdot 1 + (-3) \cdot 1 + a\cdot (-5) =3 -3 -5a = -5a.\]</span></p>
-<p>Since the dot product of orthogonal vectors is zero, we have:</p>
-<p><span class="math display">\[-5a=0\rightarrow a=0.\]</span></p>
-<p>We obtain, <span class="math inline">\(\mathbf x =   \begin{pmatrix}
-        3 &amp; -3 &amp; 0
-      \end{pmatrix}.\)</span></p>
+<summary>Answer</summary>
+The dot product is:
+
+\[3\cdot 1 + (-3) \cdot 1 + a\cdot (-5) =3 -3 -5a = -5a.\]
+
+Since the dot product of orthogonal vectors is zero, we have:
+
+\[-5a=0\rightarrow a=0.\]
+
+We obtain,  \(\mathbf x =   \begin{pmatrix}
+        3 & -3 & 0
+      \end{pmatrix}.\)
+
 </details>
-</div>
-<div class="exercise">
-<p><span id="exr:ortho2" class="exercise"><strong>Exercise 9.2  (find orthonormal vectors) </strong></span>Consider <span class="math inline">\(\mathbf x =   \begin{pmatrix}
-        a &amp; b &amp; a
-      \end{pmatrix}\)</span> and <span class="math inline">\(\bf y =  \begin{pmatrix}
+:::
+
+::: {.exercise #ortho2 name="find orthonormal vectors"}
+
+Consider \(\mathbf x =   \begin{pmatrix}
+        a & b & a
+      \end{pmatrix}\) and \(\bf y =  \begin{pmatrix}
         0\\
         0.6\\
        -0.8
-      \end{pmatrix}.\)</span></p>
-<p>Find <span class="math inline">\(a,b&gt;0\)</span> such that the vectors are orthonormal.</p>
+      \end{pmatrix}.\) 
+
+Find \(a,b>0\) such that the vectors are orthonormal.
+
 <details>
-<summary>
-Answer
-</summary>
-<p>The dot product is:</p>
-<p><span class="math display">\[a\cdot 0+ b \cdot 0.6 + a\cdot (-0.8) =0.6 b -0.8a \stackrel{!}{=} 0.\]</span></p>
-<p>So, <span class="math inline">\(a=3/4\cdot b.\)</span></p>
-<p>On the other hand, the norm of <span class="math inline">\(\bf x\)</span> is:</p>
-<p><span class="math display">\[\sqrt{a^2+b^2+a^2} \stackrel{!}{=} 1\rightarrow 2a^2 + b^2 = 1. \]</span></p>
-<p>Plugging in the above <span class="math inline">\(a=3/4\cdot b,\)</span> we have:</p>
-<p><span class="math display">\[2\cdot 9/16b^2 + b^2 = 1\rightarrow 17/8b^2 =1\rightarrow b = \sqrt{8/17} = 2\sqrt{2/17}.\]</span></p>
-<p>Hence, <span class="math inline">\(a=3/4\cdot 2\sqrt{2/17} = 1.5 \cdot \sqrt{2/17}.\)</span></p>
-<p>Therefore:</p>
-<p><span class="math inline">\(\mathbf x =   \begin{pmatrix}
-        1.5 \cdot \sqrt{2/17} &amp; \sqrt{8/17} &amp; 1.5 \cdot \sqrt{2/17}
-      \end{pmatrix}\)</span></p>
+<summary>Answer</summary>
+The dot product is:
+
+\[a\cdot 0+ b \cdot 0.6 + a\cdot (-0.8) =0.6 b -0.8a \stackrel{!}{=} 0.\]
+
+So, \(a=3/4\cdot b.\)
+
+On the other hand, the norm of \(\bf x\) is:
+
+\[\sqrt{a^2+b^2+a^2} \stackrel{!}{=} 1\rightarrow 2a^2 + b^2 = 1. \]
+
+Plugging in the above \(a=3/4\cdot b,\) we have:
+
+\[2\cdot 9/16b^2 + b^2 = 1\rightarrow 17/8b^2 =1\rightarrow b = \sqrt{8/17} = 2\sqrt{2/17}.\]
+
+Hence, \(a=3/4\cdot 2\sqrt{2/17} = 1.5 \cdot \sqrt{2/17}.\)
+
+Therefore:
+
+\(\mathbf x =   \begin{pmatrix}
+        1.5 \cdot \sqrt{2/17} & \sqrt{8/17} & 1.5 \cdot \sqrt{2/17}
+      \end{pmatrix}\)
+
 </details>
-</div>
+:::
+
+-->
 <p>The <strong>product of two matrices</strong> is defined in such a way that some properties of multiplication of real numbers are preserved.</p>
 <div class="definition">
-<p><span id="def:defmatprod" class="definition"><strong>Definition 9.10  (product of two matrices) </strong></span>Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(m × n\)</span> matrix and <span class="math inline">\(B\)</span> an <span class="math inline">\(n × q\)</span> matrix (i.e. the number of columns in <span class="math inline">\(A\)</span> corresponds to the number of rows in <span class="math inline">\(B\)</span> – important!).
+<p><span id="def:defmatprod" class="definition"><strong>Definition 9.9  (product of two matrices) </strong></span>Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(m × n\)</span> matrix and <span class="math inline">\(B\)</span> an <span class="math inline">\(n × q\)</span> matrix (i.e. the number of columns in <span class="math inline">\(A\)</span> corresponds to the number of rows in <span class="math inline">\(B\)</span> – important!).
 Then the product <span class="math inline">\(C = A · B\)</span> is defined as the <span class="math inline">\(m × q\)</span> matrix with the elements:
 <span class="math inline">\(c_{ij}= \sum_{k=1}^{n} a_{ik} \ b_{kj}\)</span>,</p>
 <p><span class="math inline">\(i = 1, ... , m\)</span>, <span class="math inline">\(\ j = 1, ... , q\)</span>.</p>
-<p>In other words: The entry <span class="math inline">\(c_{ij}\)</span> is the scalar product of the <span class="math inline">\(i\)</span>th row vector and the <span class="math inline">\(j\)</span>th column vector:</p>
+<p>In other words: The entry <span class="math inline">\(c_{ij}\)</span> is the dot (or scalar) product of the <span class="math inline">\(i\)</span>th row vector and the <span class="math inline">\(j\)</span>th column vector:</p>
 <p><span class="math display">\[\begin{equation*}
     \begin{pmatrix}
         a_{i1} &amp; a_{i2} &amp; \ldots &amp; a_{in}
@@ -773,8 +796,7 @@ from <span class="math inline">\(B\)</span>”)}</li>
 <div class="example">
 <p><span id="exm:mmultlgs" class="example"><strong>Example 9.9  (Systems of linear equations) </strong></span></p>
 <ul>
-<li>We consider an LGS consisting of <span class="math inline">\(m\)</span> linear ones
-Equations and <span class="math inline">\(n\)</span> variables:
+<li>We consider an LSE with <span class="math inline">\(m\)</span> linear equations and <span class="math inline">\(n\)</span> variables:
 <span class="math display">\[\begin{equation*}
     \begin{array}{ccccccccc}
       a_{11} x_1 &amp;+&amp; a_{12} x_2 &amp;+&amp; \cdots &amp;+&amp; a_{1n} x_n &amp;=&amp; b_1\\
@@ -783,7 +805,7 @@ Equations and <span class="math inline">\(n\)</span> variables:
       a_{m1} x_1 &amp;+&amp; a_{m2} x_2 &amp;+&amp; \cdots &amp;+&amp; a_{mn} x_n &amp;=&amp; b_m
     \end{array}
   \end{equation*}\]</span></li>
-<li>The LGS can be written as a matrix product:
+<li>The LSE can be written as a matrix product:
 <span class="math display">\[\begin{equation*}
     Ax=b
   \end{equation*}\]</span>
@@ -828,38 +850,41 @@ where <span class="math inline">\(A=\begin{pmatrix}
 <span class="math inline">\((A + B)C = AC + BC\)</span></p>
 <p><strong>Important</strong>: There is no commutative law for multiplication! As a rule <span class="math inline">\(AB \neq BA\)</span> holds, even if both products are well defined.</p>
 </div>
-<div class="exercise">
-<p><span id="exr:exrmmult" class="exercise"><strong>Exercise 9.3  (Matrix multiplication I) </strong></span>Check that <span class="math inline">\(AB\not= BA\)</span> for the matrices
-<span class="math inline">\(\displaystyle A=
+<!--::: {.exercise #exrmmult name="Matrix multiplication I"}
+Check that $AB\not= BA$ for the matrices
+$\displaystyle A=
     \begin{pmatrix}
-      2 &amp; 1 \\
-      1 &amp; 1
-    \end{pmatrix}\)</span> and <span class="math inline">\(\displaystyle B=
+      2 & 1 \\
+      1 & 1
+    \end{pmatrix}$ and $\displaystyle B=
     \begin{pmatrix}
-      1 &amp; -1 \\
-      0 &amp;\phantom{-}2
-    \end{pmatrix}\)</span>.</p>
-</div>
-<p>Matrices that have the property <span class="math inline">\(AB= BA\)</span> are called <strong>idempotent</strong> matrices.</p>
-<div class="definition">
-<p><span id="def:defidempotenz" class="definition"><strong>Definition 9.11  (idempotence) </strong></span>A square matrix <span class="math inline">\(A\)</span> is called <strong>idempotent</strong> if:
-<span class="math inline">\(A\, A=A\)</span>.</p>
-</div>
-<div class="exercise">
-<p><span id="exr:idempo" class="exercise"><strong>Exercise 9.4  (Idempotent Matrices) </strong></span>Show that the following matrices are idempotent:
-<span class="math display">\[\begin{pmatrix}
-        -1 &amp; 2\\
-        -1 &amp; 2
-      \end{pmatrix}\]</span>
-and
-<span class="math display">\[\displaystyle
+      1 & -1 \\
+      0 &\phantom{-}2
+    \end{pmatrix}$.
+:::
+
+Matrices that have the property $AB= BA$ are called **idempotent** matrices.
+
+::: {#defidempotenz .definition name="idempotence"}
+A square matrix $A$ is called **idempotent** if:
+$A\, A=A$.
+:::
+
+::: {.exercise #idempo name="Idempotent Matrices"}
+Show that the following matrices are idempotent:
+\[\begin{pmatrix}
+        -1 & 2\\
+        -1 & 2
+      \end{pmatrix}\]
+    and
+\[\displaystyle
       \begin{pmatrix}
-        \phantom{-}3 &amp; \phantom{-}6\\
-        -1 &amp; -2
-\end{pmatrix}\]</span></p>
-</div>
+        \phantom{-}3 & \phantom{-}6\\
+        -1 & -2
+\end{pmatrix}\]
+:::-->
 <div class="exercise">
-<p><span id="exr:exrmmult2" class="exercise"><strong>Exercise 9.5  (Matrix multiplication II) </strong></span>be</p>
+<p><span id="exr:exrmmult2" class="exercise"><strong>Exercise 9.1  (Matrix multiplication) </strong></span>be</p>
 <p><span class="math inline">\(A = \begin{pmatrix} 2 \ 1 \\ 1\ 1 \\ 1 \ 1 \end{pmatrix}\)</span> and</p>
 <p><span class="math inline">\(B = \begin{pmatrix} 1 \ -1 \ \ 1 \\ 0 \ \ \ \ \ 2 \ \ \ 1\end{pmatrix}\)</span></p>
 Both products are well defined, but it is easy to see that <span class="math inline">\(AB \neq BA\)</span>.
@@ -881,35 +906,8 @@ Answer
 <p><span class="math inline">\(p^\top=(p_1 \ \ p_2 \ \ ... \ \ p_n)\)</span></p>
 <p>The monthly consumer spending corresponds to the scalar product <span class="math inline">\(E = p^\top x\)</span>:</p>
 <p><span class="math inline">\(E= p^\top x= (p_{1} \ \ p_{2} \ \ ... \ p_{n}) \begin{pmatrix} x_{1} \\ x_{2} \\ . \\ . \\ x_{n}  \end{pmatrix} =  \sum_{i=1}^{n} p_ix_i\)</span></p>
-</div>
-<div id="regional-migration" class="section level3 hasAnchor" number="9.3.2">
-<h3><span class="header-section-number">9.3.2</span> Regional migration<a href="matrices-and-basic-matrix-operations.html#regional-migration" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The transition matrix from section 1 above describes the migratory behavior of the population in three regions.</p>
-<p>Currently, i.e. at the time <span class="math inline">\(t = 0\)</span>, the population is distributed over the three regions as follows (numbers in million),</p>
-<p><span class="math inline">\({\bf x_0} = \begin{pmatrix} 5 \\ 10 \\ 6 \end{pmatrix}\)</span></p>
-<p>With the transition matrix <span class="math inline">\(P\)</span></p>
-<p><span class="math inline">\(P = \begin{pmatrix} 0.80 \ \ 0.15 \ \ 0.05 \\ 0.10 \ \ 0.70 \ \ 0.05\\ 0.10 \ \ 0.15 \ \ 0 ,90 \\ \end{pmatrix}\)</span></p>
-<p>we can find the population distribution at the beginning of the next period (<span class="math inline">\(t = 1\)</span>): <span class="math inline">\({\bf x_1} = P{\bf x_0}\)</span>.</p>
-<p>The solution <span class="math inline">\({\bf x_1} = P {\bf x_0}\)</span> with the concrete numbers is</p>
-<p><span class="math display">\[\begin{align*} P{\bf x_0}  &amp;= \begin{pmatrix} 0.80 \ \ 0.15 \ \ 0.05 \\ 0.10 \ \ 0.70 \ \ 0.05\\ 0.10 \ \ 0.15 \ \ 0 ,90 \\ \end{pmatrix} \begin{pmatrix} 5 \\ 10 \\ 6 \end{pmatrix} \\
-&amp; = \begin{pmatrix} 0.80 \cdot 5\ + \ 0.15 \cdot 10 \ + \ 0.05 \cdot 6\\ 0.10 \cdot 5 \ + \ 0.70 \cdot 10 \ + \ 0.05 \cdot 6\\ 0.10 \cdot 5\ + \ 0.15 \cdot 10 \ + \ 0.90 \cdot 6 \\ \end{pmatrix} =\begin{pmatrix} 5.8 \\7.8\\ 7.4\end{pmatrix}
-\end{align*}\]</span></p>
-<p>According to this, after a period more people live in regions 1 and 3, whereas the population in region 2 has shrunk.</p>
-<p>Similarly, it can be calculated how the population is distributed over the three regions after two periods:
-<span class="math display">\[{\bf x_2}  = P{\bf x_1}  = P(P{\bf x_0} ) = P^ 2 {\bf x_0}. \]</span></p>
-<p>In general, after <span class="math inline">\(n\)</span> periods</p>
-<p><span class="math display">\[{\bf x_n}  = P{\bf x_{n-1}}  = P^ n {\bf x_0}. \]</span></p>
 <div class="exercise">
-<p><span id="exr:regwand" class="exercise"><strong>Exercise 9.6  (Regional migration) </strong></span>Determine <span class="math inline">\(\bf x_2\)</span>, the population in the three regions at the end of the second period.</p>
-<details>
-<summary>
-Answer
-</summary>
-<img src="images/regwand.png" />
-</details>
-</div>
-<div class="exercise">
-<p><span id="exr:kundebest" class="exercise"><strong>Exercise 9.7  (customer order) </strong></span>The customer orders of a manufacturer are:</p>
+<p><span id="exr:kundebest" class="exercise"><strong>Exercise 9.2  (customer order) </strong></span>The customer orders of a manufacturer are:</p>
 <p>– Customer 1 orders 3 units of product 1,</p>
 <p>– Customer 2 orders 2 units of product 1,</p>
 <p>– Customer 3 orders 0 units of product 1,</p>
@@ -934,12 +932,39 @@ Answer
 </details>
 </div>
 </div>
+<div id="regional-migration" class="section level3 hasAnchor" number="9.3.2">
+<h3><span class="header-section-number">9.3.2</span> Regional migration<a href="matrices-and-basic-matrix-operations.html#regional-migration" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The transition matrix from section 1 above describes the migratory behavior of the population in three regions.</p>
+<p>Currently, i.e. at the time <span class="math inline">\(t = 0\)</span>, the population is distributed over the three regions as follows (numbers in million),</p>
+<p><span class="math inline">\({\bf x_0} = \begin{pmatrix} 5 \\ 10 \\ 6 \end{pmatrix}\)</span></p>
+<p>With the transition matrix <span class="math inline">\(P\)</span></p>
+<p><span class="math inline">\(P = \begin{pmatrix} 0.80 \ \ 0.15 \ \ 0.05 \\ 0.10 \ \ 0.70 \ \ 0.05\\ 0.10 \ \ 0.15 \ \ 0 ,90 \\ \end{pmatrix}\)</span></p>
+<p>we can find the population distribution at the beginning of the next period (<span class="math inline">\(t = 1\)</span>): <span class="math inline">\({\bf x_1} = P{\bf x_0}\)</span>.</p>
+<p>The solution <span class="math inline">\({\bf x_1} = P {\bf x_0}\)</span> with the concrete numbers is</p>
+<p><span class="math display">\[\begin{align*} P{\bf x_0}  &amp;= \begin{pmatrix} 0.80 \ \ 0.15 \ \ 0.05 \\ 0.10 \ \ 0.70 \ \ 0.05\\ 0.10 \ \ 0.15 \ \ 0 ,90 \\ \end{pmatrix} \begin{pmatrix} 5 \\ 10 \\ 6 \end{pmatrix} \\
+&amp; = \begin{pmatrix} 0.80 \cdot 5\ + \ 0.15 \cdot 10 \ + \ 0.05 \cdot 6\\ 0.10 \cdot 5 \ + \ 0.70 \cdot 10 \ + \ 0.05 \cdot 6\\ 0.10 \cdot 5\ + \ 0.15 \cdot 10 \ + \ 0.90 \cdot 6 \\ \end{pmatrix} =\begin{pmatrix} 5.8 \\7.8\\ 7.4\end{pmatrix}
+\end{align*}\]</span></p>
+<p>According to this, after a period more people live in regions 1 and 3, whereas the population in region 2 has shrunk.</p>
+<p>Similarly, it can be calculated how the population is distributed over the three regions after two periods:
+<span class="math display">\[{\bf x_2}  = P{\bf x_1}  = P(P{\bf x_0} ) = P^ 2 {\bf x_0}. \]</span></p>
+<p>In general, after <span class="math inline">\(n\)</span> periods</p>
+<p><span class="math display">\[{\bf x_n}  = P{\bf x_{n-1}}  = P^ n {\bf x_0}. \]</span></p>
+<div class="exercise">
+<p><span id="exr:regwand" class="exercise"><strong>Exercise 9.3  (Regional migration) </strong></span>Determine <span class="math inline">\(\bf x_2\)</span>, the population in the three regions at the end of the second period.</p>
+<details>
+<summary>
+Answer
+</summary>
+<img src="images/regwand.png" />
+</details>
+</div>
+</div>
 </div>
 <div id="transpose-of-a-matrix" class="section level2 hasAnchor" number="9.4">
 <h2><span class="header-section-number">9.4</span> Transpose of a matrix<a href="matrices-and-basic-matrix-operations.html#transpose-of-a-matrix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We have already seen that you can use transposition to turn a column vector into a row vector and vice versa. You can also transpose matrices and thus swap their dimensions.</p>
+<p>We have already seen that you can use transposing to turn a column vector into a row vector and vice versa. You can also transpose matrices and thus swap their dimensions.</p>
 <div class="definition">
-<p><span id="def:deftransponierte" class="definition"><strong>Definition 9.12  (transpose of a matrix) </strong></span>Let <span class="math inline">\(A\)</span> be a <span class="math inline">\(m\times n\)</span> matrix. The <strong>Transpose</strong> of a matrix
+<p><span id="def:deftransponierte" class="definition"><strong>Definition 9.10  (transpose of a matrix) </strong></span>Let <span class="math inline">\(A\)</span> be a <span class="math inline">\(m\times n\)</span> matrix. The <strong>Transpose</strong> of a matrix
 <span class="math inline">\(A^\top\)</span>, also written as <span class="math inline">\(A^\prime\)</span>, is a <span class="math inline">\(n\times m\)</span> matrix,
 which is created by adding the rows (columns) from <span class="math inline">\(A\)</span> to the
 Columns (rows) of <span class="math inline">\(A^\top\)</span> makes:
@@ -979,7 +1004,7 @@ Matrix.</li>
 row vector becomes a column vector and vice versa.</li>
 </ul>
 <div class="theorem">
-<p><span id="thm:thmtransponieren" class="theorem"><strong>Theorem 9.2  (Properties of the transpose) </strong></span></p>
+<p><span id="thm:thmtransponieren" class="theorem"><strong>Theorem 9.2  (Properties of the transpose*) </strong></span></p>
 <ul>
 <li><p>Transposing a transposed matrix produces the
 original matrix: <span class="math inline">\((A^{\top})^{\top}=A\)</span>.</p></li>
@@ -1004,7 +1029,7 @@ through:
 <h2><span class="header-section-number">9.5</span> Determinant and inverse of a matrix<a href="matrices-and-basic-matrix-operations.html#determinant-and-inverse-of-a-matrix" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We define the inverse of a square matrix.</p>
 <div class="definition">
-<p><span id="def:definverse" class="definition"><strong>Definition 9.13  (Inverse of a square matrix) </strong></span></p>
+<p><span id="def:definverse" class="definition"><strong>Definition 9.11  (Inverse of a square matrix) </strong></span></p>
 <ul>
 <li><p>Let <span class="math inline">\(A\)</span> be a square <span class="math inline">\(n\times n\)</span> matrix. The <span class="math inline">\(n\times n\)</span> matrix
 <span class="math inline">\(B\)</span> is the <strong>inverse matrix</strong> of <span class="math inline">\(A\)</span> if:
@@ -1231,147 +1256,191 @@ p_{k}%
 \end{equation*}\]</span></p></li>
 </ul>
 </div>
-<div class="example">
-<p><span id="exm:inputoutput" class="example"><strong>Example 9.14  (Input-Output Matrix) </strong></span></p>
-<ul>
-<li>A firm produces two outputs, <span class="math inline">\(y_{1}\)</span> and <span class="math inline">\(y_{2}\)</span>, with two
-inputs, <span class="math inline">\(z_{1}\)</span> and <span class="math inline">\(z_{2}\)</span>.</li>
-<li>Let <span class="math inline">\(a_{ij}\)</span> denote the amount of <span class="math inline">\(z_i\)</span> required to
-produce one unit of output <span class="math inline">\(y_j\)</span>.</li>
-<li>The coefficients <span class="math inline">\(a_{ij}\)</span>, <span class="math inline">\(i,j=1,2\)</span>, define the
-<strong>input-requirement matrix</strong>
-<span class="math display">\[\begin{equation*}
+<!--::: {.example #inputoutput name="Input-Output Matrix"}
+
+- A firm produces two outputs, $y_{1}$ and $y_{2}$, with two
+   inputs, $z_{1}$ and $z_{2}$.
+- Let $a_{ij}$ denote the amount of $z_i$ required to 
+produce one unit of output $y_j$.
+- The coefficients $a_{ij}$, $i,j=1,2$, define the
+**input-requirement matrix**
+\begin{equation*}
 A=\begin{pmatrix}
-2 &amp; 1 \\
-3 &amp; 2%
+2 & 1 \\ 
+3 & 2%
 \end{pmatrix}.
-\end{equation*}\]</span></li>
-<li>Given the input levels <span class="math inline">\(z_{1}=50\)</span> and <span class="math inline">\(z_{2}=80\)</span>, what
-outputs <span class="math inline">\(y_{1}\)</span> and <span class="math inline">\(y_{2}\)</span> are produced?</li>
-<li>We have <span class="math inline">\(z=Ay\)</span> <span class="math inline">\(\Longrightarrow y=A^{-1}z\)</span>, and therefore
-<span class="math inline">\(\displaystyle\begin{pmatrix}
-      y_{1} \\
-      y_{2}
-     \end{pmatrix}
-     =\begin{pmatrix}
-       2 &amp; 1 \\
-       3 &amp; 2
-     \end{pmatrix}^{-1}\,
-     \begin{pmatrix}
-       50 \\
-       80
-     \end{pmatrix}\)</span>.</li>
-<li>The inverse is determined as
-<span class="math display">\[\begin{equation*}
+\end{equation*}
+- Given the input levels $z_{1}=50$ and $z_{2}=80$, what 
+   outputs $y_{1}$ and $y_{2}$ are produced? 
+- We have $z=Ay$ $\Longrightarrow y=A^{-1}z$, and therefore 
+   $\displaystyle\begin{pmatrix}
+        y_{1} \\
+        y_{2}
+       \end{pmatrix}
+       =\begin{pmatrix}
+         2 & 1 \\ 
+         3 & 2
+       \end{pmatrix}^{-1}\,
+       \begin{pmatrix}
+         50 \\
+         80
+       \end{pmatrix}$.
+- The inverse is determined as
+\begin{equation*}
 \begin{pmatrix}
-2 &amp; 1 \\
-3 &amp; 2
+ 2 & 1 \\ 
+ 3 & 2
 \end{pmatrix}^{-1}=
 \frac{1}{4-3}
 \begin{pmatrix}
-2 &amp; -1 \\
--3 &amp; 2
+ 2 & -1 \\ 
+-3 & 2
 \end{pmatrix}
 =\begin{pmatrix}
-2 &amp; -1 \\
--3 &amp; 2
+ 2 & -1 \\ 
+-3 & 2
 \end{pmatrix}.
-\end{equation*}\]</span></li>
-<li>Finally, we obtain
-<span class="math inline">\(\displaystyle\begin{pmatrix}
-y_{1} \\
+\end{equation*}
+- Finally, we obtain 
+$\displaystyle\begin{pmatrix}
+y_{1} \\ 
 y_{2}
 \end{pmatrix}
 =
 \begin{pmatrix}
-2 &amp; -1 \\
--3 &amp; 2
+2 & -1 \\ 
+-3 & 2
 \end{pmatrix}\,
 \begin{pmatrix}
-50 \\
+50 \\ 
 80
 \end{pmatrix}
 =\begin{pmatrix}
-20 \\
+20 \\ 
 10
-\end{pmatrix}\)</span>.</li>
-</ul>
-</div>
-<div id="more-on-the-determinant-of-a-matrixast" class="section level3 hasAnchor" number="9.5.1">
-<h3><span class="header-section-number">9.5.1</span> More on the Determinant of a Matrix<span class="math inline">\(^\ast\)</span><a href="matrices-and-basic-matrix-operations.html#more-on-the-determinant-of-a-matrixast" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+\end{pmatrix}$.
+:::-->
+<div id="more-on-the-determinant-of-a-matrix" class="section level3 hasAnchor" number="9.5.1">
+<h3><span class="header-section-number">9.5.1</span> More on the Determinant of a Matrix<a href="matrices-and-basic-matrix-operations.html#more-on-the-determinant-of-a-matrix" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>When determining the inverse <span class="math inline">\(A^{-1}\)</span>, the special number - the <strong>determinant</strong> of the original matrix <span class="math inline">\(A\)</span> - plays an important role. In the following chapters, this number is used, for example, to check for maxima and minima of multivariate functions. Below we define the determinant explicitly.</p>
-<div class="definition">
-<p><span id="def:defdeterminante" class="definition"><strong>Definition 9.14  (determinant) </strong></span>Let <span class="math inline">\(A\)</span> be a <span class="math inline">\(2\times 2\)</span> matrix. the term
-<span class="math inline">\(a_{22}a_{11}-a_{21}a_{12}\)</span> is the <strong>determinant</strong> of <span class="math inline">\(A\)</span>
-and is denoted by <span class="math inline">\(|A|\)</span> or <span class="math inline">\(\det(A)\)</span>.</p>
-</div>
-<p>Similarly, the <strong>determinant</strong> of an arbitrarily
-define a dimensional, square matrix. However, the calculation of the determinant
-slightly more complicated for <span class="math inline">\(n&gt;2\)</span>. We therefore restrict ourselves to <span class="math inline">\(3×3\)</span> matrices for illustration.</p>
 <div class="theorem">
 <p><span id="thm:thmdet0" class="theorem"><strong>Theorem 9.4  (invertibility) </strong></span>A square matrix is non-singular (i.e. invertible)
 if and only if (iff) its determinant is non-zero.</p>
 </div>
-<div class="example">
-<p><span id="exm:nutzenmax" class="example"><strong>Example 1.1  (Determinant of a $3\times 3$ matrix) </strong></span>The following matrix is given
-<span class="math display">\[\begin{equation*}
+<p>Similarly to the case of a <span class="math inline">\(2\times 2\)</span> matrix, the <strong>determinant</strong> of an arbitrarily
+dimensional, square matrix can be defined. However, the calculation of the determinant
+slightly more complicated for <span class="math inline">\(n&gt;2\)</span>. We therefore restrict ourselves to <span class="math inline">\(3×3\)</span> matrices for illustration.</p>
+<div class="theorem">
+<p><span id="thm:defdeterminante" class="theorem"><strong>Theorem 9.5  (determinants) </strong></span></p>
+<ul>
+<li><p>Let <span class="math inline">\(A\)</span> be a <span class="math inline">\(2\times 2\)</span> matrix. The term
+<span class="math inline">\(a_{22}a_{11}-a_{21}a_{12}\)</span> is the <strong>determinant</strong> of <span class="math inline">\(A\)</span>
+and is denoted by <span class="math inline">\(|A|\)</span> or <span class="math inline">\(\det(A)\)</span>.
+<span class="math display">\[\det(A) = a_{22}a_{11}-a_{21}a_{12}\]</span></p></li>
+<li><p>Let <span class="math inline">\(A\)</span> be a <span class="math inline">\(3\times 3\)</span> matrix. The <strong>determinant</strong> of <span class="math inline">\(A\)</span>:
+<span class="math display">\[\det(A) = a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{31}a_{22}a_{13}-a_{32}a_{23}a_{11}-a_{33}a_{21}a_{12}\]</span></p></li>
+</ul>
+<p><img src="images/mdet.png" /></p>
+<p>The Sarrus’ rule above is restricted to <span class="math inline">\(3×3\)</span> matrices. More generally, the calculation is done using subdeterminants.</p>
+</div>
+<!--
+
+::: {.example #nutzenmax name="Determinant of a $3\times 3$ matrix"}
+
+The following matrix is given
+    \begin{equation*}
       A=
       \begin{bmatrix}
-        a_{11} &amp; a_{12} &amp; a_{13}\\
-        a_{21} &amp; a_{22} &amp; a_{23}\\
-        a_{31} &amp; a_{32} &amp; a_{33}
+        a_{11} & a_{12} & a_{13}\\
+        a_{21} & a_{22} & a_{23}\\
+        a_{31} & a_{32} & a_{33}
       \end{bmatrix}.
-    \end{equation*}\]</span></p>
-<p>The calculation of the determinant can be done using the catchy <strong>Rule of Sarrus</strong> (also called <strong>Hunter Fence Rule</strong>):</p>
-<p><img src="images/mdet.png" /></p>
-<p>The determinant of the <span class="math inline">\(3\times 3\)</span> matrix <span class="math inline">\(A\)</span> is:
-<span class="math display">\[\begin{align*}
-      \det(A) &amp;= a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{31}a_{22}a_{13}-a_{32}a_{23}a_{11}-a_{33}a_{21}a_{12}\\
-      &amp;= a_{11} (a_{22} a_{33} - a_{23} a_{32}) - a_{12} (a_{21} a_{33} -
+    \end{equation*}
+
+The calculation of the determinant can be done using the catchy **Rule of Sarrus** (also called **Hunter Fence Rule**):
+
+![](images/mdet.png)
+
+The determinant of the $3\times 3$ matrix $A$ is:
+  \begin{align*}
+      \det(A) &= a_{11}a_{22}a_{33}+a_{12}a_{23}a_{31}+a_{13}a_{21}a_{32}-a_{31}a_{22}a_{13}-a_{32}a_{23}a_{11}-a_{33}a_{21}a_{12}\\
+      &= a_{11} (a_{22} a_{33} - a_{23} a_{32}) - a_{12} (a_{21} a_{33} -
     a_{23} a_{31}) + a_{13} (a_{21} a_{32} - a_{22} a_{31})
-    \end{align*}\]</span></p>
-</div>
-<p>Sarrus’ rule is restricted to <span class="math inline">\(3×3\)</span> matrices. More generally, the calculation is done using subdeterminants.</p>
+    \end{align*}
+:::
+
+Sarrus' rule is restricted to $3×3$ matrices.
+
+
+- Consider the $2\times 2$ submatrices
+     \begin{equation*}
+      A_{11}=
+      \begin{bmatrix}
+        a_{22} & a_{23}\\
+        a_{32} & a_{33}
+      \end{bmatrix},
+      A_{12}=\begin{bmatrix}
+        a_{21} & a_{23}\\
+        a_{31} & a_{33}
+      \end{bmatrix},
+       A_{13}=\begin{bmatrix}
+      a_{21} & a_{22}\\
+        a_{31} & a_{32}
+      \end{bmatrix}.
+\end{equation*}
+
+- The determinant of the $3\times 3$ matrix $A$ is:
+    \begin{align*}
+      \det(A) &= a_{11}|A_{11}|-a_{12}|A_{12}|+a_{13}|A_{13}|\\
+      &= a_{11} (a_{22} a_{33} - a_{23} a_{32}) - a_{12} (a_{21} a_{33} -
+    a_{23} a_{31}) + a_{13} (a_{21} a_{32} - a_{22} a_{31})
+    \end{align*}
+- Note that the signs are alternating.
+-->
+<div class="example">
+<p><span id="exm:maschinenlaufzeit2" class="example"><strong>Example 9.14  (machine runtime II) </strong></span>In the example <a href="matrices-and-basic-matrix-operations.html#exm:maschinenlaufzeit">9.1</a>, we are supposed to solve the following system of three linear equations:</p>
+<p><span class="math display">\[\begin{align*}
+2x_1 + 2x_2 +2x_3 &amp;= 8,\\
+3x_1 + 4x_2 +x_3 &amp;=8,\\
+6x_1 + \frac{10}3 x_2 + \frac 23x_3 &amp;=8.
+\end{align*}\]</span></p>
 <ul>
-<li><p>Consider the <span class="math inline">\(2\times 2\)</span> submatrices
-<span class="math display">\[\begin{equation*}
-    A_{11}=
-    \begin{bmatrix}
-      a_{22} &amp; a_{23}\\
-      a_{32} &amp; a_{33}
-    \end{bmatrix},
-    A_{12}=\begin{bmatrix}
-      a_{21} &amp; a_{23}\\
-      a_{31} &amp; a_{33}
-    \end{bmatrix},
-     A_{13}=\begin{bmatrix}
-    a_{21} &amp; a_{22}\\
-      a_{31} &amp; a_{32}
-    \end{bmatrix}.
-\end{equation*}\]</span></p></li>
-<li><p>The determinant of the <span class="math inline">\(3\times 3\)</span> matrix <span class="math inline">\(A\)</span> is:
-<span class="math display">\[\begin{align*}
-    \det(A) &amp;= a_{11}|A_{11}|-a_{12}|A_{12}|+a_{13}|A_{13}|\\
-    &amp;= a_{11} (a_{22} a_{33} - a_{23} a_{32}) - a_{12} (a_{21} a_{33} -
-  a_{23} a_{31}) + a_{13} (a_{21} a_{32} - a_{22} a_{31})
-  \end{align*}\]</span></p></li>
-<li><p>Note that the signs are alternating.</p></li>
+<li>The coefficients (production hours) of the three linear equations are collected in coefficient matrix <span class="math inline">\(A\)</span> and the hours restriction - in vector <span class="math inline">\(\mathbf b\)</span>:</li>
 </ul>
+<p><span class="math display">\[A=\begin{pmatrix}
+        \color{red}{2} &amp; \color{red}{2} &amp; \color{red}{2} \\
+        \color{blue}{3} &amp; \color{blue}4 &amp; \color{blue}1 \\
+        \color{green}{6} &amp; \color{green}{\frac{10}3} &amp; \color{green}{\frac 23},
+        \end{pmatrix} ~~~~\mathbf b = \begin{pmatrix} \color{red}8 \\ \color{blue}{8} \\ \color{green}8 \end{pmatrix}.
+\]</span></p>
+<ul>
+<li><p>The determinant of <span class="math inline">\(A\)</span>:
+<span class="math display">\[\det(A) = 2\cdot 4\cdot\frac23+2\cdot1\cdot 6 + 2\cdot 3\cdot\frac{10}3 - 6\cdot 4\cdot 2-\frac{10}3\cdot 1\cdot 2- \frac 23\cdot 3\cdot 2 = -21.3333\]</span>
+<img src="images/detA.png" /></p></li>
+<li><p>The inverse of the coefficients matrix (with excel):</p></li>
+</ul>
+<p><span class="math display">\[A^{-1} = \begin{pmatrix}0.0313&amp;-0.25&amp;0.2813\\-0.1875&amp;0.5&amp;0.1875\\0.6563&amp;-0.25&amp;-0.0938\end{pmatrix}\]</span></p>
+<p><img src="images/inv.png" /></p>
+<ul>
+<li>The solution can be found via:</li>
+</ul>
+<p><span class="math display">\[\mathbf x = A^{-1}b = \]</span></p>
+</div>
 <div class="theorem">
-<p><span id="thm:thmdeter" class="theorem"><strong>Theorem 9.5  (Properties of the determinants) </strong></span>Let <span class="math inline">\(A\)</span> be a square matrix. Then:</p>
+<p><span id="thm:thmdeter" class="theorem"><strong>Theorem 9.6  (Properties of the determinants*) </strong></span>Let <span class="math inline">\(A\)</span> be a square matrix. Then:</p>
 <ul>
 <li><span class="math inline">\(\det(A^\top)=\det(A)\)</span>,</li>
-<li><span class="math inline">\(\det(A\, B) = \det(A) \, \det(B)\)</span>,</li>
-<li><span class="math inline">\(\det(A+B)\not= \det(A) + \det(B)\)</span>, im
-general. (“in general” should be understood as follows: It
-there may be instances where equality holds; equality is
-but not given in all cases.)</li>
+<li><span class="math inline">\(\det(A\, B) = \det(A) \cdot \det(B)\)</span>,</li>
+<li><span class="math inline">\(\det(A+B)\not= \det(A) + \det(B)\)</span> in
+general. <!--("in general" should be understood as follows: It
+         there may be instances where equality holds; equality is
+         but not given in all cases.)--></li>
 </ul>
 </div>
 <div class="example">
 <p><span id="exm:determinante" class="example"><strong>Example 9.15  (determinant) </strong></span>Note that
 <span class="math display">\[\begin{equation*}
-     det\begin{pmatrix}
+     \det\begin{pmatrix}
        3 &amp; 2 \\
        1 &amp; 4
      \end{pmatrix}
@@ -1379,37 +1448,39 @@ but not given in all cases.)</li>
 \end{equation*}\]</span>
 as well as
 <span class="math display">\[\begin{equation*}
-det\begin{pmatrix}
+\det\begin{pmatrix}
        3 &amp; 1 \\
        2 &amp; 4%
      \end{pmatrix}
      =10.
 \end{equation*}\]</span></p>
 </div>
-<div class="exercise">
-<p><span id="exr:aufdeter" class="exercise"><strong>Exercise 9.8  (determinant) </strong></span>Show that: <span class="math inline">\(\det(A^{-1})=1/\det(A)\)</span>.</p>
+<!--
+
+::: {.exercise #aufdeter name="determinant"}
+Show that: $\det(A^{-1})=1/\det(A)$.
+
 <details>
-<summary>
-Solution
-</summary>
-<p>By the definition of the inverse matrix:
-<span class="math display">\[AA^{-1}=I_n,\]</span></p>
-where <span class="math inline">\(I_n\)</span> is the identity matrix.
+<summary>Solution</summary>
+By the definition of the inverse matrix:
+\[AA^{-1}=I_n,\]
+
+where \(I_n\) is the identity matrix.
 It holds:
-<span class="math display">\[\det(I_n) = 1,\]</span>
-so <span class="math display">\[\det(AA^{-1} = \det(A) \det(A^{-1}) = 1 \Rightarrow \det(A^{-1})=\frac 1{\det(A)}.\]</span>
+\[\det(I_n) = 1,\]
+so \[\det(AA^{-1} = \det(A) \det(A^{-1}) = 1 \Rightarrow \det(A^{-1})=\frac 1{\det(A)}.\]
 </details>
-</div>
+:::-->
 </div>
 <div id="rank-and-determinantast" class="section level3 hasAnchor" number="9.5.2">
 <h3><span class="header-section-number">9.5.2</span> Rank and determinant<span class="math inline">\(^\ast\)</span><a href="matrices-and-basic-matrix-operations.html#rank-and-determinantast" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <div class="definition">
-<p><span id="def:defrang" class="definition"><strong>Definition 9.15  (rank of a matrix) </strong></span>The <strong>row rank (column rank)</strong> of a matrix <span class="math inline">\(A\)</span> (<span class="math inline">\(rg(A)\)</span>)
+<p><span id="def:defrang" class="definition"><strong>Definition 9.12  (rank of a matrix) </strong></span>The <strong>row rank (column rank)</strong> of a matrix <span class="math inline">\(A\)</span> (<span class="math inline">\(rg(A)\)</span>)
 corresponds to the number of linearly independent rows (columns). It
 the following applies: row rank = column rank.</p>
 </div>
 <div class="theorem">
-<p><span id="thm:thmsingular" class="theorem"><strong>Theorem 9.6  (Determinants of singular matrices) </strong></span>A matrix whose row (column) is a multiple of another
+<p><span id="thm:thmsingular" class="theorem"><strong>Theorem 9.7  (Determinants of singular matrices) </strong></span>A matrix whose row (column) is a multiple of another
 row (column) is called <strong>singular</strong>. In this case are
 the rows (columns) are not linearly independent, the matrix has
 therefore not full row rank (column rank).</p>
@@ -1417,14 +1488,14 @@ therefore not full row rank (column rank).</p>
 <div class="example">
 <p><span id="exm:singularmat" class="example"><strong>Example 9.16  (Determinants of singular matrices) </strong></span>One can see that
 <span class="math display">\[\begin{equation*}
-det\begin{pmatrix}
+\det\begin{pmatrix}
          3 &amp; 2 \\
          9 &amp; 6%
        \end{pmatrix}
        =0,
 \end{equation*}\]</span></p>
 <p><span class="math display">\[\begin{equation*}
-det\begin{pmatrix}
+\det\begin{pmatrix}
          3 &amp; 6 \\
          6 &amp; 12%
        \end{pmatrix}
@@ -1432,7 +1503,7 @@ det\begin{pmatrix}
 \end{equation*}\]</span></p>
 </div>
 <div class="theorem">
-<p><span id="thm:thmeigdet1" class="theorem"><strong>Theorem 9.7  (Determinant when adding the multiple of a column/row) </strong></span>If the matrix <span class="math inline">\(B\)</span> from another matrix <span class="math inline">\(A\)</span> through
+<p><span id="thm:thmeigdet1" class="theorem"><strong>Theorem 9.8  (Determinant when adding the multiple of a column/row) </strong></span>If the matrix <span class="math inline">\(B\)</span> from another matrix <span class="math inline">\(A\)</span> through
 Addition of the multiple of a row (column) to another row
 (column) is generated, then the value of the determinant remains
 unchanged, i.e. are the determinants of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>
@@ -1440,7 +1511,7 @@ identical.</p>
 </div>
 <div class="example">
 <p><span id="exm:eigdet2" class="example"><strong>Example 9.17  (Determinant when adding the multiple of a column/row) </strong></span><span class="math display">\[\begin{equation*}
-det(A)=det\left(
+\det(A)=\det\left(
        \begin{array}{cc}
          3 &amp; 2 \\
          1 &amp; 4
@@ -1449,7 +1520,7 @@ det(A)=det\left(
      
 \end{equation*}\]</span>
 <span class="math display">\[\begin{equation*}
-det(B)=det\left(
+\det(B)=\det\left(
        \begin{array}{cc}
          3 &amp; 2 \\
          7 &amp; 8
@@ -1458,12 +1529,12 @@ det(B)=det\left(
 \end{equation*}\]</span></p>
 </div>
 <div class="theorem">
-<p><span id="thm:thmdeter2" class="theorem"><strong>Theorem 9.8  (determinant of a triangular matrix) </strong></span>The determinant of an upper (lower) <strong>triangular matrix</strong>
+<p><span id="thm:thmdeter2" class="theorem"><strong>Theorem 9.9  (determinant of a triangular matrix) </strong></span>The determinant of an upper (lower) <strong>triangular matrix</strong>
 corresponds to the product of the diagonal elements.</p>
 </div>
 <div class="example">
 <p><span id="exm:deter3" class="example"><strong>Example 9.18  (determinant of a triangular matrix) </strong></span><span class="math display">\[\begin{equation*}
-det(A)=det\left(
+\det(A)=\det\left(
         \begin{array}{cc}
           3 &amp; 2 \\
           0 &amp; 4
@@ -1471,7 +1542,7 @@ det(A)=det\left(
       \right) =12,
 \end{equation*}\]</span>
 <span class="math display">\[\begin{equation*}
-det(B)=det\left(
+\det(B)=\det\left(
         \begin{array}{cc}
           3 &amp; 0 \\
           3 &amp; 4
@@ -1480,7 +1551,7 @@ det(B)=det\left(
 \end{equation*}\]</span></p>
 </div>
 <div class="theorem">
-<p><span id="thm:thmdeter3" class="theorem"><strong>Theorem 9.9  (Determinants when multiplying by a scalar) </strong></span></p>
+<p><span id="thm:thmdeter3" class="theorem"><strong>Theorem 9.10  (Determinants when multiplying by a scalar) </strong></span></p>
 <ul>
 <li>Can be a matrix <span class="math inline">\(B\)</span> from another <span class="math inline">\(n\times n\)</span> matrix
 <span class="math inline">\(A\)</span> by multiplying a row (column) by a scalar
