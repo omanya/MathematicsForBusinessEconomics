@@ -420,14 +420,17 @@ Proof
       \end{align*}\]</span>
 </details>
 </div>
+<!--::: {.example #pkettene name="chain rule"}
+Let \(f (x_1,x_2) = 3x_1 + 5x_2\) with \(x_1(t) = t^2\) and \(x_2(t) = 4t^3\) .
+
+The chain rule gives
+
+\( \frac{df}{dt} = 3\frac{ d t^2}{ \ dt} + 5\frac{d4t^3}{dt} =6t+60t^2 \)
+
+The same result can be obtained by directly substituting the functions \(x_1(t)\) and \(x_2(t)\) into \(f\) and then deriving them.
+:::-->
 <div class="example">
-<p><span id="exm:pkettene" class="example"><strong>Example 10.3  (chain rule) </strong></span>Let <span class="math inline">\(f (x_1,x_2) = 3x_1 + 5x_2\)</span> with <span class="math inline">\(x_1(t) = t^2\)</span> and <span class="math inline">\(x_2(t) = 4t^3\)</span> .</p>
-<p>The chain rule gives</p>
-<p><span class="math inline">\(\frac{df}{dt} = 3\frac{ d t^2}{ \ dt} + 5\frac{d4t^3}{dt} =6t+60t^2\)</span></p>
-<p>The same result can be obtained by directly substituting the functions <span class="math inline">\(x_1(t)\)</span> and <span class="math inline">\(x_2(t)\)</span> into <span class="math inline">\(f\)</span> and then deriving them.</p>
-</div>
-<div class="example">
-<p><span id="exm:pkettee2" class="example"><strong>Example 10.4  (Chain rule for the utility function) </strong></span>If you want to consider the utility function from example <a href="index.html#exm:nutzenf">1.3</a> as a function of externalities/emissions (e.g. CO<span class="math inline">\(2\)</span>) that are associated with the consumption of the two goods, and given the emission functions:</p>
+<p><span id="exm:pkettee2" class="example"><strong>Example 10.3  (Chain rule for the utility function) </strong></span>If you want to consider the utility function from example <a href="index.html#exm:nutzenf">1.3</a> as a function of externalities/emissions (e.g. CO<span class="math inline">\(2\)</span>) that are associated with the consumption of the two goods, and given the emission functions:</p>
 <p><span class="math display">\[t(x) = \frac12x, x&gt;0; ~ t(y)=2y-1, y\geq 1\]</span></p>
 <p>one can derive the utility function according to the externality <span class="math inline">\(t\)</span> as follows:</p>
 <ul>
@@ -438,7 +441,7 @@ Proof
 <li>Use the above chain rule to derive <span class="math inline">\(U(x(t),y(t))\)</span> from <span class="math inline">\(t\)</span>:</li>
 </ul>
 <p><span class="math display">\[\begin{align}\frac{dU}{dt} &amp;= \color{blue}{\frac{\partial U}{\partial x}}\cdot \color{red}{\frac{dx}{ dt}} + \color{green}{\frac{\partial U}{\partial y}}\cdot \color{purple}{\frac{dy}{dt}}\\
-&amp;=\color{blue}{\frac1{2\sqrt{x}}}\cdot \color{red}{2} + \color{green}{\frac1{2\sqrt{y}}}\cdot \ color{purple}{\frac12}\\
+&amp;=\color{blue}{\frac1{2\sqrt{x}}}\cdot \color{red}{2} + \color{green}{\frac1{2\sqrt{y}}}\cdot \color{purple}{\frac12}\\
 &amp;=\frac1{\sqrt{\underbrace{x}}_{=2t}} + \frac1{4\sqrt{\underbrace{y}}_{=0.5(t+1)}}\\
 &amp;=\frac1{\sqrt{2t}} + \frac1{4\sqrt{0.5(t+1)}}.
 \end{align}\]</span></p>
@@ -458,7 +461,7 @@ Proof
 <li><p>The derivatives <span class="math inline">\(f_{ij}, i \neq j\)</span>, are called <strong>cross derivatives</strong>.</p></li>
 </ul>
 <div class="example">
-<p><span id="exm:partab3" class="example"><strong>Example 10.5  (Partial derivatives of the second order) </strong></span>Let <span class="math inline">\(f: \mathbb{R}^2 \rightarrow \mathbb{R}\)</span>. The second order partial derivatives are given by:</p>
+<p><span id="exm:partab3" class="example"><strong>Example 10.4  (Partial derivatives of the second order) </strong></span>Let <span class="math inline">\(f: \mathbb{R}^2 \rightarrow \mathbb{R}\)</span>. The second order partial derivatives are given by:</p>
 <p><span class="math inline">\(f_{11}(x_1, x_2) = \frac{ \partial^2 f (x_1, x_2)}{ \partial x_1^2}\)</span></p>
 <p><span class="math inline">\(f_{12}(x_1, x_2) = \frac{ \partial^2 f (x_1, x_2)}{ \partial x_1\partial x_2}\)</span></p>
 <p><span class="math inline">\(f_{21}(x_1, x_2) = \frac{ \partial^2 f (x_1, x_2)}{ \partial x_2\partial x_1}\)</span></p>
@@ -516,7 +519,7 @@ indicating the <em>grade</em> or <em>steepness</em> of the function
 in each direction.</li>
 </ul>
 <div class="example">
-<p><span id="exm:gradientvec" class="example"><strong>Example 10.6  (Gradient Vector) </strong></span>Let <span class="math inline">\(f(x_1,x_2)=5-2x_1+3x_2\)</span>.</p>
+<p><span id="exm:gradientvec" class="example"><strong>Example 10.5  (Gradient Vector) </strong></span>Let <span class="math inline">\(f(x_1,x_2)=5-2x_1+3x_2\)</span>.</p>
 <ul>
 <li>The first derivatives are
 <span class="math display">\[\begin{equation*}
@@ -538,9 +541,9 @@ in each direction.</li>
 <p><span class="math inline">\(H =  \begin{bmatrix} f_{11} \ \ f_{12} \ \ ... \ \ f_{1n} \\ f_{21} \ \ f_{22} \ \ ... \ \ f_{2n} \\ ..\ \ .. \ \ .. \ \ .. \ \ .. \\ f_{n1} \ \ f_{n2} \ \ ... \ \ f_{nn} \end{bmatrix}\)</span></p>
 </div>
 <div class="example">
-<p><span id="exm:gundh" class="example"><strong>Example 10.7  (Gradient and Hessian matrix) </strong></span>Let <span class="math inline">\(f (x_1, x_2) = x_1^2 x_2\)</span>.</p>
+<p><span id="exm:gundh" class="example"><strong>Example 10.6  (Gradient and Hessian matrix) </strong></span>Let <span class="math inline">\(f (x_1, x_2) = x_1^2 x_2\)</span>.</p>
 <p>The first partial derivatives (summarized as a vector, the so-called gradient) and the Hessian matrix are given as:
-<span class="math display">\[] G(x_1, x_2) =\nabla f=  \begin{bmatrix} 2x_1 \cdot x_2 \\ x_1^2   \end{bmatrix}  \]</span></p>
+<span class="math display">\[ G(x_1, x_2) =\nabla f=  \begin{bmatrix} 2x_1 \cdot x_2 \\ x_1^2   \end{bmatrix}  \]</span></p>
 <!--![](images/GH.png)-->
 <p><span class="math display">\[H(x_1, x_2) =  \begin{bmatrix} 2x_2 \ \ 2x_1 \\ 2x_1 \ \ 0  \ \  \end{bmatrix}.  \]</span></p>
 </div>
@@ -583,7 +586,7 @@ convert to an explicit function by rearranging;
 in many cases this is not possible (e.g.: <span class="math inline">\(F(x,y)=x^3 \text{e}^y - 2y \text{e}^x + 2=0\)</span>).</p>
 <p>Interestingly, in these cases, the derivative <span class="math inline">\(y&#39;(x)\)</span> can still be determined.</p>
 <div class="example">
-<p><span id="exm:implfun" class="example"><strong>Example 10.8  (Implicit functions) </strong></span></p>
+<p><span id="exm:implfun" class="example"><strong>Example 10.7  (Implicit functions) </strong></span></p>
 <ul>
 <li>Let <span class="math inline">\(F(x,y)=2y+4x-10=0\)</span>. Then: <span class="math inline">\(y=f(x)=5-2x\)</span>.</li>
 <li>Let <span class="math inline">\(F(x,y)=\text{e}^{x^2+y}-5=0\)</span>. Then: <span class="math inline">\(y=\ln(5)-x^2\)</span>.</li>
@@ -597,7 +600,7 @@ Function term is to be understood as “local”.</li>
 </ul>
 </div>
 <div class="example">
-<p><span id="exm:implizitgewinn" class="example"><strong>Example 10.9  (Profit maximization) </strong></span>We also consider a profit-maximizing company
+<p><span id="exm:implizitgewinn" class="example"><strong>Example 10.8  (Profit maximization) </strong></span>We also consider a profit-maximizing company
 Production function <span class="math inline">\(y=f(x)\)</span>. A unit of input <span class="math inline">\(x\)</span>
 costs <span class="math inline">\(w\)</span> euros.</p>
 <ul>
@@ -660,7 +663,7 @@ where the derivative is <span class="math inline">\(0\)</span> since the functio
 --></li>
 </ul>
 <div class="example">
-<p><span id="exm:impldif" class="example"><strong>Example 10.10  (Implicit Derivation) </strong></span>Look at the equation
+<p><span id="exm:impldif" class="example"><strong>Example 10.9  (Implicit Derivation) </strong></span>Look at the equation
 <span class="math display">\[\begin{equation*}
         F(x,y)=x^2-3xy + y^3-7=0,
       \end{equation*}\]</span>

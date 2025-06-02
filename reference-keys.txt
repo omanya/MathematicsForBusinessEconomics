@@ -201,7 +201,6 @@ def:defsepfun
 exm:nutzensep
 thm:thmpketten
 eq:kettenr
-exm:pkettene
 exm:pkettee2
 def:defpartiellab2
 exm:partab3
