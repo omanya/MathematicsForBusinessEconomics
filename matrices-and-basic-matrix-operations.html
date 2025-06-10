@@ -23,7 +23,7 @@
 <meta name="author" content="Maria Osipenko" />
 
 
-<meta name="date" content="2025-06-02" />
+<meta name="date" content="2025-06-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -287,8 +287,8 @@ function checkAnswer_num(q) {
       }
     }
 </script>
-<p>Matrices represent and manipulate data in a very efficient way. One important applications of matrices is solving large systems of linear equations. We summarize the <strong>coefficients</strong> <span class="math inline">\(a_{ij}\)</span> of such linear equation system in a matrix, e.g., <span class="math inline">\(A\)</span>, write the <strong>unknowns</strong> as a vector <span class="math inline">\(\bf x\)</span>, and collect the constants on the right hand sides of the equations in a vector <span class="math inline">\(\bf b.\)</span></p>
-<p>A matrix can be thought of as a table, with the added benefit of being able to do matrices. For example, matrices can be used to solve systems of linear equations.</p>
+<p>Matrices represent and manipulate data in a very efficient way. One important application of matrices is solving large systems of linear equations. We summarize the <strong>coefficients</strong> <span class="math inline">\(a_{ij}\)</span> of such linear equation system in a matrix, e.g., <span class="math inline">\(A\)</span>, write the <strong>unknowns</strong> as a vector <span class="math inline">\(\bf x\)</span>, and collect the constants on the right hand sides of the equations in a vector <span class="math inline">\(\bf b.\)</span></p>
+<p>A matrix can be thought of as a table, with the added benefit of being able to compute with matrices, for example, in order to solve systems of linear equations.</p>
 <div id="matrices" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> Matrices<a href="matrices-and-basic-matrix-operations.html#matrices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="definition">
@@ -539,7 +539,7 @@ Figure 9.1: Illustation of the dot product
 <div class="example">
 <p><span id="exm:exkalarprodukt" class="example"><strong>Example 9.5  (dot product) </strong></span></p>
 <ul>
-<li><p>The <strong>dot product</strong> <span class="math inline">\(\bf x^\top y\)</span> of <span class="math inline">\(\bf x =   \begin{pmatrix}
+<li><p>The <strong>dot product</strong> <span class="math inline">\(\bf x^\top y\)</span> of <span class="math inline">\(\bf x^\top =   \begin{pmatrix}
       3 &amp; 3
     \end{pmatrix}\)</span> and <span class="math inline">\(\bf y =  \begin{pmatrix}
       1\\
@@ -559,7 +559,7 @@ Figure 9.1: Illustation of the dot product
 </ul>
 <p><img src="_main_files/figure-html/unnamed-chunk-57-1.png" width="672" /></p>
 <ul>
-<li><p>The <strong>dot product</strong> <span class="math inline">\(\bf x^\top y\)</span> of <span class="math inline">\(\bf x =   \begin{pmatrix}
+<li><p>The <strong>dot product</strong> <span class="math inline">\(\bf x^\top y\)</span> of <span class="math inline">\(\bf x^\top =   \begin{pmatrix}
       3 &amp; -3
     \end{pmatrix}\)</span> and <span class="math inline">\(\bf y =  \begin{pmatrix}
     -1\\
@@ -772,7 +772,7 @@ from <span class="math inline">\(B\)</span>”)}</li>
   // Generate a random question
     const questionObj17 = {
       question: 'What is the product \\(A \\cdot B\\)?',
-      options: [\\(\\begin{pmatrix} -15 \\ \\ -15  \\\\ 2 \\ \\ \\ \\ \\ \\ 2  \\end{pmatrix}\\),\\(\\begin{pmatrix} -10 \\ \\ -10  \\\\ 3 \\ \\ \\ \\ \\ \\ 3  \\end{pmatrix}\\)],
+      options: [\\(\\begin{pmatrix} -15 \\ \\ x  \\\\ y \\ \\ \\ \\ \\ \\ z  \\end{pmatrix}\\),\\(\\begin{pmatrix} -10 \\ \\ x  \\\\ y \\ \\ \\ \\ \\ \\ z  \\end{pmatrix}\\)],
       answer: '1',
       id: 17
     };
@@ -782,10 +782,10 @@ from <span class="math inline">\(B\)</span>”)}</li>
 </p>
 <div class="options">
 <label>
-<input type="radio" name="option17" value=1> ‘\(\begin{pmatrix} -15 \ \ -15 \\ 2 \ \ \ \ \ \ 2 \end{pmatrix}\)’
+<input type="radio" name="option17" value=1> ‘\(\begin{pmatrix} -15 \ \ x \\ y \ \ \ \ \ \ z \end{pmatrix}\)’
 </label>
 <label>
-<input type="radio" name="option17" value=2> ‘\(\begin{pmatrix} -10 \ \ -10 \\ 3 \ \ \ \ \ \ 3 \end{pmatrix}\)’
+<input type="radio" name="option17" value=2> ‘\(\begin{pmatrix} -10 \ \ x \\ y \ \ \ \ \ \ z \end{pmatrix}\)’
 </label>
 </div>
 <button onclick="checkAnswer_match(questionObj17)">Submit</button>
