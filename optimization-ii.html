@@ -23,7 +23,7 @@
 <meta name="author" content="Maria Osipenko" />
 
 
-<meta name="date" content="2025-06-10" />
+<meta name="date" content="2025-06-30" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -306,10 +306,9 @@ f_n(x_1^∗ , \ldots , x_n^∗) =&amp; 0
 <img src="images/minmaxn.png" />
 As in the univariate case, a <strong>necessary condition</strong> for <span class="math inline">\(f\)</span> to have a minimum or maximum at <span class="math inline">\({\bf x^∗}\)</span> is that <span class="math inline">\({\bf x^∗}\)</span> is a stationary point.</p>
 <div class="theorem">
-<p><span id="thm:thmnotbedn" class="theorem"><strong>Theorem 11.1  (Necessary conditions) </strong></span>Let <span class="math inline">\(f: \mathbb{R} ^n \rightarrow \mathbb{R}\)</span> be differentiable. If <span class="math inline">\(f\)</span> is a local maximum <span class="math inline">\(\color{red}{\text{(a local minimum)}}\)</span> at the position <span class="math inline">\(x^∗ = (x_1^∗ ,\ldots. , x_n ^∗)\)</span> has, so</p>
-<p><span class="math inline">\(f (x_1^∗ , \ldots , x_n^∗) ≥ f (x_1,\ldots , x_n)\)</span></p>
-<p><span class="math inline">\(\color{red}{f (x_1^∗ , \ldots , x_n^∗) \leq f (x_1,\ldots , x_n)}\)</span></p>
-<p>for all points <span class="math inline">\((x_1, \ldots , x_n)\)</span> in a neighborhood of <span class="math inline">\(x^∗\)</span> , then holds:</p>
+<p><span id="thm:thmnotbedn" class="theorem"><strong>Theorem 11.1  (Necessary conditions) </strong></span>Let <span class="math inline">\(f: \mathbb{R} ^n \rightarrow \mathbb{R}\)</span> be differentiable. If <span class="math inline">\(f\)</span> has a local maximum <span class="math inline">\(\color{red}{\text{(a local minimum)}}\)</span> at <span class="math inline">\(x^∗ = (x_1^∗ ,\ldots. , x_n ^∗),\)</span>
+such as <span class="math inline">\(f (x_1^∗ , \ldots , x_n^∗) \geq f (x_1,\ldots , x_n)\)</span> <span class="math inline">\(\color{red}{(f (x_1^∗ , \ldots , x_n^∗) \leq f (x_1,\ldots , x_n))}\)</span></p>
+<p>for all points <span class="math inline">\((x_1, \ldots , x_n)\)</span> in a neighborhood of <span class="math inline">\(x^∗,\)</span> then it holds:</p>
 <p><span class="math display">\[\begin{align*}f_1(x_1^∗, \ldots , x_n ^∗ )&amp; = 0\\
 f_2(x_1^∗, \ldots , x_n^∗ )&amp; = 0\\
   &amp;~~~\vdots\\
@@ -327,11 +326,11 @@ f_n(x_1^∗, \ldots , x_n^∗)&amp; = 0.
 <p><span class="math inline">\(p_1(x_1) = 12 − x_1\)</span></p>
 <p><span class="math inline">\(p_2(x_2) = 10 − 2x_2\)</span>,</p>
 <p>where <span class="math inline">\(p_i\)</span> are the prices and <span class="math inline">\(x_i\)</span> are the output quantities on the respective markets.</p>
-<p>The firm’s cost function is <span class="math inline">\(C(x_1,x_2) = 1/2 (x_1 + x_2)^2.\)</span></p>
+<p>The firm’s cost function is <span class="math inline">\(C(x_1,x_2) = 1/2\cdot (x_1 + x_2)^2.\)</span></p>
 <p>The profit function is, therefore:</p>
-<p><span class="math inline">\(\pi(x_1,x_2) = p_1x_1 + p_2x_2 − C(x_1,x_2) = 12x_1 − x_1^2 + 10x_2 − 2x_2^2 − 1/2 (x_1 + x_2)^2\)</span> .</p>
+<p><span class="math inline">\(\pi(x_1,x_2) = p_1x_1 + p_2x_2 − C(x_1,x_2) = 12x_1 − x_1^2 + 10x_2 − 2x_2^2 − 1/2\cdot (x_1 + x_2)^2\)</span> .</p>
 <p>The first-order conditions are:</p>
-<p><span class="math inline">\(\pi_1(x_1^∗,x_2^∗) = 12 − 2_1x^∗ − (x_1^∗ + x_2^∗ ) = 0\)</span></p>
+<p><span class="math inline">\(\pi_1(x_1^∗,x_2^∗) = 12 − 2x_1^∗ − (x_1^∗ + x_2^∗ ) = 0\)</span></p>
 <p><span class="math inline">\(\pi_2(x_1^∗,x_2^∗) = 10 − 4x_2^∗ − (x_1^∗ + x_2^∗ ) = 0\)</span></p>
 <p>These conditions show that in order to maximize profit, the marginal returns in both markets must necessarily be the same, since the marginal costs <span class="math inline">\((x_1^∗ + x_2^∗ )\)</span> are identical.</p>
 <p>The profit-maximizing supply quantities are then: <span class="math inline">\(x_1^∗ = 3.57\)</span> and <span class="math inline">\(x_2^∗ = 1.29\)</span> (higher sales volume in market <span class="math inline">\(1\)</span>).</p>
@@ -485,7 +484,7 @@ Answer
 <p>Then there exists a real number <span class="math inline">\(\lambda^∗\)</span> such that <span class="math inline">\((x_1^∗, x_2^∗,\lambda^∗)\)</span> is a stationary point of the Lagrangian:</p>
 <p><span class="math display">\[\mathcal{L} (x_1,x_2, \lambda)=f(x_1,x_2)+ \lambda g(x_1,x_2). \]</span></p>
 <p>In other words, at the position <span class="math inline">\((x_1^∗, x_2^∗,\lambda^∗)\)</span> the following applies:</p>
-<p><span class="math inline">\(\frac{ \partial \mathcal{L}  }{ \partial  x_1  } =0\)</span>, <span class="math inline">\(\frac{ \partial \mathcal{L}  }{ \partial  x_2  } =0\)</span>, <span class="math inline">\(\frac{ \partial \mathcal{L}  }{ \partial  \lambda  } =0.\)</span></p>
+<p><span class="math display">\[\frac{ \partial \mathcal{L}  }{ \partial  x_1  } =0 \), \(  \frac{ \partial \mathcal{L}  }{ \partial  x_2  } =0 \), \(  \frac{ \partial \mathcal{L}  }{ \partial  \lambda  } =0. \]</span></p>
 </div>
 <div class="example">
 <p><span id="exm:optlagr" class="example"><strong>Example 11.4  (Optimization with Lagrangian method) </strong></span>We solve the following optimization problem:</p>
@@ -497,13 +496,13 @@ Answer
 <p>The first-order conditions are:</p>
 <p><span class="math display">\[\begin{align}
 
-0.25x_1^{ −0.75} x_2{ 0.75} − 2\lambda &amp;= 0\\
+0.25x_1^{ −0.75} x_2^{0.75} − 2\lambda &amp;= 0\\
 
 0.75x_1^{ 0.25} x_2^{−0.25} − 4\lambda &amp;= 0\\
 
 100 − 2x_1 − 4x_2 &amp;= 0.
 \end{align}\]</span></p>
-<p>Eliminating <span class="math inline">\(\lambda\)</span> in the first two equations yields: <span class="math inline">\(x_2 = 3/ 2 x_1\)</span></p>
+<p>Eliminating <span class="math inline">\(\lambda\)</span> in the first two equations yields: <span class="math inline">\(x_2 = 3/ 2 \cdot x_1\)</span></p>
 <p>and substituting into the third equation gives <span class="math inline">\(x_1^∗ = 12.5\)</span> and <span class="math inline">\(x_2^∗ = 18.75.\)</span></p>
 <p>For <span class="math inline">\(\lambda^∗\)</span> we get <span class="math inline">\(\lambda^∗ = 0.25x_1^{ −0.75} x_2^{ 0.75} /2 = 0.75x_1^{ 0.25} x_2^{ −0 .25} /4 = 0.169425.\)</span></p>
 <p><img src="images/lagropt.png" /></p>
@@ -548,15 +547,15 @@ Answer
 <p><span class="math display">\[\mathcal{L} (x_1,x_2, \lambda)=f(x_1,x_2)+ \lambda g(x_1,x_2).\]</span></p>
 <p>Then:</p>
 <ol style="list-style-type: lower-roman">
-<li><span class="math inline">\((x_1^∗ ,x_2^∗ )\)</span> is a local maximum of <span class="math inline">\(f\)</span> under the constraint <span class="math inline">\(g(x_1,x_2) = 0\)</span>, if <span class="math inline">\(\det(H^∗ ) &gt; 0\)</span>;</li>
+<li><p><span class="math inline">\((x_1^∗ ,x_2^∗ )\)</span> is a local maximum of <span class="math inline">\(f\)</span> under the constraint <span class="math inline">\(g(x_1,x_2) = 0\)</span>, if <span class="math inline">\(\det(H^∗ ) &gt; 0\)</span>;</p></li>
+<li><p><span class="math inline">\((x_1^∗ ,x_2^∗ )\)</span> is a local minimum of <span class="math inline">\(f\)</span> under the constraint <span class="math inline">\(g(x_1,x_2) = 0\)</span>, if <span class="math inline">\(\det(H^∗ ) &lt; 0\)</span>.</p></li>
 </ol>
-<p>(ii)<span class="math inline">\((x_1^∗ ,x_2^∗ )\)</span> is a local minimum of <span class="math inline">\(f\)</span> under the constraint <span class="math inline">\(g(x_1,x_2) = 0\)</span>, if <span class="math inline">\(\det(H^∗ ) &lt; 0\)</span>.</p>
 </div>
 <div class="example">
 <p><span id="exm:optlagr2" class="example"><strong>Example 11.5  (Optimization with the Lagrange method) </strong></span>We continue the previous example <a href="optimization-ii.html#exm:optlagr">11.4</a> .</p>
 <p>The Hessian matrix is:</p>
 <p><span class="math inline">\(H^*(x_1,x_2)= \begin{bmatrix} - \frac{0.1875x_2^{0.75}}{x_1^{1.75}} \ \ \frac{0.1875}{x_1 ^{0.75}x_2^{0.25}} \ \ -2 \\ \frac{0.1875}{x_1^{0.75}x_2^{0.25}} \ \ -\frac{0 ,1875x_1^{0.25}}{x_2^{1.25}} \ \ -4 \\-2 \ \ \ \ \ \ \ \ \ \ \ \ \ -4 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0 \end{bmatrix}\)</span></p>
-<p>The determinant at <span class="math inline">\((x_1^∗ , x_2^∗ , λ^∗ )\)</span> is <span class="math inline">\(\det(H^*) = 0.5783.\)</span>So <span class="math inline">\(f\)</span> has a maximum at <span class="math inline">\((x_1^∗ , x_2^∗ ).\)</span></p>
+<p>The determinant at <span class="math inline">\((x_1^∗ , x_2^∗ , λ^∗ )\)</span> is <span class="math inline">\(\det(H^*) = 0.5783.\)</span> So <span class="math inline">\(f\)</span> has a maximum at <span class="math inline">\((x_1^∗ , x_2^∗ ).\)</span></p>
 </div>
 <div class="example">
 <p><span id="exm:nutzenmaxl" class="example"><strong>Example 11.6  (utility maximization) </strong></span>We consider the example of utility maximization <a href="index.html#exm:nutzenmax">1.1</a> from Chapter 1.</p>
@@ -575,7 +574,7 @@ Answer
 \frac{ \partial \mathcal{L} }{ \partial \lambda } (x,y, \lambda )= 100-x-3y =0.
 \end{align}\]</span></p>
 <p>The solution is <span class="math inline">\(x^∗ = 75\)</span>, <span class="math inline">\(y^∗ = 100/12 = 8.3333\)</span> and <span class="math inline">\(λ^∗ = 0.05774\)</span>.</p>
-<p>Here <span class="math inline">\(\lambda^∗\)</span> expresses the marginal utility, i.e. the rate of change of the optimal utility when the budget constraint is relaxed.</p>
+<p>Here <span class="math inline">\(\lambda^∗\)</span> expresses the change in the optimal utility when the budget constraint is relaxed.</p>
 <p>The Hessian is:</p>
 <p><span class="math display">\[H(x,y,\lambda)=\begin{pmatrix}\frac{\partial^2\mathcal L}{\partial x^2}&amp; \frac{\partial^2\mathcal L}{\partial x\partial y}&amp; \frac{\partial^2\mathcal L}{\partial x\partial\lambda}\\
 \frac{\partial^2\mathcal L}{\partial y\partial x}&amp; \frac{\partial^2\mathcal L}{\partial y^2}&amp; \frac{\partial^2\mathcal L}{\partial y\partial\lambda}\\
@@ -587,11 +586,11 @@ Answer
 \end{pmatrix}
 \]</span></p>
 <p>Plugging in <span class="math inline">\(x^∗ = 75\)</span>, <span class="math inline">\(y^∗ = 100/12 = 8,3333\)</span> and <span class="math inline">\(λ^∗ = 0,05774\)</span> gives
-<span class="math display">\[H^*=\begin{pmatrix}-0,0003849&amp; 0&amp; -1\\
-0&amp; -0,0103923&amp; -3\\
+<span class="math display">\[H^*=\begin{pmatrix}-0.0003849&amp; 0&amp; -1\\
+0&amp; -0.0103923&amp; -3\\
 -1&amp; -3&amp; \end{pmatrix} \]</span></p>
 <p>The determinant of the Hessian (Formula <a href="optimization-ii.html#eq:det">(11.1)</a>):</p>
-<p><span class="math display">\[\det(H^*) = \frac{1}{4(x^*)^{3/2}} \cdot (-3)^2 +  \frac{1}{4(y^*)^{3/2}} \cdot (-1)^2 = 0,0139&gt;0,\]</span></p>
+<p><span class="math display">\[\det(H^*) = \frac{1}{4(x^*)^{3/2}} \cdot (-3)^2 +  \frac{1}{4(y^*)^{3/2}} \cdot (-1)^2 = 0.0139&gt;0,\]</span></p>
 <p>or in Excel:</p>
 <p><img src="images/mdetbsp2.png" /></p>
 <p>so it is a maximum.</p>
